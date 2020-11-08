@@ -10,14 +10,14 @@ import team.charliechocolatefactory.machine.functiondetail.ProcessMachine;
  * @date 2020/11/8 19:30
  */
 public class WrapperMachine extends ProcessMachine {
-    public WrapperMachine(String type, String machineNum)
+    public WrapperMachine(String type,String machineNum,double lifeYear,double lossCoefficient,int maxCapacity)
     {
-        super(type,machineNum);
+        super(type,machineNum,lifeYear,lossCoefficient,maxCapacity);
     }
 
-    public WrapperMachine(String type,String machineNum,double age)
+    public WrapperMachine(String type,String machineNum,double age,double lifeYear,double lossCoefficient,int maxCapacity)
     {
-        super(type,machineNum,age);
+        super(type,machineNum,age,lifeYear,lossCoefficient,maxCapacity);
     }
 
     @Override

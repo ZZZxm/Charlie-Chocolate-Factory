@@ -10,32 +10,15 @@ import team.charliechocolatefactory.machine.Machine;
  * @date 2020/11/8 14:03
  */
 public abstract class TransportMachine extends Machine {
-    protected int capacity;
-    protected int maxCapacity;
 
-    public TransportMachine(String type, String machineNum)
+    public TransportMachine(String type,String machineNum,double lifeYear,double lossCoefficient,int maxCapacity)
     {
-        super(type,machineNum);
+        super(type,machineNum,lifeYear,lossCoefficient,maxCapacity);
     }
 
-    public TransportMachine(String type,String machineNum,double age)
+    public TransportMachine(String type,String machineNum,double age,double lifeYear,double lossCoefficient,int maxCapacity)
     {
-        super(type,machineNum,age);
-    }
-
-    public void setCapacity(int capacity) {
-        if(capacity> maxCapacity)
-        {
-            System.out.println("Exceed maxCapacity!");
-            return;
-        }
-        if(capacity<=0)
-        {
-            System.out.println("Capacity must be a positive integer!");
-            return;
-        }
-        this.capacity = capacity;
-        this.agingSpeed=1+(1.0*(capacity -maxCapacity))/ maxCapacity;
+        super(type,machineNum,age,lifeYear,lossCoefficient,maxCapacity);
     }
 
     @Override
@@ -45,7 +28,7 @@ public abstract class TransportMachine extends Machine {
 
     public int transport(Product product)
     {
-        work(product,capacity);
-        return capacity;
+        work(product,aimProcessNum);
+        return aimProcessNum;
     }
 }

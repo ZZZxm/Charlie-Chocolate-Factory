@@ -12,46 +12,38 @@ import java.util.Random;
  * @date 2020/11/8 0:04
  */
 public abstract class ProcessMachine extends Machine {
-    static final int MAXIM_NUM =500;
-    //the number of products aimed to produce per production
-    protected int aimProductNum;
 
-    public ProcessMachine(String type, String machineNum)
+    public ProcessMachine(String type,String machineNum,double lifeYear,double lossCoefficient,int maxCapacity)
     {
-        super(type,machineNum);
-        aimProductNum =0;
+        super(type,machineNum,lifeYear,lossCoefficient,maxCapacity);
     }
 
-    public ProcessMachine(String type,String machineNum,double age)
+    public ProcessMachine(String type,String machineNum,double age,double lifeYear,double lossCoefficient,int maxCapacity)
     {
-        super(type,machineNum,age);
-        aimProductNum =0;
-    }
-
-    public void setAimProduct(int aimProductNum)
-    {
-        if(aimProductNum> MAXIM_NUM)
-        {
-            System.out.println("Exceed maximum aimProductNum!");
-            return;
-        }
-        if(aimProductNum<=0)
-        {
-            System.out.println("AimProductNum must be a positive integer!");
-            return;
-        }
-        this.aimProductNum =aimProductNum;
-        //adjust the machine aging speed according to the target production number
-        this.agingSpeed=1+(1.0*(MAXIM_NUM -aimProductNum))/ MAXIM_NUM;
+        super(type,machineNum,age,lifeYear,lossCoefficient,maxCapacity);
     }
 
     public void process(Product product)
     {
+        if(breakDown)
+        {
+            System.out.println("This machine breaks down, please fix!");
+            return;
+        }
         Random rand = new Random();
-        int bounds=(int)(aimProductNum*0.02);
-        int trashNum= rand.nextInt(bounds);
-        获取trashproduct的单例对象，对其总数增加
-        work(product,aimProductNum-trashNum);
-        increaseAge();
+        int failPosibility = rand.nextInt(8);
+        if(failPosibility<2) malfunction();
+        if(!breakDown) {
+            Random rand = new Random();
+            int bounds = (int) (aimProcessNum * 0.02);
+            int trashNum = rand.nextInt(bounds);
+            获取trashproduct的单例对象，对其总数增加
+            work(product, aimProcessNum - trashNum);
+            increaseAge();
+        }
+        else
+        {
+            System.out.println("This machine breaks down, please fix!");
+        }
     }
 }

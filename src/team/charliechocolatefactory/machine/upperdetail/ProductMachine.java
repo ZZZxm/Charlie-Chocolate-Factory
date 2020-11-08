@@ -10,14 +10,14 @@ import team.charliechocolatefactory.machine.functiondetail.ProcessMachine;
  * @date 2020/11/8 19:25
  */
 public abstract class ProductMachine extends ProcessMachine {
-    public ProductMachine(String type, String machineNum)
+    public ProductMachine(String type,String machineNum,double lifeYear,double lossCoefficient,int maxCapacity)
     {
-        super(type,machineNum);
+        super(type,machineNum,lifeYear,lossCoefficient,maxCapacity);
     }
 
-    public ProductMachine(String type,String machineNum,double age)
+    public ProductMachine(String type,String machineNum,double age,double lifeYear,double lossCoefficient,int maxCapacity)
     {
-        super(type,machineNum,age);
+        super(type,machineNum,age,lifeYear,lossCoefficient,maxCapacity);
     }
 
     @Override

@@ -1,15 +1,13 @@
 package team.charliechocolatefactory.machine;
 
+import java.util.Random;
+
 /**
  * @author Yuan.Cai
  * @project chocolateFactory
  * @classname Machine
  * @description This is the abstract base class of all the machines in the factory.
-                When a machine is constructed, you're required to provide 2 or 3 params.
-                Basic class Machine includes 4 private attributes,
-                only machineNum is allowed to change from outside once a machine is constructed.
-                Basic class Machine includes 1 protected attributes, which can be visited by subclasses,
-                default agingSpeed is 1 .
+                Basic class Machine includes 7 private attributes, 2 protected attributes.
  * @date 2020/11/7 19:55
  */
 public abstract class Machine {
@@ -25,38 +23,42 @@ public abstract class Machine {
      */
     private String machineNum;
     //machine service life, unit: year
-    private double age;
+    private double age=0;
     //maximum machine service life, unit: year
-    private double lifeYear;
+    private double lifeYear=20;
+    //the benchmark value of each lost life
+    private double lossCoefficient=0.5;
     //increased life of the machine after each operation, unit: year
-    protected double agingSpeed;
+    private double agingSpeed=0.5;
+    private int maxCapacity=500;
+    protected int aimProcessNum=0;
+    protected boolean breakDown=false;
 
-
-    /**
-     * 'Machine' construction case one:3 params
-     * @param type param1
-     * @param machineNum param2
-     */
     public Machine(String type,String machineNum)
     {
         this.type=type;
         this.machineNum=machineNum;
-        this.age=0;
-        this.agingSpeed=1;
     }
 
-    /**
-     * 'Machine' construction case two:4 params
-     * @param type param1
-     * @param machineNum param2
-     * @param age param3
-     */
-    public Machine(String type,String machineNum,double age)
+    public Machine(String type,String machineNum,double lifeYear,double lossCoefficient,int maxCapacity)
+    {
+        this.type=type;
+        this.machineNum=machineNum;
+        this.lifeYear=lifeYear;
+        this.lossCoefficient=lossCoefficient;
+        this.maxCapacity=maxCapacity;
+        this.agingSpeed=lossCoefficient;
+    }
+
+    public Machine(String type,String machineNum,double age,double lifeYear,double lossCoefficient,int maxCapacity)
     {
         this.type=type;
         this.machineNum=machineNum;
         this.age=age;
-        this.agingSpeed=1;
+        this.lifeYear=lifeYear;
+        this.lossCoefficient=lossCoefficient;
+        this.maxCapacity=maxCapacity;
+        this.agingSpeed=lossCoefficient;
     }
 
     /**
@@ -99,6 +101,36 @@ public abstract class Machine {
         return lifeYear;
     }
 
+    public double getLossCoefficient() {
+        return lossCoefficient;
+    }
+
+    public int getAimProcessNum() {
+        return aimProcessNum;
+    }
+
+    public int getMaxCapacity() {
+        return maxCapacity;
+    }
+
+    public boolean isBreakDown() {
+        return breakDown;
+    }
+
+    protected void malfunction(){
+        breakDown=true;
+    }
+
+    public void fix(){
+        breakDown=false;
+    }
+
+    public void maintenance(){
+        Random rand = new Random();
+        int ageLonged = rand.nextInt(5);
+        lifeYear=lifeYear+lifeYear*ageLonged*0.01;
+    }
+
     /**
      * setMachineNum: prevent incorrect numbering situations
      * @param machineNum only param
@@ -115,6 +147,24 @@ public abstract class Machine {
         age = age+agingSpeed;
         return age;
     }
+
+    public void setAimProcessNum(int aimProcessNum)
+    {
+        if(aimProcessNum> maxCapacity)
+        {
+            System.out.println("Exceed maxCapacity!");
+            return;
+        }
+        if(aimProcessNum<=0)
+        {
+            System.out.println("AimProcessNum must be a positive integer!");
+            return;
+        }
+        this.aimProcessNum =aimProcessNum;
+        //adjust the machine aging speed according to the target production number
+        this.agingSpeed=lossCoefficient+(1.0*aimProcessNum)/maxCapacity;
+    }
+
 
     /**
      * work process and consequence

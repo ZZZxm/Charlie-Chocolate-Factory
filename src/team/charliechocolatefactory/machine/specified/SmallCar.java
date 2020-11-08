@@ -12,15 +12,11 @@ import team.charliechocolatefactory.machine.functiondetail.TransportMachine;
 public class SmallCar extends TransportMachine {
     public SmallCar(String type, String machineNum)
     {
-        super(type,machineNum);
-        capacity=0;
-        maxCapacity=50;
+        super(type,machineNum,20,0.6,50);
     }
 
     public SmallCar(String type,String machineNum,double age)
     {
-        super(type,machineNum,age);
-        capacity=0;
-        maxCapacity=50;
+        super(type,machineNum,age,20,0.6,50);
     }
 }
