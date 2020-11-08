@@ -16,9 +16,7 @@ public abstract class Person {
 
     protected int age;
 
-    public enum Sex {MALE, FEMALE}
-
-    ;
+    public enum Sex {MALE, FEMALE};
 
     protected Sex sex;
 

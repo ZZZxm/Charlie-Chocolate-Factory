@@ -7,7 +7,7 @@ import team.charliechocolatefactory.person.staff.worker.Worker;
  * @author Brian.Z
  * @project chocolateFactory
  * @classname Manager
- * @description
+ * @description A manager is responsible for one department.
  * @date 2020/11/7 17:17
  */
 public class Manager extends Staff{

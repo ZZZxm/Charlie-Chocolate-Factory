@@ -6,7 +6,7 @@ import team.charliechocolatefactory.person.Person;
  * @author Brian.Z
  * @project chocolateFactory
  * @classname Stockholder
- * @description TODO
+ * @description
  * @date 2020/11/7 18:45
  */
 public class Stockholder extends Person {

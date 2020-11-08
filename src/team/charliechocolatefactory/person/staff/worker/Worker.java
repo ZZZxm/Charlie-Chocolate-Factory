@@ -10,7 +10,7 @@ import team.charliechocolatefactory.person.staff.Staff;
  * @description A low-level employee of a factory, attached to a department 工厂的底层员工，隶属于某个部门
  * @date 2020/11/7 16:55
  */
-public class Worker extends Staff {
+public abstract class Worker extends Staff {
 
     public Worker(String name, int age, Sex sex, int salary, Scene department) {
         super(name, age, sex, salary, department);
@@ -25,4 +25,7 @@ public class Worker extends Staff {
     public String toString() {
         return "class Worker extends Staff";
     }
+
+    /** work */
+    public abstract void work();
 }
