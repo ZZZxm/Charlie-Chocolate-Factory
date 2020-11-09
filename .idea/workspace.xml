@@ -42,7 +42,9 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -87,6 +89,7 @@
       <workItem from="1604824254697" duration="95000" />
       <workItem from="1604825144978" duration="2120000" />
       <workItem from="1604888491296" duration="1858000" />
+      <workItem from="1604921541281" duration="10380000" />
     </task>
     <servers />
   </component>
@@ -99,6 +102,10 @@
     </state>
     <state x="-1730" y="266" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/-2560.0.2048.1112@-2560.0.2048.1112" timestamp="1604733545000" />
     <state x="623" y="197" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1604817499070" />
+    <state x="472" y="297" width="631" height="239" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1604923711029">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="472" y="297" width="631" height="239" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1604923711029" />
     <state x="-1755" y="255" key="FileChooserDialogImpl" timestamp="1604723951991">
       <screen x="-2560" y="0" width="2048" height="1112" />
     </state>
@@ -111,5 +118,9 @@
       <screen x="-2560" y="0" width="2048" height="1112" />
     </state>
     <state x="-2345" y="171" key="SettingsEditor/0.0.1536.824/-2560.0.2048.1112@-2560.0.2048.1112" timestamp="1604726488112" />
+    <state x="449" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1604921540383">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="449" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1604921540383" />
   </component>
 </project>

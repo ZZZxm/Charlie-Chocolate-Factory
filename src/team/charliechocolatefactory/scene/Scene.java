@@ -1,4 +1,4 @@
-package team.charliechocolatefactory.site;
+package team.charliechocolatefactory.scene;
 
 import team.charliechocolatefactory.person.Person;
 import team.charliechocolatefactory.person.staff.GeneralManager;
@@ -7,11 +7,11 @@ import team.charliechocolatefactory.person.stockholder.Stockholder;
 /**
  * @author Brian.Z
  * @project chocolateFactory
- * @classname Site
+ * @classname Scene
  * @description The basic class of Site, each site has its own function
  * @date 2020/11/9 10:26
  */
-public abstract class Site {
+public abstract class Scene {
 
     /** location of this site */
     protected String location;
@@ -22,7 +22,7 @@ public abstract class Site {
     /** area of this site */
     protected double area;
 
-    public Site(String location, double cost, double area) {
+    public Scene(String location, double cost, double area) {
         this.location = location;
         this.cost = cost;
         this.area = area;
