@@ -23,6 +23,10 @@ public abstract class ProcessMachine extends Machine {
         super(type,machineNum,age,lifeYear,lossCoefficient,maxCapacity);
     }
 
+    /**
+     * universal working process of all the processMachines
+     * @param product a Product
+     */
     public void process(Product product)
     {
         if(breakDown)

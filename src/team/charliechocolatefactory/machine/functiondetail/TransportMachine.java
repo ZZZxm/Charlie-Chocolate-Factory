@@ -26,6 +26,11 @@ public abstract class TransportMachine extends Machine {
         return 0;
     }
 
+    /**
+     * universal working process of all the transportMachines
+     * @param product a Product
+     * @return a int
+     */
     public int transport(Product product)
     {
         work(product,aimProcessNum);

@@ -26,12 +26,15 @@ public abstract class Machine {
     private double age=0;
     //maximum machine service life, unit: year
     private double lifeYear=20;
-    //the benchmark value of each lost life
+    //the benchmark value of each increased age, unit: year
     private double lossCoefficient=0.5;
-    //increased life of the machine after each operation, unit: year
+    //increased age value of the machine after each operation, unit: year
     private double agingSpeed=0.5;
+    //maximum number of items produced (processed) by the machine at one time
     private int maxCapacity=500;
+    //the number of products the machine is set to produce at one time
     protected int aimProcessNum=0;
+    //indicating whether the machine is in malfunction
     protected boolean breakDown=false;
 
     public Machine(String type,String machineNum)
@@ -101,30 +104,55 @@ public abstract class Machine {
         return lifeYear;
     }
 
+    /**
+     * getLossCoefficient
+     * @return a double
+     */
     public double getLossCoefficient() {
         return lossCoefficient;
     }
 
+    /**
+     * getAimProcessNum
+     * @return a int
+     */
     public int getAimProcessNum() {
         return aimProcessNum;
     }
 
+    /**
+     * getMaxCapacity
+     * @return a int
+     */
     public int getMaxCapacity() {
         return maxCapacity;
     }
 
+    /**
+     * isBreakDown
+     * @return a boolean
+     */
     public boolean isBreakDown() {
         return breakDown;
     }
 
+    /**
+     * set breakDown to true, called when something wrong occurs
+     */
     protected void malfunction(){
         breakDown=true;
     }
 
+    /**
+     * set breakDown to false, called when fix work finishes
+     */
     public void fix(){
         breakDown=false;
     }
 
+    /**
+     * artificial maintenance of machinery to extend its service life
+     */
     public void maintenance(){
         Random rand = new Random();
         int ageLonged = rand.nextInt(5);
@@ -148,6 +176,11 @@ public abstract class Machine {
         return age;
     }
 
+    /**
+     * usually called before working, set the number of products the machine is to produce at one time
+     * default aimProcessNum is 0, so this function have to be called before first working
+     * @param aimProcessNum a int
+     */
     public void setAimProcessNum(int aimProcessNum)
     {
         if(aimProcessNum> maxCapacity)
@@ -164,7 +197,6 @@ public abstract class Machine {
         //adjust the machine aging speed according to the target production number
         this.agingSpeed=lossCoefficient+(1.0*aimProcessNum)/maxCapacity;
     }
-
 
     /**
      * work process and consequence
