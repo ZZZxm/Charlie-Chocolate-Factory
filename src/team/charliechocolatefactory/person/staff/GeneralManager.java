@@ -16,6 +16,11 @@ public class GeneralManager extends Staff{
     }
 
     @Override
+    public void moveTo(Scene dest) {
+        System.out.println("The general manager " + this.name + "moves to " + dest.toString());
+    }
+
+    @Override
     protected void setInitialAsset() {
         this.asset = 1000000;
     }

@@ -1,5 +1,6 @@
 package team.charliechocolatefactory.person.stockholder;
 
+import javafx.scene.Scene;
 import team.charliechocolatefactory.person.Person;
 
 /**
@@ -16,8 +17,14 @@ public class Stockholder extends Person {
     }
 
     @Override
-    protected void setInitialAsset() {
+    public void moveTo(Scene dest) {
+        this.location = dest;
+        System.out.println("The stockholder " + this.name + " moves to " + dest.toString());
+    }
 
+    @Override
+    protected void setInitialAsset() {
+        this.asset = 100000;
     }
 
     @Override

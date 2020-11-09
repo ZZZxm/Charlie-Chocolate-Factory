@@ -3,6 +3,7 @@ package team.charliechocolatefactory.person.staff;
 import java.util.UUID;
 
 import javafx.scene.Scene;
+import team.charliechocolatefactory.person.Scene;
 import team.charliechocolatefactory.person.Person;
 
 
@@ -21,7 +22,7 @@ public abstract class Staff extends Person {
     protected int salary;
 
     /** where he/she works at */
-    protected Scene department;
+    protected StaffArea department;
 
     /** 0: normal 1: suspended 2: fired */
     protected int state;
@@ -66,9 +67,6 @@ public abstract class Staff extends Person {
         return this.department;
     }
 
-    @Override
-    protected abstract void setInitialAsset();
-
     /**
      * @return allocate a unique UUID for every worker
      */
@@ -76,6 +74,14 @@ public abstract class Staff extends Person {
         String uuid = UUID.randomUUID().toString();
         return uuid.replaceAll("-", "");
     }
+
+    public void moveTo(Scene dest) {
+        this.location = dest;
+        System.out.println("The staff " + this.name + "moves to " + dest.toString());
+    }
+
+    @Override
+    protected abstract void setInitialAsset();
 
     @Override
     public String toString() {

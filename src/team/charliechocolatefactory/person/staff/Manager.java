@@ -19,10 +19,8 @@ public class Manager extends Staff{
     /**
      * Manager can hire workers for the department he/she is responsible for.
      */
-    public void hireWorker() {
-        if(true /* 该部门人未满 */) {
-            /* 加入员工 */
-        }
+    public void hireWorker(String name, Sex sex, int age, int salary) {
+        location.addWorker(new Worker(name, age, sex, salary, location);
     }
 
     /**
@@ -37,6 +35,11 @@ public class Manager extends Staff{
             System.out.println("The worker is not responsible to the manager.");
             return false;
         }
+    }
+
+    @Override
+    public void moveTo(Scene dest) {
+
     }
 
     @Override
