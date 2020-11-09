@@ -26,4 +26,10 @@ public abstract class TransportMachine extends Machine {
         运输操作
         return 0;
     }
+
+    public int work()
+    {
+        无指定产品运输操作
+        return 0;
+    }
 }
