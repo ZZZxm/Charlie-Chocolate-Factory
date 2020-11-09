@@ -23,31 +23,30 @@ public abstract class ProcessMachine extends Machine {
         super(type,machineNum,age,lifeYear,lossCoefficient,maxCapacity);
     }
 
-    /**
-     * universal working process of all the processMachines
-     * @param product a Product
-     */
-    public void process(Product product)
-    {
+    @Override
+    public int work(String productName) {
         if(breakDown)
         {
             System.out.println("This machine breaks down, please fix!");
-            return;
+            return 0;
         }
         Random rand = new Random();
         int failPosibility = rand.nextInt(8);
         if(failPosibility<2) malfunction();
         if(!breakDown) {
-            Random rand = new Random();
+            Random rand2 = new Random();
             int bounds = (int) (aimProcessNum * 0.02);
-            int trashNum = rand.nextInt(bounds);
+            int trashNum = rand2.nextInt(bounds);
             获取trashproduct的单例对象，对其总数增加
-            work(product, aimProcessNum - trashNum);
+            process(productName, aimProcessNum - trashNum);
             increaseAge();
         }
         else
         {
             System.out.println("This machine breaks down, please fix!");
+            return 0;
         }
     }
+
+    protected abstract void process(String productName,int productNum);
 }

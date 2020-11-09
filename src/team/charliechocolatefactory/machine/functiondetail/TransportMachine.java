@@ -22,18 +22,8 @@ public abstract class TransportMachine extends Machine {
     }
 
     @Override
-    public int work(Product product, int productNum) {
+    public int work(String productName) {
+        运输操作
         return 0;
-    }
-
-    /**
-     * universal working process of all the transportMachines
-     * @param product a Product
-     * @return a int
-     */
-    public int transport(Product product)
-    {
-        work(product,aimProcessNum);
-        return aimProcessNum;
     }
 }

@@ -21,7 +21,8 @@ public abstract class ProductMachine extends ProcessMachine {
     }
 
     @Override
-    public int work(Product product, int productNum) {
-        return 0;
+    protected void process(String productName, int productNum) {
+        生产操作
+        return;
     }
 }

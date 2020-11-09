@@ -21,7 +21,8 @@ public class WrapperMachine extends ProcessMachine {
     }
 
     @Override
-    public int work(Product product, int productNum) {
-        return 0;
+    protected void process(String productName, int productNum) {
+        包装操作
+        return;
     }
 }

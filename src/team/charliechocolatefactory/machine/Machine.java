@@ -199,8 +199,9 @@ public abstract class Machine {
     }
 
     /**
-     * work process and consequence
-     * @return a int representing the output of this work
+     * work process
+     * @param productName param1
+     * @return a int
      */
-    public abstract int work(Product product,int productNum);
+    public abstract int work(String productName);
 }
