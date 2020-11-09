@@ -26,7 +26,7 @@ public abstract class Person {
      * For visitors, it may determine if he/she can afford the fee.
      * For stockholders, it may be related to the factory's profit.
      */
-    protected int asset;
+    protected double asset;
 
     /**
      * show where the peron is
@@ -100,7 +100,6 @@ public abstract class Person {
 
     @Override
     public String toString() {
-        return "abstract class Person{ name = "
-                + this.name;
+        return "abstract class Person";
     }
 }

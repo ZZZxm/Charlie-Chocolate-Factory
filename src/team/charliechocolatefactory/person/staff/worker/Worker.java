@@ -28,4 +28,6 @@ public abstract class Worker extends Staff {
 
     /** work */
     public abstract void work();
+
+
 }

@@ -20,4 +20,8 @@ public class GeneralManager extends Staff{
         this.asset = 1000000;
     }
 
+    @Override
+    public String toString() {
+        return "class GeneralManager extends Staff";
+    }
 }

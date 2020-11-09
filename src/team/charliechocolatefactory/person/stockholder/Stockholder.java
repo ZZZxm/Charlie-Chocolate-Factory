@@ -19,4 +19,9 @@ public class Stockholder extends Person {
     protected void setInitialAsset() {
 
     }
+
+    @Override
+    public String toString() {
+        return "class Stockholder extends Person";
+    }
 }

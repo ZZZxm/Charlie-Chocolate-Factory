@@ -3,11 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="425325a1-c14b-4e98-b1fd-63d42a2af23b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/factory/CharlieFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/factory/CharlieFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/person/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/person/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/person/staff/GeneralManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/person/staff/GeneralManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/person/staff/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/person/staff/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/person/staff/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/person/staff/Staff.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/person/staff/worker/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/person/staff/worker/Worker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/person/stockholder/Stockholder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/person/stockholder/Stockholder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/person/visitor/Visitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/person/visitor/Visitor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +83,10 @@
       <workItem from="1604736162980" duration="9315000" />
       <workItem from="1604746094851" duration="605000" />
       <workItem from="1604759347162" duration="197000" />
-      <workItem from="1604817172586" duration="464000" />
+      <workItem from="1604817172586" duration="823000" />
+      <workItem from="1604824254697" duration="95000" />
+      <workItem from="1604825144978" duration="2120000" />
+      <workItem from="1604888491296" duration="1858000" />
     </task>
     <servers />
   </component>

@@ -79,7 +79,6 @@ public abstract class Staff extends Person {
 
     @Override
     public String toString() {
-        return "abstract class Staff{ id = "
-                + this.id;
+        return "abstract class Staff extends Person";
     }
 }

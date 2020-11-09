@@ -19,4 +19,9 @@ public class Visitor extends Person {
     protected void setInitialAsset() {
         this.asset = 1000;
     }
+
+    @Override
+    public String toString() {
+        return "class Visitor extends Person";
+    }
 }
