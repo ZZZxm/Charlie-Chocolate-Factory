@@ -27,7 +27,7 @@ public class Manager extends Staff{
      */
     public void hireWorker(String name, Sex sex, int age, int salary) {
 
-        department.addWorker(new Worker(name, age, sex, salary, this.department));
+        department.addWorker(name, age, sex, salary);
     }
 
     /**

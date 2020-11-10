@@ -19,4 +19,9 @@ public class WarehouseWorker extends Worker {
     public void work() {
         System.out.println("Warehouse Worker" + this.name + "is working.");
     }
+
+    @Override
+    public void rest() {
+        System.out.println("Warehouse Worker" + this.name + "goes to rest.");
+    }
 }

@@ -10,7 +10,7 @@ import team.charliechocolatefactory.scene.staffarea.StaffArea;
  * @description A low-level employee of a factory, attached to a department 工厂的底层员工，隶属于某个部门
  * @date 2020/11/7 16:55
  */
-public class Worker extends Staff {
+public abstract class Worker extends Staff {
 
     public Worker(String name, int age, Sex sex, int salary, StaffArea department) {
         super(name, age, sex, salary, department);
@@ -30,12 +30,8 @@ public class Worker extends Staff {
     }
 
     /** work */
-    public void work() {
-        System.out.println("The worker is working,");
-    }
+    public abstract void work();
 
     /** rest */
-    public void rest() {
-        System.out.println("The worker goes to rest.");
-    }
+    public abstract void rest();
 }
