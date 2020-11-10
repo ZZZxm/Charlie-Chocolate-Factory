@@ -8,7 +8,7 @@ package team.charliechocolatefactory.rawmaterial;
  * @author Ngae Zeh-ghau
  * @date 2020-11-09 20:48:19
  */
-public abstract class PackageMaterial extends RawMaterial{
+public class PackageMaterial extends RawMaterial{
 	
 	/**
 	 * ctor of PackageMaterial

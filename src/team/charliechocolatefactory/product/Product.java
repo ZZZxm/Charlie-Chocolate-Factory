@@ -1,6 +1,6 @@
 package team.charliechocolatefactory.product;
 import javafx.scene.Scene;
-import packageSource.Package;
+import team.charliechocolatefactory.rawmaterial.PackageMaterial;
 
 import java.util.ArrayList;
 
@@ -37,7 +37,7 @@ public abstract class Product {
      */
     public int state;
 
-    protected Package pack;
+    protected PackageMaterial pack;
 
     public ArrayList<String> ingredientList;
 

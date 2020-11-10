@@ -1,8 +1,8 @@
 package team.charliechocolatefactory.product.chocolateProduct;
 
 import javafx.scene.Scene;
-import packageSource.cup.Cup;
 import team.charliechocolatefactory.product.Product;
+import team.charliechocolatefactory.rawmaterial.Cup;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -28,7 +28,7 @@ public class ChocolateIceCream extends Product {
     @Override
     protected void packaging() {
         System.out.println("Start packaging Chocolate Ice-cream...");
-        super.pack = new Cup();
+        super.pack = new Cup(0);
         super.state = 2;
         System.out.println("Finish packaging.");
         super.state = 3;

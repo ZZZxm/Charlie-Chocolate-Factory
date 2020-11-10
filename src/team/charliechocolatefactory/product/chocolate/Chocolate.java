@@ -6,6 +6,7 @@ import team.charliechocolatefactory.product.Product;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import team.charliechocolatefactory.rawmaterial.*;
 
 /**
  * @author Kerr
@@ -48,7 +49,7 @@ public abstract class Chocolate extends Product {
      */
     public void packaging() {
         System.out.println("Start packaging" + this.productName + "...");
-        super.pack = new Bag();
+        super.pack = new Bag(0);
         super.state = 2;
         System.out.println("Finish packaging.");
         super.state = 3;
