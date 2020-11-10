@@ -16,8 +16,7 @@ public class DiningRoom extends StaffArea {
         super(location, cost, area);
     }
 
-    public DiningRoom(String location, double cost, double area, Manager newManager)
-    {
+    public DiningRoom(String location, double cost, double area, Manager newManager) {
         super(location, cost, area, newManager);
     }
 

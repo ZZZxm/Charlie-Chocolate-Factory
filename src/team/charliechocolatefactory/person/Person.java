@@ -1,7 +1,7 @@
 package team.charliechocolatefactory.person;
 
 
-import javafx.scene.Scene;
+import team.charliechocolatefactory.scene.Scene;
 
 /**
  * @author Brian.Z
@@ -90,7 +90,7 @@ public abstract class Person {
      * A person can move from one scene to another.
      * However, not everyone has access to every scene.
      */
-    public abstract void moveTo(Scene dest);
+    public abstract boolean moveTo(Scene dest);
 
     /**
      * set the initial asset of the person, which depends on what kind of person he/she is

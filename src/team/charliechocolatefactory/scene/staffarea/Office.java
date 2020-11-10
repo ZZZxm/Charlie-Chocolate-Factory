@@ -17,8 +17,7 @@ public class Office extends StaffArea {
         super(location, cost, area);
     }
 
-    public Office(String location, double cost, double area, Manager newManager)
-    {
+    public Office(String location, double cost, double area, Manager newManager) {
         super(location, cost, area, newManager);
     }
 

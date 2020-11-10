@@ -1,7 +1,7 @@
 package team.charliechocolatefactory.person.staff.worker;
 
-import javafx.scene.Scene;
 import team.charliechocolatefactory.person.staff.Staff;
+import team.charliechocolatefactory.scene.staffarea.StaffArea;
 
 /**
  * @author Brian.Z
@@ -12,10 +12,13 @@ import team.charliechocolatefactory.person.staff.Staff;
  */
 public class Worker extends Staff {
 
-    public Worker(String name, int age, Sex sex, int salary, Scene department) {
+    public Worker(String name, int age, Sex sex, int salary, StaffArea department) {
         super(name, age, sex, salary, department);
     }
 
+    /**
+     * set the initial asset of the worker
+     */
     @Override
     protected void setInitialAsset() {
         this.asset = 10000;
@@ -28,6 +31,11 @@ public class Worker extends Staff {
 
     /** work */
     public void work() {
-        System.out.println(this.name + "is working.");
+        System.out.println("The worker is working,");
+    }
+
+    /** rest */
+    public void rest() {
+        System.out.println("The worker goes to rest.");
     }
 }
