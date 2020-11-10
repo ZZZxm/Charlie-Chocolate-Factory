@@ -1,4 +1,4 @@
-package product.chocolate;
+package team.charliechocolatefactory.product.chocolate;
 
 import javafx.scene.Scene;
 
@@ -18,11 +18,13 @@ public class MatchaChocolate extends Chocolate {
     /**
      * @param loc
      */
-    public MatchaChocolate(Scene loc, double content) {
-        super("Matcha chocolate", loc, 18,8, 0.4);
-        this.matchaContent = matchaContent;
+    public MatchaChocolate(Scene loc) {
+        super("Matcha chocolate", loc, 18, 8, 0.4);
+        this.matchaContent = 0.2;
+        this.initIngredientList();
     }
 
+// methods
     /**
      * @return matcha's content
      */
@@ -37,4 +39,25 @@ public class MatchaChocolate extends Chocolate {
     public double getMatchaWieght(){
         return this.matchaContent * this.weight;
     }
+
+    /**
+     * initialize the ingredient list of matcha chocolate
+     */
+    @Override
+    protected void initIngredientList() {
+        super.ingredientList.add("CocoaBean");
+        super.ingredientList.add("Water");
+        super.ingredientList.add("Sugar");
+        super.ingredientList.add("Matcha");
+    }
+
+    /**
+     * override the to string method
+     * @return a String
+     */
+    @Override
+    public String toString(){
+        return "Subclass : Matcha Chocolate";
+    }
+
 }

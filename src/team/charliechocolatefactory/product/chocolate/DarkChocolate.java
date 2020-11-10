@@ -1,8 +1,6 @@
-package product.chocolate;
+package team.charliechocolatefactory.product.chocolate;
 
 import javafx.scene.Scene;
-import packageSource.bag.Bag;
-import product.Product;
 
 /**
  * @author Kerr
@@ -19,5 +17,24 @@ public class DarkChocolate extends Chocolate{
      */
     public DarkChocolate( Scene loc) {
         super("Dark chocolate", loc, 18,10, 0.78);
+        this.initIngredientList();
+    }
+
+    /**
+     * initialize the ingredient list of dark chocolate.
+     */
+    @Override
+    protected void initIngredientList() {
+        super.ingredientList.add("CocoaBean");
+        super.ingredientList.add("Water");
+    }
+
+    /**
+     * override the toString method
+     * @return
+     */
+    @Override
+    public String toString(){
+        return "subclass : DarkChocolate";
     }
 }

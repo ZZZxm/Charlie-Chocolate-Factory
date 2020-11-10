@@ -1,8 +1,8 @@
-package product.chocolateProduct;
+package team.charliechocolatefactory.product.chocolateProduct;
 
 import javafx.scene.Scene;
 import packageSource.box.Box;
-import product.Product;
+import team.charliechocolatefactory.product.Product;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -27,6 +27,7 @@ public class ChocolateCookie extends Product {
     public ChocolateCookie(Scene loc, Shape shape) {
         super("Chocolate Cookie", loc, 6, 7);
         this.shape = shape;
+        this.initIngredientList();
     }
 
 // methods
@@ -45,10 +46,33 @@ public class ChocolateCookie extends Product {
     }
 
     /**
+     * initialize the ingredient list of chocolate cookie
+     */
+    @Override
+    protected void initIngredientList() {
+        super.ingredientList.add("DarkChocolate");
+        super.ingredientList.add("Butter");
+        super.ingredientList.add("Egg");
+        super.ingredientList.add("Flour");
+        super.ingredientList.add("Milk");
+        super.ingredientList.add("Sugar");
+        super.ingredientList.add("Water");
+    }
+
+    /**
      * @return the shape of cookie
      */
     public Shape getShape(){
         return this.shape;
+    }
+
+    /**
+     * override the toString method
+     * @return
+     */
+    @Override
+    public String toString(){
+        return "subclass : ChocolateCookie";
     }
 
 }

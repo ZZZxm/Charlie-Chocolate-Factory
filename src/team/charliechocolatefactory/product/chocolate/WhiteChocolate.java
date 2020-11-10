@@ -1,4 +1,4 @@
-package product.chocolate;
+package team.charliechocolatefactory.product.chocolate;
 
 import javafx.scene.Scene;
 
@@ -17,5 +17,27 @@ public class WhiteChocolate extends Chocolate{
      */
     public WhiteChocolate(Scene loc) {
         super("White chocolate", loc, 12,5, 0.1);
+        this.initIngredientList();
+    }
+
+
+    /**
+     * initialize the ingredient list of white chocolate
+     */
+    @Override
+    protected void initIngredientList() {
+        super.ingredientList.add("Water");
+        super.ingredientList.add("CocoaBean");
+        super.ingredientList.add("Sugar");
+        return;
+    }
+
+    /**
+     * override the toString method
+     * @return
+     */
+    @Override
+    public String toString(){
+        return "subclass : WhiteChocolate";
     }
 }

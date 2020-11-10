@@ -1,4 +1,4 @@
-package product.chocolate;
+package team.charliechocolatefactory.product.chocolate;
 
 import javafx.scene.Scene;
 
@@ -18,9 +18,10 @@ public class MilkChocolate extends Chocolate {
     /**
      * @param loc
      */
-    public MilkChocolate(Scene loc, double content) {
+    public MilkChocolate(Scene loc) {
         super("Milk chocolate", loc, 18,15, 0.3);
-        this.milkContent = milkContent;
+        this.milkContent = 0.2;
+        this.initIngredientList();
     }
 
     /**
@@ -36,5 +37,24 @@ public class MilkChocolate extends Chocolate {
      */
     public double getMilkWeight(){
         return this.milkContent * this.weight;
+    }
+
+    /**
+     * initialize the ingredient list of the milk chocolate
+     */
+    @Override
+    protected void initIngredientList() {
+        super.ingredientList.add("CocoaBean");
+        super.ingredientList.add("Sugar");
+        super.ingredientList.add("Milk");
+    }
+
+    /**
+     * override the toString method
+     * @return
+     */
+    @Override
+    public String toString(){
+        return "subclass : Milk Chocolate";
     }
 }

@@ -1,10 +1,10 @@
-package product.chocolate;
+package team.charliechocolatefactory.product.chocolate;
 
 import javafx.scene.Scene;
-import packageSource.bag.Bag;
-import product.Product;
+import team.charliechocolatefactory.product.Product;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -14,7 +14,7 @@ import java.util.Date;
  * @description the basic class of chocolate
  * @date 2020/11/8 15:55
  */
-public class Chocolate extends Product {
+public abstract class Chocolate extends Product {
 
 //fields
     /**
@@ -26,6 +26,7 @@ public class Chocolate extends Product {
      * white chocolate -> 0.1
      */
     public double cocoaContent;
+
 
 //constructor
     /**
@@ -57,5 +58,10 @@ public class Chocolate extends Product {
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
         super.setProducedDate(df.format(day));
         return;
+    }
+
+    @Override
+    public String toString(){
+        return "Basic class : Chocolate";
     }
 }

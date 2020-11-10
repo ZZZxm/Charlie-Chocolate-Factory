@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="425325a1-c14b-4e98-b1fd-63d42a2af23b" name="Default Changelist" comment="" />
+    <list default="true" id="425325a1-c14b-4e98-b1fd-63d42a2af23b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolate/Chocolate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolate/Chocolate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolate/DarkChocolate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolate/DarkChocolate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolate/MatchaChocolate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolate/MatchaChocolate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolate/MilkChocolate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolate/MilkChocolate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolate/SandwichChocolate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolate/SandwichChocolate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolate/WhiteChocolate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolate/WhiteChocolate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolateProduct/ChocolateCake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolateProduct/ChocolateCake.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolateProduct/ChocolateCookie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolateProduct/ChocolateCookie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolateProduct/ChocolateIceCream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolateProduct/ChocolateIceCream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolateProduct/ChocolateWafer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolateProduct/ChocolateWafer.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,63 +28,20 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1jwk9QmKiY1N4qamc7TyRqF2WJt" />
-  <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="untitled104" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="untitled104" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="untitled104" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="untitled104" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="untitled104" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="company" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
@@ -95,7 +66,33 @@
       <option name="presentableId" value="Default" />
       <updated>1604722389512</updated>
       <workItem from="1604722393530" duration="1000" />
+      <workItem from="1604927702168" duration="8032000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="533" y="162" key="#com.intellij.ide.util.MemberChooser" timestamp="1605000319665">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="533" y="162" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1605000319665" />
+    <state x="553" y="358" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1604929241289">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="553" y="358" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1440.900@0.0.1440.900" timestamp="1604929241289" />
+    <state x="412" y="339" width="619" height="225" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1604999782464">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="412" y="339" width="619" height="225" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1440.900@0.0.1440.900" timestamp="1604999782464" />
+    <state x="374" y="284" key="com.intellij.ide.util.TipDialog" timestamp="1604927705990">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="374" y="284" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1604927705990" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1604998554057">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1604998554057" />
   </component>
 </project>

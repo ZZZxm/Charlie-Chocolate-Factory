@@ -1,8 +1,8 @@
-package product.chocolateProduct;
+package team.charliechocolatefactory.product.chocolateProduct;
 
 import javafx.scene.Scene;
 import packageSource.box.Box;
-import product.Product;
+import team.charliechocolatefactory.product.Product;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -27,6 +27,7 @@ public class ChocolateCake extends Product {
     public ChocolateCake( Scene loc, int size) {
         super("Chocolate Cake", loc, 1, size*size*100);
         this.size = size;
+        this.initIngredientList();
     }
 
 // methods
@@ -44,10 +45,36 @@ public class ChocolateCake extends Product {
         return;
     }
 
+// methods
+    /**
+     * initialize the ingredient list of chocolate cake
+     */
+    @Override
+    protected void initIngredientList() {
+        super.ingredientList.add("DarkChocolate");
+        super.ingredientList.add("Water");
+        super.ingredientList.add("Sugar");
+        super.ingredientList.add("Milk");
+        super.ingredientList.add("Egg");
+        super.ingredientList.add("Flour");
+        super.ingredientList.add("Butter");
+        super.ingredientList.add("EdibleGoldLeaf");
+    }
+
     /**
      * @return cake's size
      */
     public int getSize(){
         return this.size;
     }
+
+    /**
+     * override the toString method
+     * @return
+     */
+    @Override
+    public String toString(){
+        return "subclass : ChocolateCake";
+    }
+
 }

@@ -1,6 +1,8 @@
-package product;
+package team.charliechocolatefactory.product;
 import javafx.scene.Scene;
 import packageSource.Package;
+
+import java.util.ArrayList;
 
 /**
  * @author Kerr
@@ -14,8 +16,6 @@ public abstract class Product {
 // fields
 
     protected String productName;
-
-    protected int amount;
 
     protected String producedDate; // yyyy-mm-dd
 
@@ -39,6 +39,8 @@ public abstract class Product {
 
     protected Package pack;
 
+    public ArrayList<String> ingredientList;
+
 // constructor
 
     /**
@@ -50,10 +52,10 @@ public abstract class Product {
         this.productName = name;
         this.location = loc;
         this.shelfLife = shelfLife;
-        this.amount = 0;
         this.producedDate= null;
         this.state = 0;
         this.weight = weight;
+        this.ingredientList = new ArrayList<String>();
     }
 
 // methods
@@ -73,21 +75,6 @@ public abstract class Product {
      */
     protected String getName(){
         return this.productName;
-    }
-
-    /**
-     * @param amount the amount of the product
-     */
-    protected void setAmount(int amount){
-        this.amount = amount;
-        return;
-    }
-
-    /**
-     * @return the amount of the product
-     */
-    protected int getAmount(){
-        return this.amount;
     }
 
     /**
@@ -127,8 +114,13 @@ public abstract class Product {
      * @param date template yyyy-mm-dd
      */
     protected void setProducedDate(String date){
-        this.producedDate = date;
-        return;
+        if(this.producedDate==null){
+            this.producedDate = date;
+            return;
+        }
+        else{
+            System.out.println("Warning! The producedDate mustn't be modified after the product being produced!");
+        }
     }
 
     /**
@@ -154,8 +146,6 @@ public abstract class Product {
         return this.shelfLife;
     }
 
-    // package the product by modifying the field -> pack
-    protected abstract void packaging();
 
     /**
      * set the weight of this product's single item
@@ -172,6 +162,16 @@ public abstract class Product {
     protected int getWeight(){
         return this.weight;
     }
+
+    /**
+     * package the product by modifying the field -> pack
+     */
+    protected abstract void packaging();
+
+    /**
+     * initialize the ingredient list of the product
+     */
+    protected abstract void initIngredientList();
 
     @Override
     public String toString(){

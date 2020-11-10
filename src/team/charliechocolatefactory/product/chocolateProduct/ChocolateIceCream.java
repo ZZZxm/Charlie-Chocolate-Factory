@@ -1,8 +1,8 @@
-package product.chocolateProduct;
+package team.charliechocolatefactory.product.chocolateProduct;
 
 import javafx.scene.Scene;
 import packageSource.cup.Cup;
-import product.Product;
+import team.charliechocolatefactory.product.Product;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -22,6 +22,7 @@ public class ChocolateIceCream extends Product {
      */
     public ChocolateIceCream(Scene loc) {
         super("Chocolate Ice-cream", loc, 12, 200);
+        this.initIngredientList();
     }
 
     @Override
@@ -36,5 +37,25 @@ public class ChocolateIceCream extends Product {
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
         super.setProducedDate(df.format(day));
         return;
+    }
+
+    /**
+     * initialize the ingredient list of chocolate ice-cream
+     */
+    @Override
+    protected void initIngredientList() {
+        super.ingredientList.add("DarkChocolate");
+        super.ingredientList.add("Milk");
+        super.ingredientList.add("Sugar");
+        super.ingredientList.add("Water");
+    }
+
+    /**
+     * override the toString method
+     * @return
+     */
+    @Override
+    public String toString(){
+        return "subclass : ChocolateIceCream";
     }
 }
