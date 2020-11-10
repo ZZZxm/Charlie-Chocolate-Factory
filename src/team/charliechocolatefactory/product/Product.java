@@ -169,9 +169,20 @@ public abstract class Product {
     }
 
     /**
+     * produce the product
+     */
+    public void producing(){
+        System.out.println("Start producing "+this.productName+"...");
+        this.state=0;
+        System.out.println("Finish producing "+this.productName+".");
+        this.state=1;
+        return;
+    }
+
+    /**
      * package the product by modifying the field -> pack
      */
-    protected abstract void packaging();
+    public abstract void packaging();
 
     /**
      * initialize the ingredient list of the product

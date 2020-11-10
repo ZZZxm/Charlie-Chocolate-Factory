@@ -60,5 +60,4 @@ public abstract class Chocolate extends Product {
         super.setProducedDate(df.format(day));
         return;
     }
-
 }
