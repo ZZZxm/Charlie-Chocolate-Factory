@@ -5,11 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolate/Chocolate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolate/Chocolate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolateProduct/ChocolateCake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolateProduct/ChocolateCake.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolateProduct/ChocolateCookie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolateProduct/ChocolateCookie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolateProduct/ChocolateIceCream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolateProduct/ChocolateIceCream.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolateProduct/ChocolateWafer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolateProduct/ChocolateWafer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/rawmaterial/PackageMaterial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/rawmaterial/PackageMaterial.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

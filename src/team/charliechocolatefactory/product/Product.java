@@ -95,6 +95,11 @@ public abstract class Product {
     }
 
     /**
+     * this product is in the next state.
+     */
+    protected void gotoNextState(){ this.state++; }
+
+    /**
      * the product is delivered from location to dest
      * @param dest the destination
      */
@@ -173,8 +178,4 @@ public abstract class Product {
      */
     protected abstract void initIngredientList();
 
-    @Override
-    public String toString(){
-        return "abstract class : Product";
-    }
 }

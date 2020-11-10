@@ -61,8 +61,4 @@ public abstract class Chocolate extends Product {
         return;
     }
 
-    @Override
-    public String toString(){
-        return "Basic class : Chocolate";
-    }
 }
