@@ -25,29 +25,29 @@ public abstract class ProcessMachine extends Machine {
     }
 
     @Override
-    public int work(Product product) {
+    protected int work(Product product) {
         if(breakDown)
         {
-            System.out.println("This machine breaks down, please fix!");
+            System.out.println("This machine can't work due to a malfunction, please fix!\n");
             return 0;
         }
         Random rand = new Random();
-        int failPosibility = rand.nextInt(8);
-        if(failPosibility<2) malfunction();
+        int failPossibility = rand.nextInt(8);
+        if(failPossibility<2) malfunction();
         if(!breakDown) {
             Random rand2 = new Random();
             int bounds = (int) (aimProcessNum * 0.02);
             int trashNum = rand2.nextInt(bounds);
-            // TODO 获取trashproduct的单例对象，对其总数增加
+            // TODO 返回的值是成功产出产品数
             process(product, aimProcessNum - trashNum);
             increaseAge();
+            return aimProcessNum - trashNum;
         }
         else
         {
-            System.out.println("This machine breaks down, please fix!");
+            System.out.println("This machine can't work due to a malfunction, please fix!\n");
             return 0;
         }
-        return 1;
     }
 
     protected abstract void process(Product product,int productNum);

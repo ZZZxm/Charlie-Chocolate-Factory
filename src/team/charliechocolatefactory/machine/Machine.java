@@ -142,13 +142,22 @@ public abstract class Machine {
      */
     protected void malfunction(){
         breakDown=true;
+        System.out.println("Oh no! "+type+machineNum+" breaks down! Please fix!\n");
     }
 
     /**
      * set breakDown to false, called when fix work finishes
      */
     public void fix(){
-        breakDown=false;
+        if(breakDown)
+        {
+            breakDown=false;
+            System.out.println("Fix finished, "+type+machineNum+" can work again!\n");
+        }
+        else
+        {
+            System.out.println("There is nothing to be fixed.\n");
+        }
     }
 
     /**
@@ -158,6 +167,7 @@ public abstract class Machine {
         Random rand = new Random();
         int ageLonged = rand.nextInt(5);
         lifeYear=lifeYear+lifeYear*ageLonged*0.01;
+        System.out.println("Maintenance work is completed, and the life of "+type+machineNum+" is extended to "+lifeYear+" years.\n");
     }
 
     /**
@@ -166,6 +176,7 @@ public abstract class Machine {
      */
     public void setMachineNum(String machineNum) {
         this.machineNum = machineNum;
+        System.out.println("The code number of the machine is changed to "+machineNum+".\n");
     }
 
     /**
@@ -174,6 +185,12 @@ public abstract class Machine {
      */
     public double increaseAge() {
         age = age+agingSpeed;
+        System.out.println("The age of "+type+machineNum+" increases to "+age+" years.\n");
+        if(age==lifeYear)
+        {
+            System.out.println(type+machineNum+" has reached its end life.\n");
+            System.out.println("Please maintenance "+type+machineNum+" or change a machine to run next time.\n");
+        }
         return age;
     }
 
@@ -186,17 +203,19 @@ public abstract class Machine {
     {
         if(aimProcessNum> maxCapacity)
         {
-            System.out.println("Exceed maxCapacity!");
+            System.out.println("Exceed maxCapacity!\n");
             return;
         }
         if(aimProcessNum<=0)
         {
-            System.out.println("AimProcessNum must be a positive integer!");
+            System.out.println("AimProcessNum must be a positive integer!\n");
             return;
         }
         this.aimProcessNum =aimProcessNum;
         //adjust the machine aging speed according to the target production number
         this.agingSpeed=lossCoefficient+(1.0*aimProcessNum)/maxCapacity;
+        System.out.println("Set aimProcessNum to "+aimProcessNum+".\n");
+        System.out.println("The agingSpeed of "+type+machineNum+" changes to"+agingSpeed+".\n");
     }
 
     /**
@@ -204,5 +223,26 @@ public abstract class Machine {
      * @param product param1
      * @return a int
      */
-    public abstract int work(Product product);
+    protected abstract int work(Product product);
+
+    /**
+     * run process
+     * @param product a Product
+     * @return a int representing output product numbers
+     */
+    public int run(Product product)
+    {
+        double virtualAge=age+agingSpeed;
+        if(virtualAge>lifeYear)
+        {
+            System.out.println(type+machineNum+"'s remaining life is not sufficient to support this operation.\n");
+            System.out.println("Please maintenance "+type+machineNum+" or change a machine to run.\n");
+            return 0;
+        }
+        else
+        {
+            System.out.println(type+machineNum+" starts to tun:\n");
+            return work(product);
+        }
+    }
 }

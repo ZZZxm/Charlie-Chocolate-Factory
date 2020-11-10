@@ -23,12 +23,12 @@ public abstract class TransportMachine extends Machine {
     }
 
     @Override
-    public int work(Product product) {
+    protected int work(Product product) {
         运输操作
         return 0;
     }
 
-    public int work()
+    protected int work()
     {
         无指定产品运输操作
         return 0;

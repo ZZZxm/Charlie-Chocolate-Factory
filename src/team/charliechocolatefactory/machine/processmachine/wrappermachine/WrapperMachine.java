@@ -23,7 +23,6 @@ public class WrapperMachine extends ProcessMachine {
 
     @Override
     protected void process(Product product, int productNum) {
-        System.out.println("Wrapper finished!");
         product.p
         return;
     }
