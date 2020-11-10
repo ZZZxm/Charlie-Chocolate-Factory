@@ -1,4 +1,4 @@
-package team.charliechocolatefactory.machine.functiondetail;
+package team.charliechocolatefactory.machine.transportmachine;
 
 import team.charliechocolatefactory.machine.Machine;
 
@@ -22,7 +22,7 @@ public abstract class TransportMachine extends Machine {
     }
 
     @Override
-    public int work(String productName) {
+    public int work(Product product) {
         运输操作
         return 0;
     }

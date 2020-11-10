@@ -1,6 +1,6 @@
-package team.charliechocolatefactory.machine.specified;
+package team.charliechocolatefactory.machine.processmachine.wrappermachine;
 
-import team.charliechocolatefactory.machine.upperdetail.WrapperMachine;
+import team.charliechocolatefactory.machine.processmachine.wrappermachine.WrapperMachine;
 
 /**
  * @author Yuan.Cai

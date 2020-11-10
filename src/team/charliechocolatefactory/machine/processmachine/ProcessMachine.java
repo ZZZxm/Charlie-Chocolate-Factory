@@ -1,4 +1,4 @@
-package team.charliechocolatefactory.machine.functiondetail;
+package team.charliechocolatefactory.machine.processmachine;
 
 import team.charliechocolatefactory.machine.Machine;
 
@@ -24,7 +24,7 @@ public abstract class ProcessMachine extends Machine {
     }
 
     @Override
-    public int work(String productName) {
+    public int work(Product product) {
         if(breakDown)
         {
             System.out.println("This machine breaks down, please fix!");
@@ -37,8 +37,8 @@ public abstract class ProcessMachine extends Machine {
             Random rand2 = new Random();
             int bounds = (int) (aimProcessNum * 0.02);
             int trashNum = rand2.nextInt(bounds);
-            获取trashproduct的单例对象，对其总数增加
-            process(productName, aimProcessNum - trashNum);
+            // TODO 获取trashproduct的单例对象，对其总数增加
+            process(product, aimProcessNum - trashNum);
             increaseAge();
         }
         else
@@ -46,7 +46,8 @@ public abstract class ProcessMachine extends Machine {
             System.out.println("This machine breaks down, please fix!");
             return 0;
         }
+        return 1;
     }
 
-    protected abstract void process(String productName,int productNum);
+    protected abstract void process(Product product,int productNum);
 }

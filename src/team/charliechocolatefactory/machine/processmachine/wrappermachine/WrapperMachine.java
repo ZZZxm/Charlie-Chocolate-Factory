@@ -1,6 +1,6 @@
-package team.charliechocolatefactory.machine.upperdetail;
+package team.charliechocolatefactory.machine.processmachine.wrappermachine;
 
-import team.charliechocolatefactory.machine.functiondetail.ProcessMachine;
+import team.charliechocolatefactory.machine.processmachine.ProcessMachine;
 
 /**
  * @author Yuan.Cai
@@ -21,8 +21,8 @@ public class WrapperMachine extends ProcessMachine {
     }
 
     @Override
-    protected void process(String productName, int productNum) {
-        包装操作
+    protected void process(Product product, int productNum) {
+        // TODO 包装操作
         return;
     }
 }

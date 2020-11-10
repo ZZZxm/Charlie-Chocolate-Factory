@@ -203,5 +203,5 @@ public abstract class Machine {
      * @param productName param1
      * @return a int
      */
-    public abstract int work(String productName);
+    public abstract int work(Product product);
 }

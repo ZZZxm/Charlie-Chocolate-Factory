@@ -1,6 +1,6 @@
-package team.charliechocolatefactory.machine.upperdetail;
+package team.charliechocolatefactory.machine.processmachine.productmachine;
 
-import team.charliechocolatefactory.machine.functiondetail.ProcessMachine;
+import team.charliechocolatefactory.machine.processmachine.ProcessMachine;
 
 /**
  * @author Yuan.Cai
@@ -21,7 +21,7 @@ public abstract class ProductMachine extends ProcessMachine {
     }
 
     @Override
-    protected void process(String productName, int productNum) {
+    protected void process(Product product, int productNum) {
         生产操作
         return;
     }
