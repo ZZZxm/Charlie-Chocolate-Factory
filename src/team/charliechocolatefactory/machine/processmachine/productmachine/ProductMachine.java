@@ -23,7 +23,7 @@ public abstract class ProductMachine extends ProcessMachine {
 
     @Override
     protected void process(Product product, int productNum) {
-        product.gotoNextState();
+        product.producing();
         return;
     }
 }

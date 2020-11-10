@@ -23,7 +23,7 @@ public class WrapperMachine extends ProcessMachine {
 
     @Override
     protected void process(Product product, int productNum) {
-        product.p
+        product.packaging();
         return;
     }
 }
