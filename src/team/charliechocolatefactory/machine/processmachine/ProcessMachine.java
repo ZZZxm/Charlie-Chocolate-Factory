@@ -1,6 +1,7 @@
 package team.charliechocolatefactory.machine.processmachine;
 
 import team.charliechocolatefactory.machine.Machine;
+import team.charliechocolatefactory.product.Product;
 
 import java.util.Random;
 

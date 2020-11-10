@@ -1,6 +1,7 @@
 package team.charliechocolatefactory.machine.processmachine.wrappermachine;
 
 import team.charliechocolatefactory.machine.processmachine.ProcessMachine;
+import team.charliechocolatefactory.product.Product;
 
 /**
  * @author Yuan.Cai
@@ -22,7 +23,8 @@ public class WrapperMachine extends ProcessMachine {
 
     @Override
     protected void process(Product product, int productNum) {
-        // TODO 包装操作
+        System.out.println("Wrapper finished!");
+        product.p
         return;
     }
 }

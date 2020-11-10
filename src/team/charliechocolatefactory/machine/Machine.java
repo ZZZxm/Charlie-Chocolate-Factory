@@ -1,4 +1,5 @@
 package team.charliechocolatefactory.machine;
+import team.charliechocolatefactory.product.Product;
 
 import java.util.Random;
 
@@ -200,7 +201,7 @@ public abstract class Machine {
 
     /**
      * work process
-     * @param productName param1
+     * @param product param1
      * @return a int
      */
     public abstract int work(Product product);
