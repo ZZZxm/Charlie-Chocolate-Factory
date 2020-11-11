@@ -20,6 +20,10 @@ public class Alchohol extends FoodMaterial {
 		super(initialQuant, initialExpireTime, State.LIQUID);
 	}
 
+	public Alchohol() {
+		this(1, 1);
+	}
+
 	@Override
 	public boolean process() {
 		/*

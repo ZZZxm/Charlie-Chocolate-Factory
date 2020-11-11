@@ -1,6 +1,8 @@
 package team.charliechocolatefactory.product.chocolate;
 
-import javafx.scene.Scene;
+import team.charliechocolatefactory.rawmaterial.CocoaBean;
+import team.charliechocolatefactory.rawmaterial.Milk;
+import team.charliechocolatefactory.rawmaterial.Sugar;
 
 /**
  * @author Kerr
@@ -12,15 +14,12 @@ import javafx.scene.Scene;
 public class MilkChocolate extends Chocolate {
 
 //fields
-    public double milkContent;
+    protected double milkContent;
 
 //constructor
-    /**
-     * @param loc
-     */
-    public MilkChocolate(Scene loc) {
-        super("Milk chocolate", loc, 18,15, 0.3);
-        this.milkContent = 0.2;
+    public MilkChocolate() {
+        super("Milk chocolate", 18,15, 0.3);
+        this.milkContent = 0.4;
         this.initIngredientList();
     }
 
@@ -44,9 +43,9 @@ public class MilkChocolate extends Chocolate {
      */
     @Override
     protected void initIngredientList() {
-        super.ingredientList.add("CocoaBean");
-        super.ingredientList.add("Sugar");
-        super.ingredientList.add("Milk");
+        super.ingredientList.add(new CocoaBean());
+        super.ingredientList.add(new Sugar());
+        super.ingredientList.add(new Milk());
     }
 
     /**

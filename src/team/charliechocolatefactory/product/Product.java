@@ -1,6 +1,8 @@
 package team.charliechocolatefactory.product;
-import javafx.scene.Scene;
+
 import team.charliechocolatefactory.rawmaterial.PackageMaterial;
+import team.charliechocolatefactory.rawmaterial.RawMaterial;
+import team.charliechocolatefactory.scene.Scene;
 
 import java.util.ArrayList;
 
@@ -21,8 +23,6 @@ public abstract class Product {
 
     protected int shelfLife; // how many month
 
-    public Scene location;
-
     protected int weight; // weight of single item, in gram
 
     /**
@@ -35,27 +35,25 @@ public abstract class Product {
      *  6 -> delivering
      *  ...
      */
-    public int state;
+    protected int state;
 
     protected PackageMaterial pack;
 
-    public ArrayList<String> ingredientList;
+    public ArrayList<RawMaterial> ingredientList;
 
 // constructor
 
     /**
      * @param name
-     * @param loc
      * @param shelfLife how many month
      */
-    public Product(String name, Scene loc, int shelfLife, int weight){
+    public Product(String name, int shelfLife, int weight){
         this.productName = name;
-        this.location = loc;
         this.shelfLife = shelfLife;
         this.producedDate= null;
         this.state = 0;
         this.weight = weight;
-        this.ingredientList = new ArrayList<String>();
+        this.ingredientList = new ArrayList<RawMaterial>();
     }
 
 // methods
@@ -73,24 +71,14 @@ public abstract class Product {
      *
      * @return product's name
      */
-    protected String getName(){
+    public String getName(){
         return this.productName;
-    }
-
-    /**
-     * set the state of the product
-     *
-     * @param state
-     */
-    protected void setState(int state){
-        this.state = state;
-        return;
     }
 
     /**
      * @return the state of the product
      */
-    protected int getState(){
+    public int getState(){
         return state;
     }
 
@@ -98,22 +86,6 @@ public abstract class Product {
      * this product is in the next state.
      */
     protected void gotoNextState(){ this.state++; }
-
-    /**
-     * the product is delivered from location to dest
-     * @param dest the destination
-     */
-    protected void deliveredTo(Scene dest){
-        this.location = dest;
-        return;
-    }
-
-    /**
-     * @return the location of the product
-     */
-    protected Scene getLocation(){
-        return this.location;
-    }
 
     /**
      * @param date template yyyy-mm-dd
@@ -131,7 +103,7 @@ public abstract class Product {
     /**
      * @return the producedDate of the product
      */
-    protected String getProducedDate(){
+    public String getProducedDate(){
         return this.producedDate;
     }
 
@@ -147,7 +119,7 @@ public abstract class Product {
     /**
      * @return the shelf life of the product
      */
-    protected int getShelfLife(){
+    public int getShelfLife(){
         return this.shelfLife;
     }
 
@@ -164,7 +136,7 @@ public abstract class Product {
     /**
      * @return the weight of this product's single item, in gram
      */
-    protected int getWeight(){
+    public int getWeight(){
         return this.weight;
     }
 

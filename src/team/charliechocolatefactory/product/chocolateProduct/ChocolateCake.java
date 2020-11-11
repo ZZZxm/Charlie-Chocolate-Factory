@@ -1,8 +1,7 @@
 package team.charliechocolatefactory.product.chocolateProduct;
 
-import javafx.scene.Scene;
 import team.charliechocolatefactory.product.Product;
-import team.charliechocolatefactory.rawmaterial.Box;
+import team.charliechocolatefactory.rawmaterial.*;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -18,26 +17,27 @@ import java.util.Date;
 public class ChocolateCake extends Product {
 
 // fields
-    public int size; //how many inches is its radius
+    protected int size; //how many inches is its radius
 
 //constructor
     /**
-     * @param loc
+     * @param size
      */
-    public ChocolateCake( Scene loc, int size) {
-        super("Chocolate Cake", loc, 1, size*size*100);
+    public ChocolateCake(int size) {
+        super("Chocolate Cake", 1, size*size*100);
         this.size = size;
         this.initIngredientList();
     }
 
 // methods
     @Override
-    protected void packaging() {
+    public void packaging() {
+        super.gotoNextState();
         System.out.println("Start packaging Chocolate Cake...");
         super.pack = new Box(0);
-        super.state = 2;
+        super.gotoNextState();
         System.out.println("Finish packaging.");
-        super.state = 3;
+        super.gotoNextState();
 
         Date day=new Date();
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
@@ -51,14 +51,14 @@ public class ChocolateCake extends Product {
      */
     @Override
     protected void initIngredientList() {
-        super.ingredientList.add("DarkChocolate");
-        super.ingredientList.add("Water");
-        super.ingredientList.add("Sugar");
-        super.ingredientList.add("Milk");
-        super.ingredientList.add("Egg");
-        super.ingredientList.add("Flour");
-        super.ingredientList.add("Butter");
-        super.ingredientList.add("EdibleGoldLeaf");
+        super.ingredientList.add(new CocoaBean());
+        super.ingredientList.add(new Water());
+        super.ingredientList.add(new Sugar());
+        super.ingredientList.add(new Milk());
+        super.ingredientList.add(new Egg());
+        super.ingredientList.add(new Flour());
+        super.ingredientList.add(new Butter());
+        super.ingredientList.add(new EdibleGoldLeaf());
     }
 
     /**

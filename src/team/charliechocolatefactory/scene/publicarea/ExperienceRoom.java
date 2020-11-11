@@ -10,7 +10,7 @@ package team.charliechocolatefactory.scene.publicarea;
 public class ExperienceRoom extends PublicArea {
 
     /**
-     * constructor of ExperericeRoom
+     * constructor of ExperienceRoom
      */
     public ExperienceRoom(String location, double cost, double area, int maxNumber) {
         super(location, cost, area, maxNumber);

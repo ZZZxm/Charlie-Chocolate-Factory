@@ -16,4 +16,8 @@ public class Cup extends PackageMaterial {
 	public Cup(double initialQuant) {
 		super(initialQuant);
 	}
+
+	public Cup() {
+		this(1);
+	}
 }

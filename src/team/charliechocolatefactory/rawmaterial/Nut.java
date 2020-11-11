@@ -20,6 +20,10 @@ public class Nut extends FoodMaterial {
 		super(initialQuant, initialExpireTime, State.SOLID);
 	}
 
+	public Nut() {
+		this(1, 1);
+	}
+
 	@Override
 	public boolean process() {
 		/*
