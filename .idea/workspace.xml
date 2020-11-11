@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="425325a1-c14b-4e98-b1fd-63d42a2af23b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/person/staff/worker/OfficeWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/scene/staffarea/DiningRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/scene/staffarea/DiningRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/scene/staffarea/Office.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/scene/staffarea/Office.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/scene/staffarea/manufacturingarea/Warehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/scene/staffarea/manufacturingarea/Warehouse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/scene/staffarea/manufacturingarea/Workshop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/scene/staffarea/manufacturingarea/Workshop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/factory/CharlieFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/scene/publicarea/ExperienceRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/scene/publicarea/ExperienceRoom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/scene/staffarea/manufacturingarea/ManufacturingArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/scene/staffarea/manufacturingarea/ManufacturingArea.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +79,7 @@
       <workItem from="1604927702168" duration="8032000" />
       <workItem from="1605075537984" duration="1901000" />
       <workItem from="1605082413153" duration="676000" />
+      <workItem from="1605083446638" duration="119000" />
     </task>
     <servers />
   </component>
