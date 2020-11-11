@@ -1,9 +1,7 @@
 package team.charliechocolatefactory.product.chocolateProduct;
 
 import team.charliechocolatefactory.product.Product;
-import team.charliechocolatefactory.product.chocolate.DarkChocolate;
 import team.charliechocolatefactory.rawmaterial.*;
-import team.charliechocolatefactory.scene.Scene;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -23,10 +21,10 @@ public class ChocolateCookie extends Product {
 
 // constructor
     /**
-     * @param loc
+     * @param shape
      */
-    public ChocolateCookie(Scene loc, Shape shape) {
-        super("Chocolate Cookie", loc, 6, 7);
+    public ChocolateCookie(Shape shape) {
+        super("Chocolate Cookie", 6, 7);
         this.shape = shape;
         this.initIngredientList();
     }
@@ -51,7 +49,7 @@ public class ChocolateCookie extends Product {
      */
     @Override
     protected void initIngredientList() {
-        super.ingredientList.add(new DarkChocolate());
+        super.ingredientList.add(new CocoaBean());
         super.ingredientList.add(new Butter());
         super.ingredientList.add(new Egg());
         super.ingredientList.add(new Flour());

@@ -4,7 +4,6 @@ import team.charliechocolatefactory.rawmaterial.CocoaBean;
 import team.charliechocolatefactory.rawmaterial.Matcha;
 import team.charliechocolatefactory.rawmaterial.Sugar;
 import team.charliechocolatefactory.rawmaterial.Water;
-import team.charliechocolatefactory.scene.Scene;
 
 /**
  * @author Kerr
@@ -19,11 +18,8 @@ public class MatchaChocolate extends Chocolate {
     protected double matchaContent;
 
 // constructor
-    /**
-     * @param loc
-     */
-    public MatchaChocolate(Scene loc) {
-        super("Matcha chocolate", loc, 18, 8, 0.4);
+    public MatchaChocolate() {
+        super("Matcha chocolate", 18, 8, 0.4);
         this.matchaContent = 0.2;
         this.initIngredientList();
     }

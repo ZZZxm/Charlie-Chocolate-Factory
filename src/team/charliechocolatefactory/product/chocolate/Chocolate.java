@@ -4,10 +4,8 @@ package team.charliechocolatefactory.product.chocolate;
 import team.charliechocolatefactory.product.Product;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import team.charliechocolatefactory.rawmaterial.*;
-import team.charliechocolatefactory.scene.Scene;
 
 /**
  * @author Kerr
@@ -33,13 +31,12 @@ public abstract class Chocolate extends Product {
 //constructor
     /**
      * @param name
-     * @param loc
      * @param shelfLife how many month
      * @param content cocoa's content
      * @implNote  this class can not be directly used to create objects, so it's constructor is protected
      */
-    protected Chocolate(String name, Scene loc, int shelfLife, int weight, double content) {
-        super(name, loc, shelfLife, weight);
+    protected Chocolate(String name, int shelfLife, int weight, double content) {
+        super(name, shelfLife, weight);
         this.cocoaContent = content;
     }
 

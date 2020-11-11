@@ -1,12 +1,7 @@
 package team.charliechocolatefactory.product.chocolateProduct;
 
 import team.charliechocolatefactory.product.Product;
-import team.charliechocolatefactory.product.chocolate.DarkChocolate;
-import team.charliechocolatefactory.rawmaterial.Cup;
-import team.charliechocolatefactory.rawmaterial.Milk;
-import team.charliechocolatefactory.rawmaterial.Sugar;
-import team.charliechocolatefactory.rawmaterial.Water;
-import team.charliechocolatefactory.scene.Scene;
+import team.charliechocolatefactory.rawmaterial.*;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -21,11 +16,8 @@ import java.util.Date;
 public class ChocolateIceCream extends Product {
 
 // constructor
-    /**
-     * @param loc
-     */
-    public ChocolateIceCream(Scene loc) {
-        super("Chocolate Ice-cream", loc, 12, 200);
+    public ChocolateIceCream() {
+        super("Chocolate Ice-cream", 12, 200);
         this.initIngredientList();
     }
 
@@ -48,7 +40,7 @@ public class ChocolateIceCream extends Product {
      */
     @Override
     protected void initIngredientList() {
-        super.ingredientList.add(new DarkChocolate());
+        super.ingredientList.add(new CocoaBean());
         super.ingredientList.add(new Milk());
         super.ingredientList.add(new Sugar());
         super.ingredientList.add(new Water());

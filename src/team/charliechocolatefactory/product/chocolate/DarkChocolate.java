@@ -2,7 +2,6 @@ package team.charliechocolatefactory.product.chocolate;
 
 import team.charliechocolatefactory.rawmaterial.CocoaBean;
 import team.charliechocolatefactory.rawmaterial.Water;
-import team.charliechocolatefactory.scene.Scene;
 
 /**
  * @author Kerr
@@ -14,14 +13,10 @@ import team.charliechocolatefactory.scene.Scene;
 public class DarkChocolate extends Chocolate{
 
 // constructor
-    /**
-     * @param loc
-     */
-    public DarkChocolate( Scene loc) {
-        super("Dark chocolate", loc, 18,10, 0.78);
+    public DarkChocolate() {
+        super("Dark chocolate", 18,10, 0.78);
         this.initIngredientList();
     }
-
     /**
      * initialize the ingredient list of dark chocolate.
      */

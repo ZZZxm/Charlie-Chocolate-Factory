@@ -4,7 +4,6 @@ import team.charliechocolatefactory.rawmaterial.CocoaBean;
 import team.charliechocolatefactory.rawmaterial.Nut;
 import team.charliechocolatefactory.rawmaterial.Sugar;
 import team.charliechocolatefactory.rawmaterial.Water;
-import team.charliechocolatefactory.scene.Scene;
 
 /**
  * @author Kerr
@@ -16,22 +15,12 @@ import team.charliechocolatefactory.scene.Scene;
 public class SandwichChocolate extends Chocolate {
 // constructor
 
-    /**
-     * @param loc
-     */
-    public SandwichChocolate(Scene loc) {
-        super("Sandwich chocolate", loc, 6, 20, 0.5);
+    public SandwichChocolate() {
+        super("Sandwich chocolate", 6, 20, 0.5);
         this.initIngredientList();
     }
 
 // methods
-    /**
-     * @return nut
-     */
-    public Nut getNut() {
-        return this.nut;
-    }
-
     /**
      * initialize the ingredient list of the sandwich chocolate
      */

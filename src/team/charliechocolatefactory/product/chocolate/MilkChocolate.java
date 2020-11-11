@@ -3,7 +3,6 @@ package team.charliechocolatefactory.product.chocolate;
 import team.charliechocolatefactory.rawmaterial.CocoaBean;
 import team.charliechocolatefactory.rawmaterial.Milk;
 import team.charliechocolatefactory.rawmaterial.Sugar;
-import team.charliechocolatefactory.scene.Scene;
 
 /**
  * @author Kerr
@@ -18,11 +17,8 @@ public class MilkChocolate extends Chocolate {
     protected double milkContent;
 
 //constructor
-    /**
-     * @param loc
-     */
-    public MilkChocolate(Scene loc) {
-        super("Milk chocolate", loc, 18,15, 0.3);
+    public MilkChocolate() {
+        super("Milk chocolate", 18,15, 0.3);
         this.milkContent = 0.4;
         this.initIngredientList();
     }
