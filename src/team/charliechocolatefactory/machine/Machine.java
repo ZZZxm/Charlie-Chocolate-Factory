@@ -220,7 +220,7 @@ public abstract class Machine {
 
     /**
      * work process
-     * @param product param1
+     * @param product a Product
      * @return a int
      */
     protected abstract int work(Product product);
@@ -239,10 +239,16 @@ public abstract class Machine {
             System.out.println("Please maintenance "+type+machineNum+" or change a machine to run.\n");
             return 0;
         }
-        else
+        if(aimProcessNum==0)
         {
-            System.out.println(type+machineNum+" starts to tun:\n");
-            return work(product);
+            System.out.println("Please set "+type+machineNum+"'s aimProcessNum first.\n");
+            return 0;
         }
+        System.out.println(type+machineNum+" starts to tun:\n");
+        return work(product);
+    }
+
+    public String toString() {
+        return "class Machine";
     }
 }

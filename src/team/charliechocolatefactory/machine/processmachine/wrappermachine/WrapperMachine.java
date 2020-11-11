@@ -7,7 +7,7 @@ import team.charliechocolatefactory.product.Product;
  * @author Yuan.Cai
  * @project chocolateFactory
  * @classname WrapperMachine
- * @description TODO
+ * @description Inherited from ProcessMachine, this class is the abstract class of all the wrapper machines.
  * @date 2020/11/8 19:30
  */
 public class WrapperMachine extends ProcessMachine {
@@ -25,5 +25,9 @@ public class WrapperMachine extends ProcessMachine {
     protected void process(Product product, int productNum) {
         product.packaging();
         return;
+    }
+
+    public String toString() {
+        return "class WrapperMachine";
     }
 }

@@ -7,7 +7,7 @@ import team.charliechocolatefactory.product.Product;
  * @author Yuan.Cai
  * @project chocolateFactory
  * @classname TransportMachine
- * @description TODO
+ * @description Inherited from Machine, this class is the abstract class of all the transport machines.
  * @date 2020/11/8 14:03
  */
 public abstract class TransportMachine extends Machine {
@@ -24,13 +24,22 @@ public abstract class TransportMachine extends Machine {
 
     @Override
     protected int work(Product product) {
-        运输操作
+        String name=product.getName();
+        System.out.println(aimProcessNum+" "+name+" transported successfully.");
         return 0;
     }
 
+    /**
+     * designed for transporting items without explicit names
+     * @return a int
+     */
     protected int work()
     {
-        无指定产品运输操作
+        System.out.println(aimProcessNum+" items transported successfully.");
         return 0;
+    }
+
+    public String toString() {
+        return "class TransportMachine";
     }
 }

@@ -7,7 +7,7 @@ import team.charliechocolatefactory.product.Product;
  * @author Yuan.Cai
  * @project chocolateFactory
  * @classname ProductMachine
- * @description TODO
+ * @description Inherited from ProcessMachine, this class is the abstract class of all the product machines.
  * @date 2020/11/8 19:25
  */
 public abstract class ProductMachine extends ProcessMachine {
@@ -25,5 +25,9 @@ public abstract class ProductMachine extends ProcessMachine {
     protected void process(Product product, int productNum) {
         product.producing();
         return;
+    }
+
+    public String toString() {
+        return "class ProductMachine";
     }
 }

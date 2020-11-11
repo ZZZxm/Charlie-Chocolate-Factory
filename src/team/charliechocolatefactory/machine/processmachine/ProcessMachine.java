@@ -9,7 +9,7 @@ import java.util.Random;
  * @author Yuan.Cai
  * @project chocolateFactory
  * @classname ProcessMachine
- * @description TODO
+ * @description Inherited from Machine, this class is the abstract class of all the process machines.
  * @date 2020/11/8 0:04
  */
 public abstract class ProcessMachine extends Machine {
@@ -50,5 +50,14 @@ public abstract class ProcessMachine extends Machine {
         }
     }
 
+    /**
+     * detailed woring process
+     * @param product a Product
+     * @param productNum a int
+     */
     protected abstract void process(Product product,int productNum);
+
+    public String toString() {
+        return "class ProcessMachine";
+    }
 }

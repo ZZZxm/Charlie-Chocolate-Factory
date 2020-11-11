@@ -6,7 +6,7 @@ import team.charliechocolatefactory.machine.processmachine.productmachine.Produc
  * @author Yuan.Cai
  * @project chocolateFactory
  * @classname BasicProductMachine
- * @description TODO
+ * @description Machine for producing a large quantity of products.
  * @date 2020/11/9 0:09
  */
 public class BasicProductMachine extends ProductMachine {
@@ -18,5 +18,9 @@ public class BasicProductMachine extends ProductMachine {
     public BasicProductMachine(String type,String machineNum,double age)
     {
         super(type,machineNum,age,40,1,500);
+    }
+
+    public String toString() {
+        return "class BasicProductMachine";
     }
 }
