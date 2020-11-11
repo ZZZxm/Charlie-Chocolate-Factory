@@ -20,6 +20,10 @@ public class Butter extends FoodMaterial {
 		super(initialQuant, initialExpireTime, State.SOLID);
 	}
 
+	public Butter() {
+		this(1, 1);
+	}
+
 	@Override
 	public boolean process() {
 		/*

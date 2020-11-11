@@ -1,8 +1,7 @@
 package team.charliechocolatefactory.product.chocolateProduct;
 
 import team.charliechocolatefactory.product.Product;
-import team.charliechocolatefactory.rawmaterial.Box;
-import team.charliechocolatefactory.scene.Scene;
+import team.charliechocolatefactory.rawmaterial.*;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -22,10 +21,10 @@ public class ChocolateCake extends Product {
 
 //constructor
     /**
-     * @param loc
+     * @param size
      */
-    public ChocolateCake(Scene loc, int size) {
-        super("Chocolate Cake", loc, 1, size*size*100);
+    public ChocolateCake(int size) {
+        super("Chocolate Cake", 1, size*size*100);
         this.size = size;
         this.initIngredientList();
     }
@@ -52,14 +51,14 @@ public class ChocolateCake extends Product {
      */
     @Override
     protected void initIngredientList() {
-        super.ingredientList.add("DarkChocolate");
-        super.ingredientList.add("Water");
-        super.ingredientList.add("Sugar");
-        super.ingredientList.add("Milk");
-        super.ingredientList.add("Egg");
-        super.ingredientList.add("Flour");
-        super.ingredientList.add("Butter");
-        super.ingredientList.add("EdibleGoldLeaf");
+        super.ingredientList.add(new CocoaBean());
+        super.ingredientList.add(new Water());
+        super.ingredientList.add(new Sugar());
+        super.ingredientList.add(new Milk());
+        super.ingredientList.add(new Egg());
+        super.ingredientList.add(new Flour());
+        super.ingredientList.add(new Butter());
+        super.ingredientList.add(new EdibleGoldLeaf());
     }
 
     /**

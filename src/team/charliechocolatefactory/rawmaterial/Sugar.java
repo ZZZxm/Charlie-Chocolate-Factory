@@ -19,6 +19,14 @@ public class Sugar extends FoodMaterial {
 		super(initialQuant, initialExpireTime, state);
 	}
 
+	public Sugar(State state) {
+		this(1, 1, state);
+	}
+
+	public Sugar() {
+		this(State.SOLID);
+	}
+
 	@Override
 	public boolean process() {
 		/*

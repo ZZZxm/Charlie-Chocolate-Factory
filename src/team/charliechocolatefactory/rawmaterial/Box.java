@@ -16,4 +16,8 @@ public class Box extends PackageMaterial {
 	public Box(double initialQuant) {
 		super(initialQuant);
 	}
+
+	public Box() {
+		this(1);
+	}
 }

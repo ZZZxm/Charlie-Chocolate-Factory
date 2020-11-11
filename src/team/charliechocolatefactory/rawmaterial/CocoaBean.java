@@ -21,6 +21,10 @@ public class CocoaBean extends FoodMaterial {
         super(initialQuant, initialExpireTime, State.SOLID);
     }
 
+    public CocoaBean() {
+        this(1, 1);
+    }
+
     @Override
     public boolean process() {
         /*

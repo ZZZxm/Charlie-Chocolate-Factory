@@ -21,6 +21,10 @@ public class Flour extends FoodMaterial {
         super(initialQuant, initialExpireTime, State.POWDER);
     }
 
+    public Flour() {
+        this(1, 1);
+    }
+
     @Override
     public boolean process() {
         /*

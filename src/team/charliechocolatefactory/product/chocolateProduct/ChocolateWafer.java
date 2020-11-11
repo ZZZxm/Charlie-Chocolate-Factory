@@ -1,7 +1,7 @@
 package team.charliechocolatefactory.product.chocolateProduct;
 
 import team.charliechocolatefactory.product.Product;
-import team.charliechocolatefactory.rawmaterial.Bag;
+import team.charliechocolatefactory.rawmaterial.*;
 import team.charliechocolatefactory.scene.Scene;
 
 import java.text.SimpleDateFormat;
@@ -17,11 +17,8 @@ import java.util.Date;
 public class ChocolateWafer extends Product {
 
 // constructor
-    /**
-     * @param loc
-     */
     public ChocolateWafer(Scene loc) {
-        super("Chocolate Wafer", loc, 18, 100);
+        super("Chocolate Wafer", 18, 100);
         this.initIngredientList();
     }
 
@@ -45,12 +42,12 @@ public class ChocolateWafer extends Product {
      */
     @Override
     protected void initIngredientList() {
-        super.ingredientList.add("DarkChocolate");
-        super.ingredientList.add("Butter");
-        super.ingredientList.add("Egg");
-        super.ingredientList.add("Flour");
-        super.ingredientList.add("Nut");
-        super.ingredientList.add("Sugar");
+        super.ingredientList.add(new CocoaBean());
+        super.ingredientList.add(new Butter());
+        super.ingredientList.add(new Egg());
+        super.ingredientList.add(new Flour());
+        super.ingredientList.add(new Nut());
+        super.ingredientList.add(new Sugar());
     }
 
     /**

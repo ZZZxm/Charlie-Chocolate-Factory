@@ -1,6 +1,8 @@
 package team.charliechocolatefactory.product.chocolate;
 
-import team.charliechocolatefactory.scene.Scene;
+import team.charliechocolatefactory.rawmaterial.CocoaBean;
+import team.charliechocolatefactory.rawmaterial.Sugar;
+import team.charliechocolatefactory.rawmaterial.Water;
 
 /**
  * @author Kerr
@@ -12,11 +14,8 @@ import team.charliechocolatefactory.scene.Scene;
 public class WhiteChocolate extends Chocolate{
 
 // constructor
-    /**
-     * @param loc
-     */
-    public WhiteChocolate(Scene loc) {
-        super("White chocolate", loc, 12,5, 0.1);
+    public WhiteChocolate() {
+        super("White chocolate", 12,5, 0.1);
         this.initIngredientList();
     }
 
@@ -26,9 +25,9 @@ public class WhiteChocolate extends Chocolate{
      */
     @Override
     protected void initIngredientList() {
-        super.ingredientList.add("Water");
-        super.ingredientList.add("CocoaBean");
-        super.ingredientList.add("Sugar");
+        super.ingredientList.add(new Water());
+        super.ingredientList.add(new CocoaBean());
+        super.ingredientList.add(new Sugar());
         return;
     }
 

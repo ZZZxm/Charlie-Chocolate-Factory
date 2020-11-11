@@ -28,6 +28,10 @@ public abstract class FoodMaterial extends RawMaterial {
         this.state = state;
     }
 
+    protected FoodMaterial(State state) {
+        this(1, 1, state);
+    }
+
     /**
      * getter of timeToExpire
      * 

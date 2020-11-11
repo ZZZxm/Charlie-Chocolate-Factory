@@ -16,4 +16,9 @@ public class Bag extends PackageMaterial {
 	public Bag(double initialQuant) {
 		super(initialQuant);
 	}
+
+	public Bag() {
+		this(1);
+	}
+
 }
