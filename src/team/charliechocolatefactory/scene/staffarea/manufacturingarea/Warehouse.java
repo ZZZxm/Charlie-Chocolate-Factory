@@ -2,6 +2,7 @@ package team.charliechocolatefactory.scene.staffarea.manufacturingarea;
 
 import team.charliechocolatefactory.person.Person;
 import team.charliechocolatefactory.person.staff.Manager;
+import team.charliechocolatefactory.person.staff.worker.WarehouseWorker;
 
 import java.util.HashMap;
 
@@ -37,7 +38,7 @@ public class Warehouse extends ManufacturingArea {
      */
     @Override
     public void addWorker(String name, int age, Person.Sex sex, int salary) {
-        workerObj = new WarehouseWorker(name, age, sex, salary);
+        WarehouseWorker workerObj = new WarehouseWorker(name, age, sex, salary, this);
         workerList.add(workerObj);
     }
 

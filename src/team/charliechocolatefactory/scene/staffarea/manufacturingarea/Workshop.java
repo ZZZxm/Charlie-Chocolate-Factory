@@ -2,6 +2,7 @@ package team.charliechocolatefactory.scene.staffarea.manufacturingarea;
 
 import team.charliechocolatefactory.person.Person;
 import team.charliechocolatefactory.person.staff.Manager;
+import team.charliechocolatefactory.person.staff.worker.WorkshopWorker;
 
 /**
  * @author Y.C.Young
@@ -36,7 +37,7 @@ public class Workshop extends ManufacturingArea {
      */
     @Override
     public void addWorker(String name, int age, Person.Sex sex, int salary) {
-        workerObj = new WorkshopWorker(name, age, sex, salary);
+        WorkshopWorker workerObj = new WorkshopWorker(name, age, sex, salary, this);
         workerList.add(workerObj);
     }
 
