@@ -4,17 +4,7 @@
     <list default="true" id="425325a1-c14b-4e98-b1fd-63d42a2af23b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolate/Chocolate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolate/Chocolate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolate/DarkChocolate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolate/DarkChocolate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolate/MatchaChocolate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolate/MatchaChocolate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolate/MilkChocolate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolate/MilkChocolate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolate/SandwichChocolate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolate/SandwichChocolate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolate/WhiteChocolate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolate/WhiteChocolate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolateProduct/ChocolateCake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolateProduct/ChocolateCake.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolateProduct/ChocolateCookie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolateProduct/ChocolateCookie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolateProduct/ChocolateIceCream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolateProduct/ChocolateIceCream.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolateProduct/ChocolateWafer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolateProduct/ChocolateWafer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/rawmaterial/RawMaterial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/rawmaterial/RawMaterial.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,10 +91,11 @@
     </state>
     <state x="533" y="162" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1605000319665" />
     <state x="569" y="148" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1605082927328" />
-    <state x="553" y="358" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1605093831969">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="590" y="328" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1605101757452">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="553" y="358" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1440.900@0.0.1440.900" timestamp="1605093831969" />
+    <state x="590" y="328" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824@0.0.1536.824" timestamp="1605101757452" />
     <state x="412" y="339" width="619" height="225" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1604999782464">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
