@@ -1,12 +1,13 @@
 package team.charliechocolatefactory.product.chocolate;
 
-import javafx.scene.Scene;
+
 import team.charliechocolatefactory.product.Product;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import team.charliechocolatefactory.rawmaterial.*;
+import team.charliechocolatefactory.scene.Scene;
 
 /**
  * @author Kerr
@@ -37,7 +38,7 @@ public abstract class Chocolate extends Product {
      * @param content cocoa's content
      * @implNote  this class can not be directly used to create objects, so it's constructor is protected
      */
-    protected Chocolate(String name, Scene loc, int shelfLife,int weight, double content) {
+    protected Chocolate(String name, Scene loc, int shelfLife, int weight, double content) {
         super(name, loc, shelfLife, weight);
         this.cocoaContent = content;
     }
@@ -48,12 +49,12 @@ public abstract class Chocolate extends Product {
      * Chocolates are packaged by bag.
      */
     public void packaging() {
+        super.gotoNextState();
         System.out.println("Start packaging" + this.productName + "...");
         super.pack = new Bag(0);
-        super.state = 2;
+        super.gotoNextState();
         System.out.println("Finish packaging.");
-        super.state = 3;
-
+        super.gotoNextState();
         // set the producedDate of the chocolate
         Date day=new Date();
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");

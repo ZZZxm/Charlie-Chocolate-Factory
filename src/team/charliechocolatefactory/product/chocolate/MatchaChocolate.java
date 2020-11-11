@@ -1,6 +1,6 @@
 package team.charliechocolatefactory.product.chocolate;
 
-import javafx.scene.Scene;
+import team.charliechocolatefactory.scene.Scene;
 
 /**
  * @author Kerr
@@ -12,7 +12,7 @@ import javafx.scene.Scene;
 public class MatchaChocolate extends Chocolate {
 
 //fields
-    public double matchaContent;
+    protected double matchaContent;
 
 // constructor
     /**

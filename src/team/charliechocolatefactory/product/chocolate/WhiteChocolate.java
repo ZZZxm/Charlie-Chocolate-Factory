@@ -1,6 +1,6 @@
 package team.charliechocolatefactory.product.chocolate;
 
-import javafx.scene.Scene;
+import team.charliechocolatefactory.scene.Scene;
 
 /**
  * @author Kerr

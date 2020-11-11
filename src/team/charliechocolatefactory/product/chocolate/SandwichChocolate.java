@@ -1,7 +1,7 @@
 package team.charliechocolatefactory.product.chocolate;
 
-import javafx.scene.Scene;
 import team.charliechocolatefactory.rawmaterial.Nut;
+import team.charliechocolatefactory.scene.Scene;
 
 /**
  * @author Kerr
@@ -13,7 +13,7 @@ import team.charliechocolatefactory.rawmaterial.Nut;
 public class SandwichChocolate extends Chocolate {
 
 //fields
-    public Nut nut;
+    protected Nut nut;
 
 // constructor
 

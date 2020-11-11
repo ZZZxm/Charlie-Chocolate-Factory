@@ -1,8 +1,8 @@
 package team.charliechocolatefactory.product.chocolateProduct;
 
-import javafx.scene.Scene;
 import team.charliechocolatefactory.product.Product;
 import team.charliechocolatefactory.rawmaterial.Box;
+import team.charliechocolatefactory.scene.Scene;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -18,7 +18,7 @@ public class ChocolateCookie extends Product {
 
 //fields
     public enum Shape{CAT,DOG,HORSE,HUMAN,APPLE,STAR,TREE,SUN}
-    public Shape shape;
+    protected Shape shape;
 
 // constructor
     /**
@@ -32,7 +32,7 @@ public class ChocolateCookie extends Product {
 
 // methods
     @Override
-    protected void packaging() {
+    public void packaging() {
         System.out.println("Start packaging Chocolate Cookies...");
         super.pack = new Box(0);
         super.state = 2;

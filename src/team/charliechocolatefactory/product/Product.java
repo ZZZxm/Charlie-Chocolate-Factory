@@ -1,6 +1,7 @@
 package team.charliechocolatefactory.product;
-import javafx.scene.Scene;
+
 import team.charliechocolatefactory.rawmaterial.PackageMaterial;
+import team.charliechocolatefactory.scene.Scene;
 
 import java.util.ArrayList;
 
@@ -21,7 +22,7 @@ public abstract class Product {
 
     protected int shelfLife; // how many month
 
-    public Scene location;
+    protected Scene location;
 
     protected int weight; // weight of single item, in gram
 
@@ -35,7 +36,7 @@ public abstract class Product {
      *  6 -> delivering
      *  ...
      */
-    public int state;
+    protected int state;
 
     protected PackageMaterial pack;
 
@@ -73,24 +74,14 @@ public abstract class Product {
      *
      * @return product's name
      */
-    protected String getName(){
+    public String getName(){
         return this.productName;
-    }
-
-    /**
-     * set the state of the product
-     *
-     * @param state
-     */
-    protected void setState(int state){
-        this.state = state;
-        return;
     }
 
     /**
      * @return the state of the product
      */
-    protected int getState(){
+    public int getState(){
         return state;
     }
 
@@ -111,7 +102,7 @@ public abstract class Product {
     /**
      * @return the location of the product
      */
-    protected Scene getLocation(){
+    public Scene getLocation(){
         return this.location;
     }
 
@@ -131,7 +122,7 @@ public abstract class Product {
     /**
      * @return the producedDate of the product
      */
-    protected String getProducedDate(){
+    public String getProducedDate(){
         return this.producedDate;
     }
 
@@ -147,7 +138,7 @@ public abstract class Product {
     /**
      * @return the shelf life of the product
      */
-    protected int getShelfLife(){
+    public int getShelfLife(){
         return this.shelfLife;
     }
 
@@ -164,7 +155,7 @@ public abstract class Product {
     /**
      * @return the weight of this product's single item, in gram
      */
-    protected int getWeight(){
+    public int getWeight(){
         return this.weight;
     }
 
