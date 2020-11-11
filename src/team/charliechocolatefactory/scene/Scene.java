@@ -8,7 +8,7 @@ import team.charliechocolatefactory.person.stockholder.Stockholder;
  * @author Brian.Z
  * @project chocolateFactory
  * @classname Scene
- * @description The basic class of Site, each site has its own function
+ * @description The basic class of Scene, each scene has its own function
  * @date 2020/11/9 10:26
  */
 public abstract class Scene {
