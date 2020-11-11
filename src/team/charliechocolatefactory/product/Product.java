@@ -1,6 +1,7 @@
 package team.charliechocolatefactory.product;
 
 import team.charliechocolatefactory.rawmaterial.PackageMaterial;
+import team.charliechocolatefactory.rawmaterial.RawMaterial;
 import team.charliechocolatefactory.scene.Scene;
 
 import java.util.ArrayList;
@@ -40,7 +41,7 @@ public abstract class Product {
 
     protected PackageMaterial pack;
 
-    public ArrayList<String> ingredientList;
+    public ArrayList<RawMaterial> ingredientList;
 
 // constructor
 
@@ -56,7 +57,7 @@ public abstract class Product {
         this.producedDate= null;
         this.state = 0;
         this.weight = weight;
-        this.ingredientList = new ArrayList<String>();
+        this.ingredientList = new ArrayList<RawMaterial>();
     }
 
 // methods

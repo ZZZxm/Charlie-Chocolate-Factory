@@ -1,5 +1,9 @@
 package team.charliechocolatefactory.product.chocolate;
 
+import team.charliechocolatefactory.rawmaterial.CocoaBean;
+import team.charliechocolatefactory.rawmaterial.Matcha;
+import team.charliechocolatefactory.rawmaterial.Sugar;
+import team.charliechocolatefactory.rawmaterial.Water;
 import team.charliechocolatefactory.scene.Scene;
 
 /**
@@ -45,10 +49,10 @@ public class MatchaChocolate extends Chocolate {
      */
     @Override
     protected void initIngredientList() {
-        super.ingredientList.add("CocoaBean");
-        super.ingredientList.add("Water");
-        super.ingredientList.add("Sugar");
-        super.ingredientList.add("Matcha");
+        super.ingredientList.add(new CocoaBean());
+        super.ingredientList.add(new Water());
+        super.ingredientList.add(new Sugar());
+        super.ingredientList.add(new Matcha());
     }
 
     /**
