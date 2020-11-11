@@ -89,7 +89,11 @@
       <workItem from="1604824254697" duration="95000" />
       <workItem from="1604825144978" duration="2120000" />
       <workItem from="1604888491296" duration="1858000" />
-      <workItem from="1604921541281" duration="10380000" />
+      <workItem from="1604921541281" duration="10823000" />
+      <workItem from="1604976520023" duration="102000" />
+      <workItem from="1604992755665" duration="1870000" />
+      <workItem from="1604998206503" duration="12592000" />
+      <workItem from="1605022446952" duration="2263000" />
     </task>
     <servers />
   </component>
@@ -97,11 +101,11 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="623" y="197" key="#com.intellij.ide.util.MemberChooser" timestamp="1604817499070">
+    <state x="623" y="197" key="#com.intellij.ide.util.MemberChooser" timestamp="1605009963576">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="-1730" y="266" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/-2560.0.2048.1112@-2560.0.2048.1112" timestamp="1604733545000" />
-    <state x="623" y="197" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1604817499070" />
+    <state x="623" y="197" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1605009963576" />
     <state x="472" y="297" width="631" height="239" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1604923711029">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -114,13 +118,18 @@
       <screen x="-2560" y="0" width="2048" height="1112" />
     </state>
     <state x="-1896" y="254" key="NewModule_or_Project.wizard/0.0.1536.824/-2560.0.2048.1112@-2560.0.2048.1112" timestamp="1604724010580" />
-    <state x="-2345" y="171" key="SettingsEditor" timestamp="1604726488112">
-      <screen x="-2560" y="0" width="2048" height="1112" />
-    </state>
-    <state x="-2345" y="171" key="SettingsEditor/0.0.1536.824/-2560.0.2048.1112@-2560.0.2048.1112" timestamp="1604726488112" />
-    <state x="449" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1604921540383">
+    <state x="161" y="0" key="SettingsEditor" timestamp="1605017699782">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="449" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1604921540383" />
+    <state x="-2345" y="171" key="SettingsEditor/0.0.1536.824/-2560.0.2048.1112@-2560.0.2048.1112" timestamp="1604726488112" />
+    <state x="161" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1605017699782" />
+    <state x="449" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1605022459172">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="449" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1605022459172" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1605017555890">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1605017555890" />
   </component>
 </project>

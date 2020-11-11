@@ -1,17 +1,43 @@
 package team.charliechocolatefactory.scene.staffarea.manufacturingarea;
 
+import team.charliechocolatefactory.person.Person;
+import team.charliechocolatefactory.person.staff.Manager;
+
 /**
  * @author Y.C.Young
  * @project chocolateFactory
  * @classname Workshop
- * @description TODO
+ * @description Workshop where the production is produced
  * @date 2020/11/9 20:05
  */
 public class Workshop extends ManufacturingArea {
 
-    public Workshop(String location, double cost, double area)
+    /**
+     * Constructor of Workshop with no manager specified
+     */
+    public Workshop(String location, double cost, double area) {
+        this(location, cost, area, null);
+    }
+
+    /**
+     * Constructor of Workshop with no manager specified
+     */
+    public Workshop(String location, double cost, double area, Manager newManager)
     {
-        super(location, cost, area);
+        super(location, cost, area, newManager);
+    }
+
+    /**
+     * create and add a worker to the area
+     * @param name name of the worker
+     * @param age age of the worker
+     * @param sex sex of the worker
+     * @param salary salary of the worker
+     */
+    @Override
+    public void addWorker(String name, int age, Person.Sex sex, int salary) {
+        workerObj = new WorkshopWorker(name, age, sex, salary);
+        workerList.add(workerObj);
     }
 
 }
