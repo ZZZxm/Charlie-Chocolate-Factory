@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="425325a1-c14b-4e98-b1fd-63d42a2af23b" name="Default Changelist" comment="" />
+    <list default="true" id="425325a1-c14b-4e98-b1fd-63d42a2af23b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/person/staff/worker/OfficeWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/scene/staffarea/DiningRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/scene/staffarea/DiningRoom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/scene/staffarea/Office.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/scene/staffarea/Office.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/scene/staffarea/manufacturingarea/Warehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/scene/staffarea/manufacturingarea/Warehouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/scene/staffarea/manufacturingarea/Workshop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/scene/staffarea/manufacturingarea/Workshop.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -17,30 +28,31 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="jdkForImporter" value="1.8" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1jwk9QmKiY1N4qamc7TyRqF2WJt" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Background" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
@@ -53,19 +65,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -77,33 +77,41 @@
       <option name="presentableId" value="Default" />
       <updated>1604722389512</updated>
       <workItem from="1604722393530" duration="1000" />
-      <workItem from="1604733879823" duration="40000" />
-      <workItem from="1604734160194" duration="14000000" />
-      <workItem from="1604818202071" duration="26803000" />
-      <workItem from="1604896073954" duration="11489000" />
-      <workItem from="1605017645747" duration="5543000" />
+      <workItem from="1604927702168" duration="8032000" />
+      <workItem from="1605075537984" duration="1901000" />
+      <workItem from="1605082413153" duration="676000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="486" y="305" width="578" height="220" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1605014878639">
+    <state x="569" y="148" key="#com.intellij.ide.util.MemberChooser" timestamp="1605082927328">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="486" y="305" width="578" height="220" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1605014878639" />
-    <state x="270" y="0" key="SettingsEditor" timestamp="1605017706934">
+    <state x="533" y="162" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1605000319665" />
+    <state x="569" y="148" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1605082927328" />
+    <state x="553" y="358" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1604929241289">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="553" y="358" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1440.900@0.0.1440.900" timestamp="1604929241289" />
+    <state x="412" y="339" width="619" height="225" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1604999782464">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="412" y="339" width="619" height="225" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1440.900@0.0.1440.900" timestamp="1604999782464" />
+    <state x="236" y="0" key="SettingsEditor" timestamp="1605082507177">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="270" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1605017706934" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1604828958019">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1605076048320" />
+    <state x="236" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1605082507177" />
+    <state x="374" y="284" key="com.intellij.ide.util.TipDialog" timestamp="1605075548531">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1604828958019" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1605017593962">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="374" y="284" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1605075548531" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1604998554057">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1605017593962" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1604998554057" />
   </component>
 </project>
