@@ -20,6 +20,10 @@ public class EdibleGoldLeaf extends FoodMaterial {
 		super(initialQuant, initialExpireTime, State.SOLID);
 	}
 
+	public EdibleGoldLeaf() {
+		this(1, 1);
+	}
+
 	@Override
 	public boolean process() {
 		/*

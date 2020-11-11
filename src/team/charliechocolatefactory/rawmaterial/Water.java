@@ -20,6 +20,10 @@ public class Water extends FoodMaterial {
 		super(initialQuant, initialExpireTime, State.LIQUID);
 	}
 
+	public Water() {
+		this(1, 1);
+	}
+
 	@Override
 	public boolean process() {
 		/*

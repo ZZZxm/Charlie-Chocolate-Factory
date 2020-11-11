@@ -20,6 +20,10 @@ public class Egg extends FoodMaterial {
 		super(initialQuant, initialExpireTime, State.LIQUID);
 	}
 
+	public Egg() {
+		this(1, 1);
+	}
+
 	@Override
 	public boolean process() {
 		/*

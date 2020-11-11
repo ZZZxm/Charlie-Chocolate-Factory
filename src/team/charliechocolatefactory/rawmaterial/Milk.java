@@ -20,6 +20,10 @@ public class Milk extends FoodMaterial {
 		super(initialQuant, initialExpireTime, State.LIQUID);
 	}
 
+	public Milk() {
+		this(1, 1);
+	}
+
 	@Override
 	public boolean process() {
 		/*

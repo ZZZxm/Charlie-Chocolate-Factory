@@ -21,6 +21,13 @@ public abstract class RawMaterial {
     }
 
     /**
+     * ctor of RawMaterial
+     */
+    protected RawMaterial() {
+        this(1);
+    }
+
+    /**
      * getter of quantity
      * 
      * @return quantity

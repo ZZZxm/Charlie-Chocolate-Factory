@@ -9,7 +9,7 @@ package team.charliechocolatefactory.rawmaterial;
  * @date 2020-11-09 20:48:19
  */
 public class PackageMaterial extends RawMaterial{
-	
+
 	/**
 	 * ctor of PackageMaterial
 	 * 
@@ -17,5 +17,9 @@ public class PackageMaterial extends RawMaterial{
 	 */
 	protected PackageMaterial(double initialQuant) {
 		super(initialQuant);
+	}
+
+	protected PackageMaterial() {
+		this(1);
 	}
 }

@@ -20,6 +20,10 @@ public class Matcha extends FoodMaterial {
 		super(initialQuant, initialExpireTime, State.POWDER);
 	}
 
+	public Matcha() {
+		this(1, 1);
+	}
+
 	@Override
 	public boolean process() {
 		/*
