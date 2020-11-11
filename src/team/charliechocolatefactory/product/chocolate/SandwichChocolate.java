@@ -1,6 +1,9 @@
 package team.charliechocolatefactory.product.chocolate;
 
+import team.charliechocolatefactory.rawmaterial.CocoaBean;
 import team.charliechocolatefactory.rawmaterial.Nut;
+import team.charliechocolatefactory.rawmaterial.Sugar;
+import team.charliechocolatefactory.rawmaterial.Water;
 import team.charliechocolatefactory.scene.Scene;
 
 /**
@@ -11,18 +14,13 @@ import team.charliechocolatefactory.scene.Scene;
  * @date 2020/11/8 15:23
  */
 public class SandwichChocolate extends Chocolate {
-
-//fields
-    protected Nut nut;
-
 // constructor
 
     /**
      * @param loc
      */
-    public SandwichChocolate(Scene loc, Nut nut) {
+    public SandwichChocolate(Scene loc) {
         super("Sandwich chocolate", loc, 6, 20, 0.5);
-        this.nut = nut;
         this.initIngredientList();
     }
 
@@ -39,10 +37,10 @@ public class SandwichChocolate extends Chocolate {
      */
     @Override
     protected void initIngredientList() {
-        super.ingredientList.add("CocoaBean");
-        super.ingredientList.add("Water");
-        super.ingredientList.add("Sugar");
-        super.ingredientList.add("Nut");
+        super.ingredientList.add(new CocoaBean());
+        super.ingredientList.add(new Water());
+        super.ingredientList.add(new Sugar());
+        super.ingredientList.add(new Nut());
     }
 
     /**

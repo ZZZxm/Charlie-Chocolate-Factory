@@ -4,7 +4,6 @@
     <list default="true" id="425325a1-c14b-4e98-b1fd-63d42a2af23b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolate/Chocolate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolate/Chocolate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolate/DarkChocolate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolate/DarkChocolate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolate/MatchaChocolate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolate/MatchaChocolate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolate/MilkChocolate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team/charliechocolatefactory/product/chocolate/MilkChocolate.java" afterDir="false" />
@@ -67,7 +66,7 @@
       <updated>1604722389512</updated>
       <workItem from="1604722393530" duration="1000" />
       <workItem from="1604927702168" duration="8032000" />
-      <workItem from="1605075537984" duration="1901000" />
+      <workItem from="1605075537984" duration="4166000" />
     </task>
     <servers />
   </component>
