@@ -10,14 +10,12 @@ import team.charliechocolatefactory.machine.transportmachine.TransportMachine;
  * @date 2020/11/8 19:54
  */
 public class Van extends TransportMachine {
-    public Van(String type, String machineNum)
-    {
-        super(type,machineNum,15,0.8,150);
+    public Van(String type, String machineNum) {
+        super(type, machineNum, 15, 0.8, 150);
     }
 
-    public Van(String type, String machineNum, double age)
-    {
-        super(type,machineNum,age,15,0.8,150);
+    public Van(String type, String machineNum, double age) {
+        super(type, machineNum, age, 15, 0.8, 150);
     }
 
     public String toString() {

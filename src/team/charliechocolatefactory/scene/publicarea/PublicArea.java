@@ -37,7 +37,7 @@ public abstract class PublicArea extends Scene {
      * when a visitor enters the area, add him to the list
      * @param visitorObj visitor object
      */
-    void addVisitor(Visitor visitorObj) {
+    public void addVisitor(Visitor visitorObj) {
         if (visitorList.size() >= maxVisitorNumber) {
             System.out.println("The area is already full");
         } else if (visitorList.contains(visitorObj)) {
@@ -51,7 +51,7 @@ public abstract class PublicArea extends Scene {
      * when a visitor leaves the area, remove him from the list
      * @param visitorObj visitor object
      */
-    void removeVisitor(Visitor visitorObj) {
+    public void removeVisitor(Visitor visitorObj) {
         if (visitorList.contains(visitorObj)) {
             visitorList.remove(visitorObj);
         } else {
@@ -64,7 +64,7 @@ public abstract class PublicArea extends Scene {
      * @param visitorObj visitor object
      * @return true if the visitor is in
      */
-    boolean checkVisitor(Visitor visitorObj) {
+    public boolean checkVisitor(Visitor visitorObj) {
         return visitorList.contains(visitorObj);
     }
 
@@ -72,7 +72,7 @@ public abstract class PublicArea extends Scene {
      * check whether the area is full
      * @return true if the area is full
      */
-    boolean isFull() {
+    public boolean isFull() {
         return visitorList.size() >= maxVisitorNumber;
     }
 

@@ -51,7 +51,7 @@ public abstract class ProcessMachine extends Machine {
     }
 
     /**
-     * detailed woring process
+     * detailed working process
      * @param product a Product
      * @param productNum a int
      */

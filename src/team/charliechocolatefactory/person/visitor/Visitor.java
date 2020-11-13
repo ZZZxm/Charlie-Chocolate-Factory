@@ -24,7 +24,7 @@ public class Visitor extends Person {
      * @param dest destination
      */
     public boolean visit(PublicArea dest) {
-        if(/* not full*/true) {
+        if(!dest.isFull()) {
             System.out.println("Visitor " + this.name + "visits" + dest.toString());
             this.moveTo(dest);
             return true;
