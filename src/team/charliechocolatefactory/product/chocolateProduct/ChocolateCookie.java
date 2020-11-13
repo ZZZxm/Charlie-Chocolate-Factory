@@ -32,16 +32,7 @@ public class ChocolateCookie extends Product {
 // methods
     @Override
     public void packaging() {
-        System.out.println("Start packaging Chocolate Cookies...");
-        super.pack = new Box(0);
-        super.state = 2;
-        System.out.println("Finish packaging.");
-        super.state = 3;
-
-        Date day=new Date();
-        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-        super.setProducedDate(df.format(day));
-        return;
+        this.wrapperMachine.process(this,1);
     }
 
     /**

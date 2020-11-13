@@ -30,22 +30,6 @@ public class ChocolateCake extends Product {
     }
 
 // methods
-    @Override
-    public void packaging() {
-        super.gotoNextState();
-        System.out.println("Start packaging Chocolate Cake...");
-        super.pack = new Box(0);
-        super.gotoNextState();
-        System.out.println("Finish packaging.");
-        super.gotoNextState();
-
-        Date day=new Date();
-        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-        super.setProducedDate(df.format(day));
-        return;
-    }
-
-// methods
     /**
      * initialize the ingredient list of chocolate cake
      */

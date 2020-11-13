@@ -17,7 +17,7 @@ import java.util.Date;
 public class ChocolateWafer extends Product {
 
 // constructor
-    public ChocolateWafer(Scene loc) {
+    public ChocolateWafer() {
         super("Chocolate Wafer", 18, 100);
         this.initIngredientList();
     }

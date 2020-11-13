@@ -3,6 +3,7 @@ package team.charliechocolatefactory.person.staff;
 import java.util.UUID;
 
 import team.charliechocolatefactory.person.Person;
+import team.charliechocolatefactory.product.Product;
 import team.charliechocolatefactory.scene.Scene;
 import team.charliechocolatefactory.scene.staffarea.StaffArea;
 
@@ -27,6 +28,7 @@ public abstract class Staff extends Person {
 
     /** 0: normal 1: suspended 2: fired */
     protected int state;
+
 
     public Staff(String name, int age, Sex sex, int salary, StaffArea workingArea) {
         super(name, age, sex);

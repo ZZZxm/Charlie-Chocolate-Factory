@@ -1,6 +1,12 @@
 package team.charliechocolatefactory.person.staff.worker;
 
 import team.charliechocolatefactory.person.staff.Staff;
+import team.charliechocolatefactory.product.Product;
+import team.charliechocolatefactory.product.chocolate.*;
+import team.charliechocolatefactory.product.chocolateProduct.ChocolateCake;
+import team.charliechocolatefactory.product.chocolateProduct.ChocolateCookie;
+import team.charliechocolatefactory.product.chocolateProduct.ChocolateIceCream;
+import team.charliechocolatefactory.product.chocolateProduct.ChocolateWafer;
 import team.charliechocolatefactory.scene.staffarea.StaffArea;
 
 /**
@@ -12,8 +18,93 @@ import team.charliechocolatefactory.scene.staffarea.StaffArea;
  */
 public abstract class Worker extends Staff {
 
+    // command pattern
+    // workers are invokers, they invoke machines to carry on the command -> produce product
+    private Product darkChocolate, matchaChocolate, milkChocolate, sandwichChocolate, whiteChocolate, chocolateCake, chocolateWafer, chocolateIceCream, chocolateStarCookie;
+
     public Worker(String name, int age, Sex sex, int salary, StaffArea department) {
         super(name, age, sex, salary, department);
+        this.darkChocolate = new DarkChocolate();
+        this.matchaChocolate = new MatchaChocolate();
+        this.milkChocolate = new MilkChocolate();
+        this.sandwichChocolate = new SandwichChocolate();
+        this.whiteChocolate = new WhiteChocolate();
+        this.chocolateCake = new ChocolateCake(5);
+        this.chocolateStarCookie = new ChocolateCookie(ChocolateCookie.Shape.STAR);
+        this.chocolateIceCream = new ChocolateIceCream();
+        this.chocolateWafer = new ChocolateWafer();
+    }
+
+    public void produceDarkChocolate() {
+        this.darkChocolate.producing();
+    }
+
+    public void produceWhiteChocolate() {
+        this.whiteChocolate.producing();
+    }
+
+    public void produceMatchaChocolate() {
+        this.matchaChocolate.producing();
+    }
+
+    public void produceMilkChocolate() {
+        this.milkChocolate.producing();
+    }
+
+    public void produceSandwichChocolate() {
+        this.sandwichChocolate.producing();
+    }
+
+    public void produceChocolateCake() {
+        this.chocolateCake.producing();
+    }
+
+    public void produceChocolateCookie() {
+        this.chocolateStarCookie.producing();
+    }
+
+    public void produceChocolateIceCream() {
+        this.chocolateIceCream.producing();
+    }
+
+    public void produceChocolateWafer() {
+        this.chocolateWafer.producing();
+    }
+
+    public void processDarkChocolate() {
+        this.darkChocolate.producing();
+    }
+
+    public void processWhiteChocolate() {
+        this.whiteChocolate.producing();
+    }
+
+    public void processMatchaChocolate() {
+        this.matchaChocolate.producing();
+    }
+
+    public void processMilkChocolate() {
+        this.milkChocolate.producing();
+    }
+
+    public void processSandwichChocolate() {
+        this.sandwichChocolate.producing();
+    }
+
+    public void processChocolateCake() {
+        this.chocolateCake.producing();
+    }
+
+    public void processChocolateCookie() {
+        this.chocolateStarCookie.producing();
+    }
+
+    public void processChocolateIceCream() {
+        this.chocolateIceCream.producing();
+    }
+
+    public void processChocolateWafer() {
+        this.chocolateWafer.producing();
     }
 
     /**
@@ -29,9 +120,13 @@ public abstract class Worker extends Staff {
         return "class Worker extends Staff";
     }
 
-    /** work */
+    /**
+     * work
+     */
     public abstract void work();
 
-    /** rest */
+    /**
+     * rest
+     */
     public abstract void rest();
 }

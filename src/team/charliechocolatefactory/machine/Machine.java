@@ -220,14 +220,12 @@ public abstract class Machine {
 
     /**
      * work process
-     * @param product a Product
      * @return a int
      */
     protected abstract int work(Product product);
 
     /**
      * run process
-     * @param product a Product
      * @return a int representing output product numbers
      */
     public int run(Product product)

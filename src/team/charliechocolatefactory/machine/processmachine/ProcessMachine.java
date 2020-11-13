@@ -39,7 +39,7 @@ public abstract class ProcessMachine extends Machine {
             int bounds = (int) (aimProcessNum * 0.02);
             int trashNum = rand2.nextInt(bounds);
             // TODO 返回的值是成功产出产品数
-            process(product, aimProcessNum - trashNum);
+            process(product,aimProcessNum - trashNum);
             increaseAge();
             return aimProcessNum - trashNum;
         }
@@ -52,10 +52,9 @@ public abstract class ProcessMachine extends Machine {
 
     /**
      * detailed woring process
-     * @param product a Product
      * @param productNum a int
      */
-    protected abstract void process(Product product,int productNum);
+    public abstract void process(Product product,int productNum);
 
     public String toString() {
         return "class ProcessMachine";

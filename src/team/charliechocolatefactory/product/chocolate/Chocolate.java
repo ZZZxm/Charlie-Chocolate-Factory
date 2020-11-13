@@ -29,33 +29,15 @@ public abstract class Chocolate extends Product {
 
 
 //constructor
+
     /**
      * @param name
      * @param shelfLife how many month
-     * @param content cocoa's content
-     * @implNote  this class can not be directly used to create objects, so it's constructor is protected
+     * @param content   cocoa's content
+     * @implNote this class can not be directly used to create objects, so it's constructor is protected
      */
     protected Chocolate(String name, int shelfLife, int weight, double content) {
         super(name, shelfLife, weight);
         this.cocoaContent = content;
-    }
-
-// methods
-    @Override
-    /**
-     * Chocolates are packaged by bag.
-     */
-    public void packaging() {
-        super.gotoNextState();
-        System.out.println("Start packaging" + this.productName + "...");
-        super.pack = new Bag(0);
-        super.gotoNextState();
-        System.out.println("Finish packaging.");
-        super.gotoNextState();
-        // set the producedDate of the chocolate
-        Date day=new Date();
-        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-        super.setProducedDate(df.format(day));
-        return;
     }
 }
