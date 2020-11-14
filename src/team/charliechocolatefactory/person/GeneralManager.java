@@ -15,7 +15,7 @@ import team.charliechocolatefactory.scene.staffarea.StaffArea;
  */
 public class GeneralManager extends Person {
 
-    GeneralManager instance = null;
+    static GeneralManager instance = null;
 
     /**
      * Get the only instance of the general manager.
@@ -23,7 +23,7 @@ public class GeneralManager extends Person {
      * Then it will return the instance in the future.
      * @return instance of general manager
      */
-    public GeneralManager getInstance() {
+    public static GeneralManager getInstance() {
         if (instance == null) {
             instance = new GeneralManager("Young young", 21, Sex.MALE);
             System.out.println("We didn't have a general manager yet. Now our general manager has taken over.");

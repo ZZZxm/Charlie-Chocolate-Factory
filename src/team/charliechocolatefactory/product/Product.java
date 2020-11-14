@@ -85,14 +85,14 @@ public abstract class Product {
     /**
      * this product is in the next state.
      */
-    protected void gotoNextState() {
+    public void gotoNextState() {
         this.state++;
     }
 
     /**
      * @param date template yyyy-mm-dd
      */
-    protected void setProducedDate(String date) {
+    public void setProducedDate(String date) {
         if (this.producedDate == null) {
             this.producedDate = date;
             return;
@@ -141,6 +141,14 @@ public abstract class Product {
      */
     public int getWeight() {
         return this.weight;
+    }
+
+    /**
+     * set the weight of this product's single item
+     * @param pack pack
+     */
+    public void setPack(PackageMaterial pack) {
+        this.pack = pack;
     }
 
     /**
