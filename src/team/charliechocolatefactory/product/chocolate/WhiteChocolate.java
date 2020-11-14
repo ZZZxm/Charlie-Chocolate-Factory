@@ -11,11 +11,11 @@ import team.charliechocolatefactory.rawmaterial.Water;
  * @description this is white chocolate.
  * @date 2020/11/8 15:15
  */
-public class WhiteChocolate extends Chocolate{
+public class WhiteChocolate extends Chocolate {
 
-// constructor
+    // constructor
     public WhiteChocolate() {
-        super("White chocolate", 12,5, 0.1);
+        super("White chocolate", 12, 5, 0.1);
         this.initIngredientList();
     }
 
@@ -33,10 +33,11 @@ public class WhiteChocolate extends Chocolate{
 
     /**
      * override the toString method
+     *
      * @return
      */
     @Override
-    public String toString(){
+    public String toString() {
         return "subclass : WhiteChocolate";
     }
 }

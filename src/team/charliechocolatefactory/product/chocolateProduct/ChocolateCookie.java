@@ -15,11 +15,13 @@ import java.util.Date;
  */
 public class ChocolateCookie extends Product {
 
-//fields
-    public enum Shape{CAT,DOG,HORSE,HUMAN,APPLE,STAR,TREE,SUN}
+    //fields
+    public enum Shape {CAT, DOG, HORSE, HUMAN, APPLE, STAR, TREE, SUN}
+
     protected Shape shape;
 
 // constructor
+
     /**
      * @param shape
      */
@@ -30,10 +32,6 @@ public class ChocolateCookie extends Product {
     }
 
 // methods
-    @Override
-    public void packaging() {
-        this.wrapperMachine.process(this,1);
-    }
 
     /**
      * initialize the ingredient list of chocolate cookie
@@ -52,16 +50,17 @@ public class ChocolateCookie extends Product {
     /**
      * @return the shape of cookie
      */
-    public Shape getShape(){
+    public Shape getShape() {
         return this.shape;
     }
 
     /**
      * override the toString method
+     *
      * @return
      */
     @Override
-    public String toString(){
+    public String toString() {
         return "subclass : ChocolateCookie";
     }
 

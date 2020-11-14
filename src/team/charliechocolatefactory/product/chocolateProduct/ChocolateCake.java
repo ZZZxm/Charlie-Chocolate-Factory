@@ -11,25 +11,27 @@ import java.util.Date;
  * @project chocolateFactory
  * @classname ChocolateCake
  * @description this is chocolate cake, the feature of which is the size.
- *                  Here I've defined size to stand for the radius of the cake.
+ * Here I've defined size to stand for the radius of the cake.
  * @date 2020/11/8 15:25
  */
 public class ChocolateCake extends Product {
 
-// fields
+    // fields
     protected int size; //how many inches is its radius
 
 //constructor
+
     /**
      * @param size
      */
     public ChocolateCake(int size) {
-        super("Chocolate Cake", 1, size*size*100);
+        super("Chocolate Cake", 1, size * size * 100);
         this.size = size;
         this.initIngredientList();
     }
 
 // methods
+
     /**
      * initialize the ingredient list of chocolate cake
      */
@@ -48,16 +50,17 @@ public class ChocolateCake extends Product {
     /**
      * @return cake's size
      */
-    public int getSize(){
+    public int getSize() {
         return this.size;
     }
 
     /**
      * override the toString method
+     *
      * @return
      */
     @Override
-    public String toString(){
+    public String toString() {
         return "subclass : ChocolateCake";
     }
 
