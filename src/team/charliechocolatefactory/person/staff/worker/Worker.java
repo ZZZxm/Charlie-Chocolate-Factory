@@ -129,4 +129,6 @@ public abstract class Worker extends Staff {
      * rest
      */
     public abstract void rest();
+
+    public abstract void feedBack();
 }

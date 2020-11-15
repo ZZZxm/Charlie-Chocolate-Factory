@@ -1,5 +1,6 @@
 package team.charliechocolatefactory.scene.staffarea;
 
+import team.charliechocolatefactory.person.GeneralManager;
 import team.charliechocolatefactory.person.Person;
 import team.charliechocolatefactory.person.staff.Manager;
 import team.charliechocolatefactory.person.staff.worker.Worker;
@@ -20,7 +21,7 @@ public abstract class StaffArea extends Scene {
     protected Manager manager;
 
     /** List of all workers in the area **/
-    protected ArrayList<Worker> workerList;
+    public ArrayList<Worker> workerList;
 
     /**
     * Constructor of StaffArea with no manager specified
@@ -36,6 +37,7 @@ public abstract class StaffArea extends Scene {
         super(location, cost, area);
         workerList = new ArrayList<>();
         manager = newManager;
+        GeneralManager.getInstance().addManager(manager);
     }
 
     /**

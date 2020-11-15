@@ -1,9 +1,12 @@
 package team.charliechocolatefactory.person;
 
-import sun.java2d.loops.FillRect;
+//import sun.java2d.loops.FillRect;
+import team.charliechocolatefactory.person.staff.Manager;
 import team.charliechocolatefactory.person.staff.Staff;
 import team.charliechocolatefactory.scene.Scene;
 import team.charliechocolatefactory.scene.staffarea.StaffArea;
+
+import java.util.ArrayList;
 
 /**
  * @author Brian.Z
@@ -11,11 +14,13 @@ import team.charliechocolatefactory.scene.staffarea.StaffArea;
  * @classname GeneralManager
  * @description There is only one general manager of the chocolate factory.
  *              TODO This class realizes the design pattern SINGLETON.
- * @date 2020/11/7 18:13
+ * @date 2020/11/7 18:13s
  */
 public class GeneralManager extends Person {
 
-    GeneralManager instance = null;
+    static GeneralManager instance = null;
+
+    public ArrayList<Manager> managerList;
 
     /**
      * Get the only instance of the general manager.
@@ -23,7 +28,7 @@ public class GeneralManager extends Person {
      * Then it will return the instance in the future.
      * @return instance of general manager
      */
-    public GeneralManager getInstance() {
+    public static GeneralManager getInstance() {
         if (instance == null) {
             instance = new GeneralManager("Young young", 21, Sex.MALE);
             System.out.println("We didn't have a general manager yet. Now our general manager has taken over.");
@@ -34,6 +39,33 @@ public class GeneralManager extends Person {
         return instance;
     }
 
+    /**
+     * receive workers feed backs through the scene managers, and gives a solution toward the issue.
+     */
+    public void receiveFeedBack(){
+        System.out.println("General manager received the feed back and solve it.");
+    }
+
+    /**
+     * add manager to the list
+     * @param manager
+     */
+    public void addManager(Manager manager){
+        this.managerList.add(manager);
+    }
+
+    /**
+     * dispatch works to managers
+     */
+    public void dispatchWork(){
+        if(managerList.isEmpty()){
+            System.out.println("Please add manager to each scene first!!");
+        }
+        for(Manager manager:managerList){
+            System.out.println("Dispatch work to "+ manager.name);
+            manager.dispatchTask();
+        }
+    }
     /**
      * General Manager can move to anywhere.
      * @param dest destination

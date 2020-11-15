@@ -1,9 +1,12 @@
 package team.charliechocolatefactory.person.staff;
 
+import team.charliechocolatefactory.person.GeneralManager;
 import team.charliechocolatefactory.person.staff.worker.WarehouseWorker;
 import team.charliechocolatefactory.person.staff.worker.Worker;
 import team.charliechocolatefactory.scene.Scene;
 import team.charliechocolatefactory.scene.staffarea.StaffArea;
+
+import java.util.ArrayList;
 
 /**
  * @author Brian.Z
@@ -13,6 +16,7 @@ import team.charliechocolatefactory.scene.staffarea.StaffArea;
  * @date 2020/11/7 17:17
  */
 public class Manager extends Staff{
+
 
     public Manager(String name, int age, Sex sex, int salary, StaffArea department) {
         super(name, age, sex, salary, department);
@@ -47,6 +51,19 @@ public class Manager extends Staff{
         }
     }
 
+    public void dispatchTask(){
+        System.out.println("Received work from the general manager.");
+        ArrayList<Worker> workers = this.department.getWorkerList();
+        if(workers.isEmpty()){
+            System.out.println("Warning!! Here's no worker in this scene.");
+        }else{
+            for(Worker worker:workers){
+                System.out.println("dispatch task to "+worker.getName());
+                worker.work();
+            }
+        }
+    }
+
     /**
      * Managers can move to anywhere.
      * @param dest destination
@@ -69,5 +86,15 @@ public class Manager extends Staff{
     @Override
     public String toString() {
         return "class Manager extends Staff";
+    }
+
+    public void receiveFeedBack() {
+        System.out.println(this.department.toString()+" manager received feed back.");
+        reportToGeneralManager();
+    }
+
+    private void reportToGeneralManager() {
+        System.out.println(this.department.toString()+" manager report feed back things to the general manager.");
+        GeneralManager.getInstance().receiveFeedBack();
     }
 }

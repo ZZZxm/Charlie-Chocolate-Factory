@@ -18,11 +18,17 @@ public class WorkshopWorker extends Worker {
 
     @Override
     public void work() {
-        System.out.println("The workshop worker" + this.name + "is working.");
+        System.out.println("The workshop worker " + this.name + " is working.");
     }
 
     @Override
     public void rest() {
-        System.out.println("The workshop worker" + this.name + "goes to rest.");
+        System.out.println("The workshop worker " + this.name + " goes to rest.");
+    }
+
+    @Override
+    public void feedBack() {
+        System.out.println("The workshop worker "+this.name+" feed back things to the dining room manager");
+        this.department.getManager().receiveFeedBack();
     }
 }
