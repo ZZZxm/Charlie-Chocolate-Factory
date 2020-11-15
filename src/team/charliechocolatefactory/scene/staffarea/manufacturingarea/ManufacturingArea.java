@@ -1,7 +1,10 @@
 package team.charliechocolatefactory.scene.staffarea.manufacturingarea;
 
+import team.charliechocolatefactory.machine.Machine;
 import team.charliechocolatefactory.person.staff.Manager;
 import team.charliechocolatefactory.scene.staffarea.StaffArea;
+
+import java.util.ArrayList;
 
 /**
  * @author Y.C.Young
@@ -62,7 +65,7 @@ public abstract class ManufacturingArea extends StaffArea {
      * @return true if the machine is in the area
      */
     public boolean MachineExists(Machine machineObj) {
-        return machineObj.contains(machineObj);
+        return machineList.contains(machineObj);
     }
 
 }

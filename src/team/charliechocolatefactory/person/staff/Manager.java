@@ -1,7 +1,9 @@
 package team.charliechocolatefactory.person.staff;
 
-import javafx.scene.Scene;
+import team.charliechocolatefactory.person.staff.worker.WarehouseWorker;
 import team.charliechocolatefactory.person.staff.worker.Worker;
+import team.charliechocolatefactory.scene.Scene;
+import team.charliechocolatefactory.scene.staffarea.StaffArea;
 
 /**
  * @author Brian.Z
@@ -12,25 +14,31 @@ import team.charliechocolatefactory.person.staff.worker.Worker;
  */
 public class Manager extends Staff{
 
-    public Manager(String name, int age, Sex sex, int salary, Scene department) {
+    public Manager(String name, int age, Sex sex, int salary, StaffArea department) {
         super(name, age, sex, salary, department);
     }
 
     /**
-     * Manager can hire workers for the department he/she is responsible for.
+     * Manager can hire workers for his/her department.
+     * @param name name of the new worker
+     * @param sex sex of the new worker
+     * @param age age of the new worker
+     * @param salary salary of the new worker
      */
-    public void hireWorker() {
-        if(true /* 该部门人未满 */) {
-            /* 加入员工 */
-        }
+    public void hireWorker(String name, Sex sex, int age, int salary) {
+
+        department.addWorker(name, age, sex, salary);
     }
 
     /**
-     * Manager can fire workers for the department he/she is responsible for.
+     * Manager can fire workers for his/her department.
+     * @param worker the instance of the worker to be fired
+     * @return whether the action of fire is successful, the manager can only fire the workers in his/her department.
      */
     public boolean fireWorker(Worker worker) {
-        if (department == worker.getDepartment()) {
+        if (this.department == worker.getDepartment()) {
             /* 删除员工 */
+            department.removeWorker(worker);
             return true;
         }
         else {
@@ -39,6 +47,20 @@ public class Manager extends Staff{
         }
     }
 
+    /**
+     * Managers can move to anywhere.
+     * @param dest destination
+     */
+    @Override
+    public boolean moveTo(Scene dest) {
+        this.location = dest;
+        System.out.println("The manager " + this.name + "moves to " + dest.toString());
+        return true;
+    }
+
+    /**
+     * set the initial asset of the manager
+     */
     @Override
     protected void setInitialAsset() {
         this.asset = 100000;

@@ -2,8 +2,9 @@ package team.charliechocolatefactory.person.staff;
 
 import java.util.UUID;
 
-import javafx.scene.Scene;
 import team.charliechocolatefactory.person.Person;
+import team.charliechocolatefactory.scene.Scene;
+import team.charliechocolatefactory.scene.staffarea.StaffArea;
 
 
 /**
@@ -18,18 +19,19 @@ public abstract class Staff extends Person {
     /** staff ID number, each is unique */
     protected String id;
 
+    /** salary of the staff */
     protected int salary;
 
     /** where he/she works at */
-    protected Scene department;
+    protected StaffArea department;
 
     /** 0: normal 1: suspended 2: fired */
     protected int state;
 
-    public Staff(String name, int age, Sex sex, int salary, Scene department) {
+    public Staff(String name, int age, Sex sex, int salary, StaffArea workingArea) {
         super(name, age, sex);
         this.salary = salary;
-        this.department = department;
+        this.department = workingArea;
         this.id = allocateId();
     }
 
@@ -62,12 +64,9 @@ public abstract class Staff extends Person {
     /**
      * @return the department that the worker works at
      */
-    public Scene getDepartment() {
+    public StaffArea getDepartment() {
         return this.department;
     }
-
-    @Override
-    protected abstract void setInitialAsset();
 
     /**
      * @return allocate a unique UUID for every worker
@@ -76,6 +75,22 @@ public abstract class Staff extends Person {
         String uuid = UUID.randomUUID().toString();
         return uuid.replaceAll("-", "");
     }
+
+    /**
+     * Staffs can move to anywhere.
+     * @param dest destination
+     */
+    public boolean moveTo(Scene dest) {
+        this.location = dest;
+        System.out.println("The staff " + this.name + "moves to " + dest.toString());
+        return true;
+    }
+
+    /**
+     * set the initial asset of the staff
+     */
+    @Override
+    protected abstract void setInitialAsset();
 
     @Override
     public String toString() {
