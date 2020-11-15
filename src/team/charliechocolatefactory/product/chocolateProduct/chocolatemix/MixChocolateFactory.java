@@ -9,7 +9,7 @@ import team.charliechocolatefactory.product.chocolate.*;
  * @classname MixChocolateFactory
  * @description Factory class of ChocolateMix. This is a part of Flyweight Pattern.
  * @author Ngae Zeh-ghau
- * @date 2020/11/15 21:27
+ * @date 2020/11/16 00:32
  */
 public class MixChocolateFactory {
 
@@ -19,7 +19,7 @@ public class MixChocolateFactory {
 	/**
 	 * Get an instance of certain subclass of Chocoate or create a new one if absent.
 	 * 
-	 * @param type Extended class of Chocolate. eg: DarkChocolate
+	 * @param type Extended class of Chocolate. eg: DarkChocolate.class
 	 * @return Instance of (extended) Chocolate.
 	 * @throws NewInstanceFailureException Thrown when failed to create an instance.
 	 */

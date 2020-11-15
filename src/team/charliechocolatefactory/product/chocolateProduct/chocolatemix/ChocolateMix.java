@@ -1,9 +1,13 @@
 package team.charliechocolatefactory.product.chocolateProduct.chocolatemix;
 
 import java.text.SimpleDateFormat;
+import java.util.AbstractList;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Date;
 
 import team.charliechocolatefactory.product.chocolate.Chocolate;
+import team.charliechocolatefactory.product.chocolate.*;
 import team.charliechocolatefactory.rawmaterial.RawMaterial;
 import team.charliechocolatefactory.rawmaterial.Box;
 import team.charliechocolatefactory.product.Product;
@@ -13,39 +17,43 @@ import team.charliechocolatefactory.product.Product;
  * @classname ChocolateMix
  * @description Mixed chocolate pack. This is a part of Flyweight Pattern.
  * @author Ngae Zeh-ghau
- * @date 2020/11/15 22:08
+ * @date 2020/11/16 01:04
  */
 public class ChocolateMix extends Product {
 
 	private final Chocolate[] chocolates;
 
 	/**
-	 * TODO
+	 * ctor of ChocolateMix
 	 * 
-	 * @param typeList
-	 * @throws NewInstanceFailureException
+	 * @param typeList List of extended class of Chocolate. Eg: {MilkChocolate.class}
+	 * @throws NewInstanceFailureException Thrown when failed to create an instance.
 	 */
-	public ChocolateMix(Class<? extends Chocolate>[] typeList) throws NewInstanceFailureException {
+	public ChocolateMix(List<Class<? extends Chocolate>> typeList)
+			throws NewInstanceFailureException {
 		super("Chocolate Mix", Integer.MAX_VALUE, 0);
 		Chocolate chocolate = null;
 		int chocolateShelfLife = 0;
+		int index = 0;
 
-		chocolates = new Chocolate[typeList.length];
-		for (int i = 0; i < typeList.length; i++) {
-			chocolate = MixChocolateFactory.getChocolate(typeList[i]);
-			chocolates[i] = chocolate;
+		chocolates = new Chocolate[typeList.size()];
+		for (Class<? extends Chocolate> type : typeList) {
+			chocolate = MixChocolateFactory.getChocolate(type);
+			chocolates[index] = chocolate;
 			weight += chocolate.getWeight();
 			chocolateShelfLife = chocolate.getShelfLife();
 			if (chocolateShelfLife < shelfLife) {
 				shelfLife = chocolateShelfLife;
 			}
+			index++;
 		}
 	}
 
 	/**
+	 * Get chocolate instance at index.
 	 * 
-	 * @param index
-	 * @return
+	 * @param index index of instance
+	 * @return chocolate instance
 	 */
 	public Chocolate at(int index) {
 		if (index >= 0 && index < chocolates.length) {
@@ -67,7 +75,6 @@ public class ChocolateMix extends Product {
 		Date day = new Date();
 		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
 		super.setProducedDate(df.format(day));
-		return;
 	}
 
 	@Override
@@ -79,6 +86,19 @@ public class ChocolateMix extends Product {
 				}
 			}
 		}
+	}
+
+	/**
+	 * Test for Flyweight Pattern.
+	 * 
+	 * @param args dummy
+	 */
+	public static void main(String[] args) throws Exception {
+		ArrayList<Class<? extends Chocolate>> classes = new ArrayList<>();
+		classes.add(MilkChocolate.class);
+		classes.add(DarkChocolate.class);
+		ChocolateMix chocolateMix = new ChocolateMix(classes);
+		chocolateMix.at(1);
 	}
 
 }
