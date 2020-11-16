@@ -27,7 +27,6 @@ public abstract class Chocolate extends Product {
      */
     public double cocoaContent;
 
-
 //constructor
     /**
      * @param name

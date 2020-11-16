@@ -20,12 +20,29 @@ public abstract class TransportMachine extends Machine {
         super(type, machineNum, age, lifeYear, lossCoefficient, maxCapacity);
     }
 
+
+    /**
+     * function work() for transport machine aims to transport products or persons from one place to another
+     * @param product a Product
+     * @return
+     */
     @Override
     protected int work(Product product) {
-        String name = product.getName();
-        System.out.println(aimProcessNum + " " + name + " transported successfully.");
+        load(product);
+        System.out.println("On the way to the destination...");
+        arrive(product);
         return 0;
     }
+
+    /**
+     * loading the product or persons into the transport machine
+     */
+    protected abstract void load(Product product);
+
+    /**
+     * debus the product or persons
+     */
+    protected abstract void arrive(Product product);
 
     /**
      * designed for transporting items without explicit names

@@ -1,6 +1,7 @@
 package team.charliechocolatefactory.machine.transportmachine;
 
 import team.charliechocolatefactory.machine.transportmachine.TransportMachine;
+import team.charliechocolatefactory.product.Product;
 
 /**
  * @author Yuan.Cai
@@ -16,6 +17,16 @@ public class SmallCar extends TransportMachine {
 
     public SmallCar(String type, String machineNum, double age) {
         super(type, machineNum, age, 20, 0.6, 50);
+    }
+
+    @Override
+    protected void load(Product product) {
+        System.out.println("Four people are getting on the small car.");
+    }
+
+    @Override
+    protected void arrive(Product product) {
+        System.out.println("Four people arrive at the destination.");
     }
 
     public String toString() {
