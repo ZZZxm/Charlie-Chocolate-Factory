@@ -1,7 +1,6 @@
 package team.charliechocolatefactory.product.chocolateProduct.chocolatemix;
 
 import java.text.SimpleDateFormat;
-import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Date;
@@ -17,7 +16,7 @@ import team.charliechocolatefactory.product.Product;
  * @classname ChocolateMix
  * @description Mixed chocolate pack. This is a part of Flyweight Pattern.
  * @author Ngae Zeh-ghau
- * @date 2020/11/16 01:04
+ * @date 2020/11/16 12:27
  */
 public class ChocolateMix extends Product {
 
@@ -26,7 +25,7 @@ public class ChocolateMix extends Product {
 	/**
 	 * ctor of ChocolateMix
 	 * 
-	 * @param typeList List of extended class of Chocolate. Eg: {MilkChocolate.class}
+	 * @param typeList List of extended class of Chocolate. Eg: MilkChocolate.class
 	 * @throws NewInstanceFailureException Thrown when failed to create an instance.
 	 */
 	public ChocolateMix(List<Class<? extends Chocolate>> typeList)
@@ -94,11 +93,53 @@ public class ChocolateMix extends Product {
 	 * @param args dummy
 	 */
 	public static void main(String[] args) throws Exception {
+		// create an array of [Matcha, Dark, Milk, Matcha, Dark, White, Sandwich, White]
 		ArrayList<Class<? extends Chocolate>> classes = new ArrayList<>();
-		classes.add(MilkChocolate.class);
+		classes.add(MatchaChocolate.class);
 		classes.add(DarkChocolate.class);
+		classes.add(MilkChocolate.class);
+		classes.add(MatchaChocolate.class);
+		classes.add(DarkChocolate.class);
+		classes.add(WhiteChocolate.class);
+		classes.add(SandwichChocolate.class);
+		classes.add(WhiteChocolate.class);
+
+		/*
+		 * the following line should print:
+		 * 
+		 * "Creating chocolate of type: MatchaChocolate"
+		 * 
+		 * "Creating chocolate of type: DarkChocolate"
+		 * 
+		 * "Creating chocolate of type: MilkChocolate"
+		 * 
+		 * "Creating chocolate of type: WhiteChocolate"
+		 * 
+		 * "Creating chocolate of type: SandwichChocolate"
+		 */
 		ChocolateMix chocolateMix = new ChocolateMix(classes);
-		chocolateMix.at(1);
+		// the following lines should both print "true"
+		System.out.println(chocolateMix.at(0) == chocolateMix.at(3));
+		System.out.println(chocolateMix.at(1) == chocolateMix.at(4));
+
+		DarkChocolate myDarkChocolate = new DarkChocolate();
+		// the following line should print "false"
+		System.out.println(chocolateMix.at(1) == myDarkChocolate);
+
+		/*
+		 * the following lines should print:
+		 * 
+		 * "Creating chocolate of type: Chocolate"
+		 * 
+		 * "[Exception Handled] Cannot directly instantiate Chocolate!"
+		 */
+		try {
+			ArrayList<Class<? extends Chocolate>> baseChocolate = new ArrayList<>();
+			baseChocolate.add(Chocolate.class);
+			new ChocolateMix(baseChocolate);
+		} catch (NewInstanceFailureException e) {
+			System.out.println("[Exception Handled] Cannot directly instantiate Chocolate!");
+		}
 	}
 
 }
