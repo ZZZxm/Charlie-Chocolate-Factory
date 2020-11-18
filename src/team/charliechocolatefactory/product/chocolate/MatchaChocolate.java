@@ -14,10 +14,10 @@ import team.charliechocolatefactory.rawmaterial.Water;
  */
 public class MatchaChocolate extends Chocolate {
 
-//fields
+    //fields
     protected double matchaContent;
 
-// constructor
+    // constructor
     public MatchaChocolate() {
         super("Matcha chocolate", 18, 8, 0.4);
         this.matchaContent = 0.2;
@@ -25,18 +25,20 @@ public class MatchaChocolate extends Chocolate {
     }
 
 // methods
+
     /**
      * @return matcha's content
      */
-    public double getMatchaContent(){
+    public double getMatchaContent() {
         return this.matchaContent;
     }
 
     /**
      * how many grams' matcha is needed
+     *
      * @return
      */
-    public double getMatchaWieght(){
+    public double getMatchaWieght() {
         return this.matchaContent * this.weight;
     }
 
@@ -53,10 +55,11 @@ public class MatchaChocolate extends Chocolate {
 
     /**
      * override the to string method
+     *
      * @return a String
      */
     @Override
-    public String toString(){
+    public String toString() {
         return "Subclass : Matcha Chocolate";
     }
 

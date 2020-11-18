@@ -1,5 +1,9 @@
 package team.charliechocolatefactory.product;
 
+import team.charliechocolatefactory.machine.Machine;
+import team.charliechocolatefactory.machine.processmachine.ProcessMachine;
+import team.charliechocolatefactory.machine.processmachine.productmachine.BasicProductMachine;
+import team.charliechocolatefactory.machine.processmachine.wrappermachine.WrapperMachine;
 import team.charliechocolatefactory.rawmaterial.PackageMaterial;
 import team.charliechocolatefactory.rawmaterial.RawMaterial;
 import team.charliechocolatefactory.scene.Scene;
@@ -25,6 +29,7 @@ public abstract class Product {
 
     protected int weight; // weight of single item, in gram
 
+    public ProcessMachine produceMachine, wrapperMachine;
     /**
      * 0 -> still producing
      * 1 -> produced but un-packaged
@@ -54,6 +59,8 @@ public abstract class Product {
         this.state = 0;
         this.weight = weight;
         this.ingredientList = new ArrayList<RawMaterial>();
+        this.produceMachine = new BasicProductMachine("PR", "PR220");
+        this.wrapperMachine = new WrapperMachine("PA", "PA118", 40, 1, 500);
     }
 
 // methods
@@ -92,7 +99,7 @@ public abstract class Product {
     /**
      * @param date template yyyy-mm-dd
      */
-    public void setProducedDate(String date) {
+    protected void setProducedDate(String date) {
         if (this.producedDate == null) {
             this.producedDate = date;
             return;
@@ -155,16 +162,12 @@ public abstract class Product {
      * produce the product
      */
     public void producing() {
-        System.out.println("Start producing " + this.productName + "...");
-        this.state = 0;
-        System.out.println("Finish producing " + this.productName + ".");
-        this.state = 1;
+        this.produceMachine.process(this, 1);
     }
 
-    /**
-     * package the product by modifying the field -> pack
-     */
-    public abstract void packaging();
+    public void packaging() {
+        this.wrapperMachine.process(this, 1);
+    }
 
     /**
      * initialize the ingredient list of the product

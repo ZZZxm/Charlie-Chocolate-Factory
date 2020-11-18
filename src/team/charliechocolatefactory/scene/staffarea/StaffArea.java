@@ -1,5 +1,6 @@
 package team.charliechocolatefactory.scene.staffarea;
 
+import team.charliechocolatefactory.person.GeneralManager;
 import team.charliechocolatefactory.person.Person;
 import team.charliechocolatefactory.person.staff.Manager;
 import team.charliechocolatefactory.person.staff.worker.Worker;
@@ -41,6 +42,7 @@ public abstract class StaffArea extends Scene implements Aggregate {
         super(location, cost, area);
         workerList = new ArrayList<Worker>();
         manager = newManager;
+        GeneralManager.getInstance().addManager(manager);
     }
 
     /**

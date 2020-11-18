@@ -13,15 +13,15 @@ import team.charliechocolatefactory.rawmaterial.Sugar;
  */
 public class MilkChocolate extends Chocolate {
 
-//fields
+    //fields
     protected double milkContent;
     private double cocoaBeanNum=100;
     private double sugarNum=5;
     private double milkNum=0.5;
 
-//constructor
+    //constructor
     public MilkChocolate() {
-        super("Milk chocolate", 18,15, 0.3);
+        super("Milk chocolate", 18, 15, 0.3);
         this.milkContent = 0.4;
         this.initIngredientList();
     }
@@ -29,15 +29,16 @@ public class MilkChocolate extends Chocolate {
     /**
      * @return milk's content
      */
-    public double getMilkContent(){
+    public double getMilkContent() {
         return this.milkContent;
     }
 
     /**
      * how many grams' milk is needed;
+     *
      * @return
      */
-    public double getMilkWeight(){
+    public double getMilkWeight() {
         return this.milkContent * this.weight;
     }
 
@@ -53,10 +54,11 @@ public class MilkChocolate extends Chocolate {
 
     /**
      * override the toString method
+     *
      * @return
      */
     @Override
-    public String toString(){
+    public String toString() {
         return "subclass : Milk Chocolate";
     }
 

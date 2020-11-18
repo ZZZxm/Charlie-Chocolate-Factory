@@ -21,6 +21,7 @@ public class SandwichChocolate extends Chocolate {
     }
 
 // methods
+
     /**
      * initialize the ingredient list of the sandwich chocolate
      */
@@ -34,10 +35,11 @@ public class SandwichChocolate extends Chocolate {
 
     /**
      * override the toString method
+     *
      * @return
      */
     @Override
-    public String toString(){
+    public String toString() {
         return "subclass : SandwichChocolate";
     }
 }
