@@ -23,6 +23,7 @@ public class MilkChocolate extends Chocolate {
     //constructor
     public MilkChocolate() {
         super("Milk chocolate", 18, 15, 0.3);
+    }
 //constructor
     public MilkChocolate(Sandwich sandwich) {
         super("Milk chocolate", 18,15, 0.3,sandwich);

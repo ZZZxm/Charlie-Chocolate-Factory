@@ -21,6 +21,7 @@ public class MatchaChocolate extends Chocolate {
     // constructor
     public MatchaChocolate() {
         super("Matcha chocolate", 18, 8, 0.4);
+    }
 // constructor
     public MatchaChocolate(Sandwich sandwich) {
         super("Matcha chocolate", 18, 8, 0.4,sandwich);

@@ -2,6 +2,7 @@ package team.charliechocolatefactory.product.chocolate;
 
 
 import team.charliechocolatefactory.product.Product;
+import team.charliechocolatefactory.product.Sandwich.Pure;
 import team.charliechocolatefactory.product.Sandwich.Sandwich;
 
 import java.text.SimpleDateFormat;
@@ -49,5 +50,11 @@ public abstract class Chocolate extends Product {
         super(name, shelfLife, weight);
         this.cocoaContent = content;
         this.sandwich=sandwich;
+    }
+
+    protected Chocolate(String name, int shelfLife, int weight, double content) {
+        super(name, shelfLife, weight);
+        this.cocoaContent = content;
+        this.sandwich = new Pure();
     }
 }

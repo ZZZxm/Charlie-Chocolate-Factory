@@ -13,16 +13,10 @@ import team.charliechocolatefactory.product.Product;
 public class Adapter implements UAV{
     private TransportMachine adaptee;
     private String mID;
-    @Override
-    public int work(){
 
-        System.out.println(this.adaptee.getAimProcessNum()+" items transported successfully.");
-        return 0;
-    }
      @Override
      public int work(Product product){
-        String pdName=product.getName();
-        System.out.println(this.adaptee.getAimProcessNum()+" "+pdName+" transported successfully.");
+         adaptee.run(product);
         return 0;
      }
     @Override

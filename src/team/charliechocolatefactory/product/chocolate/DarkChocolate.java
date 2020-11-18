@@ -16,6 +16,8 @@ public class DarkChocolate extends Chocolate {
     // constructor
     public DarkChocolate() {
         super("Dark chocolate", 18, 10, 0.78);
+    }
+
 // constructor
     public DarkChocolate(Sandwich sandwich) {
         super("Dark chocolate", 18,10, 0.78,sandwich);

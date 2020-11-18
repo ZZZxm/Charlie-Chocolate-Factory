@@ -11,7 +11,6 @@ import team.charliechocolatefactory.product.Product;
  */
 public interface UAV {
 
-    int work();
     int work(Product product);
     void setID(String ID);
     String getID();
