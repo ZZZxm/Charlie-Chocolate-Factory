@@ -1,5 +1,6 @@
 package team.charliechocolatefactory.product.chocolate;
 
+import team.charliechocolatefactory.product.Sandwich.Sandwich;
 import team.charliechocolatefactory.rawmaterial.CocoaBean;
 import team.charliechocolatefactory.rawmaterial.Matcha;
 import team.charliechocolatefactory.rawmaterial.Sugar;
@@ -20,6 +21,9 @@ public class MatchaChocolate extends Chocolate {
     // constructor
     public MatchaChocolate() {
         super("Matcha chocolate", 18, 8, 0.4);
+// constructor
+    public MatchaChocolate(Sandwich sandwich) {
+        super("Matcha chocolate", 18, 8, 0.4,sandwich);
         this.matchaContent = 0.2;
         this.initIngredientList();
     }
@@ -53,6 +57,9 @@ public class MatchaChocolate extends Chocolate {
         super.ingredientList.add(new Matcha());
     }
 
+    public String getNameWithSandwich() {
+        return sandwich.getSandwich()+" MatchaChocolate";
+    }
     /**
      * override the to string method
      *

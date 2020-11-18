@@ -15,6 +15,12 @@ public class ExperienceRoom extends PublicArea {
     private HandmadeTool tool = HandmadeToolFactory.getHandMadeTool();
 
     /**
+     * number of this exp-room
+     * @modified by Ray
+     **/
+    private int expRoomNumber;
+
+    /**
      * constructor of ExperienceRoom
      */
     public ExperienceRoom(String location, double cost, double area, int maxNumber) {
@@ -77,4 +83,7 @@ public class ExperienceRoom extends PublicArea {
         System.out.println(HandmadeToolFactory.getDefaultHandmadeTool().getRefCount());
     }
 
+    public int getExpRoomNumber(){return expRoomNumber;}
+
+    public void setExpRoomNumber(int number){expRoomNumber=number;}
 }

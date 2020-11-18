@@ -1,5 +1,6 @@
 package team.charliechocolatefactory.product.chocolate;
 
+import team.charliechocolatefactory.product.Sandwich.Sandwich;
 import team.charliechocolatefactory.rawmaterial.CocoaBean;
 import team.charliechocolatefactory.rawmaterial.Milk;
 import team.charliechocolatefactory.rawmaterial.Sugar;
@@ -22,6 +23,9 @@ public class MilkChocolate extends Chocolate {
     //constructor
     public MilkChocolate() {
         super("Milk chocolate", 18, 15, 0.3);
+//constructor
+    public MilkChocolate(Sandwich sandwich) {
+        super("Milk chocolate", 18,15, 0.3,sandwich);
         this.milkContent = 0.4;
         this.initIngredientList();
     }
@@ -51,7 +55,9 @@ public class MilkChocolate extends Chocolate {
         super.ingredientList.add(new Sugar());
         super.ingredientList.add(new Milk());
     }
-
+    public String getNameWithSandwich() {
+        return sandwich.getSandwich()+" MilkChocolate";
+    }
     /**
      * override the toString method
      *

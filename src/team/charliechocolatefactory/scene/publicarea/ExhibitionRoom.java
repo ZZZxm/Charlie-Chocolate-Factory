@@ -11,6 +11,13 @@ import java.util.ArrayList;
  */
 public class ExhibitionRoom extends PublicArea {
 
+
+    /**
+     * number of this exh-room
+     * @modified by Ray
+     **/
+    private int exhRoomNumber;
+
     /**
      * List of all exhibits
      **/
@@ -67,5 +74,9 @@ public class ExhibitionRoom extends PublicArea {
             System.out.println("Exhibits are not in the room.");
         }
     }
+
+    public int getExhRoomNumber(){return exhRoomNumber;}
+
+    public void setExhRoomNumber(int number){exhRoomNumber=number;}
 
 }
