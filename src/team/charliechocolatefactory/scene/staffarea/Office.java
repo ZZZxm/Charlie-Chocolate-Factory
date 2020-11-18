@@ -3,6 +3,7 @@ package team.charliechocolatefactory.scene.staffarea;
 import team.charliechocolatefactory.person.Person;
 import team.charliechocolatefactory.person.staff.Manager;
 import team.charliechocolatefactory.person.staff.worker.OfficeWorker;
+import team.charliechocolatefactory.person.staff.worker.Worker;
 import team.charliechocolatefactory.scene.staffarea.manufacturingarea.ManufacturingArea;
 
 /**
@@ -37,10 +38,13 @@ public class Office extends StaffArea {
      * @param sex sex of the worker
      * @param salary salary of the worker
      */
+
     @Override
     public void addWorker(String name, int age, Person.Sex sex, int salary) {
         OfficeWorker workerObj = new OfficeWorker(name, age, sex, salary, this);
         workerList.add(workerObj);
     }
+
+
 
 }

@@ -12,6 +12,8 @@ import team.charliechocolatefactory.scene.Scene;
  */
 public abstract class Person {
 
+    public String identity="person";
+
     protected String name;
 
     protected int age;

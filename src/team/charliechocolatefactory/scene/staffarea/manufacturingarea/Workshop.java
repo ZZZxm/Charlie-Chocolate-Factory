@@ -2,6 +2,7 @@ package team.charliechocolatefactory.scene.staffarea.manufacturingarea;
 
 import team.charliechocolatefactory.person.Person;
 import team.charliechocolatefactory.person.staff.Manager;
+import team.charliechocolatefactory.person.staff.worker.Worker;
 import team.charliechocolatefactory.person.staff.worker.WorkshopWorker;
 
 /**
@@ -28,7 +29,8 @@ public class Workshop extends ManufacturingArea {
         super(location, cost, area, newManager);
     }
 
-    /**
+
+     /**
      * create and add a worker to the area
      * @param name name of the worker
      * @param age age of the worker

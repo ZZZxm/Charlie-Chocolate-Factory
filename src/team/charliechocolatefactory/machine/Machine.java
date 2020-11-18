@@ -1,5 +1,6 @@
 package team.charliechocolatefactory.machine;
 import team.charliechocolatefactory.product.Product;
+import team.charliechocolatefactory.person.staff.worker.MaintenanceWorker.*;
 
 import java.util.Random;
 
@@ -163,11 +164,16 @@ public abstract class Machine {
     /**
      * artificial maintenance of machinery to extend its service life
      */
-    public void maintenance(){
-        Random rand = new Random();
-        int ageLonged = rand.nextInt(5);
-        lifeYear=lifeYear+lifeYear*ageLonged*0.01;
-        System.out.println("Maintenance work is completed, and the life of "+type+machineNum+" is extended to "+lifeYear+" years.\n");
+    public void maintenance(MaintenanceRookie worker1, MaintenanceProfession worker2, MaintenanceWorker worker3){
+        double attritionRate= age/lifeYear;
+        worker1.setNext(worker2);
+        worker2.setNext(worker3);
+        if(worker1.handleRequest(attritionRate)) {
+            Random rand = new Random();
+            int ageLonged = rand.nextInt(5);
+            lifeYear = lifeYear + lifeYear * ageLonged * 0.01;
+            System.out.println("Maintenance work is completed, and the life of " + type + machineNum + " is extended to " + lifeYear + " years.\n");
+        }
     }
 
     /**

@@ -11,6 +11,8 @@ import team.charliechocolatefactory.scene.staffarea.StaffArea;
  */
 public class Guard extends Staff{
 
+    public String identity="guard";
+
     public Guard(String name, int age, Sex sex, int salary, StaffArea workingArea) {
         super(name, age, sex, salary, workingArea);
     }

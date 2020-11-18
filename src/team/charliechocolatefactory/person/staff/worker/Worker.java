@@ -12,8 +12,14 @@ import team.charliechocolatefactory.scene.staffarea.StaffArea;
  */
 public abstract class Worker extends Staff {
 
+    public String identity="worker";
+
     public Worker(String name, int age, Sex sex, int salary, StaffArea department) {
         super(name, age, sex, salary, department);
+    }
+
+    public Worker(String name, int age, Sex sex, int salary) {
+        super(name, age, sex, salary);
     }
 
     /**

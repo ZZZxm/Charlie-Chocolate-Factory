@@ -4,6 +4,9 @@ import team.charliechocolatefactory.person.Person;
 import team.charliechocolatefactory.person.staff.Manager;
 import team.charliechocolatefactory.person.staff.worker.Worker;
 import team.charliechocolatefactory.scene.Scene;
+import team.charliechocolatefactory.scene.staffarea.manufacturingarea.WorkerIterator.Aggregate;
+import team.charliechocolatefactory.scene.staffarea.manufacturingarea.WorkerIterator.Iterator;
+import team.charliechocolatefactory.scene.staffarea.manufacturingarea.WorkerIterator.WorkerListIterator;
 
 import java.util.ArrayList;
 
@@ -12,21 +15,23 @@ import java.util.ArrayList;
  * @project chocolateFactory
  * @classname StaffArea
  * @description Inherited from basic class scene, it represents scenes only open for staffs.
+ *              ConcreteAggregate of the Iterator.
  * @date 2020/11/9 19:44
  */
-public abstract class StaffArea extends Scene {
+public abstract class StaffArea extends Scene implements Aggregate {
 
     /** Manager of the staff area **/
     protected Manager manager;
 
     /** List of all workers in the area **/
-    protected ArrayList<Worker> workerList;
+    protected ArrayList<Worker> workerList=null;
 
     /**
     * Constructor of StaffArea with no manager specified
     */
     public StaffArea(String location, double cost, double area) {
         this(location, cost, area, null);
+        workerList = new ArrayList<Worker>();
     }
 
     /**
@@ -34,7 +39,7 @@ public abstract class StaffArea extends Scene {
      */
     public StaffArea(String location, double cost, double area, Manager newManager) {
         super(location, cost, area);
-        workerList = new ArrayList<>();
+        workerList = new ArrayList<Worker>();
         manager = newManager;
     }
 
@@ -53,6 +58,7 @@ public abstract class StaffArea extends Scene {
     public void setManager(Manager newManager) {
         manager = newManager;
     }
+
 
     /**
      * create and add a worker to the area
@@ -88,9 +94,22 @@ public abstract class StaffArea extends Scene {
      * get the worker list
      * @return the worker list of the staff area
      */
-    public ArrayList<Worker> getWorkerList()
-    {
-        return new ArrayList<Worker>(workerList);
+    public ArrayList<Worker> getWorkerList() {
+        return workerList;
+    }
+
+    /**
+     *
+     * @return an Iterator that copies the protected WorkerList
+     */
+    @Override
+    public Iterator getIterator() {
+        return new WorkerListIterator(workerList);
+    }
+
+    @Override
+    public String toString() {
+        return "class StaffArea extends Scene and implements Aggregate";
     }
 
 }

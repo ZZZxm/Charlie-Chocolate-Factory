@@ -3,6 +3,7 @@ package team.charliechocolatefactory.scene.staffarea.manufacturingarea;
 import team.charliechocolatefactory.person.Person;
 import team.charliechocolatefactory.person.staff.Manager;
 import team.charliechocolatefactory.person.staff.worker.WarehouseWorker;
+import team.charliechocolatefactory.person.staff.worker.Worker;
 
 import java.util.HashMap;
 
@@ -80,5 +81,6 @@ public class Warehouse extends ManufacturingArea {
     public HashMap<String, Double> getMaterialList() {
         return new HashMap<String, Double>(materialAmount);
     }
+
 
 }

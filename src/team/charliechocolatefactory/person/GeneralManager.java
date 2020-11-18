@@ -15,6 +15,8 @@ import team.charliechocolatefactory.scene.staffarea.StaffArea;
  */
 public class GeneralManager extends Person {
 
+    public String identity="general manager";
+
     GeneralManager instance = null;
 
     /**
