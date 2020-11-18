@@ -2,6 +2,7 @@ package team.charliechocolatefactory.scene.publicarea;
 
 import team.charliechocolatefactory.supplement.HandmadeTool;
 import team.charliechocolatefactory.supplement.HandmadeToolFactory;
+import team.charliechocolatefactory.person.staff.worker.UtilityWorker;
 
 /**
  * @author Ngae Zeh-ghau
@@ -86,4 +87,20 @@ public class ExperienceRoom extends PublicArea {
     public int getExpRoomNumber(){return expRoomNumber;}
 
     public void setExpRoomNumber(int number){expRoomNumber=number;}
+     * @return name of the scene as a String
+     */
+    @Override
+    public String toString() {
+        return "experience room";
+    }
+
+    /**
+     * Visitor Pattern: accept a utility worker to maintenance the scene
+     *
+     * @param worker the utility worker
+     */
+    @Override
+    public void accept(UtilityWorker worker) {
+        worker.visit(this);
+    }
 }

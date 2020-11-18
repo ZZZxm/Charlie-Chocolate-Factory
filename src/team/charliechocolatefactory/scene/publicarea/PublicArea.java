@@ -1,5 +1,6 @@
 package team.charliechocolatefactory.scene.publicarea;
 
+import team.charliechocolatefactory.person.staff.worker.UtilityWorker;
 import team.charliechocolatefactory.person.visitor.Visitor;
 import team.charliechocolatefactory.scene.Scene;
 
@@ -34,7 +35,14 @@ public abstract class PublicArea extends Scene {
     }
 
     /**
+     * @return name of the scene as a String
+     */
+    @Override
+    public abstract String toString();
+
+    /**
      * when a visitor enters the area, add him to the list
+     *
      * @param visitorObj visitor object
      */
     public void addVisitor(Visitor visitorObj) {
@@ -49,6 +57,7 @@ public abstract class PublicArea extends Scene {
 
     /**
      * when a visitor leaves the area, remove him from the list
+     *
      * @param visitorObj visitor object
      */
     public void removeVisitor(Visitor visitorObj) {
@@ -61,6 +70,7 @@ public abstract class PublicArea extends Scene {
 
     /**
      * check whether a visitor object is in the list
+     *
      * @param visitorObj visitor object
      * @return true if the visitor is in
      */
@@ -70,10 +80,25 @@ public abstract class PublicArea extends Scene {
 
     /**
      * check whether the area is full
+     *
      * @return true if the area is full
      */
     public boolean isFull() {
         return visitorList.size() >= maxVisitorNumber;
     }
+
+    /**
+     * maintain exhibits
+     */
+    public void getExhibitsMaintained() {
+        System.out.println("The exhibits have been maintained.");
+    }
+
+    /**
+     * Visitor Pattern: accept a utility worker to maintenance the scene
+     *
+     * @param worker the utility worker
+     */
+    public abstract void accept(UtilityWorker worker);
 
 }
