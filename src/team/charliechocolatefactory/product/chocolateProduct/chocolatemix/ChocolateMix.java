@@ -16,7 +16,7 @@ import team.charliechocolatefactory.product.Product;
  * @classname ChocolateMix
  * @description Mixed chocolate pack. This is a part of Flyweight Pattern.
  * @author Ngae Zeh-ghau
- * @date 2020/11/16 12:27
+ * @date 2020/11/18 00:32
  */
 public class ChocolateMix extends Product {
 
@@ -101,7 +101,6 @@ public class ChocolateMix extends Product {
 		classes.add(MatchaChocolate.class);
 		classes.add(DarkChocolate.class);
 		classes.add(WhiteChocolate.class);
-		classes.add(SandwichChocolate.class);
 		classes.add(WhiteChocolate.class);
 
 		/*
@@ -114,8 +113,6 @@ public class ChocolateMix extends Product {
 		 * "Creating chocolate of type: MilkChocolate"
 		 * 
 		 * "Creating chocolate of type: WhiteChocolate"
-		 * 
-		 * "Creating chocolate of type: SandwichChocolate"
 		 */
 		ChocolateMix chocolateMix = new ChocolateMix(classes);
 		// the following lines should both print "true"
