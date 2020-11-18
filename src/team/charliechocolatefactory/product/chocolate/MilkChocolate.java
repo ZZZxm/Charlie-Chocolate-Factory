@@ -15,9 +15,9 @@ public class MilkChocolate extends Chocolate {
 
 //fields
     protected double milkContent;
-    private double cocoaBeanNum;
-    private double sugarNum;
-    private double milkNum;
+    private double cocoaBeanNum=100;
+    private double sugarNum=5;
+    private double milkNum=0.5;
 
 //constructor
     public MilkChocolate() {
