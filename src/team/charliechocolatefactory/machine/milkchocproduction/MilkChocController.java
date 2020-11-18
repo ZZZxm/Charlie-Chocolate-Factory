@@ -1,5 +1,7 @@
 package team.charliechocolatefactory.machine.milkchocproduction;
 
+import team.charliechocolatefactory.product.chocolate.MilkChocolate;
+
 /**
  * @author Yuan.Cai
  * @project chocolateFactory
@@ -35,6 +37,14 @@ public class MilkChocController {
             System.out.println("Successfully producing "+outNum+" MilkChocolate!");
         }
         return outNum;
+    }
+
+    /**
+     * return the product
+     * @return a MilkChocolate
+     */
+    public MilkChocolate getMilkChocolate() {
+        return milkChocMachine.getMilkChocolate();
     }
 
     public String toString() {
