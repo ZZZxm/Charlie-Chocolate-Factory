@@ -11,9 +11,10 @@ import team.charliechocolatefactory.scene.staffarea.StaffArea;
  * @date 2020/11/18 14:19
  */
 public abstract class Residence extends Scene {
-    public Residence(){}
+    public Residence() {
+    }
 
-    public Residence(double x){
+    public Residence(double x) {
         super(x);
     }
 

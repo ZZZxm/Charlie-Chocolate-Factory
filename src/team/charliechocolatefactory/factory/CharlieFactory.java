@@ -11,6 +11,10 @@ import java.sql.Struct;
  */
 public class CharlieFactory {
 
+    private PeriodicMaintenance periodicMaintenance;
 
+    public CharlieFactory() {
+        periodicMaintenance = new PeriodicMaintenance();
+    }
 
 }

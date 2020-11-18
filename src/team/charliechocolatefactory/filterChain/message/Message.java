@@ -16,6 +16,7 @@ public abstract class Message {
 
     /**
      * Construct method, set our information
+     *
      * @param messageInfo
      */
     public Message(String messageInfo) {

@@ -27,7 +27,7 @@ public class OfficeWorker extends Worker {
 
     @Override
     public void feedBack() {
-        System.out.println("The office worker "+this.name+" feed back things to the dining room manager");
+        System.out.println("The office worker " + this.name + " feed back things to the dining room manager");
         this.department.getManager().receiveFeedBack();
     }
 }

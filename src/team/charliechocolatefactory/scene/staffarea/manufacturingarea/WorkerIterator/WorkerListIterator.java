@@ -12,18 +12,16 @@ import java.util.List;
  * @description TODO
  * @date 2020/11/16 9:54
  */
-public class WorkerListIterator implements Iterator{
+public class WorkerListIterator implements Iterator {
 
     private ArrayList<Worker> workerList = null;
     private int index = -1;
 
-    public WorkerListIterator()
-    {
+    public WorkerListIterator() {
         workerList = new ArrayList<Worker>();
     }
 
-    public WorkerListIterator(ArrayList<Worker> workerList)
-    {
+    public WorkerListIterator(ArrayList<Worker> workerList) {
         this.workerList = workerList;
     }
 
@@ -38,8 +36,7 @@ public class WorkerListIterator implements Iterator{
     //Point to the next element
     @Override
     public Worker next() {
-        if(this.hasNext())
-        {
+        if (this.hasNext()) {
             return workerList.get(++index);
         }
         return null;
@@ -48,21 +45,18 @@ public class WorkerListIterator implements Iterator{
     //Determine if there is the next element
     @Override
     public boolean hasNext() {
-        if(index < workerList.size() - 1)
-        {
+        if (index < workerList.size() - 1) {
             return true;
         }
         return false;
     }
 
-    public Worker last()
-    {
+    public Worker last() {
         index = workerList.size() - 1;
         return workerList.get(index);
     }
 
-    public Worker previous()
-    {
+    public Worker previous() {
         return workerList.get(--index);
     }
 

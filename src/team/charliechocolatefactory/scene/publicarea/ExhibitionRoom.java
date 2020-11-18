@@ -1,6 +1,6 @@
 package team.charliechocolatefactory.scene.publicarea;
 
-import team.charliechocolatefactory.person.staff.worker.UtilityWorker;
+import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
 
 import java.util.ArrayList;
 
@@ -16,6 +16,7 @@ public class ExhibitionRoom extends PublicArea {
 
     /**
      * number of this exh-room
+     *
      * @modified by Ray
      **/
     private int exhRoomNumber;
@@ -87,9 +88,14 @@ public class ExhibitionRoom extends PublicArea {
         }
     }
 
-    public int getExhRoomNumber(){return exhRoomNumber;}
+    public int getExhRoomNumber() {
+        return exhRoomNumber;
+    }
 
-    public void setExhRoomNumber(int number){exhRoomNumber=number;}
+    public void setExhRoomNumber(int number) {
+        exhRoomNumber = number;
+    }
+
     /**
      * Visitor Pattern: accept a utility worker to maintenance the scene
      *

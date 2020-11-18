@@ -7,26 +7,22 @@ package team.charliechocolatefactory.supplement.proxy;
  * @description TODO
  * @date 2020/11/18 13:28
  */
-public class PortableBattery  implements PortableBatterySubject {
-    private static int id_count=100000;
+public class PortableBattery implements PortableBatterySubject {
+    private static int id_count = 100000;
 
     protected int id;
 
     protected boolean isOccupied;
 
 
-
-
-
-    public PortableBattery(){
+    public PortableBattery() {
         this.id = id_count++;
 //        this.context = new ToolContext();
         this.isOccupied = false;
     }
 
-    public boolean take(){
-        if(this.isOccupied)
-        {
+    public boolean take() {
+        if (this.isOccupied) {
             System.out.println("This tool has been taken!");
             return false;
         }
@@ -36,9 +32,8 @@ public class PortableBattery  implements PortableBatterySubject {
         return true;
     }
 
-    public boolean returnPortableBattery(){
-        if(!this.isOccupied)
-        {
+    public boolean returnPortableBattery() {
+        if (!this.isOccupied) {
             System.out.println("This tool hasn't been taken!");
             return false;
         }
@@ -49,8 +44,7 @@ public class PortableBattery  implements PortableBatterySubject {
     }
 
 
-
-    public int getToolId(){
+    public int getToolId() {
         return this.id;
     }
 

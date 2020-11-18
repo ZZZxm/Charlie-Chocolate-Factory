@@ -7,7 +7,7 @@ import team.charliechocolatefactory.rawmaterial.RawMaterial;
  * @project chocolateFactory
  * @classname WarehouseClient
  * @description the presentation layer
- *              Client of a warehouse, users can access service of warehouse through this client
+ * Client of a warehouse, users can access service of warehouse through this client
  * @date 2020/11/17 21:44
  */
 public class WarehouseClient {
@@ -24,7 +24,8 @@ public class WarehouseClient {
     /**
      * By invoking this method, service of warehouse will be applied.
      * You can set the type of service by invoking
-     *      -> warehouseDelegate.setServiceType()
+     * -> warehouseDelegate.setServiceType()
+     *
      * @param rawMaterial every service is linked to some material
      */
     public void doTask(RawMaterial rawMaterial) {

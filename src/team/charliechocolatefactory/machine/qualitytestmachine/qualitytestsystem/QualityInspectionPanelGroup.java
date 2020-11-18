@@ -1,6 +1,8 @@
 package team.charliechocolatefactory.machine.qualitytestmachine.qualitytestsystem;
+
 import java.util.ArrayList;
 import java.util.List;
+
 /**
  * @author TT
  * @project chocolateFactory
@@ -8,7 +10,7 @@ import java.util.List;
  * @description TODO
  * @date 2020/11/14 18:010
  */
-public class QualityInspectionPanelGroup extends QualityTestSystem{
+public class QualityInspectionPanelGroup extends QualityTestSystem {
     private List<QualityTestSystem> succulents = new ArrayList<QualityTestSystem>();
 
     public QualityInspectionPanelGroup(String type, String machineNum, List<QualityTestSystem> succulents) {

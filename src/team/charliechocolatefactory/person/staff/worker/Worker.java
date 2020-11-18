@@ -21,14 +21,13 @@ public abstract class Worker extends Staff {
     public String identity="worker";
     // command pattern
     // workers are invokers, they invoke machines to carry on the command -> produce product
-    private Product darkChocolate, matchaChocolate, milkChocolate, sandwichChocolate, whiteChocolate, chocolateCake, chocolateWafer, chocolateIceCream, chocolateStarCookie;
+    private Product darkChocolate, matchaChocolate, milkChocolate, whiteChocolate, chocolateCake, chocolateWafer, chocolateIceCream, chocolateStarCookie;
 
     public Worker(String name, int age, Sex sex, int salary, StaffArea department) {
         super(name, age, sex, salary, department);
         this.darkChocolate = new DarkChocolate();
         this.matchaChocolate = new MatchaChocolate();
         this.milkChocolate = new MilkChocolate();
-        this.sandwichChocolate = new SandwichChocolate();
         this.whiteChocolate = new WhiteChocolate();
         this.chocolateCake = new ChocolateCake(5);
         this.chocolateStarCookie = new ChocolateCookie(ChocolateCookie.Shape.STAR);
@@ -50,10 +49,6 @@ public abstract class Worker extends Staff {
 
     public void produceMilkChocolate() {
         this.milkChocolate.producing();
-    }
-
-    public void produceSandwichChocolate() {
-        this.sandwichChocolate.producing();
     }
 
     public void produceChocolateCake() {
@@ -86,10 +81,6 @@ public abstract class Worker extends Staff {
 
     public void processMilkChocolate() {
         this.milkChocolate.producing();
-    }
-
-    public void processSandwichChocolate() {
-        this.sandwichChocolate.producing();
     }
 
     public void processChocolateCake() {

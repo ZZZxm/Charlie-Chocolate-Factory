@@ -7,8 +7,7 @@
 // * @author Zeus Lee
 // * @project chocolateFactory
 // * @classname ChocolateCake
-// * @description
-// * We need cloned classes, chocolate cake classes,
+// * @description We need cloned classes, chocolate cake classes,
 // * This class mainly tests shallow copies
 // * @date 2020/11/15 17:14
 // */

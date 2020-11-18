@@ -9,5 +9,6 @@ package team.charliechocolatefactory.supplement.proxy;
  */
 public interface PortableBatterySubject {
     boolean take();
+
     boolean returnPortableBattery();
 }

@@ -3,9 +3,7 @@ package team.charliechocolatefactory.scene.staffarea;
 import team.charliechocolatefactory.person.Person;
 import team.charliechocolatefactory.person.staff.Manager;
 import team.charliechocolatefactory.person.staff.worker.OfficeWorker;
-import team.charliechocolatefactory.person.staff.worker.Worker;
-import team.charliechocolatefactory.scene.staffarea.manufacturingarea.ManufacturingArea;
-import team.charliechocolatefactory.person.staff.worker.UtilityWorker;
+import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
 
 /**
  * @author Y.C.Young
@@ -31,14 +29,6 @@ public class Office extends StaffArea {
     }
 
     /**
-     * @return name of the scene as a String
-     */
-    @Override
-    public String toString() {
-        return "office";
-    }
-
-    /**
      * create and add a worker to the area
      *
      * @param name   name of the worker
@@ -46,7 +36,6 @@ public class Office extends StaffArea {
      * @param sex    sex of the worker
      * @param salary salary of the worker
      */
-
     @Override
     public void addWorker(String name, int age, Person.Sex sex, int salary) {
         OfficeWorker workerObj = new OfficeWorker(name, age, sex, salary, this);
@@ -64,4 +53,11 @@ public class Office extends StaffArea {
         worker.visit(this);
     }
 
+    /**
+     * @return name of the scene as a String
+     */
+    @Override
+    public String toString() {
+        return "office";
+    }
 }

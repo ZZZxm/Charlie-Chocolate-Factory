@@ -1,6 +1,5 @@
 package team.charliechocolatefactory.machine.processmachine.productmachine;
 
-import team.charliechocolatefactory.machine.processmachine.productmachine.ProductMachine;
 
 /**
  * @author Yuan.Cai

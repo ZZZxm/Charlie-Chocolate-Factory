@@ -1,5 +1,7 @@
 package team.charliechocolatefactory.scene.staffarea.decorator;
 
+import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
+
 /**
  * @author TT
  * @project chocolateFactory
@@ -20,6 +22,11 @@ public class CentralAirCondition extends ResidenceDecorator {
     @Override
     public double getCost() {
         return residence.getCost() + 200; //chair 200yuan/per
+    }
+
+    @Override
+    public void accept(UtilityWorker worker) {
+
     }
 
     @Override

@@ -10,35 +10,45 @@ import team.charliechocolatefactory.product.Product;
  * @description: Adapter Pattern to implement UAV's work function
  * @date: 2020/11/17 16:35
  */
-public class Adapter implements UAV{
+public class Adapter implements UAV {
     private TransportMachine adaptee;
     private String mID;
 
-     @Override
-     public int work(Product product){
-         adaptee.run(product);
+    @Override
+    public int work(Product product) {
+        adaptee.run(product);
         return 0;
-     }
+    }
+
     @Override
     public void setID(String ID) {
-        this.mID=ID;
+        this.mID = ID;
     }
+
     @Override
     public String getID() {
         return this.mID;
     }
+
     @Override
     public void navigate() {
-        System.out.println("UAV "+this.mID+" is navigating to destination.");
+        System.out.println("UAV " + this.mID + " is navigating to destination.");
     }
 
-    public Adapter(){}
+    public Adapter() {
+    }
 
-    public Adapter(TransportMachine adaptee){this.adaptee=adaptee;}
+    public Adapter(TransportMachine adaptee) {
+        this.adaptee = adaptee;
+    }
 
-    public TransportMachine getAdaptee(){return adaptee;}
+    public TransportMachine getAdaptee() {
+        return adaptee;
+    }
 
-    public void setAdaptee(TransportMachine adaptee){this.adaptee=adaptee;}
+    public void setAdaptee(TransportMachine adaptee) {
+        this.adaptee = adaptee;
+    }
 
     @Override
     public String toString() {

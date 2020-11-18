@@ -7,53 +7,51 @@ package team.charliechocolatefactory.supplement.proxy;
  * @description TODO
  * @date 2020/11/18 13:28
  */
-public class PortableBatteryProxy implements PortableBatterySubject{
+public class PortableBatteryProxy implements PortableBatterySubject {
 
     private PortableBattery portableBatteryInstance;
-    public PortableBatteryProxy(PortableBattery tool)
-    {
+
+    public PortableBatteryProxy(PortableBattery tool) {
         this.portableBatteryInstance = tool;
     }
 
     @Override
     public boolean take() {
-        if (portableBatteryInstance==null)
-        {
-            portableBatteryInstance=new PortableBattery();
+        if (portableBatteryInstance == null) {
+            portableBatteryInstance = new PortableBattery();
         }
         preTake();
-        boolean out=portableBatteryInstance.take();
+        boolean out = portableBatteryInstance.take();
         postTake();
 
         return out;
     }
-    public void preTake()
-    {
+
+    public void preTake() {
         System.out.println("Doing preTake functions");
     }
-    public void postTake()
-    {
+
+    public void postTake() {
         System.out.println("Doing postTake functions");
     }
 
     @Override
     public boolean returnPortableBattery() {
-        if (portableBatteryInstance==null)
-        {
-            portableBatteryInstance=new PortableBattery();
+        if (portableBatteryInstance == null) {
+            portableBatteryInstance = new PortableBattery();
         }
         preReturn();
-        boolean out=portableBatteryInstance.returnPortableBattery();
+        boolean out = portableBatteryInstance.returnPortableBattery();
         postReturn();
 
         return out;
     }
-    public void preReturn()
-    {
+
+    public void preReturn() {
         System.out.println("Doing preReturn functions");
     }
-    public void postReturn()
-    {
+
+    public void postReturn() {
         System.out.println("Doing postReturn functions");
     }
 

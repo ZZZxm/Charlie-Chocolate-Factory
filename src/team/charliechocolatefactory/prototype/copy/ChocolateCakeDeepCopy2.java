@@ -9,8 +9,7 @@
 // * @author Zeus Lee
 // * @project chocolateFactory
 // * @classname ChocolateCake
-// * @description
-// * We need cloned classes, chocolate cake classes,
+// * @description We need cloned classes, chocolate cake classes,
 // * This class mainly tests Deep copies2
 // * @date 2020/11/15 17:14
 // */
@@ -120,7 +119,7 @@
 //        } catch (Exception e) {
 //            e.printStackTrace();
 //            return null;
-//        }finally {
+//        } finally {
 //            try {
 //                // Close the flow;
 //                bos.close();

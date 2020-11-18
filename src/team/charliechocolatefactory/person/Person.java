@@ -12,13 +12,15 @@ import team.charliechocolatefactory.scene.Scene;
  */
 public abstract class Person {
 
-    public String identity="person";
+    public String identity = "person";
 
     protected String name;
 
     protected int age;
 
-    public enum Sex {MALE, FEMALE};
+    public enum Sex {
+        MALE, FEMALE,
+    };
 
     protected Sex sex;
 

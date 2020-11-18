@@ -13,19 +13,19 @@ public abstract class QualityTestSystem extends QualityTestMachine {
     private String species;
 
 
-    public QualityTestSystem(String type, String machineNum)
-    {
-        super(type,machineNum,50,1.2,500);
+    public QualityTestSystem(String type, String machineNum) {
+        super(type, machineNum, 50, 1.2, 500);
     }
 
-    public QualityTestSystem(String type,String machineNum,double age)
-    {
-        super(type,machineNum,age,50,1.2,500);
+    public QualityTestSystem(String type, String machineNum, double age) {
+        super(type, machineNum, age, 50, 1.2, 500);
     }
 
     protected abstract void add(QualityTestSystem qualityTestSystem);
 
-    public void show() { this.show(0); }
+    public void show() {
+        this.show(0);
+    }
 
     protected abstract void show(int depth);
 
@@ -33,7 +33,7 @@ public abstract class QualityTestSystem extends QualityTestMachine {
         return species;
     }
 
-    public void setSpecies(String species){
+    public void setSpecies(String species) {
         this.species = species;
     }
 

@@ -32,7 +32,7 @@ public class WorkshopWorker extends Worker {
 
     @Override
     public void feedBack() {
-        System.out.println("The workshop worker "+this.name+" feed back things to the dining room manager");
+        System.out.println("The workshop worker " + this.name + " feed back things to the dining room manager");
         this.department.getManager().receiveFeedBack();
     }
 }

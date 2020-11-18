@@ -2,7 +2,7 @@ package team.charliechocolatefactory.scene.staffarea.manufacturingarea;
 
 import team.charliechocolatefactory.machine.Machine;
 import team.charliechocolatefactory.person.staff.Manager;
-import team.charliechocolatefactory.person.staff.worker.UtilityWorker;
+import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
 import team.charliechocolatefactory.scene.staffarea.StaffArea;
 
 import java.util.ArrayList;

@@ -1,5 +1,7 @@
 package team.charliechocolatefactory.scene.staffarea.decorator;
 
+import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
+
 /**
  * @author TT
  * @project chocolateFactory
@@ -20,6 +22,11 @@ public class FireHydrant extends ResidenceDecorator {
     @Override
     public double getCost() {
         return residence.getCost() + 1000; //Infrared alarm 100yuan/per
+    }
+
+    @Override
+    public void accept(UtilityWorker worker) {
+
     }
 
     @Override

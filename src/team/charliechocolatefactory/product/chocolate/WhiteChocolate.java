@@ -1,9 +1,9 @@
 package team.charliechocolatefactory.product.chocolate;
 
 import team.charliechocolatefactory.product.Sandwich.Sandwich;
-import team.charliechocolatefactory.rawmaterial.CocoaBean;
-import team.charliechocolatefactory.rawmaterial.Sugar;
-import team.charliechocolatefactory.rawmaterial.Water;
+import team.charliechocolatefactory.rawmaterial.foodmaterial.CocoaBean;
+import team.charliechocolatefactory.rawmaterial.foodmaterial.Sugar;
+import team.charliechocolatefactory.rawmaterial.foodmaterial.Water;
 
 /**
  * @author Kerr
@@ -18,9 +18,10 @@ public class WhiteChocolate extends Chocolate {
     public WhiteChocolate() {
         super("White chocolate", 12, 5, 0.1);
     }
-// constructor
+
+    // constructor
     public WhiteChocolate(Sandwich sandwich) {
-        super("White chocolate", 12,5, 0.1,sandwich);
+        super("White chocolate", 12, 5, 0.1, sandwich);
         this.initIngredientList();
     }
 
@@ -33,17 +34,12 @@ public class WhiteChocolate extends Chocolate {
         super.ingredientList.add(new Water());
         super.ingredientList.add(new CocoaBean());
         super.ingredientList.add(new Sugar());
-        return;
     }
 
     public String getNameWithSandwich() {
-        return sandwich.getSandwich()+" WhiteChocolate";
+        return sandwich.getSandwich() + " WhiteChocolate";
     }
-    /**
-     * override the toString method
-     *
-     * @return
-     */
+
     @Override
     public String toString() {
         return "subclass : WhiteChocolate";

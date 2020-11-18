@@ -7,7 +7,7 @@ package team.charliechocolatefactory.filterChain.message;
  * @description ResignationMessage
  * @date 2020/11/15 18:01
  */
-public class ResignationMessage extends Message{
+public class ResignationMessage extends Message {
 
     /**
      * message type,The types of information users distinguish

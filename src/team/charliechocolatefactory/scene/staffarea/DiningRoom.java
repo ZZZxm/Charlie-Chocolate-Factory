@@ -3,8 +3,7 @@ package team.charliechocolatefactory.scene.staffarea;
 import team.charliechocolatefactory.person.Person;
 import team.charliechocolatefactory.person.staff.Manager;
 import team.charliechocolatefactory.person.staff.worker.DinningRoomWorker;
-import team.charliechocolatefactory.person.staff.worker.Worker;
-import team.charliechocolatefactory.person.staff.worker.UtilityWorker;
+import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
 
 /**
  * @author Y.C.Young

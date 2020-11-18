@@ -1,7 +1,8 @@
 package team.charliechocolatefactory.machine;
 
+import team.charliechocolatefactory.person.Person;
 import team.charliechocolatefactory.product.Product;
-import team.charliechocolatefactory.person.staff.worker.MaintenanceWorker.*;
+import team.charliechocolatefactory.person.staff.worker.fixworker.*;
 
 import java.util.Random;
 
@@ -39,6 +40,8 @@ public abstract class Machine {
     protected int aimProcessNum = 0;
     //indicating whether the machine is in malfunction
     protected boolean breakDown = false;
+    //the degree of machine failure
+    protected int breakLevel = 0;
 
     public Machine(String type, String machineNum) {
         this.type = type;
@@ -154,12 +157,31 @@ public abstract class Machine {
     }
 
     /**
+     *
+     */
+    public void notifyBroke() {
+        breakDown = true;
+        breakLevel = (int) (Math.random() * 10 + 1);
+        fix();
+    }
+
+    /**
      * set breakDown to false, called when fix work finishes
      */
     public void fix() {
+        FixRookie worker1 = new FixRookie("rookie", 18, Person.Sex.MALE, 10, null);
+        FixProfession worker2 = new FixProfession("profession", 19, Person.Sex.MALE, 10, null);
+        FixExpert worker3 = new FixExpert("expert", 18, Person.Sex.MALE, 10, null);
+
+
         if (breakDown) {
-            breakDown = false;
-            System.out.println("Fix finished, " + type + machineNum + " can work again!\n");
+            worker1.setNext(worker2);
+            worker2.setNext(worker3);
+            if (worker1.handleRequest(breakLevel)) {
+                breakLevel = 0;
+                breakDown = false;
+                System.out.println("Fix finished, " + type + machineNum + " can work again!\n");
+            }
         } else {
             System.out.println("There is nothing to be fixed.\n");
         }
@@ -168,16 +190,11 @@ public abstract class Machine {
     /**
      * artificial maintenance of machinery to extend its service life
      */
-    public void maintenance(MaintenanceRookie worker1, MaintenanceProfession worker2, MaintenanceWorker worker3) {
-        double attritionRate = age / lifeYear;
-        worker1.setNext(worker2);
-        worker2.setNext(worker3);
-        if (worker1.handleRequest(attritionRate)) {
-            Random rand = new Random();
-            int ageLonged = rand.nextInt(5);
-            lifeYear = lifeYear + lifeYear * ageLonged * 0.01;
-            System.out.println("Maintenance work is completed, and the life of " + type + machineNum + " is extended to " + lifeYear + " years.\n");
-        }
+    public void maintenance() {
+        Random rand = new Random();
+        int ageLonged = rand.nextInt(5);
+        lifeYear = lifeYear + lifeYear * ageLonged * 0.01;
+        System.out.println("Maintenance work is completed, and the life of " + type + machineNum + " is extended to " + lifeYear + " years.\n");
     }
 
     /**

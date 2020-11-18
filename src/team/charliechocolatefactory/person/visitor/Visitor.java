@@ -15,7 +15,7 @@ import team.charliechocolatefactory.scene.publicarea.PublicArea;
  */
 public class Visitor extends Person {
 
-    public String identity="visitor";
+    public String identity = "visitor";
 
     public Visitor(String name, int age, Sex sex) {
         super(name, age, sex);
@@ -24,15 +24,15 @@ public class Visitor extends Person {
     /**
      * visit a public area
      * However, a visitor can only be allowed to visit some place when it is not full.
+     *
      * @param dest destination
      */
     public boolean visit(PublicArea dest) {
-        if(!dest.isFull()) {
+        if (!dest.isFull()) {
             System.out.println("Visitor " + this.name + "visits" + dest.toString());
             this.moveTo(dest);
             return true;
-        }
-        else {
+        } else {
             System.out.println("Sorry, the" + dest.toString() + "is already full.");
             return false;
         }
@@ -40,6 +40,7 @@ public class Visitor extends Person {
 
     /**
      * Visitor can only visit the public areas.
+     *
      * @param dest destination
      */
     @Override
@@ -52,14 +53,14 @@ public class Visitor extends Person {
             System.out.println("Sorry, visitor " +this.name + "can't go to" + dest.toString());
             return false;
         }*/
-        Context visit=new Context();
-        String move="visitor enter "+dest.toString();
-        if(visit.canEnter(move)) {
+        Context visit = new Context();
+        String move = "visitor enter " + dest.toString();
+        if (visit.canEnter(move)) {
             this.location = dest;
             System.out.println("Visitor" + this.name + "moves to " + dest.toString());
             return true;
         } else {
-            System.out.println("Sorry, visitor " +this.name + "can't go to" + dest.toString());
+            System.out.println("Sorry, visitor " + this.name + "can't go to" + dest.toString());
             return false;
         }
     }

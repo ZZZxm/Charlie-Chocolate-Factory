@@ -1,8 +1,8 @@
 package team.charliechocolatefactory.scene.publicarea;
 
-import team.charliechocolatefactory.supplement.HandmadeTool;
-import team.charliechocolatefactory.supplement.HandmadeToolFactory;
-import team.charliechocolatefactory.person.staff.worker.UtilityWorker;
+import team.charliechocolatefactory.supplement.handmadetool.HandmadeTool;
+import team.charliechocolatefactory.supplement.handmadetool.HandmadeToolFactory;
+import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
 
 /**
  * @author Ngae Zeh-ghau
@@ -17,6 +17,7 @@ public class ExperienceRoom extends PublicArea {
 
     /**
      * number of this exp-room
+     *
      * @modified by Ray
      **/
     private int expRoomNumber;
@@ -37,7 +38,7 @@ public class ExperienceRoom extends PublicArea {
 
     /**
      * Get description of tool in this room.
-     * 
+     *
      * @return description
      */
     public String getToolDescription() {
@@ -46,7 +47,7 @@ public class ExperienceRoom extends PublicArea {
 
     /**
      * Set description of tool in this room. This is a part of COW pattern.
-     * 
+     *
      * @return description
      */
     public void setToolDescription(String description) {
@@ -84,11 +85,14 @@ public class ExperienceRoom extends PublicArea {
         System.out.println(HandmadeToolFactory.getDefaultHandmadeTool().getRefCount());
     }
 
-    public int getExpRoomNumber(){return expRoomNumber;}
+    public int getExpRoomNumber() {
+        return expRoomNumber;
+    }
 
-    public void setExpRoomNumber(int number){expRoomNumber=number;}
-     * @return name of the scene as a String
-     */
+    public void setExpRoomNumber(int number) {
+        expRoomNumber = number;
+    }
+
     @Override
     public String toString() {
         return "experience room";

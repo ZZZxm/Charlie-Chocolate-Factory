@@ -10,11 +10,11 @@ package team.charliechocolatefactory.scene.staffarea.decorator;
 public abstract class ResidenceDecorator extends Residence {
     protected Residence residence;      //Residence decorated by the ResidenceDecorator
 
-    public ResidenceDecorator(){
+    public ResidenceDecorator() {
     }
 
 
-    public ResidenceDecorator(Residence r){
+    public ResidenceDecorator(Residence r) {
         residence = r;
     }
 

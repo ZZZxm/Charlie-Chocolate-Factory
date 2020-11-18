@@ -7,13 +7,13 @@ package team.charliechocolatefactory.machine.qualitytestmachine.qualitytestsyste
  * @description TODO
  * @date 2020/11/14 18:00
  */
-public class QualityInspectionPanel extends QualityTestSystem{
+public class QualityInspectionPanel extends QualityTestSystem {
     public QualityInspectionPanel(String type, String machineNum) {
         super(type, machineNum);
     }
 
     @Override
-    protected void add(QualityTestSystem qualityTestSystem){
+    protected void add(QualityTestSystem qualityTestSystem) {
     }
 
     @Override
@@ -23,6 +23,7 @@ public class QualityInspectionPanel extends QualityTestSystem{
         }
         System.out.println(this.getSpecies());
     }
+
     public String toString() {
         return "class QualityInspectionPanel";
     }

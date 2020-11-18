@@ -1,10 +1,10 @@
 package team.charliechocolatefactory.product.chocolateProduct;
 
 import team.charliechocolatefactory.product.Product;
-import team.charliechocolatefactory.rawmaterial.*;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import team.charliechocolatefactory.rawmaterial.foodmaterial.CocoaBean;
+import team.charliechocolatefactory.rawmaterial.foodmaterial.Milk;
+import team.charliechocolatefactory.rawmaterial.foodmaterial.Sugar;
+import team.charliechocolatefactory.rawmaterial.foodmaterial.Water;
 
 /**
  * @author Kerr

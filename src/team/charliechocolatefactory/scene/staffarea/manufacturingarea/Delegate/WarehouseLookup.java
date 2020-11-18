@@ -10,10 +10,9 @@ package team.charliechocolatefactory.scene.staffarea.manufacturingarea.Delegate;
 public class WarehouseLookup {
 
     /**
-     *
      * @param serviceType the wanted service type
      * @return If found, return an object of the wanted service type
-     *         If not found, return null
+     * If not found, return null
      */
     public WarehouseService getWarehouseService(String serviceType) {
 

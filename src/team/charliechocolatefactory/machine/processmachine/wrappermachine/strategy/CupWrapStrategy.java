@@ -1,8 +1,7 @@
 package team.charliechocolatefactory.machine.processmachine.wrappermachine.strategy;
 
 import team.charliechocolatefactory.product.Product;
-import team.charliechocolatefactory.rawmaterial.Box;
-import team.charliechocolatefactory.rawmaterial.Cup;
+import team.charliechocolatefactory.rawmaterial.packagematerial.Cup;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

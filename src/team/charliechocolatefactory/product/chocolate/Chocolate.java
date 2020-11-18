@@ -49,7 +49,7 @@ public abstract class Chocolate extends Product {
     protected Chocolate(String name, int shelfLife, int weight, double content, Sandwich sandwich) {
         super(name, shelfLife, weight);
         this.cocoaContent = content;
-        this.sandwich=sandwich;
+        this.sandwich = sandwich;
     }
 
     protected Chocolate(String name, int shelfLife, int weight, double content) {

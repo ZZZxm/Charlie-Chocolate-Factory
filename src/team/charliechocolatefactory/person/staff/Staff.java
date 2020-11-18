@@ -17,18 +17,26 @@ import team.charliechocolatefactory.scene.staffarea.StaffArea;
  */
 public abstract class Staff extends Person {
 
-    public String identity="staff";
+    public String identity = "staff";
 
-    /** staff ID number, each is unique */
+    /**
+     * staff ID number, each is unique
+     */
     protected String id;
 
-    /** salary of the staff */
+    /**
+     * salary of the staff
+     */
     protected int salary;
 
-    /** where he/she works at */
+    /**
+     * where he/she works at
+     */
     protected StaffArea department;
 
-    /** 0: normal 1: suspended 2: fired */
+    /**
+     * 0: normal 1: suspended 2: fired
+     */
     protected int state;
 
 
@@ -66,8 +74,7 @@ public abstract class Staff extends Person {
     public void receiveSalary() {
         if (this.state == 0) {
             this.asset += this.salary;
-        }
-        else {
+        } else {
             System.out.println("Sorry, You won't get paid this month.");
         }
     }
@@ -89,6 +96,7 @@ public abstract class Staff extends Person {
 
     /**
      * Staffs can move to anywhere.
+     *
      * @param dest destination
      */
     public boolean moveTo(Scene dest) {

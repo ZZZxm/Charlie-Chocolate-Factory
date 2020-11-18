@@ -1,6 +1,6 @@
 package team.charliechocolatefactory.scene.publicarea;
 
-import team.charliechocolatefactory.person.staff.worker.UtilityWorker;
+import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
 import team.charliechocolatefactory.person.visitor.Visitor;
 import team.charliechocolatefactory.scene.Scene;
 

@@ -3,7 +3,7 @@ package team.charliechocolatefactory.scene.staffarea;
 import team.charliechocolatefactory.person.GeneralManager;
 import team.charliechocolatefactory.person.Person;
 import team.charliechocolatefactory.person.staff.Manager;
-import team.charliechocolatefactory.person.staff.worker.UtilityWorker;
+import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
 import team.charliechocolatefactory.person.staff.worker.Worker;
 import team.charliechocolatefactory.scene.Scene;
 import team.charliechocolatefactory.scene.staffarea.manufacturingarea.WorkerIterator.Aggregate;
@@ -17,7 +17,7 @@ import java.util.ArrayList;
  * @project chocolateFactory
  * @classname StaffArea
  * @description Inherited from basic class scene, it represents scenes only open for staffs.
- *              ConcreteAggregate of the Iterator.
+ * ConcreteAggregate of the Iterator.
  * @date 2020/11/9 19:44
  */
 public abstract class StaffArea extends Scene implements Aggregate {
@@ -27,8 +27,10 @@ public abstract class StaffArea extends Scene implements Aggregate {
      **/
     protected Manager manager;
 
-    /** List of all workers in the area **/
-    protected ArrayList<Worker> workerList=null;
+    /**
+     * List of all workers in the area
+     **/
+    protected ArrayList<Worker> workerList = null;
 
     /**
      * Constructor of StaffArea with no manager specified
@@ -48,11 +50,6 @@ public abstract class StaffArea extends Scene implements Aggregate {
         GeneralManager.getInstance().addManager(manager);
     }
 
-    /**
-     * @return name of the scene as a String
-     */
-    @Override
-    public abstract String toString();
 
     /**
      * get the manager of the area
@@ -97,16 +94,6 @@ public abstract class StaffArea extends Scene implements Aggregate {
     }
 
     /**
-     * check whether object of a worker is in the staff area
-     *
-     * @param workerObj worker object
-     * @return true if the worker is in the area
-     */
-    public boolean checkWorker(Worker workerObj) {
-        return workerList.contains(workerObj);
-    }
-
-    /**
      * get the worker list
      *
      * @return the worker list of the staff area
@@ -116,18 +103,11 @@ public abstract class StaffArea extends Scene implements Aggregate {
     }
 
     /**
-     *
      * @return an Iterator that copies the protected WorkerList
      */
     @Override
     public Iterator getIterator() {
         return new WorkerListIterator(workerList);
-    }
-
-    @Override
-    public String toString() {
-        return "class StaffArea extends Scene and implements Aggregate";
-        return new ArrayList<Worker>(workerList);
     }
 
     /**
@@ -137,4 +117,8 @@ public abstract class StaffArea extends Scene implements Aggregate {
      */
     public abstract void accept(UtilityWorker worker);
 
+    @Override
+    public String toString() {
+        return "class StaffArea extends Scene and implements Aggregate";
+    }
 }
