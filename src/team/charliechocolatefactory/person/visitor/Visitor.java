@@ -1,6 +1,7 @@
 package team.charliechocolatefactory.person.visitor;
 
 import team.charliechocolatefactory.person.Person;
+import team.charliechocolatefactory.person.visitor.limit.Context;
 import team.charliechocolatefactory.scene.Scene;
 import team.charliechocolatefactory.scene.publicarea.PublicArea;
 
@@ -13,6 +14,8 @@ import team.charliechocolatefactory.scene.publicarea.PublicArea;
  * @date 2020/11/7 18:26
  */
 public class Visitor extends Person {
+
+    public String identity="visitor";
 
     public Visitor(String name, int age, Sex sex) {
         super(name, age, sex);
@@ -41,7 +44,17 @@ public class Visitor extends Person {
      */
     @Override
     public boolean moveTo(Scene dest) {
-        if(dest instanceof PublicArea) {
+       /* if(dest instanceof PublicArea) {
+            this.location = dest;
+            System.out.println("Visitor" + this.name + "moves to " + dest.toString());
+            return true;
+        } else {
+            System.out.println("Sorry, visitor " +this.name + "can't go to" + dest.toString());
+            return false;
+        }*/
+        Context visit=new Context();
+        String move="visitor enter "+dest.toString();
+        if(visit.canEnter(move)) {
             this.location = dest;
             System.out.println("Visitor" + this.name + "moves to " + dest.toString());
             return true;

@@ -16,6 +16,8 @@ import team.charliechocolatefactory.scene.staffarea.StaffArea;
  */
 public abstract class Staff extends Person {
 
+    public String identity="staff";
+
     /** staff ID number, each is unique */
     protected String id;
 
@@ -32,6 +34,13 @@ public abstract class Staff extends Person {
         super(name, age, sex);
         this.salary = salary;
         this.department = workingArea;
+        this.id = allocateId();
+    }
+
+    public Staff(String name, int age, Sex sex, int salary) {
+        super(name, age, sex);
+        this.salary = salary;
+        this.department = null;
         this.id = allocateId();
     }
 

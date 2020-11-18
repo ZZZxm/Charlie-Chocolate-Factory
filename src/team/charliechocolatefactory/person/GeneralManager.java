@@ -10,12 +10,14 @@ import team.charliechocolatefactory.scene.staffarea.StaffArea;
  * @project chocolateFactory
  * @classname GeneralManager
  * @description There is only one general manager of the chocolate factory.
- *              TODO Design Pattern --- Singleton
+ *              TODO This class realizes the design pattern SINGLETON.
  * @date 2020/11/7 18:13
  */
 public class GeneralManager extends Person {
 
-    static GeneralManager instance = null;
+    public String identity="general manager";
+
+    GeneralManager instance = null;
 
     /**
      * Get the only instance of the general manager.
@@ -23,7 +25,7 @@ public class GeneralManager extends Person {
      * Then it will return the instance in the future.
      * @return instance of general manager
      */
-    public static GeneralManager getInstance() {
+    public GeneralManager getInstance() {
         if (instance == null) {
             instance = new GeneralManager("Young young", 21, Sex.MALE);
             System.out.println("We didn't have a general manager yet. Now our general manager has taken over.");

@@ -12,6 +12,8 @@ import team.charliechocolatefactory.scene.Scene;
  */
 public class Stockholder extends Person {
 
+    public String identity="stockholder";
+
     public Stockholder(String name, int age, Sex sex) {
         super(name, age, sex);
     }
