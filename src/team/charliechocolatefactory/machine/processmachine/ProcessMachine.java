@@ -51,7 +51,7 @@ public abstract class ProcessMachine extends Machine {
      * @param product    a Product
      * @param productNum a int
      */
-    protected abstract void process(Product product, int productNum);
+    public abstract void process(Product product, int productNum);
 
     public String toString() {
         return "class ProcessMachine";

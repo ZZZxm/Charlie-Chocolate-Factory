@@ -23,9 +23,7 @@ public abstract class ProductMachine extends ProcessMachine {
 
     @Override
     public void process(Product product, int productNum) {
-//        System.out.println("Start producing "+product.getName()+"...");
-//        System.out.println("Finish producing "+product.getName()+".");
-//        product.gotoNextState();
+        // todo print out
         return;
     }
 

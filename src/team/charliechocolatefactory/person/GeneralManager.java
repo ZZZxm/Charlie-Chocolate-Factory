@@ -20,13 +20,7 @@ public class GeneralManager extends Person {
 
     public String identity="general manager";
 
-    GeneralManager instance = null;
- *              TODO This class realizes the design pattern SINGLETON.
- * @date 2020/11/7 18:13s
- */
-public class GeneralManager extends Person {
-
-    static GeneralManager instance = null;
+    private static GeneralManager instance = null;
 
     public ArrayList<Manager> managerList;
 

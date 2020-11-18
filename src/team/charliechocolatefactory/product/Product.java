@@ -99,7 +99,7 @@ public abstract class Product {
     /**
      * @param date template yyyy-mm-dd
      */
-    protected void setProducedDate(String date) {
+    public void setProducedDate(String date) {
         if (this.producedDate == null) {
             this.producedDate = date;
             return;

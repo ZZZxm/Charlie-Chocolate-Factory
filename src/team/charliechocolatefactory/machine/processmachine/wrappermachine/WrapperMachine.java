@@ -31,7 +31,7 @@ public class WrapperMachine extends ProcessMachine {
      * @param productNum number of a product
      */
     @Override
-    protected void process(Product product, int productNum) {
+    public void process(Product product, int productNum) {
         strategy.packaging(product);
     }
 
