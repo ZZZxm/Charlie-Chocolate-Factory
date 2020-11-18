@@ -7,7 +7,7 @@ import team.charliechocolatefactory.product.Product;
  * @project chocolateFactory
  * @classname WrapStrategy
  * @description TODO Design Pattern --- Strategy
- *              abstract class of the wrap strategy, each kind of wrap strategy must implement it.
+ * abstract class of the wrap strategy, each kind of wrap strategy must implement it.
  * @date 2020/11/13 21:17
  */
 public abstract class WrapStrategy {

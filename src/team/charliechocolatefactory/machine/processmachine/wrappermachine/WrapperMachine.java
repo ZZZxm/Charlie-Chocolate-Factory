@@ -26,7 +26,8 @@ public class WrapperMachine extends ProcessMachine {
 
     /**
      * process: wrap a product with a special strategy
-     * @param product a Product
+     *
+     * @param product    a Product
      * @param productNum number of a product
      */
     @Override
@@ -36,6 +37,7 @@ public class WrapperMachine extends ProcessMachine {
 
     /**
      * set the wrap strategy of the machine
+     *
      * @param strategy wrap strategy
      */
     public void setStrategy(WrapStrategy strategy) {
