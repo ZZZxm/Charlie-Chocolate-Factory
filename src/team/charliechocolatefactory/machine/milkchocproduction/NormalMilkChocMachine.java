@@ -7,8 +7,8 @@ package team.charliechocolatefactory.machine.milkchocproduction;
  * @description This machine produces milk chocolate with CocoaBean=200, Sugar=10, Milk=1.
  * @date 2020/11/14 17:53
  */
-public class ConcreteMilkMachine1 extends MilkChocMachine{
-    public ConcreteMilkMachine1()
+public class NormalMilkChocMachine extends MilkChocMachine{
+    public NormalMilkChocMachine()
     {
         this.setMachineNum("001");
     }
