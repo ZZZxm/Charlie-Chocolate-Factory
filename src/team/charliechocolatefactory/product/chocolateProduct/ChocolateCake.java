@@ -3,6 +3,9 @@ package team.charliechocolatefactory.product.chocolateProduct;
 import team.charliechocolatefactory.product.Product;
 import team.charliechocolatefactory.rawmaterial.*;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  * @author Kerr
  * @project chocolateFactory
@@ -16,7 +19,7 @@ public class ChocolateCake extends Product {
 // fields
     protected int size; //how many inches is its radius
 
-// constructor
+//constructor
     /**
      * @param size
      */
@@ -29,7 +32,17 @@ public class ChocolateCake extends Product {
 // methods
     @Override
     public void packaging() {
-        // machine.processing();
+        super.gotoNextState();
+        System.out.println("Start packaging Chocolate Cake...");
+        super.pack = new Box(0);
+        super.gotoNextState();
+        System.out.println("Finish packaging.");
+        super.gotoNextState();
+
+        Date day=new Date();
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+        super.setProducedDate(df.format(day));
+        return;
     }
 
 // methods
