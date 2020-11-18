@@ -7,7 +7,7 @@ import team.charliechocolatefactory.scene.staffarea.manufacturingarea.Warehouse;
  * @author Brian.Z
  * @project chocolateFactory
  * @classname WarehouseDelegate
- * @description TODO Realize the design pattern --- Business Delegate
+ * @description TODO Design pattern --- Business Delegate
  *              Clients can access service of warehouse by this delegate class
  * @date 2020/11/17 21:08
  */

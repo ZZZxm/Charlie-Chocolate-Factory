@@ -7,7 +7,8 @@ import team.charliechocolatefactory.product.Product;
  * @author Yuan.Cai
  * @project chocolateFactory
  * @classname TransportMachine
- * @description Inherited from Machine, this class is the abstract class of all the transport machines.
+ * @description TODO Design Pattern --- Template Method
+ *              Inherited from Machine, this class is the abstract class of all the transport machines.
  * @date 2020/11/8 14:03
  */
 public abstract class TransportMachine extends Machine {

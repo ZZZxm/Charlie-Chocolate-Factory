@@ -10,7 +10,7 @@ import team.charliechocolatefactory.scene.staffarea.StaffArea;
  * @project chocolateFactory
  * @classname GeneralManager
  * @description There is only one general manager of the chocolate factory.
- *              TODO This class realizes the design pattern SINGLETON.
+ *              TODO Design Pattern --- Singleton
  * @date 2020/11/7 18:13
  */
 public class GeneralManager extends Person {

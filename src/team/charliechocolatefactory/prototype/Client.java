@@ -1,6 +1,6 @@
 package team.charliechocolatefactory.prototype;
 
-import team.charliechocolatefactory.factory.product.MilkChocolate;
+import team.charliechocolatefactory.product.MilkChocolate;
 import team.charliechocolatefactory.prototype.copy.ChocolateCakeDeepCopy2;
 import team.charliechocolatefactory.prototype.material.Agg;
 
