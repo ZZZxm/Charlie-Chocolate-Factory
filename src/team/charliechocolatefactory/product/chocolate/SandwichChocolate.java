@@ -12,7 +12,13 @@ import team.charliechocolatefactory.rawmaterial.Water;
  * @description this is SandwichChocolate with nut
  * @date 2020/11/8 15:23
  */
-public class SandwichChocolate extends Chocolate {
+
+/**
+ * @Modified by: Miracle Ray
+ * @date : 2020/11/17 17:03
+ * @description: (暂时废除，转为使用桥接模式实现)
+ */
+/**public class SandwichChocolate extends Chocolate {
 // constructor
 
     public SandwichChocolate() {
@@ -24,20 +30,20 @@ public class SandwichChocolate extends Chocolate {
     /**
      * initialize the ingredient list of the sandwich chocolate
      */
-    @Override
+    /**@Override
     protected void initIngredientList() {
         super.ingredientList.add(new CocoaBean());
         super.ingredientList.add(new Water());
         super.ingredientList.add(new Sugar());
         super.ingredientList.add(new Nut());
-    }
+    }*/
 
     /**
      * override the toString method
      * @return
-     */
+
     @Override
     public String toString(){
         return "subclass : SandwichChocolate";
     }
-}
+*/

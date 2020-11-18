@@ -17,6 +17,13 @@ public abstract class Worker extends Staff {
     }
 
     /**
+     * @modified by Ray
+     */
+    public void respondMorning(){
+        System.out.println("保，早安！噢，抱歉。。。早，保安！");
+    }
+
+    /**
      * set the initial asset of the worker
      */
     @Override
