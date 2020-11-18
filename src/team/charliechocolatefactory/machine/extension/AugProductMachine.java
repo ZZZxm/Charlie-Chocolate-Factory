@@ -11,6 +11,7 @@ import team.charliechocolatefactory.product.Product;
  * @date 2020/11/18 21:44
  */
 public class AugProductMachine implements MachineExtension{
+
     private BasicProductMachine productMachine;
 
     public AugProductMachine(BasicProductMachine productMachine) {

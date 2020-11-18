@@ -1,4 +1,5 @@
 package team.charliechocolatefactory.machine;
+
 import team.charliechocolatefactory.product.Product;
 import team.charliechocolatefactory.person.staff.worker.MaintenanceWorker.*;
 
@@ -9,7 +10,7 @@ import java.util.Random;
  * @project chocolateFactory
  * @classname Machine
  * @description This is the abstract base class of all the machines in the factory.
-                Basic class Machine includes 7 private attributes, 2 protected attributes.
+ * Basic class Machine includes 7 private attributes, 2 protected attributes.
  * @date 2020/11/7 19:55
  */
 public abstract class Machine {
@@ -25,49 +26,47 @@ public abstract class Machine {
      */
     private String machineNum;
     //machine service life, unit: year
-    private double age=0;
+    private double age = 0;
     //maximum machine service life, unit: year
-    private double lifeYear=20;
+    private double lifeYear = 20;
     //the benchmark value of each increased age, unit: year
-    private double lossCoefficient=0.5;
+    private double lossCoefficient = 0.5;
     //increased age value of the machine after each operation, unit: year
-    private double agingSpeed=0.5;
+    private double agingSpeed = 0.5;
     //maximum number of items produced (processed) by the machine at one time
-    private int maxCapacity=500;
+    private int maxCapacity = 500;
     //the number of products the machine is set to produce at one time
-    protected int aimProcessNum=0;
+    protected int aimProcessNum = 0;
     //indicating whether the machine is in malfunction
-    protected boolean breakDown=false;
+    protected boolean breakDown = false;
 
-    public Machine(String type,String machineNum)
-    {
-        this.type=type;
-        this.machineNum=machineNum;
+    public Machine(String type, String machineNum) {
+        this.type = type;
+        this.machineNum = machineNum;
     }
 
-    public Machine(String type,String machineNum,double lifeYear,double lossCoefficient,int maxCapacity)
-    {
-        this.type=type;
-        this.machineNum=machineNum;
-        this.lifeYear=lifeYear;
-        this.lossCoefficient=lossCoefficient;
-        this.maxCapacity=maxCapacity;
-        this.agingSpeed=lossCoefficient;
+    public Machine(String type, String machineNum, double lifeYear, double lossCoefficient, int maxCapacity) {
+        this.type = type;
+        this.machineNum = machineNum;
+        this.lifeYear = lifeYear;
+        this.lossCoefficient = lossCoefficient;
+        this.maxCapacity = maxCapacity;
+        this.agingSpeed = lossCoefficient;
     }
 
-    public Machine(String type,String machineNum,double age,double lifeYear,double lossCoefficient,int maxCapacity)
-    {
-        this.type=type;
-        this.machineNum=machineNum;
-        this.age=age;
-        this.lifeYear=lifeYear;
-        this.lossCoefficient=lossCoefficient;
-        this.maxCapacity=maxCapacity;
-        this.agingSpeed=lossCoefficient;
+    public Machine(String type, String machineNum, double age, double lifeYear, double lossCoefficient, int maxCapacity) {
+        this.type = type;
+        this.machineNum = machineNum;
+        this.age = age;
+        this.lifeYear = lifeYear;
+        this.lossCoefficient = lossCoefficient;
+        this.maxCapacity = maxCapacity;
+        this.agingSpeed = lossCoefficient;
     }
 
     /**
      * getType
+     *
      * @return a String
      */
     public String getType() {
@@ -76,6 +75,7 @@ public abstract class Machine {
 
     /**
      * getMachineNum
+     *
      * @return a String
      */
     public String getMachineNum() {
@@ -84,14 +84,16 @@ public abstract class Machine {
 
     /**
      * getMachineID:'type'+'machineNum'
+     *
      * @return a String
      */
     public String getMachineID() {
-        return type+machineNum;
+        return type + machineNum;
     }
 
     /**
      * getAge
+     *
      * @return a double
      */
     public double getAge() {
@@ -100,6 +102,7 @@ public abstract class Machine {
 
     /**
      * getLifeYear
+     *
      * @return a double
      */
     public double getLifeYear() {
@@ -108,6 +111,7 @@ public abstract class Machine {
 
     /**
      * getLossCoefficient
+     *
      * @return a double
      */
     public double getLossCoefficient() {
@@ -116,6 +120,7 @@ public abstract class Machine {
 
     /**
      * getAimProcessNum
+     *
      * @return a int
      */
     public int getAimProcessNum() {
@@ -124,6 +129,7 @@ public abstract class Machine {
 
     /**
      * getMaxCapacity
+     *
      * @return a int
      */
     public int getMaxCapacity() {
@@ -132,6 +138,7 @@ public abstract class Machine {
 
     /**
      * isBreakDown
+     *
      * @return a boolean
      */
     public boolean isBreakDown() {
@@ -141,22 +148,19 @@ public abstract class Machine {
     /**
      * set breakDown to true, called when something wrong occurs
      */
-    protected void malfunction(){
-        breakDown=true;
-        System.out.println("Oh no! "+type+machineNum+" breaks down! Please fix!\n");
+    protected void malfunction() {
+        breakDown = true;
+        System.out.println("Oh no! " + type + machineNum + " breaks down! Please fix!\n");
     }
 
     /**
      * set breakDown to false, called when fix work finishes
      */
-    public void fix(){
-        if(breakDown)
-        {
-            breakDown=false;
-            System.out.println("Fix finished, "+type+machineNum+" can work again!\n");
-        }
-        else
-        {
+    public void fix() {
+        if (breakDown) {
+            breakDown = false;
+            System.out.println("Fix finished, " + type + machineNum + " can work again!\n");
+        } else {
             System.out.println("There is nothing to be fixed.\n");
         }
     }
@@ -164,11 +168,11 @@ public abstract class Machine {
     /**
      * artificial maintenance of machinery to extend its service life
      */
-    public void maintenance(MaintenanceRookie worker1, MaintenanceProfession worker2, MaintenanceWorker worker3){
-        double attritionRate= age/lifeYear;
+    public void maintenance(MaintenanceRookie worker1, MaintenanceProfession worker2, MaintenanceWorker worker3) {
+        double attritionRate = age / lifeYear;
         worker1.setNext(worker2);
         worker2.setNext(worker3);
-        if(worker1.handleRequest(attritionRate)) {
+        if (worker1.handleRequest(attritionRate)) {
             Random rand = new Random();
             int ageLonged = rand.nextInt(5);
             lifeYear = lifeYear + lifeYear * ageLonged * 0.01;
@@ -178,24 +182,25 @@ public abstract class Machine {
 
     /**
      * setMachineNum: prevent incorrect numbering situations
+     *
      * @param machineNum only param
      */
     public void setMachineNum(String machineNum) {
         this.machineNum = machineNum;
-        System.out.println("The code number of the machine is changed to "+machineNum+".\n");
+        System.out.println("The code number of the machine is changed to " + machineNum + ".\n");
     }
 
     /**
      * modify age by the agingSpeed
+     *
      * @return a double representing the age after increasing
      */
     public double increaseAge() {
-        age = age+agingSpeed;
-        System.out.println("The age of "+type+machineNum+" increases to "+age+" years.\n");
-        if(age==lifeYear)
-        {
-            System.out.println(type+machineNum+" has reached its end life.\n");
-            System.out.println("Please maintenance "+type+machineNum+" or change a machine to run next time.\n");
+        age = age + agingSpeed;
+        System.out.println("The age of " + type + machineNum + " increases to " + age + " years.\n");
+        if (age == lifeYear) {
+            System.out.println(type + machineNum + " has reached its end life.\n");
+            System.out.println("Please maintenance " + type + machineNum + " or change a machine to run next time.\n");
         }
         return age;
     }
@@ -203,29 +208,28 @@ public abstract class Machine {
     /**
      * usually called before working, set the number of products the machine is to produce at one time
      * default aimProcessNum is 0, so this function have to be called before first working
+     *
      * @param aimProcessNum a int
      */
-    public void setAimProcessNum(int aimProcessNum)
-    {
-        if(aimProcessNum> maxCapacity)
-        {
+    public void setAimProcessNum(int aimProcessNum) {
+        if (aimProcessNum > maxCapacity) {
             System.out.println("Exceed maxCapacity!\n");
             return;
         }
-        if(aimProcessNum<=0)
-        {
+        if (aimProcessNum <= 0) {
             System.out.println("AimProcessNum must be a positive integer!\n");
             return;
         }
-        this.aimProcessNum =aimProcessNum;
+        this.aimProcessNum = aimProcessNum;
         //adjust the machine aging speed according to the target production number
-        this.agingSpeed=lossCoefficient+(1.0*aimProcessNum)/maxCapacity;
-        System.out.println("Set aimProcessNum to "+aimProcessNum+".\n");
-        System.out.println("The agingSpeed of "+type+machineNum+" changes to"+agingSpeed+".\n");
+        this.agingSpeed = lossCoefficient + (1.0 * aimProcessNum) / maxCapacity;
+        System.out.println("Set aimProcessNum to " + aimProcessNum + ".\n");
+        System.out.println("The agingSpeed of " + type + machineNum + " changes to" + agingSpeed + ".\n");
     }
 
     /**
      * work process
+     *
      * @param product a Product
      * @return a int
      */
@@ -233,24 +237,22 @@ public abstract class Machine {
 
     /**
      * run process
+     *
      * @param product a Product
      * @return a int representing output product numbers
      */
-    public int run(Product product)
-    {
-        double virtualAge=age+agingSpeed;
-        if(virtualAge>lifeYear)
-        {
-            System.out.println(type+machineNum+"'s remaining life is not sufficient to support this operation.\n");
-            System.out.println("Please maintenance "+type+machineNum+" or change a machine to run.\n");
+    public int run(Product product) {
+        double virtualAge = age + agingSpeed;
+        if (virtualAge > lifeYear) {
+            System.out.println(type + machineNum + "'s remaining life is not sufficient to support this operation.\n");
+            System.out.println("Please maintenance " + type + machineNum + " or change a machine to run.\n");
             return 0;
         }
-        if(aimProcessNum==0)
-        {
-            System.out.println("Please set "+type+machineNum+"'s aimProcessNum first.\n");
+        if (aimProcessNum == 0) {
+            System.out.println("Please set " + type + machineNum + "'s aimProcessNum first.\n");
             return 0;
         }
-        System.out.println(type+machineNum+" starts to tun:\n");
+        System.out.println(type + machineNum + " starts to tun:\n");
         return work(product);
     }
 

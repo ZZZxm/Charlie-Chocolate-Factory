@@ -6,7 +6,7 @@ import team.charliechocolatefactory.scene.staffarea.StaffArea;
  * @author Brian.Z
  * @project chocolateFactory
  * @classname DinningRoomWorker
- * @description TODO
+ * @description worker in the dinning room
  * @date 2020/11/11 16:20
  */
 public class DinningRoomWorker extends Worker {

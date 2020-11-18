@@ -7,7 +7,7 @@ import team.charliechocolatefactory.scene.staffarea.manufacturingarea.Workshop;
  * @author Brian.Z
  * @project chocolateFactory
  * @classname WorkshopWorker
- * @description TODO
+ * @description worker in the workshop
  * @date 2020/11/11 16:16
  */
 public class WorkshopWorker extends Worker {
