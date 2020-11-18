@@ -1,5 +1,7 @@
 package team.charliechocolatefactory.scene;
 
+import team.charliechocolatefactory.person.staff.worker.UtilityWorker;
+
 /**
  * @author Y.C.Young
  * @project chocolateFactory
@@ -29,6 +31,14 @@ public class GarbageStation extends Scene {
     }
 
     /**
+     * @return name of the scene as a String
+     */
+    @Override
+    public String toString() {
+        return "garbage station";
+    }
+
+    /**
      * push garbage into the station
      *
      * @param amount new amount of the garbage
@@ -48,4 +58,15 @@ public class GarbageStation extends Scene {
         maxGarbageAmount = 0;
         System.out.println("All garbage has been cleared.");
     }
+
+    /**
+     * Visitor Pattern: accept a utility worker to maintenance the scene
+     *
+     * @param worker the utility worker
+     */
+    @Override
+    public void accept(UtilityWorker worker) {
+        worker.visit(this);
+    }
+
 }

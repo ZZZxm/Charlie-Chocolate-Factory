@@ -3,7 +3,7 @@ package team.charliechocolatefactory.scene.staffarea;
 import team.charliechocolatefactory.person.Person;
 import team.charliechocolatefactory.person.staff.Manager;
 import team.charliechocolatefactory.person.staff.worker.OfficeWorker;
-import team.charliechocolatefactory.scene.staffarea.manufacturingarea.ManufacturingArea;
+import team.charliechocolatefactory.person.staff.worker.UtilityWorker;
 
 /**
  * @author Y.C.Young
@@ -17,30 +17,47 @@ public class Office extends StaffArea {
     /**
      * constructor of the Office with no manager specified
      */
-    public Office(String location, double cost, double area)
-    {
+    public Office(String location, double cost, double area) {
         super(location, cost, area);
     }
 
     /**
      * constructor of the Office with no manager specified
      */
-    public Office(String location, double cost, double area, Manager newManager)
-    {
+    public Office(String location, double cost, double area, Manager newManager) {
         super(location, cost, area, newManager);
     }
 
     /**
+     * @return name of the scene as a String
+     */
+    @Override
+    public String toString() {
+        return "office";
+    }
+
+    /**
      * create and add a worker to the area
-     * @param name name of the worker
-     * @param age age of the worker
-     * @param sex sex of the worker
+     *
+     * @param name   name of the worker
+     * @param age    age of the worker
+     * @param sex    sex of the worker
      * @param salary salary of the worker
      */
     @Override
     public void addWorker(String name, int age, Person.Sex sex, int salary) {
         OfficeWorker workerObj = new OfficeWorker(name, age, sex, salary, this);
         workerList.add(workerObj);
+    }
+
+    /**
+     * Visitor Pattern: accept a utility worker to maintenance the scene
+     *
+     * @param worker the utility worker
+     */
+    @Override
+    public void accept(UtilityWorker worker) {
+        worker.visit(this);
     }
 
 }

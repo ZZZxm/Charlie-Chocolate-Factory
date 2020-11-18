@@ -1,5 +1,7 @@
 package team.charliechocolatefactory.scene.publicarea;
 
+import team.charliechocolatefactory.person.staff.worker.UtilityWorker;
+
 import java.util.ArrayList;
 
 /**
@@ -25,6 +27,14 @@ public class ExhibitionRoom extends PublicArea {
     }
 
     /**
+     * @return name of the scene as a String
+     */
+    @Override
+    public String toString() {
+        return "exhibition room";
+    }
+
+    /**
      * tourists visit the exhibition room, print all exhibits in the room
      */
     public void visitExhibitionRoom() {
@@ -46,6 +56,7 @@ public class ExhibitionRoom extends PublicArea {
 
     /**
      * add an exhibit to the room
+     *
      * @param exhibitName exhibit to be added to the room
      */
     public void addExhibits(String exhibitName) {
@@ -58,6 +69,7 @@ public class ExhibitionRoom extends PublicArea {
 
     /**
      * remove an exhibit
+     *
      * @param exhibitName exhibit to be removed
      */
     public void removeExhibits(String exhibitName) {
@@ -66,6 +78,16 @@ public class ExhibitionRoom extends PublicArea {
         } else {
             System.out.println("Exhibits are not in the room.");
         }
+    }
+
+    /**
+     * Visitor Pattern: accept a utility worker to maintenance the scene
+     *
+     * @param worker the utility worker
+     */
+    @Override
+    public void accept(UtilityWorker worker) {
+        worker.visit(this);
     }
 
 }

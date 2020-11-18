@@ -2,6 +2,7 @@ package team.charliechocolatefactory.scene.staffarea;
 
 import team.charliechocolatefactory.person.Person;
 import team.charliechocolatefactory.person.staff.Manager;
+import team.charliechocolatefactory.person.staff.worker.UtilityWorker;
 import team.charliechocolatefactory.person.staff.worker.Worker;
 import team.charliechocolatefactory.scene.Scene;
 
@@ -16,15 +17,19 @@ import java.util.ArrayList;
  */
 public abstract class StaffArea extends Scene {
 
-    /** Manager of the staff area **/
+    /**
+     * Manager of the staff area
+     **/
     protected Manager manager;
 
-    /** List of all workers in the area **/
+    /**
+     * List of all workers in the area
+     **/
     protected ArrayList<Worker> workerList;
 
     /**
-    * Constructor of StaffArea with no manager specified
-    */
+     * Constructor of StaffArea with no manager specified
+     */
     public StaffArea(String location, double cost, double area) {
         this(location, cost, area, null);
     }
@@ -39,7 +44,14 @@ public abstract class StaffArea extends Scene {
     }
 
     /**
+     * @return name of the scene as a String
+     */
+    @Override
+    public abstract String toString();
+
+    /**
      * get the manager of the area
+     *
      * @return manager of the staff area
      */
     public Manager getManager() {
@@ -48,6 +60,7 @@ public abstract class StaffArea extends Scene {
 
     /**
      * set the new manager of the staff area
+     *
      * @param newManager new manager of the StaffArea
      */
     public void setManager(Manager newManager) {
@@ -56,15 +69,17 @@ public abstract class StaffArea extends Scene {
 
     /**
      * create and add a worker to the area
-     * @param name name of the worker
-     * @param age age of the worker
-     * @param sex sex of the worker
+     *
+     * @param name   name of the worker
+     * @param age    age of the worker
+     * @param sex    sex of the worker
      * @param salary salary of the worker
      */
     public abstract void addWorker(String name, int age, Person.Sex sex, int salary);
 
     /**
      * remove a worker from this staff area if the worker is in the list
+     *
      * @param workerObj object of the worker to be removed
      */
     public void removeWorker(Worker workerObj) {
@@ -77,6 +92,7 @@ public abstract class StaffArea extends Scene {
 
     /**
      * check whether object of a worker is in the staff area
+     *
      * @param workerObj worker object
      * @return true if the worker is in the area
      */
@@ -86,11 +102,18 @@ public abstract class StaffArea extends Scene {
 
     /**
      * get the worker list
+     *
      * @return the worker list of the staff area
      */
-    public ArrayList<Worker> getWorkerList()
-    {
+    public ArrayList<Worker> getWorkerList() {
         return new ArrayList<Worker>(workerList);
     }
+
+    /**
+     * Visitor Pattern: accept a utility worker to maintain the scene
+     *
+     * @param worker the utility worker
+     */
+    public abstract void accept(UtilityWorker worker);
 
 }
