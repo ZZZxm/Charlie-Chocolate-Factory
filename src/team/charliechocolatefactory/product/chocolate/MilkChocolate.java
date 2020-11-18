@@ -15,6 +15,9 @@ public class MilkChocolate extends Chocolate {
 
 //fields
     protected double milkContent;
+    private double cocoaBeanNum=100;
+    private double sugarNum=5;
+    private double milkNum=0.5;
 
 //constructor
     public MilkChocolate() {
@@ -55,5 +58,17 @@ public class MilkChocolate extends Chocolate {
     @Override
     public String toString(){
         return "subclass : Milk Chocolate";
+    }
+
+    public void setCocoaBeanNum(double cocoaBeanNum) {
+        this.cocoaBeanNum = cocoaBeanNum;
+    }
+
+    public void setSugarNum(double sugarNum) {
+        this.sugarNum = sugarNum;
+    }
+
+    public void setMilkNum(double milkNum) {
+        this.milkNum = milkNum;
     }
 }
