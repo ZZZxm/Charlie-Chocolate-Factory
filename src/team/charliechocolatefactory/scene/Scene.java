@@ -28,6 +28,15 @@ public abstract class Scene {
         this.area = area;
     }
 
+
+    public Scene(){}
+
+    public Scene(double cost) {
+        this.cost = cost;
+    }
+
+
+
     /**
      * @return location of this site
      */

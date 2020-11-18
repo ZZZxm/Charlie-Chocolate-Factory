@@ -39,6 +39,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -48,7 +49,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Background" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
@@ -79,6 +80,10 @@
       <workItem from="1605083446638" duration="119000" />
       <workItem from="1605093807936" duration="33000" />
       <workItem from="1605098526841" duration="465000" />
+      <workItem from="1605427527032" duration="5847000" />
+      <workItem from="1605626710801" duration="2568000" />
+      <workItem from="1605676752708" duration="5750000" />
+      <workItem from="1605692763296" duration="1271000" />
     </task>
     <servers />
   </component>
@@ -86,29 +91,43 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="569" y="148" key="#com.intellij.ide.util.MemberChooser" timestamp="1605082927328">
+    <state x="499" y="167" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1605428326694">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="167" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1605428326694" />
+    <state x="569" y="148" key="#com.intellij.ide.util.MemberChooser" timestamp="1605627949753">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="533" y="162" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1605000319665" />
-    <state x="569" y="148" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1605082927328" />
+    <state x="569" y="148" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1605627949753" />
     <state x="590" y="328" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1605101757452">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="553" y="358" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1440.900@0.0.1440.900" timestamp="1605093831969" />
     <state x="590" y="328" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824@0.0.1536.824" timestamp="1605101757452" />
-    <state x="412" y="339" width="619" height="225" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1604999782464">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="439" y="310" width="661" height="239" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1605678687172">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="412" y="339" width="619" height="225" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1440.900@0.0.1440.900" timestamp="1604999782464" />
-    <state x="236" y="0" key="SettingsEditor" timestamp="1605082507177">
+    <state x="439" y="310" width="661" height="239" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1605678687172" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605678683743">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1605678683743" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1605676836085">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1605676836085" />
+    <state x="236" y="0" key="SettingsEditor" timestamp="1605428783016">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1605076048320" />
-    <state x="236" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1605082507177" />
-    <state x="374" y="277" key="com.intellij.ide.util.TipDialog" timestamp="1605098525793">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="236" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1605428783016" />
+    <state x="399" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1605676754039">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="374" y="277" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1605098525793" />
+    <state x="399" y="254" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1605676754039" />
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1604998554057">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
