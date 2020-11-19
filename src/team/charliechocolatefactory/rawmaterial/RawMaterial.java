@@ -79,7 +79,7 @@ public abstract class RawMaterial {
     }
 
     /*
-     * TODO: removeExhaustionObsever may be implemented if needed.
+     * TODO: removeExhaustionObserver may be implemented if needed.
      */
 
     /**
