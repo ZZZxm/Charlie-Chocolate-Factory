@@ -21,18 +21,9 @@ public abstract class Workshop extends ManufacturingArea {
         super();
     }
 
-    /**
-     * Constructor of Workshop with no manager specified
-     */
     public Workshop(String location, double cost, double area) {
-        this(location, cost, area, null);
-    }
-
-    /**
-     * Constructor of Workshop with no manager specified
-     */
-    public Workshop(String location, double cost, double area, Manager newManager) {
-        super(location, cost, area, newManager);
+        super(location, cost, area, Manager.workShopManager);
+        Manager.workShopManager.addDepartment(this);
     }
 
 

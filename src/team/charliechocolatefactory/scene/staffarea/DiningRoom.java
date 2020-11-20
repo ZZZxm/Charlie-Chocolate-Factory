@@ -12,12 +12,6 @@ import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWor
  */
 public class DiningRoom extends StaffArea {
 
-    /**
-     * constructor of the DiningRoom with no manager specified
-     */
-    public DiningRoom(String location, double cost, double area) {
-        super(location, cost, area);
-    }
 
     public DiningRoom() {
         super();
@@ -26,8 +20,9 @@ public class DiningRoom extends StaffArea {
     /**
      * constructor of the DiningRoom with manager specified
      */
-    public DiningRoom(String location, double cost, double area, Manager newManager) {
-        super(location, cost, area, newManager);
+    public DiningRoom(String location, double cost, double area) {
+        super(location, cost, area, Manager.diningRoomManager);
+        Manager.diningRoomManager.addDepartment(this);
     }
 
     /**

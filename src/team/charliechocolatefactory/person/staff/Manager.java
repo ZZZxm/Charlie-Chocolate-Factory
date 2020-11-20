@@ -5,6 +5,7 @@ import team.charliechocolatefactory.person.GeneralManager;
 import team.charliechocolatefactory.person.staff.worker.WarehouseWorker;
 import team.charliechocolatefactory.person.staff.worker.Worker;
 import team.charliechocolatefactory.scene.Scene;
+import team.charliechocolatefactory.scene.staffarea.DiningRoom;
 import team.charliechocolatefactory.scene.staffarea.StaffArea;
 
 import java.util.ArrayList;
@@ -19,9 +20,76 @@ import java.util.ArrayList;
 public class Manager extends Staff {
 
     public String identity = "manager";
+    public ArrayList<StaffArea> departmentList;
+    public static Manager diningRoomManager;
+    public static Manager officeManager;
+    public static Manager workShopManager;
+    public static Manager warehouseManager;
 
-    public Manager(String name, int age, Sex sex, int salary, StaffArea department) {
-        super(name, age, sex, salary, department);
+
+    protected Manager(String name, int age, Sex sex, int salary) {
+        super(name, age, sex, salary, null);
+        diningRoomManager = null;
+        officeManager = null;
+        workShopManager = null;
+        warehouseManager = null;
+    }
+
+    /**
+     * get diningRoom's manager which is single!!
+     *
+     * @return Manager
+     */
+    public Manager getDiningRoomManager() {
+        if (diningRoomManager == null) {
+            diningRoomManager = new Manager("diningRoomManager", 25, Sex.FEMALE, 500);
+        }
+        return diningRoomManager;
+    }
+
+    /**
+     * get office's manager which is single!!
+     *
+     * @return Manager
+     */
+    public Manager getOfficeManager() {
+        if (officeManager == null) {
+            officeManager = new Manager("officeManager", 28, Sex.FEMALE, 700);
+        }
+        return officeManager;
+    }
+
+    /**
+     * return the work shop's manager, which is single!!
+     *
+     * @return
+     */
+    public Manager getWorkShopManager() {
+        if (workShopManager == null) {
+            workShopManager = new Manager("workShopManager", 30, Sex.FEMALE, 800);
+        }
+        return workShopManager;
+    }
+
+    /**
+     * return the warehouse's manager which is single!!
+     *
+     * @return
+     */
+    public Manager getWarehouseManager() {
+        if (warehouseManager == null) {
+            warehouseManager = new Manager("warehouseManager", 28, Sex.MALE, 500);
+        }
+        return warehouseManager;
+    }
+
+    /**
+     * add department to the departmentList;
+     *
+     * @param department
+     */
+    public void addDepartment(StaffArea department) {
+        this.departmentList.add(department);
     }
 
     /**
@@ -53,15 +121,20 @@ public class Manager extends Staff {
         }
     }
 
+    /**
+     * Dispatch the work got from general manager to each department he/she is managing.
+     */
     public void dispatchTask() {
         System.out.println("Received work from the general manager.");
-        ArrayList<Worker> workers = this.department.getWorkerList();
-        if (workers.isEmpty()) {
-            System.out.println("Warning!! Here's no worker in this scene.");
-        } else {
-            for (Worker worker : workers) {
-                System.out.println("dispatch task to " + worker.getName());
-                worker.work();
+        for (StaffArea staffArea : this.departmentList) {//each department (one manager may manges several same type departments.
+            ArrayList<Worker> workers = staffArea.getWorkerList();
+            if (workers.isEmpty()) {
+                System.out.println("Warning!! Here's no worker in this scene.");
+            } else {
+                for (Worker worker : workers) {
+                    System.out.println("dispatch task to " + worker.getName());
+                    worker.work();
+                }
             }
         }
     }

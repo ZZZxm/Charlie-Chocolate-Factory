@@ -12,12 +12,12 @@ import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWor
  */
 public class Office extends StaffArea {
 
-    /**
-     * constructor of the Office with no manager specified
-     */
-    public Office(String location, double cost, double area) {
-        super(location, cost, area);
-    }
+//    /**
+//     * constructor of the Office with no manager specified
+//     */
+//    public Office(String location, double cost, double area) {
+//        super(location, cost, area);
+//    }
 
     public Office() {
 
@@ -26,8 +26,9 @@ public class Office extends StaffArea {
     /**
      * constructor of the Office with no manager specified
      */
-    public Office(String location, double cost, double area, Manager newManager) {
-        super(location, cost, area, newManager);
+    public Office(String location, double cost, double area) {
+        super(location, cost, area, Manager.officeManager);
+        Manager.officeManager.addDepartment(this);
     }
 
     /**
