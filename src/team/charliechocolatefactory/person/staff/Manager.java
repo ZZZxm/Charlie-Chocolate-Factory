@@ -1,5 +1,6 @@
 package team.charliechocolatefactory.person.staff;
 
+import team.charliechocolatefactory.factory.WorkerAddingController;
 import team.charliechocolatefactory.person.GeneralManager;
 import team.charliechocolatefactory.person.staff.worker.WarehouseWorker;
 import team.charliechocolatefactory.person.staff.worker.Worker;
@@ -32,7 +33,9 @@ public class Manager extends Staff {
      * @param salary salary of the new worker
      */
     public void hireWorker(String name, Sex sex, int age, int salary) {
-        department.addWorker(name, age, sex, salary);
+
+        WorkerAddingController.addWorkerToScene(name, age, sex, salary, department);
+        //department.addWorker();
     }
 
     /**

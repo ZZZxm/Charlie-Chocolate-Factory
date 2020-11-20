@@ -1,7 +1,7 @@
 package team.charliechocolatefactory.scene.staffarea;
 
 import team.charliechocolatefactory.person.GeneralManager;
-import team.charliechocolatefactory.person.Person;
+import team.charliechocolatefactory.person.staff.EmptyStaff;
 import team.charliechocolatefactory.person.staff.Manager;
 import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
 import team.charliechocolatefactory.person.staff.worker.Worker;
@@ -73,16 +73,18 @@ public abstract class StaffArea extends Scene implements Aggregate {
         manager = newManager;
     }
 
-
     /**
-     * create and add a worker to the area
+     * add a given worker to the list
      *
-     * @param name   name of the worker
-     * @param age    age of the worker
-     * @param sex    sex of the worker
-     * @param salary salary of the worker
+     * @param workerObj worker object
      */
-    public abstract void addWorker(String name, int age, Person.Sex sex, int salary);
+    public void addWorker(Worker workerObj) {
+        if (!workerList.contains(workerObj)) {
+            workerList.add(workerObj);
+        } else {
+            System.out.println("The worker is in the scene");
+        }
+    }
 
     /**
      * remove a worker from this staff area if the worker is in the list
@@ -107,6 +109,35 @@ public abstract class StaffArea extends Scene implements Aggregate {
     }
 
     /**
+     * display all staffs in the staff area
+     */
+    public void displayAllStaffs() {
+        manager.display();
+        for (Worker obj : workerList) {
+            obj.display();
+        }
+    }
+
+    /**
+     * find a staff by id and display information
+     *
+     * @param id id of the staff to be found
+     */
+    public void searchStaffById(String id) {
+        if (manager.getId().equals(id)) {
+            manager.display();
+            return;
+        }
+        for (Worker obj : workerList) {
+            if (obj.getId() == id) {
+                obj.display();
+                return;
+            }
+        }
+        (new EmptyStaff()).display();
+    }
+
+    /**
      * @return an Iterator that copies the protected WorkerList
      */
     @Override
@@ -125,4 +156,5 @@ public abstract class StaffArea extends Scene implements Aggregate {
     public String toString() {
         return "class StaffArea extends Scene and implements Aggregate";
     }
+
 }

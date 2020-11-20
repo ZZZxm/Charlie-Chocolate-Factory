@@ -3,7 +3,6 @@ package team.charliechocolatefactory.person.staff;
 import java.util.UUID;
 
 import team.charliechocolatefactory.person.Person;
-import team.charliechocolatefactory.product.Product;
 import team.charliechocolatefactory.scene.Scene;
 import team.charliechocolatefactory.scene.staffarea.StaffArea;
 
@@ -110,6 +109,14 @@ public abstract class Staff extends Person {
      */
     @Override
     protected abstract void setInitialAsset();
+
+    /**
+     * display information of the staff
+     */
+    public void display() {
+        System.out.printf("%10s%5d%5s%15s%n", name, age, sex, department.toString());
+    }
+
 
     @Override
     public String toString() {
