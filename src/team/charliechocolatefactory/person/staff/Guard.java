@@ -12,8 +12,9 @@ import team.charliechocolatefactory.supplement.facade.SecurityCheckTask;
  * @description a kind of staff
  * @date 2020/11/10 15:27
  */
-public class Guard extends Staff{
+public class Guard extends Staff {
 
+    public String identity = "guard";
     private SecurityCheckTask securityCheckTask;
 
     public Guard(String name, int age, Sex sex, int salary, StaffArea workingArea) {
@@ -21,23 +22,29 @@ public class Guard extends Staff{
     }
 
     /**
-     * @modified by Ray
      * @param worker
+     * @modified by Ray
      */
-    public void sayMorning(Worker worker){
-        System.out.println("早安！打工人"+worker.getName());
+    public void sayMorning(Worker worker) {
+        System.out.println("早安！打工人" + worker.getName());
         worker.respondMorning();
     }
 
-    public void setSecurityCheckTask(SecurityCheckTask st){
-        this.securityCheckTask=st;
+    public void setSecurityCheckTask(SecurityCheckTask st) {
+        this.securityCheckTask = st;
     }
 
-    public void checkRoomSecurity(){securityCheckTask.checkRoomSecurity();}
+    public void checkRoomSecurity() {
+        securityCheckTask.checkRoomSecurity();
+    }
 
-    public void checkMachineSecurity(){securityCheckTask.checkMachineSecurity();}
+    public void checkMachineSecurity() {
+        securityCheckTask.checkMachineSecurity();
+    }
 
-    public void report(){securityCheckTask.report();}
+    public void report() {
+        securityCheckTask.report();
+    }
 
     @Override
     protected void setInitialAsset() {

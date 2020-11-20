@@ -1,10 +1,7 @@
 package team.charliechocolatefactory.product.chocolateProduct;
 
 import team.charliechocolatefactory.product.Product;
-import team.charliechocolatefactory.rawmaterial.*;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import team.charliechocolatefactory.rawmaterial.foodmaterial.*;
 
 /**
  * @author Kerr
@@ -15,11 +12,13 @@ import java.util.Date;
  */
 public class ChocolateCookie extends Product {
 
-//fields
-    public enum Shape{CAT,DOG,HORSE,HUMAN,APPLE,STAR,TREE,SUN}
+    //fields
+    public enum Shape {CAT, DOG, HORSE, HUMAN, APPLE, STAR, TREE, SUN}
+
     protected Shape shape;
 
 // constructor
+
     /**
      * @param shape
      */
@@ -29,19 +28,10 @@ public class ChocolateCookie extends Product {
         this.initIngredientList();
     }
 
-// methods
+    // methods
     @Override
     public void packaging() {
-        System.out.println("Start packaging Chocolate Cookies...");
-        super.pack = new Box(0);
-        super.state = 2;
-        System.out.println("Finish packaging.");
-        super.state = 3;
 
-        Date day=new Date();
-        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-        super.setProducedDate(df.format(day));
-        return;
     }
 
     /**
@@ -61,16 +51,17 @@ public class ChocolateCookie extends Product {
     /**
      * @return the shape of cookie
      */
-    public Shape getShape(){
+    public Shape getShape() {
         return this.shape;
     }
 
     /**
      * override the toString method
+     *
      * @return
      */
     @Override
-    public String toString(){
+    public String toString() {
         return "subclass : ChocolateCookie";
     }
 

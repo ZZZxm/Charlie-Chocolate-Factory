@@ -12,12 +12,15 @@ import team.charliechocolatefactory.scene.Scene;
  */
 public class Stockholder extends Person {
 
+    public String identity = "stockholder";
+
     public Stockholder(String name, int age, Sex sex) {
         super(name, age, sex);
     }
 
     /**
      * A stockholder can move to anywhere.
+     *
      * @param dest destination
      * @return whether he/she moves to the destination successfully.
      */

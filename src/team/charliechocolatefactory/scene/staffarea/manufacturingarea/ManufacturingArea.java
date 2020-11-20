@@ -2,6 +2,7 @@ package team.charliechocolatefactory.scene.staffarea.manufacturingarea;
 
 import team.charliechocolatefactory.machine.Machine;
 import team.charliechocolatefactory.person.staff.Manager;
+import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
 import team.charliechocolatefactory.scene.staffarea.StaffArea;
 
 import java.util.ArrayList;
@@ -36,7 +37,14 @@ public abstract class ManufacturingArea extends StaffArea {
     }
 
     /**
+     * @return name of the scene as a String
+     */
+    @Override
+    public abstract String toString();
+
+    /**
      * add a machine to the room
+     *
      * @param machineObj machine object
      */
     public void addMachine(Machine machineObj) {
@@ -49,6 +57,7 @@ public abstract class ManufacturingArea extends StaffArea {
 
     /**
      * remove a machine from the room
+     *
      * @param machineObj machine object
      */
     public void removeMachine(Machine machineObj) {
@@ -61,11 +70,28 @@ public abstract class ManufacturingArea extends StaffArea {
 
     /**
      * check whether a machine is in the area
+     *
      * @param machineObj machine object
      * @return true if the machine is in the area
      */
     public boolean MachineExists(Machine machineObj) {
         return machineList.contains(machineObj);
     }
+
+    /**
+     * maintained all machines
+     */
+    public void getAllMachinesMaintained() {
+        for (Machine obj : machineList) {
+            obj.maintenance();
+        }
+    }
+
+    /**
+     * Visitor Pattern: accept a utility worker to maintain the scene
+     *
+     * @param worker the utility worker
+     */
+    public abstract void accept(UtilityWorker worker);
 
 }

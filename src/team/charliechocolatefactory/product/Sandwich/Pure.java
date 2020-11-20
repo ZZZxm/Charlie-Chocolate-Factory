@@ -8,7 +8,9 @@ package team.charliechocolatefactory.product.Sandwich;
  * @date 2020/11/17 17:09
  */
 
-public class Pure implements Sandwich{
+public class Pure implements Sandwich {
     @Override
-    public String getSandwich(){return null;}
+    public String getSandwich() {
+        return null;
+    }
 }

@@ -2,6 +2,7 @@ package team.charliechocolatefactory.machine.transportmachine.UAVs;
 
 import team.charliechocolatefactory.machine.transportmachine.TransportMachine;
 import team.charliechocolatefactory.product.Product;
+
 /**
  * @project chocolateFactory
  * @author: Miracle Ray
@@ -11,13 +12,14 @@ import team.charliechocolatefactory.product.Product;
  */
 public interface UAV {
 
-    int work();
     int work(Product product);
+
     void setID(String ID);
+
     String getID();
 
     /**
-     * @description  The method UAV differ from normal transport machine.
+     * @description The method UAV differ from normal transport machine.
      */
     void navigate();
 

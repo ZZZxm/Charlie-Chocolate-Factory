@@ -6,7 +6,7 @@ import team.charliechocolatefactory.scene.staffarea.StaffArea;
  * @author Brian.Z
  * @project chocolateFactory
  * @classname OfficeWorker
- * @description TODO
+ * @description worker in the office
  * @date 2020/11/11 16:21
  */
 public class OfficeWorker extends Worker {
@@ -17,11 +17,17 @@ public class OfficeWorker extends Worker {
 
     @Override
     public void work() {
-        System.out.println("The office worker" + this.name + "is working.");
+        System.out.println("The office worker " + this.name + " is working.");
     }
 
     @Override
     public void rest() {
-        System.out.println("The office worker" + this.name + "goes to rest.");
+        System.out.println("The office worker " + this.name + " goes to rest.");
+    }
+
+    @Override
+    public void feedBack() {
+        System.out.println("The office worker " + this.name + " feed back things to the dining room manager");
+        this.department.getManager().receiveFeedBack();
     }
 }

@@ -1,11 +1,7 @@
 package team.charliechocolatefactory.product.chocolateProduct;
 
 import team.charliechocolatefactory.product.Product;
-import team.charliechocolatefactory.rawmaterial.*;
-import team.charliechocolatefactory.scene.Scene;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import team.charliechocolatefactory.rawmaterial.foodmaterial.*;
 
 /**
  * @author Kerr
@@ -16,26 +12,13 @@ import java.util.Date;
  */
 public class ChocolateWafer extends Product {
 
-// constructor
-    public ChocolateWafer(Scene loc) {
+    // constructor
+    public ChocolateWafer() {
         super("Chocolate Wafer", 18, 100);
         this.initIngredientList();
     }
 
 // methods
-    @Override
-    public void packaging() {
-        System.out.println("Start packaging Chocolate Ice-cream...");
-        super.pack = new Bag(0);
-        super.state = 2;
-        System.out.println("Finish packaging.");
-        super.state = 3;
-
-        Date day=new Date();
-        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-        super.setProducedDate(df.format(day));
-        return;
-    }
 
     /**
      * initialize the ingredient list of chocolate wafer
@@ -52,10 +35,11 @@ public class ChocolateWafer extends Product {
 
     /**
      * override the toString method
+     *
      * @return
      */
     @Override
-    public String toString(){
+    public String toString() {
         return "subclass : ChocolateWafer";
     }
 }

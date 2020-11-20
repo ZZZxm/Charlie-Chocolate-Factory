@@ -1,10 +1,10 @@
 package team.charliechocolatefactory.product.chocolateProduct;
 
 import team.charliechocolatefactory.product.Product;
-import team.charliechocolatefactory.rawmaterial.*;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import team.charliechocolatefactory.rawmaterial.foodmaterial.CocoaBean;
+import team.charliechocolatefactory.rawmaterial.foodmaterial.Milk;
+import team.charliechocolatefactory.rawmaterial.foodmaterial.Sugar;
+import team.charliechocolatefactory.rawmaterial.foodmaterial.Water;
 
 /**
  * @author Kerr
@@ -15,24 +15,10 @@ import java.util.Date;
  */
 public class ChocolateIceCream extends Product {
 
-// constructor
+    // constructor
     public ChocolateIceCream() {
         super("Chocolate Ice-cream", 12, 200);
         this.initIngredientList();
-    }
-
-    @Override
-    public void packaging() {
-        System.out.println("Start packaging Chocolate Ice-cream...");
-        super.pack = new Cup(0);
-        super.state = 2;
-        System.out.println("Finish packaging.");
-        super.state = 3;
-
-        Date day=new Date();
-        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-        super.setProducedDate(df.format(day));
-        return;
     }
 
     /**
@@ -48,10 +34,11 @@ public class ChocolateIceCream extends Product {
 
     /**
      * override the toString method
+     *
      * @return
      */
     @Override
-    public String toString(){
+    public String toString() {
         return "subclass : ChocolateIceCream";
     }
 }

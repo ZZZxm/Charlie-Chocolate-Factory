@@ -2,6 +2,7 @@ package team.charliechocolatefactory.scene.staffarea.manufacturingarea;
 
 import team.charliechocolatefactory.person.Person;
 import team.charliechocolatefactory.person.staff.Manager;
+import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
 import team.charliechocolatefactory.person.staff.worker.WarehouseWorker;
 
 import java.util.HashMap;
@@ -26,6 +27,14 @@ public class Warehouse extends ManufacturingArea {
         super(location, cost, area, newManager);
         materialAmount = new HashMap<String, Double>();
         productionAmount = new HashMap<String, Integer>();
+    }
+
+    /**
+     * @return name of the scene as a String
+     */
+    @Override
+    public String toString() {
+        return "warehouse";
     }
 
     /**
@@ -79,6 +88,16 @@ public class Warehouse extends ManufacturingArea {
      */
     public HashMap<String, Double> getMaterialList() {
         return new HashMap<String, Double>(materialAmount);
+    }
+
+    /**
+     * Visitor Pattern: accept a utility worker to maintenance the scene
+     *
+     * @param worker the utility worker
+     */
+    @Override
+    public void accept(UtilityWorker worker) {
+        worker.visit(this);
     }
 
 }
