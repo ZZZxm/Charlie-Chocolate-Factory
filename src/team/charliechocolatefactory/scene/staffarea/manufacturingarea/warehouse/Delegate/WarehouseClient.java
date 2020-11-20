@@ -1,4 +1,4 @@
-package team.charliechocolatefactory.scene.staffarea.manufacturingarea.Delegate;
+package team.charliechocolatefactory.scene.staffarea.manufacturingarea.warehouse.Delegate;
 
 import team.charliechocolatefactory.rawmaterial.RawMaterial;
 

@@ -3,19 +3,19 @@ package team.charliechocolatefactory.rawmaterial.foodmaterial;
 import team.charliechocolatefactory.rawmaterial.foodmaterial.FoodMaterial;
 
 /**
+ * @author Ngae Zeh-ghau
  * @project chocolateFactory
  * @classname Flour
  * @description flour the food raw material
- * @author Ngae Zeh-ghau
  * @date 2020-11-07 16:12:57
  */
 public class Flour extends FoodMaterial {
 
     /**
      * ctor of Flour
-     * 
+     * <p>
      * This ctor sets state to POWDER.
-     * 
+     *
      * @param initialQuant         initial quantity
      * @param timeBeforeExpiration initial time to expire
      */
@@ -33,5 +33,11 @@ public class Flour extends FoodMaterial {
          * TODO: implement Flour.process()
          */
         return false;
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        System.out.println("Successfully copy flour!");
+        return (Flour) super.clone();
     }
 }

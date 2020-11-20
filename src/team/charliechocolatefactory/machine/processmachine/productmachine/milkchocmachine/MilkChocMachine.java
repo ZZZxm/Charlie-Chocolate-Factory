@@ -1,4 +1,4 @@
-package team.charliechocolatefactory.machine.milkchocmachine;
+package team.charliechocolatefactory.machine.processmachine.productmachine.milkchocmachine;
 
 import team.charliechocolatefactory.machine.processmachine.productmachine.BasicProductMachine;
 import team.charliechocolatefactory.product.chocolate.MilkChocolate;

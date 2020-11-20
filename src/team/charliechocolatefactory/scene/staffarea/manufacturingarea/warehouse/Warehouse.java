@@ -1,9 +1,10 @@
-package team.charliechocolatefactory.scene.staffarea.manufacturingarea;
+package team.charliechocolatefactory.scene.staffarea.manufacturingarea.warehouse;
 
 import team.charliechocolatefactory.person.Person;
 import team.charliechocolatefactory.person.staff.Manager;
 import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
 import team.charliechocolatefactory.person.staff.worker.WarehouseWorker;
+import team.charliechocolatefactory.scene.staffarea.manufacturingarea.ManufacturingArea;
 
 import java.util.HashMap;
 

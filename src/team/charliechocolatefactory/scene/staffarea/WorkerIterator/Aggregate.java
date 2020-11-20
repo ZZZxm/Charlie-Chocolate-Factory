@@ -1,4 +1,4 @@
-package team.charliechocolatefactory.scene.staffarea.manufacturingarea.WorkerIterator;
+package team.charliechocolatefactory.scene.staffarea.WorkerIterator;
 
 /**
  * @author Zheng
@@ -9,5 +9,5 @@ package team.charliechocolatefactory.scene.staffarea.manufacturingarea.WorkerIte
  */
 public interface Aggregate {
 
-    public team.charliechocolatefactory.scene.staffarea.manufacturingarea.WorkerIterator.Iterator getIterator();
+    public team.charliechocolatefactory.scene.staffarea.WorkerIterator.Iterator getIterator();
 }

@@ -1,6 +1,6 @@
 package team.charliechocolatefactory.filterChain.role;
 
-import team.charliechocolatefactory.filterChain.message.Message;
+import team.charliechocolatefactory.person.filterchain.Message;
 
 /**
  * @author Zeus Lee

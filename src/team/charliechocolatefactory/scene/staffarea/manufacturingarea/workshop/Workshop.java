@@ -9,7 +9,7 @@ import team.charliechocolatefactory.person.staff.worker.WorkshopWorker;
 import team.charliechocolatefactory.scene.staffarea.manufacturingarea.ManufacturingArea;
 
 /**
- * @author Yuan.Cai
+ * @author Yuan.Cai Y.C.Young
  * @project chocolateFactory
  * @classname Workshop
  * @description This is the basic class of all the workshops, a workshop produces a family of products.

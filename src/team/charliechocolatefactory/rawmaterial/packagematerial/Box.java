@@ -7,6 +7,8 @@
  */
 package team.charliechocolatefactory.rawmaterial.packagematerial;
 
+import team.charliechocolatefactory.rawmaterial.foodmaterial.Alcohol;
+
 public class Box extends PackageMaterial {
 	/**
 	 * ctor of Box
@@ -19,5 +21,11 @@ public class Box extends PackageMaterial {
 
 	public Box() {
 		this(1);
+	}
+
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		System.out.println("Successfully copy a box!");
+		return (Box) super.clone();
 	}
 }

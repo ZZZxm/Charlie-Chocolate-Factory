@@ -1,6 +1,4 @@
-package team.charliechocolatefactory.scene.staffarea.manufacturingarea.WorkerIterator;
-
-import team.charliechocolatefactory.person.staff.worker.Worker;
+package team.charliechocolatefactory.scene.staffarea.WorkerIterator;
 
 /**
  * @author Zheng

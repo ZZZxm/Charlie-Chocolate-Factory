@@ -1,4 +1,4 @@
-package team.charliechocolatefactory.machine.milkchocmachine;
+package team.charliechocolatefactory.machine.processmachine.productmachine.milkchocmachine;
 
 /**
  * @author Yuan.Cai

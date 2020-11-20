@@ -1,5 +1,7 @@
 package team.charliechocolatefactory.rawmaterial.packagematerial;
 
+import team.charliechocolatefactory.rawmaterial.foodmaterial.Alcohol;
+
 /**
  * @project chocolateFactory
  * @classname Cup
@@ -19,5 +21,11 @@ public class Cup extends PackageMaterial {
 
 	public Cup() {
 		this(1);
+	}
+
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		System.out.println("Successfully copy a cup!");
+		return (Cup) super.clone();
 	}
 }

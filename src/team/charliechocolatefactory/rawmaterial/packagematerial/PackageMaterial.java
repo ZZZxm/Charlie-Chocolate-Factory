@@ -10,7 +10,7 @@ import team.charliechocolatefactory.rawmaterial.RawMaterial;
  * @author Ngae Zeh-ghau
  * @date 2020-11-09 20:48:19
  */
-public class PackageMaterial extends RawMaterial {
+public class PackageMaterial extends RawMaterial implements Cloneable {
 
 	/**
 	 * ctor of PackageMaterial

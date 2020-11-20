@@ -1,7 +1,6 @@
 package team.charliechocolatefactory.person.staff.worker;
 
 import team.charliechocolatefactory.scene.staffarea.StaffArea;
-import team.charliechocolatefactory.scene.staffarea.manufacturingarea.Workshop;
 
 /**
  * @author Brian.Z
