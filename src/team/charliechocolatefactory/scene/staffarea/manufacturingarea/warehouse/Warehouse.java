@@ -20,14 +20,18 @@ public class Warehouse extends ManufacturingArea {
     protected HashMap<String, Double> materialAmount;
     protected HashMap<String, Integer> productionAmount;
 
-    public Warehouse(String location, double cost, double area) {
-        this(location, cost, area, null);
-    }
-
     public Warehouse(String location, double cost, double area, Manager newManager) {
         super(location, cost, area, newManager);
         materialAmount = new HashMap<String, Double>();
         productionAmount = new HashMap<String, Integer>();
+    }
+
+    public Warehouse(String location, double cost, double area) {
+        this(location, cost, area, null);
+    }
+
+    public Warehouse() {
+        this("Warehouse Location", 10000, 100);
     }
 
     /**

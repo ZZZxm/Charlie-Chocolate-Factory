@@ -40,6 +40,10 @@ public abstract class StaffArea extends Scene implements Aggregate {
         workerList = new ArrayList<Worker>();
     }
 
+    public StaffArea() {
+        super();
+    }
+
     /**
      * Constructor of StaffArea with manager specified
      */

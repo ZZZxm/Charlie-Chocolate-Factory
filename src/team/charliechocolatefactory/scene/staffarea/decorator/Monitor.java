@@ -12,6 +12,7 @@ import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWor
 public class Monitor extends ResidenceDecorator {
 
     public Monitor() {
+
     }
 
     public Monitor(Residence r) {

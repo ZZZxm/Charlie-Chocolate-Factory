@@ -42,7 +42,8 @@ public class MainTest {
         System.out.println("               **            25 --- Copy on Write             **");
         System.out.println("               **            26 --- Extension                 **");
         System.out.println("               **            27 --- Filter                    **");
-        System.out.println("               **            28 --- Multipate                 **");
+        System.out.println("               **            28 --- IOC                       **");
+        System.out.println("               **            29 --- Multipate                 **");
         System.out.println("               -------------------------------------------------");
         System.out.print("               Which design pattern do you want to test? [0 to quit]: ");
     }
@@ -132,7 +133,7 @@ public class MainTest {
                     //VisitorTest.main(new String[]{});
                     break;
                 case 24:
-                    //BusinessDelegateTest.main(new String[]{});
+                    BusinessDelegateTest.main(new String[]{});
                     break;
                 case 25:
                     //CopyOnWriteTest.main(new String[]{});

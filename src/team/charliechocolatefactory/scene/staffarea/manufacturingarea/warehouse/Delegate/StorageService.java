@@ -16,5 +16,6 @@ public class StorageService implements WarehouseService {
     public void doProcessing(Warehouse warehouse, RawMaterial rawMaterial) {
         // todo 这里参数列表要改
         warehouse.addMaterial("test", 1.0);
+        System.out.println("Finish storage service for" + rawMaterial.toString());
     }
 }

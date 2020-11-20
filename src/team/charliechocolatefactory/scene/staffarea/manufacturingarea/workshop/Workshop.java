@@ -19,7 +19,7 @@ public abstract class Workshop extends ManufacturingArea {
     public ProductMachine productMachine;
 
     public Workshop() {
-        super("Default location", 1000, 1000, null);
+        super();
     }
 
     public Workshop(String location, double cost, double area, Manager newManager) {

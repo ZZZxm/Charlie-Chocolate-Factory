@@ -21,6 +21,10 @@ public class DiningRoom extends StaffArea {
         super(location, cost, area);
     }
 
+    public DiningRoom() {
+        super();
+    }
+
     /**
      * constructor of the DiningRoom with manager specified
      */
