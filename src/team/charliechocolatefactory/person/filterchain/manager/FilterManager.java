@@ -1,9 +1,7 @@
-package team.charliechocolatefactory.filterChain.manager;
+package team.charliechocolatefactory.person.filterchain.manager;
 
-import team.charliechocolatefactory.filterChain.message.Message;
-import team.charliechocolatefactory.filterChain.role.Person;
-
-import java.util.List;
+import team.charliechocolatefactory.person.filterchain.message.Message;
+import team.charliechocolatefactory.person.staff.Person;
 
 /**
  * @author Zeus Lee

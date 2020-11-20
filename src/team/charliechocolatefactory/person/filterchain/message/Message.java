@@ -1,4 +1,4 @@
-package team.charliechocolatefactory.filterChain.message;
+package team.charliechocolatefactory.person.filterchain.message;
 
 /**
  * @author Zeus Lee

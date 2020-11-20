@@ -8,12 +8,22 @@ import java.util.Date;
 import team.charliechocolatefactory.rawmaterial.*;
 
 /**
- * @author Kerr
+ * @author Kerr, Zeus Lee
  * @project chocolateFactory
  * @classname Chocolate
  * @description the basic class of chocolate
  * @date 2020/11/8 15:55
  */
+<<<<<<< Updated upstream
+=======
+
+/**
+ * @modifiedBy Miracle Ray, Zeus Lee
+ * @date 2020/11/17 17:15
+ * @description add an attribute of chocolate, sandwich, when construct it.
+ */
+
+>>>>>>> Stashed changes
 public abstract class Chocolate extends Product {
 
 //fields
@@ -58,4 +68,10 @@ public abstract class Chocolate extends Product {
         super.setProducedDate(df.format(day));
         return;
     }
+
+
+    /**
+     * this method to show class is some Chocolate , To subclass implementation
+     */
+    public abstract void dispaly();
 }

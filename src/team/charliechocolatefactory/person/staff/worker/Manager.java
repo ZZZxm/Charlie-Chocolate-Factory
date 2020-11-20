@@ -1,21 +1,21 @@
-package team.charliechocolatefactory.filterChain.role;
+package team.charliechocolatefactory.person.staff.worker;
 
-import team.charliechocolatefactory.filterChain.message.Message;
+import team.charliechocolatefactory.person.filterchain.message.Message;
+import team.charliechocolatefactory.person.staff.Person;
 
 /**
  * @author Zeus Lee
  * @project chocolateFactory
- * @classname Shareholder
- * @description Shareholder
- * @date 2020/11/15 18:05
+ * @classname CommonManager
+ * @description General manager class, which is used to process the messages we send
+ * @date 2020/11/15 18:06
  */
-public class Shareholder extends Person {
+public class Manager extends Person {
 
     /**
      * Distinguish by name to prevent repeated addition of filter chain
      */
-    private String personName = "Shareholder";
-
+    private String personName = "CommonManager";
 
     /**
      * This method is used to process messages.
@@ -28,7 +28,7 @@ public class Shareholder extends Person {
     @Override
     public boolean HandleRequest(Message requestMessage) {
         if (successor != null){
-           return HandleRequest(requestMessage);
+            return HandleRequest(requestMessage);
         }else {
             return true;
         }
@@ -36,10 +36,10 @@ public class Shareholder extends Person {
 
     @Override
     public boolean equals(Object obj) {
-        if (!(obj instanceof Shareholder)){
+        if (!(obj instanceof Manager)){
             return false;
         }
-        Shareholder temp = (Shareholder) obj;
+        Manager temp = (Manager) obj;
         return this.personName.equals(temp.personName);
     }
 }
