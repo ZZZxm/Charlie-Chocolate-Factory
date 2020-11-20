@@ -29,6 +29,10 @@ public class ExperienceRoom extends PublicArea {
         super(location, cost, area, maxNumber);
     }
 
+    public ExperienceRoom() {
+        super();
+    }
+
     /**
      * @return the tool
      */

@@ -5,13 +5,13 @@ import team.charliechocolatefactory.rawmaterial.RawMaterial;
 import java.util.LinkedList;
 
 /**
+ * @author Ngae Zeh-ghau
  * @project chocolateFactory
  * @classname FoodMaterial
  * @description food raw material, which can expire
- * @author Ngae Zeh-ghau
  * @date 2020-11-07 16:12:47
  */
-public abstract class FoodMaterial extends RawMaterial {
+public abstract class FoodMaterial extends RawMaterial implements Cloneable {
 
     enum State {
         POWDER, SOLID, LIQUID
@@ -19,7 +19,7 @@ public abstract class FoodMaterial extends RawMaterial {
 
     /**
      * ctor of FoodMaterial
-     * 
+     *
      * @param initialQuant         initial quantity
      * @param timeBeforeExpiration initial time to expire
      * @param state                state of material
@@ -36,7 +36,7 @@ public abstract class FoodMaterial extends RawMaterial {
 
     /**
      * getter of timeToExpire
-     * 
+     *
      * @return timeToExpire
      */
     public double timeToExpire() {
@@ -45,14 +45,14 @@ public abstract class FoodMaterial extends RawMaterial {
 
     /**
      * elapse
-     * 
+     * <p>
      * This function is related to timeToExpire. If timeToExpire < 0 then the items
      * are expired.
-     * 
+     * <p>
      * This funtion is intended to be called whenever time advances.
-     * 
+     * <p>
      * This is a part of the "observer" pattern.
-     * 
+     *
      * @param deltaTime time elapsed
      * @return true if the items are expired
      */
@@ -69,11 +69,11 @@ public abstract class FoodMaterial extends RawMaterial {
 
     /**
      * add expiration obsever (to exhaustionObserverList)
-     * 
+     * <p>
      * This is a part of the "observer" pattern.
-     * 
+     * <p>
      * TODO: The type of observer remains to be defined.
-     * 
+     *
      * @param observer observer to add
      */
     public boolean addExpirationObsever(Object observer) {
@@ -86,9 +86,9 @@ public abstract class FoodMaterial extends RawMaterial {
 
     /**
      * use the material
-     * 
+     * <p>
      * This is a part of the "strategy" pattern.
-     * 
+     *
      * @param quant quantity to use
      * @return true if the material can be used.
      */
@@ -104,11 +104,11 @@ public abstract class FoodMaterial extends RawMaterial {
 
     /**
      * process steps of material
-     * 
+     * <p>
      * The function is called by use().
-     * 
+     * <p>
      * This is a part of the "strategy" pattern.
-     * 
+     *
      * @param toState change to state
      * @return true if it can be processed
      */
@@ -116,15 +116,15 @@ public abstract class FoodMaterial extends RawMaterial {
 
     /**
      * notify on expiration
-     * 
+     * <p>
      * This function is called when items are exhausted, maybe by consume().
      */
     protected void notifyOnExpiration() {
         /*
          * TODO: notifyOnExpiration()
-         * 
+         *
          * This is a part of the "observer" pattern.
-         * 
+         *
          * Hint: expirationObseverList is the list holding all the observers that should
          * be notified here.
          */
@@ -132,7 +132,7 @@ public abstract class FoodMaterial extends RawMaterial {
 
     /**
      * melt - Change the state from SOLID into LIQUID.
-     * 
+     *
      * @return false if melt can be done.
      */
     protected boolean melt() {
@@ -148,7 +148,7 @@ public abstract class FoodMaterial extends RawMaterial {
 
     /**
      * melt - Change the state from SOLID into POWDER.
-     * 
+     *
      * @return false if grind can be done.
      */
     protected boolean grind() {
@@ -174,12 +174,12 @@ public abstract class FoodMaterial extends RawMaterial {
 
     /**
      * obsever array of expiration
-     * 
+     * <p>
      * Array holding all the observer that should be notified when
      * notifyOnExpiration() is called.
-     * 
+     * <p>
      * This is a part of the "observer" pattern.
-     * 
+     * <p>
      * TODO: The type of observer remains to be defined.
      */
     private LinkedList<Object> expirationObseverList;

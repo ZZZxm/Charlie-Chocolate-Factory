@@ -6,9 +6,9 @@ import team.charliechocolatefactory.person.staff.Manager;
 import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
 import team.charliechocolatefactory.person.staff.worker.Worker;
 import team.charliechocolatefactory.scene.Scene;
-import team.charliechocolatefactory.scene.staffarea.manufacturingarea.WorkerIterator.Aggregate;
-import team.charliechocolatefactory.scene.staffarea.manufacturingarea.WorkerIterator.Iterator;
-import team.charliechocolatefactory.scene.staffarea.manufacturingarea.WorkerIterator.WorkerListIterator;
+import team.charliechocolatefactory.scene.staffarea.WorkerIterator.Aggregate;
+import team.charliechocolatefactory.scene.staffarea.WorkerIterator.Iterator;
+import team.charliechocolatefactory.scene.staffarea.WorkerIterator.WorkerListIterator;
 
 import java.util.ArrayList;
 
@@ -39,6 +39,10 @@ public abstract class StaffArea extends Scene implements Aggregate {
     public StaffArea(String location, double cost, double area) {
         this(location, cost, area, null);
         workerList = new ArrayList<Worker>();
+    }
+
+    public StaffArea() {
+        super();
     }
 
     /**

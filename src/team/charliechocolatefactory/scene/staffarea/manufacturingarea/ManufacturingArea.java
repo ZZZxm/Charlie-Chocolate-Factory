@@ -36,6 +36,10 @@ public abstract class ManufacturingArea extends StaffArea {
         machineList = new ArrayList<Machine>();
     }
 
+    public ManufacturingArea() {
+        this("Manufacturing Location",10000,100);
+    }
+
     /**
      * @return name of the scene as a String
      */

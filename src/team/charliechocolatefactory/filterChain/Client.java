@@ -1,8 +1,8 @@
 package team.charliechocolatefactory.filterChain;
 
 import team.charliechocolatefactory.filterChain.manager.FilterManager;
-import team.charliechocolatefactory.filterChain.message.ApplicationMessage;
-import team.charliechocolatefactory.filterChain.message.Message;
+import team.charliechocolatefactory.person.filterchain.ApplicationMessage;
+import team.charliechocolatefactory.person.filterchain.Message;
 import team.charliechocolatefactory.filterChain.role.CommonManager;
 import team.charliechocolatefactory.filterChain.role.Shareholder;
 

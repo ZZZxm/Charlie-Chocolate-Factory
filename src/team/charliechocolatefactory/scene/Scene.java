@@ -29,6 +29,7 @@ public abstract class Scene {
      */
     protected double area;
 
+
     public Scene(String location, double cost, double area) {
         this.location = location;
         this.cost = cost;
@@ -36,12 +37,13 @@ public abstract class Scene {
     }
 
 
-    public Scene(){}
-
-    public Scene(double cost) {
-        this.cost = cost;
+    public Scene() {
+        this("Default Location", 10000, 100);
     }
 
+    public Scene(double cost) {
+        this("Default Location", cost, 100);
+    }
 
 
     /**

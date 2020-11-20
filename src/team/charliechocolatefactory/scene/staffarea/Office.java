@@ -21,6 +21,10 @@ public class Office extends StaffArea {
         super(location, cost, area);
     }
 
+    public Office() {
+
+    }
+
     /**
      * constructor of the Office with no manager specified
      */
