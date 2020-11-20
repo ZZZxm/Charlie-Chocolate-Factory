@@ -22,13 +22,13 @@ public class Van extends TransportMachine {
     @Override
     protected void load(Product product) {
         System.out.println("Four people are getting on the van and " +
-                this.aimProcessNum + " " + product.getName() + "are being loaded on the van.");
+                this.aimProcessNum + " " + product.getName() + " are being loaded on the van.");
     }
 
     @Override
     protected void arrive(Product product) {
         System.out.println("Four people and " +
-                this.aimProcessNum + " " + product.getName() + "arrive at the destination.");
+                this.aimProcessNum + " " + product.getName() + " arrive at the destination.");
     }
 
     public String toString() {

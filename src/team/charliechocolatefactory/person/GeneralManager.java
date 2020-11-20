@@ -55,7 +55,9 @@ public class GeneralManager extends Person {
      * @param manager
      */
     public void addManager(Manager manager) {
-        this.managerList.add(manager);
+        if (manager != null) {
+            this.managerList.add(manager);
+        }
     }
 
     /**

@@ -58,7 +58,7 @@ public class ChocolateCake extends Product {
      */
     @Override
     public String toString() {
-        return "subclass : ChocolateCake";
+        return "ChocolateCake";
     }
 
 }

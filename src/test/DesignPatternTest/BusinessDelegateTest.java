@@ -1,6 +1,7 @@
 package test.DesignPatternTest;
 
 import team.charliechocolatefactory.person.GeneralManager;
+import team.charliechocolatefactory.rawmaterial.foodmaterial.Egg;
 import team.charliechocolatefactory.scene.staffarea.manufacturingarea.warehouse.Delegate.WarehouseClient;
 import team.charliechocolatefactory.scene.staffarea.manufacturingarea.warehouse.Delegate.WarehouseDelegate;
 import team.charliechocolatefactory.scene.staffarea.manufacturingarea.warehouse.Warehouse;
@@ -36,8 +37,15 @@ public class BusinessDelegateTest {
 
         System.out.println("\nNow we need to get eggs from the warehouse.");
         warehouseDelegate.setServiceType("pickup");
-        warehouseClient.doTask("");
+        warehouseClient.doTask(new Egg());
 
+        System.out.println("\nNow we need to store eggs from the warehouse.");
+        warehouseDelegate.setServiceType("storage");
+        warehouseClient.doTask(new Egg());
+
+        System.out.println("\nLet's input a wrong service type.");
+        warehouseDelegate.setServiceType("hahahahaha");
+        warehouseClient.doTask(new Egg());
     }
 
 }

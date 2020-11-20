@@ -39,4 +39,9 @@ public class Egg extends FoodMaterial {
         System.out.println("Successfully copy egg!");
         return (Egg) super.clone();
     }
+
+    @Override
+    public String toString() {
+        return "Egg";
+    }
 }

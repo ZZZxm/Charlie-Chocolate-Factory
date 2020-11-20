@@ -19,6 +19,7 @@ public class WarehouseClient {
 
     public WarehouseClient(WarehouseDelegate warehouseDelegate) {
         this.warehouseDelegate = warehouseDelegate;
+        showServiceList();
     }
 
     /**
@@ -30,5 +31,13 @@ public class WarehouseClient {
      */
     public void doTask(RawMaterial rawMaterial) {
         warehouseDelegate.doTask(rawMaterial);
+    }
+
+    public static void showServiceList() {
+        System.out.println("");
+        System.out.println("----Warehouse Service List----");
+        System.out.println("**  1. pickup               **");
+        System.out.println("**  2. storage              **");
+        System.out.println("");
     }
 }

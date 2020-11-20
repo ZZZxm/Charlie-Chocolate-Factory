@@ -69,5 +69,8 @@ public class WarehouseDelegate {
         if (warehouseService != null) {
             warehouseService.doProcessing(warehouse, rawMaterial);
         }
+        else {
+            System.out.println("There is no such service!");
+        }
     }
 }

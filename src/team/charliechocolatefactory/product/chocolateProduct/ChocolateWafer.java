@@ -40,6 +40,6 @@ public class ChocolateWafer extends Product {
      */
     @Override
     public String toString() {
-        return "subclass : ChocolateWafer";
+        return "ChocolateWafer";
     }
 }
