@@ -4,6 +4,7 @@ import team.charliechocolatefactory.person.GeneralManager;
 import team.charliechocolatefactory.person.staff.worker.WarehouseWorker;
 import team.charliechocolatefactory.person.staff.worker.Worker;
 import team.charliechocolatefactory.scene.Scene;
+import team.charliechocolatefactory.scene.staffarea.DiningRoom;
 import team.charliechocolatefactory.scene.staffarea.StaffArea;
 
 import java.util.ArrayList;
@@ -18,9 +19,35 @@ import java.util.ArrayList;
 public class Manager extends Staff {
 
     public String identity = "manager";
+    public static Manager diningRoomManager;
+    public static Manager officeManager;
 
-    public Manager(String name, int age, Sex sex, int salary, StaffArea department) {
+    protected Manager(String name, int age, Sex sex, int salary, StaffArea department) {
         super(name, age, sex, salary, department);
+        diningRoomManager = null;
+        officeManager = null;
+    }
+
+    /**
+     * get diningRoom's manager which is single!!
+     * @return Manager
+     */
+    public Manager getDiningRoomManager() {
+        if(diningRoomManager==null){
+            diningRoomManager = new Manager("diningRoomManager",25,Sex.FEMALE,500,null);
+        }
+        return diningRoomManager;
+    }
+
+    /**
+     * get office's manager which is single!!
+     * @return Manager
+     */
+    public Manager getOfficeManager(){
+        if(officeManager==null){
+            officeManager = new Manager("officeManager",28,Sex.FEMALE,700,null);
+        }
+        return officeManager;
     }
 
     /**
