@@ -1,12 +1,10 @@
 package team.charliechocolatefactory.product;
 
-import team.charliechocolatefactory.machine.Machine;
 import team.charliechocolatefactory.machine.processmachine.ProcessMachine;
 import team.charliechocolatefactory.machine.processmachine.productmachine.BasicProductMachine;
 import team.charliechocolatefactory.machine.processmachine.wrappermachine.WrapperMachine;
-import team.charliechocolatefactory.rawmaterial.PackageMaterial;
+import team.charliechocolatefactory.rawmaterial.packagematerial.PackageMaterial;
 import team.charliechocolatefactory.rawmaterial.RawMaterial;
-import team.charliechocolatefactory.scene.Scene;
 
 import java.util.ArrayList;
 
@@ -99,7 +97,7 @@ public abstract class Product {
     /**
      * @param date template yyyy-mm-dd
      */
-    protected void setProducedDate(String date) {
+    public void setProducedDate(String date) {
         if (this.producedDate == null) {
             this.producedDate = date;
             return;
@@ -148,6 +146,15 @@ public abstract class Product {
      */
     public int getWeight() {
         return this.weight;
+    }
+
+    /**
+     * set the weight of this product's single item
+     *
+     * @param pack pack
+     */
+    public void setPack(PackageMaterial pack) {
+        this.pack = pack;
     }
 
     /**

@@ -6,7 +6,7 @@ import team.charliechocolatefactory.scene.staffarea.StaffArea;
  * @author Brian.Z
  * @project chocolateFactory
  * @classname DinningRoomWorker
- * @description TODO
+ * @description worker in the dinning room
  * @date 2020/11/11 16:20
  */
 public class DinningRoomWorker extends Worker {
@@ -27,7 +27,7 @@ public class DinningRoomWorker extends Worker {
 
     @Override
     public void feedBack() {
-        System.out.println("The dining room worker "+this.name+" feed back things to the dining room manager");
+        System.out.println("The dining room worker " + this.name + " feed back things to the dining room manager");
         this.department.getManager().receiveFeedBack();
     }
 }

@@ -1,7 +1,8 @@
 package team.charliechocolatefactory.product.chocolate;
 
-import team.charliechocolatefactory.rawmaterial.CocoaBean;
-import team.charliechocolatefactory.rawmaterial.Water;
+import team.charliechocolatefactory.product.Sandwich.Sandwich;
+import team.charliechocolatefactory.rawmaterial.foodmaterial.CocoaBean;
+import team.charliechocolatefactory.rawmaterial.foodmaterial.Water;
 
 /**
  * @author Kerr
@@ -15,6 +16,11 @@ public class DarkChocolate extends Chocolate {
     // constructor
     public DarkChocolate() {
         super("Dark chocolate", 18, 10, 0.78);
+    }
+
+    // constructor
+    public DarkChocolate(Sandwich sandwich) {
+        super("Dark chocolate", 18, 10, 0.78, sandwich);
         this.initIngredientList();
     }
 
@@ -25,6 +31,10 @@ public class DarkChocolate extends Chocolate {
     protected void initIngredientList() {
         super.ingredientList.add(new CocoaBean());
         super.ingredientList.add(new Water());
+    }
+
+    public String getNameWithSandwich() {
+        return sandwich.getSandwich() + " DarkChocolate";
     }
 
     /**

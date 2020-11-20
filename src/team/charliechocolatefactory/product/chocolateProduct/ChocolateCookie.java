@@ -1,10 +1,7 @@
 package team.charliechocolatefactory.product.chocolateProduct;
 
 import team.charliechocolatefactory.product.Product;
-import team.charliechocolatefactory.rawmaterial.*;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import team.charliechocolatefactory.rawmaterial.foodmaterial.*;
 
 /**
  * @author Kerr
@@ -31,7 +28,11 @@ public class ChocolateCookie extends Product {
         this.initIngredientList();
     }
 
-// methods
+    // methods
+    @Override
+    public void packaging() {
+
+    }
 
     /**
      * initialize the ingredient list of chocolate cookie

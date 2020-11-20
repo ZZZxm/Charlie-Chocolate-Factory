@@ -1,8 +1,9 @@
 package team.charliechocolatefactory.product.chocolate;
 
-import team.charliechocolatefactory.rawmaterial.CocoaBean;
-import team.charliechocolatefactory.rawmaterial.Milk;
-import team.charliechocolatefactory.rawmaterial.Sugar;
+import team.charliechocolatefactory.product.Sandwich.Sandwich;
+import team.charliechocolatefactory.rawmaterial.foodmaterial.CocoaBean;
+import team.charliechocolatefactory.rawmaterial.foodmaterial.Milk;
+import team.charliechocolatefactory.rawmaterial.foodmaterial.Sugar;
 
 /**
  * @author Kerr
@@ -15,10 +16,18 @@ public class MilkChocolate extends Chocolate {
 
     //fields
     protected double milkContent;
+    private double cocoaBeanNum = 100;
+    private double sugarNum = 5;
+    private double milkNum = 0.5;
 
     //constructor
     public MilkChocolate() {
         super("Milk chocolate", 18, 15, 0.3);
+    }
+
+    //constructor
+    public MilkChocolate(Sandwich sandwich) {
+        super("Milk chocolate", 18, 15, 0.3, sandwich);
         this.milkContent = 0.4;
         this.initIngredientList();
     }
@@ -49,6 +58,10 @@ public class MilkChocolate extends Chocolate {
         super.ingredientList.add(new Milk());
     }
 
+    public String getNameWithSandwich() {
+        return sandwich.getSandwich() + " MilkChocolate";
+    }
+
     /**
      * override the toString method
      *
@@ -57,5 +70,17 @@ public class MilkChocolate extends Chocolate {
     @Override
     public String toString() {
         return "subclass : Milk Chocolate";
+    }
+
+    public void setCocoaBeanNum(double cocoaBeanNum) {
+        this.cocoaBeanNum = cocoaBeanNum;
+    }
+
+    public void setSugarNum(double sugarNum) {
+        this.sugarNum = sugarNum;
+    }
+
+    public void setMilkNum(double milkNum) {
+        this.milkNum = milkNum;
     }
 }

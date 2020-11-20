@@ -7,13 +7,17 @@ import team.charliechocolatefactory.scene.staffarea.manufacturingarea.Workshop;
  * @author Brian.Z
  * @project chocolateFactory
  * @classname WorkshopWorker
- * @description TODO
+ * @description worker in the workshop
  * @date 2020/11/11 16:16
  */
 public class WorkshopWorker extends Worker {
 
     public WorkshopWorker(String name, int age, Sex sex, int salary, StaffArea department) {
         super(name, age, sex, salary, department);
+    }
+
+    public WorkshopWorker(String name, int age, Sex sex, int salary) {
+        super(name, age, sex, salary);
     }
 
     @Override
@@ -28,7 +32,7 @@ public class WorkshopWorker extends Worker {
 
     @Override
     public void feedBack() {
-        System.out.println("The workshop worker "+this.name+" feed back things to the dining room manager");
+        System.out.println("The workshop worker " + this.name + " feed back things to the dining room manager");
         this.department.getManager().receiveFeedBack();
     }
 }
