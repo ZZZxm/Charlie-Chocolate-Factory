@@ -1,44 +1,50 @@
 package team.charliechocolatefactory.scene.staffarea.manufacturingarea.workshop;
 
-
 import team.charliechocolatefactory.machine.processmachine.productmachine.ProductMachine;
-import team.charliechocolatefactory.person.Person;
 import team.charliechocolatefactory.person.staff.Manager;
 import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
-import team.charliechocolatefactory.person.staff.worker.WorkshopWorker;
 import team.charliechocolatefactory.scene.staffarea.manufacturingarea.ManufacturingArea;
 
 /**
- * @author Yuan.Cai Y.C.Young
+ * @author Y.C.Young Yuan.Cai
  * @project chocolateFactory
  * @classname Workshop
- * @description This is the basic class of all the workshops, a workshop produces a family of products.
- * @date 2020/11/13 15:42
+ * @description Workshop where the production is produced
+ * @date 2020/11/9 20:05
  */
 public abstract class Workshop extends ManufacturingArea {
+
     public ProductMachine productMachine;
+
 
     public Workshop() {
         super();
     }
 
+    /**
+     * Constructor of Workshop with no manager specified
+     */
+    public Workshop(String location, double cost, double area) {
+        this(location, cost, area, null);
+    }
+
+    /**
+     * Constructor of Workshop with no manager specified
+     */
     public Workshop(String location, double cost, double area, Manager newManager) {
         super(location, cost, area, newManager);
     }
 
+
+     /**
     /**
-     * create and add a worker to the area
-     *
-     * @param name   name of the worker
-     * @param age    age of the worker
-     * @param sex    sex of the worker
-     * @param salary salary of the worker
+     * @return name of the scene as a String
      */
     @Override
-    public void addWorker(String name, int age, Person.Sex sex, int salary) {
-        WorkshopWorker workerObj = new WorkshopWorker(name, age, sex, salary, this);
-        workerList.add(workerObj);
+    public String toString() {
+        return "workshop";
     }
+
 
     /**
      * Visitor Pattern: accept a utility worker to maintenance the scene
@@ -64,7 +70,5 @@ public abstract class Workshop extends ManufacturingArea {
      */
     public abstract int produceChocolateCookie();
 
-    public String toString() {
-        return "class Workshop";
-    }
+
 }

@@ -24,19 +24,19 @@ public class WorkerAddingController {
     public static void addWorkerToScene(String name, int age, Person.Sex sex, int salary, StaffArea scene) {
 
         Worker workerObj;
-        if (scene.toString() == "office") {
+        if (scene.toString().equals("office")) {
             workerObj = new OfficeWorker(name, age, sex, salary, scene);
             scene.addWorker(workerObj);
         }
-        else if (scene.toString() == "dining room") {
+        else if (scene.toString().equals("dining room")) {
             workerObj = new DinningRoomWorker(name, age, sex, salary, scene);
             scene.addWorker(workerObj);
         }
-        else if (scene.toString() == "workshop") {
+        else if (scene.toString().equals("workshop")) {
             workerObj = new WorkshopWorker(name, age, sex, salary, scene);
             scene.addWorker(workerObj);
         }
-        else if (scene.toString() == "warehouse") {
+        else if (scene.toString().equals("warehouse")) {
             workerObj = new WarehouseWorker(name, age, sex, salary, scene);
             scene.addWorker(workerObj);
         }
