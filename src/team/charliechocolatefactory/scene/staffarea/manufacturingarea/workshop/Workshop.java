@@ -22,8 +22,9 @@ public abstract class Workshop extends ManufacturingArea {
         super();
     }
 
-    public Workshop(String location, double cost, double area, Manager newManager) {
-        super(location, cost, area, newManager);
+    public Workshop(String location, double cost, double area) {
+        super(location, cost, area, Manager.workShopManager);
+        Manager.workShopManager.addDepartment(this);
     }
 
     /**

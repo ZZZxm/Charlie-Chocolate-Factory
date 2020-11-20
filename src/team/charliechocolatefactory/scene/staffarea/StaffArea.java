@@ -32,14 +32,14 @@ public abstract class StaffArea extends Scene implements Aggregate {
      **/
     protected ArrayList<Worker> workerList = null;
 
-    /**
-     * Constructor of StaffArea with no manager specified
-     */
-
-    public StaffArea(String location, double cost, double area) {
-        this(location, cost, area, null);
-        workerList = new ArrayList<Worker>();
-    }
+//    /**
+//     * Constructor of StaffArea with no manager specified
+//     */
+//
+//    public StaffArea(String location, double cost, double area) {
+//        this(location, cost, area, null);
+//        workerList = new ArrayList<Worker>();
+//    }
 
     public StaffArea() {
         super();
