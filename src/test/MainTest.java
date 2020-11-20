@@ -125,7 +125,7 @@ public class MainTest {
                     //StateTest.main(new String[]{});
                     break;
                 case 21:
-                    //StrategyTest.main(new String[]{});
+                    StrategyTest.main(new String[]{});
                     break;
                 case 22:
                     TemplateMethodTest.main(new String[]{});
