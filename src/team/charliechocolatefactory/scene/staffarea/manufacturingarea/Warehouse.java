@@ -1,10 +1,10 @@
 package team.charliechocolatefactory.scene.staffarea.manufacturingarea;
 
-import team.charliechocolatefactory.person.Person;
+import org.omg.Messaging.SyncScopeHelper;
 import team.charliechocolatefactory.person.staff.Manager;
 import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
-import team.charliechocolatefactory.person.staff.worker.WarehouseWorker;
 
+import javax.swing.plaf.synth.SynthSpinnerUI;
 import java.util.HashMap;
 
 /**
@@ -37,19 +37,6 @@ public class Warehouse extends ManufacturingArea {
         return "warehouse";
     }
 
-    /**
-     * create and add a worker to the area
-     *
-     * @param name   name of the worker
-     * @param age    age of the worker
-     * @param sex    sex of the worker
-     * @param salary salary of the worker
-     */
-    @Override
-    public void addWorker(String name, int age, Person.Sex sex, int salary) {
-        WarehouseWorker workerObj = new WarehouseWorker(name, age, sex, salary, this);
-        workerList.add(workerObj);
-    }
 
     /**
      * when other class needs to use material, the method will be invoked to modify amount of the material
@@ -74,11 +61,24 @@ public class Warehouse extends ManufacturingArea {
      * @param amount amount of the material added (Double)
      */
     public void addMaterial(String type, Double amount) {
-        Double newAmount = amount;
         if (materialAmount.containsKey(type)) {
-            newAmount += materialAmount.get(type);
+            materialAmount.put(type, amount + materialAmount.get(type));
+        } else {
+            System.out.println("The kind doesn't exist");
         }
-        materialAmount.put(type, newAmount);
+    }
+
+    /**
+     * create a new kind of material in the warehouse
+     *
+     * @param kind new kind of material
+     */
+    public void createMaterialKind(String kind) {
+        if (materialAmount.containsKey(kind)) {
+            System.out.println("The kind exists.");
+        } else {
+            materialAmount.put(kind, 0.0);
+        }
     }
 
     /**

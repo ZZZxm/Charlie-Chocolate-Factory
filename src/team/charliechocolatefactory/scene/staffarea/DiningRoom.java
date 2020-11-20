@@ -1,8 +1,6 @@
 package team.charliechocolatefactory.scene.staffarea;
 
-import team.charliechocolatefactory.person.Person;
 import team.charliechocolatefactory.person.staff.Manager;
-import team.charliechocolatefactory.person.staff.worker.DinningRoomWorker;
 import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
 
 /**
@@ -34,20 +32,6 @@ public class DiningRoom extends StaffArea {
     @Override
     public String toString() {
         return "dining room";
-    }
-
-    /**
-     * create and add a worker to the area
-     *
-     * @param name   name of the worker
-     * @param age    age of the worker
-     * @param sex    sex of the worker
-     * @param salary salary of the worker
-     */
-    @Override
-    public void addWorker(String name, int age, Person.Sex sex, int salary) {
-        DinningRoomWorker workerObj = new DinningRoomWorker(name, age, sex, salary, this);
-        workerList.add(workerObj);
     }
 
     /**

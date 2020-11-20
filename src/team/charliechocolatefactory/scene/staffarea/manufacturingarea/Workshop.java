@@ -1,9 +1,7 @@
 package team.charliechocolatefactory.scene.staffarea.manufacturingarea;
 
-import team.charliechocolatefactory.person.Person;
 import team.charliechocolatefactory.person.staff.Manager;
 import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
-import team.charliechocolatefactory.person.staff.worker.WorkshopWorker;
 
 /**
  * @author Y.C.Young
@@ -38,19 +36,6 @@ public class Workshop extends ManufacturingArea {
         return "workshop";
     }
 
-    /**
-     * create and add a worker to the area
-     *
-     * @param name   name of the worker
-     * @param age    age of the worker
-     * @param sex    sex of the worker
-     * @param salary salary of the worker
-     */
-    @Override
-    public void addWorker(String name, int age, Person.Sex sex, int salary) {
-        WorkshopWorker workerObj = new WorkshopWorker(name, age, sex, salary, this);
-        workerList.add(workerObj);
-    }
 
     /**
      * Visitor Pattern: accept a utility worker to maintenance the scene

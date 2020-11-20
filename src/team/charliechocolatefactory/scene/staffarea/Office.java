@@ -1,8 +1,6 @@
 package team.charliechocolatefactory.scene.staffarea;
 
-import team.charliechocolatefactory.person.Person;
 import team.charliechocolatefactory.person.staff.Manager;
-import team.charliechocolatefactory.person.staff.worker.OfficeWorker;
 import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
 
 /**
@@ -27,21 +25,6 @@ public class Office extends StaffArea {
     public Office(String location, double cost, double area, Manager newManager) {
         super(location, cost, area, newManager);
     }
-
-    /**
-     * create and add a worker to the area
-     *
-     * @param name   name of the worker
-     * @param age    age of the worker
-     * @param sex    sex of the worker
-     * @param salary salary of the worker
-     */
-    @Override
-    public void addWorker(String name, int age, Person.Sex sex, int salary) {
-        OfficeWorker workerObj = new OfficeWorker(name, age, sex, salary, this);
-        workerList.add(workerObj);
-    }
-
 
     /**
      * Visitor Pattern: accept a utility worker to maintenance the scene
