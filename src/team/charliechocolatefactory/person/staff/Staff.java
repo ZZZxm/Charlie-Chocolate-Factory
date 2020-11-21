@@ -1,9 +1,9 @@
 package team.charliechocolatefactory.person.staff;
 
+import java.util.Observer;
 import java.util.UUID;
 
 import team.charliechocolatefactory.person.Person;
-import team.charliechocolatefactory.product.Product;
 import team.charliechocolatefactory.scene.Scene;
 import team.charliechocolatefactory.scene.staffarea.StaffArea;
 
@@ -16,6 +16,10 @@ import team.charliechocolatefactory.scene.staffarea.StaffArea;
  * @date 2020/11/7 15:17
  */
 public abstract class Staff extends Person {
+//    /** response to PaySubject */
+//    public void update(){
+//        System.out.println("发工资的时候就是欢天喜地打工人！");
+//    }
 
     public String identity = "staff";
 
@@ -110,6 +114,25 @@ public abstract class Staff extends Person {
      */
     @Override
     protected abstract void setInitialAsset();
+
+    /**
+     * display information of the staff
+     */
+    public void display() {
+        System.out.printf("%10s%5d%5s%15s%n", name, age, sex, department.toString());
+    }
+
+    /**
+     * respond to the payroll system, receive salary
+     * for design pattern --- Observer
+     */
+    public void getPaid() {
+        this.asset += salary;
+    }
+
+    public void getPaid(int pay) {
+        this.asset += pay;
+    }
 
     @Override
     public String toString() {

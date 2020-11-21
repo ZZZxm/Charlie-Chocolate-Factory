@@ -2,6 +2,7 @@ package team.charliechocolatefactory.machine.processmachine;
 
 import team.charliechocolatefactory.machine.Machine;
 import team.charliechocolatefactory.product.Product;
+import team.charliechocolatefactory.machine.processmachine.state.*;
 
 import java.util.Random;
 
@@ -14,8 +15,22 @@ import java.util.Random;
  */
 public abstract class ProcessMachine extends Machine {
 
-    public ProcessMachine(String type, String machineNum, double lifeYear, double lossCoefficient, int maxCapacity) {
-        super(type, machineNum, lifeYear, lossCoefficient, maxCapacity);
+    /**
+     * ProcessMachine's state
+     */
+    public void ProcessMachineState(){
+        Context context = new Context();
+        context.setProcessMachineState(new StoppingState());
+        context.open();
+        context.close();
+        context.run();
+        context.stop();
+    }
+
+
+    public ProcessMachine(String type,String machineNum,double lifeYear,double lossCoefficient,int maxCapacity)
+    {
+        super(type,machineNum,lifeYear,lossCoefficient,maxCapacity);
     }
 
     public ProcessMachine(String type, String machineNum, double age, double lifeYear, double lossCoefficient, int maxCapacity) {

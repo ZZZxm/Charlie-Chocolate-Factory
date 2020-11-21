@@ -30,6 +30,10 @@ public class GarbageStation extends Scene {
         maxGarbageAmount = maxAmount;
     }
 
+    public GarbageStation() {
+        super();
+    }
+
     /**
      * @return name of the scene as a String
      */

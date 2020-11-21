@@ -1,9 +1,11 @@
 package team.charliechocolatefactory.person.staff;
 
-import com.sun.corba.se.spi.orbutil.threadpool.Work;
+//import com.sun.corba.se.spi.orbutil.threadpool.Work;
 import team.charliechocolatefactory.scene.staffarea.StaffArea;
 import team.charliechocolatefactory.person.staff.worker.Worker;
-import team.charliechocolatefactory.supplement.facade.SecurityCheckTask;
+import team.charliechocolatefactory.factory.support.SecurityCheckTask;
+
+import java.util.Observable;
 
 /**
  * @author Brian.Z
@@ -55,4 +57,5 @@ public class Guard extends Staff {
     public String toString() {
         return "class Guard extends Staff";
     }
+
 }

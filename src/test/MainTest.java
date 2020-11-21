@@ -35,14 +35,15 @@ public class MainTest {
         System.out.println("               **            18 --- Proxy                     **");
         System.out.println("               **            19 --- Singleton                 **");
         System.out.println("               **            20 --- State                     **");
-        System.out.println("               **            21 --- Strategy                  **");
+        System.out.println("               **            21 --- StrategyTest              **");
         System.out.println("               **            22 --- Template Method           **");
         System.out.println("               **            23 --- Visitor                   **");
         System.out.println("               **            24 --- Business Delegate         **");
         System.out.println("               **            25 --- Copy on Write             **");
         System.out.println("               **            26 --- Extension                 **");
         System.out.println("               **            27 --- Filter                    **");
-        System.out.println("               **            28 --- Multipate                 **");
+        System.out.println("               **            28 --- IOC                       **");
+        System.out.println("               **            29 --- Multipate                 **");
         System.out.println("               -------------------------------------------------");
         System.out.print("               Which design pattern do you want to test? [0 to quit]: ");
     }
@@ -51,12 +52,13 @@ public class MainTest {
 
         boolean flag = true;
         int op;
+        String blank;
         Scanner input = new Scanner(System.in);
 
         while (flag) {
             showList();
             op = input.nextInt();
-            System.out.println("\n\n");
+            System.out.println("\n");
 
             switch (op){
                 case 0:
@@ -123,16 +125,16 @@ public class MainTest {
                     //StateTest.main(new String[]{});
                     break;
                 case 21:
-                    //StrategyTest.main(new String[]{});
+                    StrategyTest.main(new String[]{});
                     break;
                 case 22:
-                    //TemplateMethodTest.main(new String[]{});
+                    TemplateMethodTest.main(new String[]{});
                     break;
                 case 23:
                     //VisitorTest.main(new String[]{});
                     break;
                 case 24:
-                    //BusinessDelegateTest.main(new String[]{});
+                    BusinessDelegateTest.main(new String[]{});
                     break;
                 case 25:
                     //CopyOnWriteTest.main(new String[]{});
@@ -150,7 +152,10 @@ public class MainTest {
                     System.out.println("Invalid input!");
                     System.out.println("Please input a number of 0-30!");
             }
-            System.out.println("\n\n");
+            System.out.println("\n");
+            System.out.println("Enter to continue testing...");
+            blank = input.nextLine();
+            blank = input.nextLine();
         }
 
         System.out.println("");

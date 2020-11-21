@@ -18,8 +18,7 @@ public class CupWrapStrategy extends WrapStrategy {
     @Override
     public void packaging(Product product) {
 
-        // TODO 产品的toString可改
-        System.out.println("Start packaging " + product.toString() + "...");
+        System.out.println("Start packaging " + product.toString() + " with a cup...");
         product.setPack(new Cup());
         product.gotoNextState();
         System.out.println("Finish packaging.");

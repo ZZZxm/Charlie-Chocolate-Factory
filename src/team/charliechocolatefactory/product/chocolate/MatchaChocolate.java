@@ -73,4 +73,8 @@ public class MatchaChocolate extends Chocolate {
         return "Subclass : Matcha Chocolate";
     }
 
+    @Override
+    public void dispaly() {
+
+    }
 }

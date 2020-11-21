@@ -21,7 +21,7 @@ public class BigTruck extends TransportMachine {
 
     @Override
     protected void load(Product product) {
-        System.out.println(this.aimProcessNum + " " + product.getName() + "are being loaded on the big truck.");
+        System.out.println(this.aimProcessNum + " " + product.getName() + " are being loaded on the big truck.");
     }
 
     @Override

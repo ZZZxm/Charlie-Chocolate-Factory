@@ -32,8 +32,14 @@ public class WrapperMachine extends ProcessMachine {
      */
     @Override
     public void process(Product product, int productNum) {
-        strategy.packaging(product);
+        if (strategy == null) {
+            System.out.println("Fail to wrap!");
+            System.out.println("Please invoke setStrategy() to set the wrap strategy first.");
+        } else {
+            strategy.packaging(product);
+        }
     }
+
 
     /**
      * set the wrap strategy of the machine

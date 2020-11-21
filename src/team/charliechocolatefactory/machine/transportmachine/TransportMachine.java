@@ -29,7 +29,7 @@ public abstract class TransportMachine extends Machine {
      * @return
      */
     @Override
-    protected int work(Product product) {
+    public int work(Product product) {
         load(product);
         System.out.println("On the way to the destination...");
         arrive(product);

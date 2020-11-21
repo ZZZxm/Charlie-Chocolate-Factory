@@ -11,19 +11,19 @@ import java.util.Date;
 import team.charliechocolatefactory.rawmaterial.*;
 
 /**
- * @author Kerr
+ * @author Kerr, Zeus Lee
  * @project chocolateFactory
  * @classname Chocolate
  * @description the basic class of chocolate
  * @date 2020/11/8 15:55
  */
 
+
 /**
- * @modifiedBy Miracle Ray
+ * @modifiedBy Miracle Ray, Zeus Lee
  * @date 2020/11/17 17:15
  * @description add an attribute of chocolate, sandwich, when construct it.
  */
-
 public abstract class Chocolate extends Product {
 
 //fields
@@ -57,4 +57,10 @@ public abstract class Chocolate extends Product {
         this.cocoaContent = content;
         this.sandwich = new Pure();
     }
+
+
+    /**
+     * this method to show class is some Chocolate , To subclass implementation
+     */
+    public abstract void dispaly();
 }

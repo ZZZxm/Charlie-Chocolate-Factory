@@ -44,4 +44,9 @@ public class WhiteChocolate extends Chocolate {
     public String toString() {
         return "subclass : WhiteChocolate";
     }
+
+    @Override
+    public void dispaly() {
+
+    }
 }

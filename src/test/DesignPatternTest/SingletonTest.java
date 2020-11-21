@@ -6,7 +6,7 @@ import team.charliechocolatefactory.person.GeneralManager;
  * @author Brian.Z
  * @project chocolateFactory
  * @classname SingletonTest
- * @description test for Singleton
+ * @description Test for Singleton
  * @date 2020/11/19 1:28
  */
 public class SingletonTest {

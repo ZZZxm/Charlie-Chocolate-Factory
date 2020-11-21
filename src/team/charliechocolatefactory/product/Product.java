@@ -100,7 +100,6 @@ public abstract class Product {
     public void setProducedDate(String date) {
         if (this.producedDate == null) {
             this.producedDate = date;
-            return;
         } else {
             System.out.println("Warning! The producedDate mustn't be modified after the product being produced!");
         }

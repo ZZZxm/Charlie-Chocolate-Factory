@@ -20,6 +20,16 @@ public class SmallCar extends TransportMachine {
     }
 
     @Override
+    public int work(Product product) {
+        if (product == null) {
+            return super.work(product);
+        } else {
+            System.out.println("Sorry, small cars cannot transport products.");
+            return 0;
+        }
+    }
+
+    @Override
     protected void load(Product product) {
         System.out.println("Four people are getting on the small car.");
     }

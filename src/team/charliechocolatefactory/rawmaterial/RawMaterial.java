@@ -3,17 +3,17 @@ package team.charliechocolatefactory.rawmaterial;
 import java.util.LinkedList;
 
 /**
+ * @author Ngae Zeh-ghau
  * @project chocolateFactory
  * @classname RawMaterial
  * @description ROOT CLASS RawMaterial
- * @author Ngae Zeh-ghau
  * @date 2020-11-07 16:12:41
  */
 public abstract class RawMaterial {
 
     /**
      * ctor of RawMaterial
-     * 
+     *
      * @param initialQuant initial quantity
      */
     protected RawMaterial(double initialQuant) {
@@ -29,7 +29,7 @@ public abstract class RawMaterial {
 
     /**
      * getter of quantity
-     * 
+     *
      * @return quantity
      */
     public double quantity() {
@@ -49,7 +49,7 @@ public abstract class RawMaterial {
 
     /**
      * consume - Subtract the quantity of raw material.
-     * 
+     *
      * @param quant quantity to subtract
      * @return the exact quantity consumed
      */
@@ -67,11 +67,11 @@ public abstract class RawMaterial {
 
     /**
      * add exhaustion obsever (to exhaustionObserverList)
-     * 
+     * <p>
      * This is a part of the "observer" pattern.
-     * 
+     * <p>
      * TODO: The type of observer remains to be defined.
-     * 
+     *
      * @param observer observer to add
      */
     public boolean addExhaustionObsever(Object observer) {
@@ -84,15 +84,15 @@ public abstract class RawMaterial {
 
     /**
      * notify on exhaustion
-     * 
+     * <p>
      * This function is called when items are exhausted, maybe by consume().
      */
     protected void notifyOnExhaustion() {
         /*
          * TODO: notifyOnExhaustion()
-         * 
+         *
          * This is a part of the "observer" pattern.
-         * 
+         *
          * Hint: exhaustionObseverList is the array holding all the observers that
          * should be notified here.
          */
@@ -100,10 +100,10 @@ public abstract class RawMaterial {
 
     /**
      * quantity of the raw material
-     * 
+     * <p>
      * For FoodRawMaterial subclass, this attribute is intended to represent the
      * quantity of items that shares the same expire date.
-     * 
+     * <p>
      * This attribute may have different units with respect to particular subclass
      * type.
      */
@@ -111,12 +111,12 @@ public abstract class RawMaterial {
 
     /**
      * obsever array of exhaustion
-     * 
+     * <p>
      * Array holding all the observer that should be notified when
      * notifyOnExhaustion() is called.
-     * 
+     * <p>
      * This is a part of the "observer" pattern.
-     * 
+     * <p>
      * TODO: The type of observer remains to be defined.
      */
     private LinkedList<Object> exhaustionObserverList;

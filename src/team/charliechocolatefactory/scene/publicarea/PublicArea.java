@@ -28,10 +28,14 @@ public abstract class PublicArea extends Scene {
     /**
      * constructor of PublicArea
      */
-    PublicArea(String location, double cost, double area, int maxNumber) {
+    public PublicArea(String location, double cost, double area, int maxNumber) {
         super(location, cost, area);
         this.maxVisitorNumber = maxNumber;
         this.visitorList = new LinkedList<Visitor>();
+    }
+
+    public PublicArea() {
+        this("Public Location", 10000, 100, 200);
     }
 
     /**
