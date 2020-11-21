@@ -35,7 +35,7 @@ public class MainTest {
         System.out.println("               **            18 --- Proxy                     **");
         System.out.println("               **            19 --- Singleton                 **");
         System.out.println("               **            20 --- State                     **");
-        System.out.println("               **            21 --- StrategyTest                  **");
+        System.out.println("               **            21 --- StrategyTest              **");
         System.out.println("               **            22 --- Template Method           **");
         System.out.println("               **            23 --- Visitor                   **");
         System.out.println("               **            24 --- Business Delegate         **");

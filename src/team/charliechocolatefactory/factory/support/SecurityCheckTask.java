@@ -1,4 +1,4 @@
-package team.charliechocolatefactory.supplement.facade;
+package team.charliechocolatefactory.factory.support;
 
 import team.charliechocolatefactory.scene.publicarea.ExhibitionRoom;
 import team.charliechocolatefactory.scene.publicarea.ExperienceRoom;
