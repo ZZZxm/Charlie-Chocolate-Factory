@@ -1,16 +1,13 @@
 package team.charliechocolatefactory.person.staff;
 
-import team.charliechocolatefactory.factory.WorkerAddingController;
+import team.charliechocolatefactory.factory.support.WorkerAddingController;
 import team.charliechocolatefactory.person.GeneralManager;
 import team.charliechocolatefactory.person.filterchain.message.Message;
-import team.charliechocolatefactory.person.staff.worker.WarehouseWorker;
 import team.charliechocolatefactory.person.staff.worker.Worker;
 import team.charliechocolatefactory.scene.Scene;
-import team.charliechocolatefactory.scene.staffarea.DiningRoom;
 import team.charliechocolatefactory.scene.staffarea.StaffArea;
 
 import java.util.ArrayList;
-import java.util.Observable;
 
 /**
  * @author Brian.Z

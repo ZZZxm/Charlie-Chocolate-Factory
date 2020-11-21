@@ -8,7 +8,7 @@ import team.charliechocolatefactory.scene.staffarea.StaffArea;
  * @author Y.C.Young
  * @project chocolateFactory
  * @classname WorkerAddingController
- * @description IOC Pattern: create worker objects here
+ * @description OCL Pattern: create worker objects here
  * @date 2020/11/20 15:00
  */
 public class WorkerAddingController {

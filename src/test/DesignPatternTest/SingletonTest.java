@@ -16,7 +16,7 @@ public class SingletonTest {
 
         System.out.println("");
         System.out.println("GeneralManager : getInstance() : Get the only instance of the general manager " +
-                "and create an instance if there's none,");
+                "and create an instance if there's none.");
         System.out.println("");
 
         System.out.println("The first time to get instance of general manager: ");
