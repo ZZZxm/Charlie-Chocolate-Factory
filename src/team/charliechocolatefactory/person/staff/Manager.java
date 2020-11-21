@@ -180,21 +180,22 @@ public class Manager extends Staff {
      * If you do not agree to the request,
      * it will return false. If you agree, it will be submitted to the next level for approval.
      * If you are the last level, you will return true.
+     *
      * @param requestMessage：sendMessage
      * @return Processing results
      */
     @Override
     public boolean HandleRequest(Message requestMessage) {
-        if (successor != null){
+        if (successor != null) {
             return HandleRequest(requestMessage);
-        }else {
+        } else {
             return true;
         }
     }
 
     @Override
     public boolean equals(Object obj) {
-        if (!(obj instanceof Manager)){
+        if (!(obj instanceof Manager)) {
             return false;
         }
         Manager temp = (Manager) obj;
