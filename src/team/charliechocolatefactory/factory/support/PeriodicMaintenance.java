@@ -1,4 +1,4 @@
-package team.charliechocolatefactory.factory;
+package team.charliechocolatefactory.factory.support;
 
 import team.charliechocolatefactory.person.staff.worker.utilityworker.Cleaner;
 import team.charliechocolatefactory.person.staff.worker.utilityworker.MaintenanceWorker;

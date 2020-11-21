@@ -1,2 +1,6 @@
 .vscode/
 *.xml
+*.html
+*.class
+.name
+
