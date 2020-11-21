@@ -1,7 +1,7 @@
-package team.charliechocolatefactory.filterChain.manager;
+package team.charliechocolatefactory.person.filterchain.manager;
 
-import team.charliechocolatefactory.person.filterchain.Message;
-import team.charliechocolatefactory.filterChain.role.Person;
+import team.charliechocolatefactory.person.filterchain.message.Message;
+import team.charliechocolatefactory.person.staff.Person;
 
 /**
  * @author Zeus Lee
@@ -20,7 +20,7 @@ public class FilterManager {
     /**
      * Current last processor
      */
-    private Person currentPersion;
+    private Person currentPerson;
 
     /**
      * The message we need to deliver
@@ -29,56 +29,60 @@ public class FilterManager {
 
     /**
      * Methods for performing messaging;
+     *
      * @param message passed in at the beginning of the method
      */
-    public boolean doFilterMessage(Message message){
+    public boolean doFilterMessage(Message message) {
         this.message = message;
         return doFilterMessage();
     }
 
     /**
      * This method can dynamically add the handler we need to enhance the flexibility of the code.
+     *
      * @param person:Added handler
      * @return:Is the addition successful
      */
-    public boolean addPersonProcess(Person person){
-        /**
+    public boolean addPersonProcess(Person person) {
+        /*
          * If NULL is passed in, false is returned directly
          */
-        if (person == null){
+        if (person == null) {
             return false;
         }
-        /**
+        /*
          * If the root node is empty, put it directly into our root node;
          */
-        if (rootPerson == null){
+        if (rootPerson == null) {
             this.rootPerson = person;
-            this.currentPersion = person;
+            this.currentPerson = person;
             return true;
         }
+
         Person temp = person;
-        /**
+        /*
          * Loop through whether there are duplicate nodes. If there are duplicate nodes, insert is rejected.
          */
-        while (temp != null){
-            if (person.equals(temp)){
+        while (temp != null) {
+            if (person.equals(temp)) {
                 return false;
             }
             temp = temp.getSuccessor();
         }
-        /**
+        /*
          * The last node points to our newly added node.
          */
-        currentPersion.SetSuccessor(person);
-        currentPersion = person;
+        currentPerson.SetSuccessor(person);
+        currentPerson = person;
         return true;
     }
 
     /**
      * The method of executing message passing to deliver message.
+     *
      * @return:message is success filter;
      */
-    public boolean doFilterMessage(){
+    public boolean doFilterMessage() {
         if (this.message == null) {
             throw new RuntimeException("message must not null!");
         }
@@ -87,6 +91,7 @@ public class FilterManager {
 
     /**
      * Get our message
+     *
      * @return:Get our message
      */
     public Message getMessage() {
@@ -95,6 +100,7 @@ public class FilterManager {
 
     /**
      * Set up the message we send
+     *
      * @param message:send message;
      */
     public void setMessage(Message message) {

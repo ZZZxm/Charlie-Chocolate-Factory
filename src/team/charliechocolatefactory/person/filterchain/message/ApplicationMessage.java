@@ -1,20 +1,21 @@
-package team.charliechocolatefactory.person.filterchain;
+package team.charliechocolatefactory.person.filterchain.message;
+
 
 /**
  * @author Zeus Lee
  * @project chocolateFactory
- * @classname ResignationMessage
- * @description ResignationMessage
+ * @classname ApplicationMessage
+ * @description ApplicationMessage
  * @date 2020/11/15 18:01
  */
-public class ResignationMessage extends Message {
+public class ApplicationMessage extends Message {
 
     /**
      * message type,The types of information users distinguish
      */
-    private String MessageType = "resignation";
+    private String MessageType = "application";
 
-    public ResignationMessage(String messageInfo) {
+    public ApplicationMessage(String messageInfo) {
         super(messageInfo);
     }
 
