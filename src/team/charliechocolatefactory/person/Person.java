@@ -1,6 +1,7 @@
 package team.charliechocolatefactory.person;
 
 
+import team.charliechocolatefactory.person.filterchain.message.Message;
 import team.charliechocolatefactory.scene.Scene;
 
 /**
@@ -36,6 +37,8 @@ public abstract class Person {
      * show where the peron is
      */
     public Scene location;
+
+    protected Person successor;
 
     public Person(String name, int age, Sex sex) {
         this.name = name;
@@ -100,6 +103,19 @@ public abstract class Person {
      * set the initial asset of the person, which depends on what kind of person he/she is
      */
     protected abstract void setInitialAsset();
+
+
+    public void SetSuccessor(Person handler) {
+        this.successor = handler;
+    }
+
+    public Person getSuccessor() {
+        return successor;
+    }
+
+    public boolean HandleRequest(Message requestMessage) {
+        return false;
+    }
 
     @Override
     public String toString() {

@@ -1,7 +1,6 @@
-package team.charliechocolatefactory.scene.staffarea.decorator;
+package team.charliechocolatefactory.scene.decorator;
 
 import team.charliechocolatefactory.scene.Scene;
-import team.charliechocolatefactory.scene.staffarea.StaffArea;
 
 /**
  * @author TT

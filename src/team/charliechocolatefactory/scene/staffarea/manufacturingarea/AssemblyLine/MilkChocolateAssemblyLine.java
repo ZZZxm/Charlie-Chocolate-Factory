@@ -1,4 +1,4 @@
-package team.charliechocolatefactory.scene.staffarea.manufacturingarea.AssemblyLine;
+package team.charliechocolatefactory.scene.staffarea.manufacturingarea.assemblyline;
 
 import team.charliechocolatefactory.product.chocolate.Chocolate;
 import team.charliechocolatefactory.product.chocolate.MilkChocolate;

@@ -3,7 +3,7 @@ package team.charliechocolatefactory.scene;
 import team.charliechocolatefactory.person.Person;
 import team.charliechocolatefactory.person.GeneralManager;
 import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
-import team.charliechocolatefactory.person.stockholder.Stockholder;
+import team.charliechocolatefactory.person.Stockholder;
 
 /**
  * @author Brian.Z

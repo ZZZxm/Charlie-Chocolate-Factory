@@ -1,4 +1,4 @@
-package team.charliechocolatefactory.scene.staffarea.decorator;
+package team.charliechocolatefactory.scene.decorator;
 
 /**
  * @author TT
