@@ -10,6 +10,7 @@ import team.charliechocolatefactory.scene.staffarea.DiningRoom;
 import team.charliechocolatefactory.scene.staffarea.StaffArea;
 
 import java.util.ArrayList;
+import java.util.Observable;
 
 /**
  * @author Brian.Z
