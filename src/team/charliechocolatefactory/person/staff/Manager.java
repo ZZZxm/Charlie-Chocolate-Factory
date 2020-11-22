@@ -1,16 +1,13 @@
 package team.charliechocolatefactory.person.staff;
 
-import team.charliechocolatefactory.factory.WorkerAddingController;
+import team.charliechocolatefactory.factory.support.WorkerAddingController;
 import team.charliechocolatefactory.person.GeneralManager;
 import team.charliechocolatefactory.person.filterchain.message.Message;
-import team.charliechocolatefactory.person.staff.worker.WarehouseWorker;
 import team.charliechocolatefactory.person.staff.worker.Worker;
 import team.charliechocolatefactory.scene.Scene;
-import team.charliechocolatefactory.scene.staffarea.DiningRoom;
 import team.charliechocolatefactory.scene.staffarea.StaffArea;
 
 import java.util.ArrayList;
-import java.util.Observable;
 
 /**
  * @author Brian.Z
@@ -24,13 +21,15 @@ public class Manager extends Staff {
     public String identity = "manager";
     public ArrayList<StaffArea> departmentList;
     public static Manager diningRoomManager;
-    public static Manager officeManager;
+    public static Manager officeManager = getOfficeManager();
     public static Manager workShopManager;
     public static Manager warehouseManager;
 
 
     protected Manager(String name, int age, Sex sex, int salary) {
         super(name, age, sex, salary, null);
+        departmentList = new ArrayList<StaffArea>();
+
         diningRoomManager = null;
         officeManager = null;
         workShopManager = null;
@@ -66,7 +65,7 @@ public class Manager extends Staff {
      *
      * @return
      */
-    public static Manager getWorkShopManager() {
+    public Manager getWorkShopManager() {
         if (workShopManager == null) {
             workShopManager = new Manager("workShopManager", 30, Sex.FEMALE, 800);
         }
@@ -78,7 +77,7 @@ public class Manager extends Staff {
      *
      * @return
      */
-    public static Manager getWarehouseManager() {
+    public Manager getWarehouseManager() {
         if (warehouseManager == null) {
             warehouseManager = new Manager("warehouseManager", 28, Sex.MALE, 500);
         }
@@ -102,8 +101,8 @@ public class Manager extends Staff {
      * @param age    age of the new worker
      * @param salary salary of the new worker
      */
-    public void hireWorker(String name, int age, Sex sex,int salary) {
-        WorkerAddingController.addWorkerToScene(name, age, sex, salary, department);
+    public void hireWorker(String name, Sex sex, int age, int salary, StaffArea staffArea) {
+        WorkerAddingController.addWorkerToScene(name, age, sex, salary, staffArea);
     }
 
     /**

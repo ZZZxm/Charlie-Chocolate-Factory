@@ -35,7 +35,7 @@ public class MainTest {
         System.out.println("               **            18 --- Proxy                     **");
         System.out.println("               **            19 --- Singleton                 **");
         System.out.println("               **            20 --- State                     **");
-        System.out.println("               **            21 --- StrategyTest              **");
+        System.out.println("               **            21 --- Strategy                  **");
         System.out.println("               **            22 --- Template Method           **");
         System.out.println("               **            23 --- Visitor                   **");
         System.out.println("               **            24 --- Business Delegate         **");
@@ -43,7 +43,8 @@ public class MainTest {
         System.out.println("               **            26 --- Extension                 **");
         System.out.println("               **            27 --- Filter                    **");
         System.out.println("               **            28 --- IOC                       **");
-        System.out.println("               **            29 --- Multipate                 **");
+        System.out.println("               **            29 --- Multition                 **");
+        System.out.println("               **            30 --- Null Object               **");
         System.out.println("               -------------------------------------------------");
         System.out.print("               Which design pattern do you want to test? [0 to quit]: ");
     }
