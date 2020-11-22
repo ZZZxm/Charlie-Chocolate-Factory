@@ -80,7 +80,7 @@ public class MainTest {
                    //ChainOfResponsibilityTest.main(new String[]{});
                     break;
                 case 6:
-                    //CommandTest.main(new String[]{});
+                    CommandTest.main(new String[]{});
                     break;
                 case 7:
                     //CompositeTest.main(new String[]{});
@@ -104,7 +104,7 @@ public class MainTest {
                     //IteratorTest.main(new String[]{});
                     break;
                 case 14:
-                    //MediatorTest.main(new String[]{});
+                    MediatorTest.main(new String[]{});
                     break;
                 case 15:
                     //MementoTest.main(new String[]{});

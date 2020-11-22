@@ -42,7 +42,7 @@ public class Manager extends Staff {
      *
      * @return Manager
      */
-    public Manager getDiningRoomManager() {
+    public static Manager getDiningRoomManager() {
         if (diningRoomManager == null) {
             diningRoomManager = new Manager("diningRoomManager", 25, Sex.FEMALE, 500);
         }
@@ -54,7 +54,7 @@ public class Manager extends Staff {
      *
      * @return Manager
      */
-    public Manager getOfficeManager() {
+    public static Manager getOfficeManager() {
         if (officeManager == null) {
             officeManager = new Manager("officeManager", 28, Sex.FEMALE, 700);
         }
@@ -66,7 +66,7 @@ public class Manager extends Staff {
      *
      * @return
      */
-    public Manager getWorkShopManager() {
+    public static Manager getWorkShopManager() {
         if (workShopManager == null) {
             workShopManager = new Manager("workShopManager", 30, Sex.FEMALE, 800);
         }
@@ -78,7 +78,7 @@ public class Manager extends Staff {
      *
      * @return
      */
-    public Manager getWarehouseManager() {
+    public static Manager getWarehouseManager() {
         if (warehouseManager == null) {
             warehouseManager = new Manager("warehouseManager", 28, Sex.MALE, 500);
         }
@@ -102,7 +102,7 @@ public class Manager extends Staff {
      * @param age    age of the new worker
      * @param salary salary of the new worker
      */
-    public void hireWorker(String name, Sex sex, int age, int salary) {
+    public void hireWorker(String name, int age, Sex sex,int salary) {
         WorkerAddingController.addWorkerToScene(name, age, sex, salary, department);
     }
 
