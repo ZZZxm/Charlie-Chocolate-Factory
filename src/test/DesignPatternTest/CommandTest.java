@@ -20,6 +20,7 @@ import team.charliechocolatefactory.scene.staffarea.manufacturingarea.workshop.W
  * @date 2020/11/21 21:32
  */
 public class CommandTest {
+
     public static void main(String[] args) {
         System.out.println("------------------------------------ [Command] Test ------------------------------------");
 

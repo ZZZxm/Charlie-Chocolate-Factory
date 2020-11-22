@@ -44,6 +44,7 @@ public class Manager extends Staff {
     public static Manager getDiningRoomManager() {
         if (diningRoomManager == null) {
             diningRoomManager = new Manager("diningRoomManager", 25, Sex.FEMALE, 500);
+            System.out.println("Here is our dining room manager.");
         }
         return diningRoomManager;
     }
@@ -56,6 +57,7 @@ public class Manager extends Staff {
     public static Manager getOfficeManager() {
         if (officeManager == null) {
             officeManager = new Manager("officeManager", 28, Sex.FEMALE, 700);
+            System.out.println("Here is our office manager.");
         }
         return officeManager;
     }
@@ -65,9 +67,10 @@ public class Manager extends Staff {
      *
      * @return
      */
-    public Manager getWorkShopManager() {
+    public static Manager getWorkShopManager() {
         if (workShopManager == null) {
             workShopManager = new Manager("workShopManager", 30, Sex.FEMALE, 800);
+            System.out.println("Here is our workshop manager.");
         }
         return workShopManager;
     }
@@ -77,9 +80,10 @@ public class Manager extends Staff {
      *
      * @return
      */
-    public Manager getWarehouseManager() {
+    public static Manager getWarehouseManager() {
         if (warehouseManager == null) {
             warehouseManager = new Manager("warehouseManager", 28, Sex.MALE, 500);
+            System.out.println("Here is our warehouse manager.");
         }
         return warehouseManager;
     }
