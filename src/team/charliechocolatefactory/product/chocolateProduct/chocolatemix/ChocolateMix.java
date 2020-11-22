@@ -16,7 +16,7 @@ import team.charliechocolatefactory.product.Product;
  * @project chocolateFactory
  * @classname ChocolateMix
  * @description Mixed chocolate pack. This is a part of Flyweight Pattern.
- * @date 2020/11/18 00:32
+ * @date 2020/11/22 14:17
  */
 public class ChocolateMix extends Product {
 
@@ -46,6 +46,7 @@ public class ChocolateMix extends Product {
             }
             index++;
         }
+        this.initIngredientList();
     }
 
     /**
