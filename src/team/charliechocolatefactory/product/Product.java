@@ -3,6 +3,9 @@ package team.charliechocolatefactory.product;
 import team.charliechocolatefactory.machine.processmachine.ProcessMachine;
 import team.charliechocolatefactory.machine.processmachine.productmachine.BasicProductMachine;
 import team.charliechocolatefactory.machine.processmachine.wrappermachine.WrapperMachine;
+import team.charliechocolatefactory.product.memento.ProductMemento;
+import team.charliechocolatefactory.product.state.ProducingState;
+import team.charliechocolatefactory.product.state.ProductState;
 import team.charliechocolatefactory.rawmaterial.packagematerial.PackageMaterial;
 import team.charliechocolatefactory.rawmaterial.RawMaterial;
 
@@ -28,17 +31,8 @@ public abstract class Product {
     protected int weight; // weight of single item, in gram
 
     public ProcessMachine produceMachine, wrapperMachine;
-    /**
-     * 0 -> still producing
-     * 1 -> produced but un-packaged
-     * 2 -> packaging
-     * 3 -> packaged
-     * 4 -> storied
-     * 5 -> loading
-     * 6 -> delivering
-     * ...
-     */
-    protected int state;
+
+    protected ProductState state;
 
     protected PackageMaterial pack;
 
@@ -54,7 +48,7 @@ public abstract class Product {
         this.productName = name;
         this.shelfLife = shelfLife;
         this.producedDate = null;
-        this.state = 0;
+        this.state = new ProducingState();
         this.weight = weight;
         this.ingredientList = new ArrayList<RawMaterial>();
         this.produceMachine = new BasicProductMachine("PR", "PR220");
@@ -68,7 +62,6 @@ public abstract class Product {
      */
     protected void setName(String name) {
         this.productName = name;
-        return;
     }
 
     /**
@@ -83,15 +76,19 @@ public abstract class Product {
     /**
      * @return the state of the product
      */
-    public int getState() {
+    public ProductState getState() {
         return state;
+    }
+
+    public void setState(ProductState state) {
+        this.state = state;
     }
 
     /**
      * this product is in the next state.
      */
     public void gotoNextState() {
-        this.state++;
+        state.gotoNextState(this);
     }
 
     /**
@@ -172,4 +169,19 @@ public abstract class Product {
      */
     protected abstract void initIngredientList();
 
+    /**
+     * for design pattern --- Memento
+     * @return a new product memento
+     */
+    public ProductMemento createMemento() {
+        return new ProductMemento(this.weight);
+    }
+
+    /**
+     * restore param from memento
+     * @param memento memento that store history messages of the product
+     */
+    public void restoreMemento(ProductMemento memento) {
+        this.weight = memento.getWeight();
+    }
 }

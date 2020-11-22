@@ -20,7 +20,7 @@ public class Office extends StaffArea {
 //    }
 
     public Office() {
-
+        this("Default Office", 100, 100);
     }
 
     /**
