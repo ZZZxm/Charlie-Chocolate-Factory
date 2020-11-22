@@ -136,5 +136,6 @@ public class GeneralManager extends Person {
      */
     private GeneralManager(String name, int age, Sex sex) {
         super(name, age, sex);
+        managerList = new ArrayList<Manager>();
     }
 }

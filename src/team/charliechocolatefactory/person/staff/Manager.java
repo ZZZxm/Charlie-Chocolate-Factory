@@ -21,13 +21,15 @@ public class Manager extends Staff {
     public String identity = "manager";
     public ArrayList<StaffArea> departmentList;
     public static Manager diningRoomManager;
-    public static Manager officeManager;
+    public static Manager officeManager = getOfficeManager();
     public static Manager workShopManager;
     public static Manager warehouseManager;
 
 
     protected Manager(String name, int age, Sex sex, int salary) {
         super(name, age, sex, salary, null);
+        departmentList = new ArrayList<StaffArea>();
+
         diningRoomManager = null;
         officeManager = null;
         workShopManager = null;
@@ -39,7 +41,7 @@ public class Manager extends Staff {
      *
      * @return Manager
      */
-    public Manager getDiningRoomManager() {
+    public static Manager getDiningRoomManager() {
         if (diningRoomManager == null) {
             diningRoomManager = new Manager("diningRoomManager", 25, Sex.FEMALE, 500);
         }
@@ -51,7 +53,7 @@ public class Manager extends Staff {
      *
      * @return Manager
      */
-    public Manager getOfficeManager() {
+    public static Manager getOfficeManager() {
         if (officeManager == null) {
             officeManager = new Manager("officeManager", 28, Sex.FEMALE, 700);
         }
@@ -99,8 +101,8 @@ public class Manager extends Staff {
      * @param age    age of the new worker
      * @param salary salary of the new worker
      */
-    public void hireWorker(String name, Sex sex, int age, int salary) {
-        WorkerAddingController.addWorkerToScene(name, age, sex, salary, department);
+    public void hireWorker(String name, Sex sex, int age, int salary, StaffArea staffArea) {
+        WorkerAddingController.addWorkerToScene(name, age, sex, salary, staffArea);
     }
 
     /**
