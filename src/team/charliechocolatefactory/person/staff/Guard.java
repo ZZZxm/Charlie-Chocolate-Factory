@@ -21,6 +21,10 @@ public class Guard extends Staff {
         super(name, age, sex, salary, workingArea);
     }
 
+    public Guard(String name, int age, Sex sex, int salary) {
+        super(name, age, sex, salary);
+    }
+
     /**
      * @param worker
      * @modified by Ray

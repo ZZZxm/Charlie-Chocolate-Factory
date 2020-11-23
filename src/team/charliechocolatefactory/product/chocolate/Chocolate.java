@@ -57,4 +57,6 @@ public abstract class Chocolate extends Product {
         this.cocoaContent = content;
         this.sandwich = new Pure();
     }
+
+    public abstract String getNameWithSandwich();
 }

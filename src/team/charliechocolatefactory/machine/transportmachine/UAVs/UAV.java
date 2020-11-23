@@ -18,6 +18,8 @@ public interface UAV {
 
     String getID();
 
+    void setAimProcessNum(int aimProcessNum);
+
     /**
      * @description The method UAV differ from normal transport machine.
      */
