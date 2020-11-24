@@ -38,7 +38,7 @@ public class TestTemplate {
 
         do {
             System.out.println("");
-            System.out.println("Enter the order [0 to quit]:");
+            System.out.print("Enter the order [0 to quit]:");
             op = input.nextInt();
 
 
