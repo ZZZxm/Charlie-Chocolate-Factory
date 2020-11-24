@@ -20,13 +20,9 @@ public class Warehouse extends ManufacturingArea {
     protected HashMap<String, Integer> productionAmount;
 
     public Warehouse(String location, double cost, double area) {
-<<<<<<< Updated upstream
         super(location, cost, area, Manager.getWarehouseManager());
-=======
-        super(location, cost, area, Manager.warehouseManager);
-        setManager(Manager.warehouseManager);
->>>>>>> Stashed changes
-        Manager.warehouseManager.addDepartment(this);
+        setManager(Manager.getWarehouseManager());
+        Manager.getWarehouseManager().addDepartment(this);
 
         materialAmount = new HashMap<String, Double>();
         productionAmount = new HashMap<String, Integer>();

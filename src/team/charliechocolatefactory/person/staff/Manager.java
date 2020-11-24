@@ -19,11 +19,11 @@ import java.util.ArrayList;
 public class Manager extends Staff {
 
     public String identity = "manager";
-    public ArrayList<StaffArea> departmentList;
-    public static Manager diningRoomManager;
-    public static Manager officeManager;
-    public static Manager workShopManager;
-    public static Manager warehouseManager;
+    private ArrayList<StaffArea> departmentList;
+    private static Manager diningRoomManager;
+    private static Manager officeManager;
+    private static Manager workShopManager;
+    private static Manager warehouseManager;
 
 
     protected Manager(String name, int age, Sex sex, int salary) {
