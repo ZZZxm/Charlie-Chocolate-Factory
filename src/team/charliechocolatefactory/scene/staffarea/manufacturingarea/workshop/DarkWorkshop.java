@@ -3,6 +3,7 @@ package team.charliechocolatefactory.scene.staffarea.manufacturingarea.workshop;
 import team.charliechocolatefactory.machine.processmachine.productmachine.BasicProductMachine;
 import team.charliechocolatefactory.product.chocolate.DarkChocolate;
 import team.charliechocolatefactory.product.chocolateProduct.ChocolateCookie;
+import team.charliechocolatefactory.scene.SceneNameConst;
 
 /**
  * @author Yuan.Cai
@@ -42,7 +43,8 @@ public class DarkWorkshop extends Workshop {
         return outNum;
     }
 
+    @Override
     public String toString() {
-        return "class DarkWorkshop extends Workshop";
+        return SceneNameConst.DARK_WORKSHOP;
     }
 }

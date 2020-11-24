@@ -32,7 +32,7 @@ public class Alcohol extends FoodMaterial {
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
+    public Object clone() throws CloneNotSupportedException {
     	System.out.println("Successfully copy alcohol!");
         return (Alcohol) super.clone();
     }

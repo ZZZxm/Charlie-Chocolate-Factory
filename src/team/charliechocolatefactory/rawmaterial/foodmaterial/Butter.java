@@ -16,7 +16,7 @@ public class Butter extends FoodMaterial {
      * This ctor sets state to SOLID.
      *
      * @param initialQuant         initial quantity
-     * @param timeBeforeExpiration initial time to expire
+     * @param initialExpireTime initial time to expire
      */
     public Butter(double initialQuant, double initialExpireTime) {
         super(initialQuant, initialExpireTime, State.SOLID);
@@ -35,7 +35,7 @@ public class Butter extends FoodMaterial {
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
+    public Object clone() throws CloneNotSupportedException {
         System.out.println("Successfully copy butter!");
         return (Butter) super.clone();
     }

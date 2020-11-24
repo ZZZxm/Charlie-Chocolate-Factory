@@ -24,7 +24,7 @@ public class Bag extends PackageMaterial {
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
+    public Object clone() throws CloneNotSupportedException {
         System.out.println("Successfully copy a bag!");
         return (Bag) super.clone();
     }

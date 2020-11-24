@@ -14,7 +14,7 @@ public class Sugar extends FoodMaterial {
      * ctor of Sugar
      *
      * @param initialQuant         initial quantity
-     * @param timeBeforeExpiration initial time to expire
+     * @param initialExpireTime initial time to expire
      * @param state                state of sugar
      */
     public Sugar(double initialQuant, double initialExpireTime, State state) {
@@ -38,7 +38,7 @@ public class Sugar extends FoodMaterial {
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
+    public Object clone() throws CloneNotSupportedException {
         System.out.println("Successfully copy sugar!");
         return (Sugar) super.clone();
     }

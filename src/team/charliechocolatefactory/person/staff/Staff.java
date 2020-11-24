@@ -95,7 +95,7 @@ public abstract class Staff extends Person {
      */
     protected static String allocateId() {
         String uuid = UUID.randomUUID().toString();
-        return uuid.replaceAll("-a-zA-z", "");
+        return uuid.replaceAll("[a-zA-Z]|-", "").substring(3, 11);
     }
 
     /**
@@ -119,7 +119,8 @@ public abstract class Staff extends Person {
      * display information of the staff
      */
     public void display() {
-        System.out.printf("%10s%5d%5s%15s%n", name, age, sex, department.toString());
+
+        System.out.printf("%-10s%-20s%-5d%-10s%s%n", id, name, age, sex, department.toString());
     }
 
     /**

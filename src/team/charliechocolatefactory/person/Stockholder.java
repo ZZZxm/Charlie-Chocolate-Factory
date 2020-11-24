@@ -49,9 +49,16 @@ public class Stockholder extends Person {
      */
     @Override
     public boolean HandleRequest(Message requestMessage) {
-        if (successor != null){
-            return HandleRequest(requestMessage);
-        }else {
+        System.out.println(this.identity + " " + this.name + " is handling request.");
+        if (requestMessage.getMessageInfo().charAt(0) == 'S') {
+            System.out.println(this.identity + " " + this.name + " rejects the request.");
+            return false;
+        }
+        System.out.println(this.identity + " " + this.name + " approves the request.");
+        if (successor != null) {
+            return successor.HandleRequest(requestMessage);
+        } else {
+            System.out.println("The request is eventually approved. The content of the message is: " + requestMessage.getMessageInfo());
             return true;
         }
     }

@@ -240,7 +240,7 @@ public abstract class Machine {
         this.aimProcessNum = aimProcessNum;
         //adjust the machine aging speed according to the target production number
         this.agingSpeed = lossCoefficient + (1.0 * aimProcessNum) / maxCapacity;
-        System.out.println("Set aimProcessNum to " + aimProcessNum + ".");
+        System.out.println("Set aimProcessNum to " + aimProcessNum + ".\n");
         System.out.println("The agingSpeed of " + type + machineNum + " changes to " + agingSpeed + ".\n");
     }
 
@@ -269,7 +269,7 @@ public abstract class Machine {
             System.out.println("Please set " + type + machineNum + "'s aimProcessNum first.\n");
             return 0;
         }
-        System.out.println(type + machineNum + " starts to tun:\n");
+        System.out.println(type + machineNum + " starts to run:\n");
         return work(product);
     }
 
