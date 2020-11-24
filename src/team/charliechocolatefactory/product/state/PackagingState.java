@@ -15,4 +15,9 @@ public class PackagingState extends ProductState {
         product.setState(new PackagedState());
         System.out.println("From packaging state to packaged state. Waiting for storing...");
     }
+
+    @Override
+    public String toString() {
+        return "packaging state";
+    }
 }

@@ -43,6 +43,7 @@ public class SingletonTest {
 
             if (generalManager1 == null && op > 1) {
                 System.out.println("Please input order 1 first!");
+                continue;
             }
 
             switch (op) {

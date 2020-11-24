@@ -4,10 +4,12 @@ import team.charliechocolatefactory.machine.processmachine.ProcessMachine;
 import team.charliechocolatefactory.machine.processmachine.productmachine.BasicProductMachine;
 import team.charliechocolatefactory.machine.processmachine.wrappermachine.WrapperMachine;
 import team.charliechocolatefactory.product.memento.ProductMemento;
+import team.charliechocolatefactory.product.state.PackagedState;
 import team.charliechocolatefactory.product.state.ProducingState;
 import team.charliechocolatefactory.product.state.ProductState;
 import team.charliechocolatefactory.rawmaterial.packagematerial.PackageMaterial;
 import team.charliechocolatefactory.rawmaterial.RawMaterial;
+import team.charliechocolatefactory.scene.staffarea.manufacturingarea.warehouse.Warehouse;
 
 import java.util.ArrayList;
 
@@ -51,8 +53,8 @@ public abstract class Product {
         this.state = new ProducingState();
         this.weight = weight;
         this.ingredientList = new ArrayList<RawMaterial>();
-        this.produceMachine = new BasicProductMachine("PR", "PR220");
-        this.wrapperMachine = new WrapperMachine("PA", "PA118", 40, 1, 500);
+        this.produceMachine = new BasicProductMachine("PR", "220");
+        this.wrapperMachine = new WrapperMachine("PA", "118", 40, 1, 500);
     }
 
 // methods
@@ -116,7 +118,6 @@ public abstract class Product {
      */
     protected void setShelfLife(int shelfLife) {
         this.shelfLife = shelfLife;
-        return;
     }
 
     /**
@@ -134,7 +135,6 @@ public abstract class Product {
      */
     protected void setWeight(int weight) {
         this.weight = weight;
-        return;
     }
 
     /**
@@ -153,6 +153,14 @@ public abstract class Product {
         this.pack = pack;
     }
 
+    public void setWrapperMachine(ProcessMachine wrapperMachine) {
+        this.wrapperMachine = wrapperMachine;
+    }
+
+    public void setProduceMachine(ProcessMachine produceMachine) {
+        this.produceMachine = produceMachine;
+    }
+
     /**
      * produce the product
      */
@@ -162,6 +170,15 @@ public abstract class Product {
 
     public void packaging() {
         this.wrapperMachine.process(this, 1);
+    }
+
+    public void storing() {
+        if (!(this.state instanceof PackagedState)) {
+            System.out.println("The product has not been packaged!");
+            return;
+        }
+        System.out.println("Transporting " + getName() + " to the warehouse.");
+        this.gotoNextState();
     }
 
     /**
