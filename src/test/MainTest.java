@@ -108,7 +108,7 @@ public class MainTest {
                     MediatorTest.main(new String[]{});
                     break;
                 case 15:
-                    //MementoTest.main(new String[]{});
+                    MementoTest.main(new String[]{});
                     break;
                 case 16:
                     //ObserverTest.main(new String[]{});

@@ -133,7 +133,7 @@ public abstract class Product {
      *
      * @param weight
      */
-    protected void setWeight(int weight) {
+    public void setWeight(int weight) {
         this.weight = weight;
     }
 
