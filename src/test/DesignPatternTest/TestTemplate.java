@@ -58,6 +58,9 @@ public class TestTemplate {
                 case 4: {
                     break;
                 }
+                default:{
+                    System.out.println("Invalid Input, Please input again.");
+                }
             }
         } while (flag);
     }
