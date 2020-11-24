@@ -16,7 +16,7 @@ public class Water extends FoodMaterial {
      * This ctor sets state to LIQUID.
      *
      * @param initialQuant         initial quantity
-     * @param timeBeforeExpiration initial time to expire
+     * @param initialExpireTime initial time to expire
      */
     public Water(double initialQuant, double initialExpireTime) {
         super(initialQuant, initialExpireTime, State.LIQUID);
@@ -35,7 +35,7 @@ public class Water extends FoodMaterial {
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
+    public Object clone() throws CloneNotSupportedException {
         System.out.println("Successfully copy water!");
         return (Water) super.clone();
     }

@@ -113,6 +113,7 @@ public abstract class StaffArea extends Scene implements Aggregate {
      * display all staffs in the staff area
      */
     public void displayAllStaffs() {
+        System.out.printf("%-10s%-20s%-5s%-10s%s%n", "Id", "Name", "Age", "Sex", "Department");
         manager.display();
         for (Worker obj : workerList) {
             obj.display();
@@ -130,7 +131,7 @@ public abstract class StaffArea extends Scene implements Aggregate {
             return;
         }
         for (Worker obj : workerList) {
-            if (obj.getId() == id) {
+            if (obj.getId().equals(id)) {
                 obj.display();
                 return;
             }

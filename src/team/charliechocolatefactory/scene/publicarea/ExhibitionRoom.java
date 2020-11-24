@@ -1,6 +1,7 @@
 package team.charliechocolatefactory.scene.publicarea;
 
 import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
+import team.charliechocolatefactory.scene.SceneNameConst;
 
 import java.util.ArrayList;
 
@@ -43,7 +44,7 @@ public class ExhibitionRoom extends PublicArea {
      */
     @Override
     public String toString() {
-        return "exhibition room";
+        return SceneNameConst.EXHIBITION_AREA;
     }
 
     /**

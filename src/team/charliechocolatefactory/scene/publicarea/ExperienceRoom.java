@@ -1,5 +1,6 @@
 package team.charliechocolatefactory.scene.publicarea;
 
+import team.charliechocolatefactory.scene.SceneNameConst;
 import team.charliechocolatefactory.supplement.handmadetool.HandmadeTool;
 import team.charliechocolatefactory.supplement.handmadetool.HandmadeToolFactory;
 import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
@@ -99,7 +100,7 @@ public class ExperienceRoom extends PublicArea {
 
     @Override
     public String toString() {
-        return "experience room";
+        return SceneNameConst.EXPERIENCE_ROOM;
     }
 
     /**

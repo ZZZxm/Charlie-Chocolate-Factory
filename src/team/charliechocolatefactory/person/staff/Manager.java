@@ -89,12 +89,42 @@ public class Manager extends Staff {
     }
 
     /**
+     *
+     * @param joinStr
+     * @return
+     */
+    public String getDepartmentListName(String joinStr) {
+        ArrayList<String> strList = new ArrayList<String>();
+        for (Scene obj: departmentList) {
+            strList.add(obj.toString());
+        }
+        return String.join(joinStr, strList);
+    }
+
+    /**
+     *
+     * @return
+     */
+    public String getDepartmentListName() {
+        return getDepartmentListName(", ");
+    }
+
+    /**
      * add department to the departmentList;
      *
      * @param department
      */
     public void addDepartment(StaffArea department) {
         this.departmentList.add(department);
+    }
+
+    /**
+     * display information of the staff
+     */
+    @Override
+    public void display() {
+
+        System.out.printf("%-10s%-20s%-5d%-10s%s%n", id, name, age, sex, getDepartmentListName());
     }
 
     /**
@@ -190,9 +220,16 @@ public class Manager extends Staff {
      */
     @Override
     public boolean HandleRequest(Message requestMessage) {
+        System.out.println(this.identity + " " + this.name + " is handling request.");
+        if (requestMessage.getMessageInfo().charAt(0) == 'M') {
+            System.out.println(this.identity + " " + this.name + " rejects the request.");
+            return false;
+        }
+        System.out.println(this.identity + " " + this.name + " approves the request.");
         if (successor != null) {
-            return HandleRequest(requestMessage);
+            return successor.HandleRequest(requestMessage);
         } else {
+            System.out.println("The request is eventually approved. The content of the message is: " + requestMessage.getMessageInfo());
             return true;
         }
     }

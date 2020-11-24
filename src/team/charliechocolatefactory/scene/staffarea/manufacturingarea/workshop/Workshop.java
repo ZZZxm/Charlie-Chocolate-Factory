@@ -3,6 +3,7 @@ package team.charliechocolatefactory.scene.staffarea.manufacturingarea.workshop;
 import team.charliechocolatefactory.machine.processmachine.productmachine.ProductMachine;
 import team.charliechocolatefactory.person.staff.Manager;
 import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
+import team.charliechocolatefactory.scene.SceneNameConst;
 import team.charliechocolatefactory.scene.staffarea.manufacturingarea.ManufacturingArea;
 
 /**
@@ -32,10 +33,13 @@ public abstract class Workshop extends ManufacturingArea {
      * @return name of the scene as a String
      */
     @Override
-    public String toString() {
-        return "workshop";
-    }
+    public abstract String toString();
 
+    /*
+    public String toString() {
+        return SceneNameConst.WORKSHOP;
+    }
+    */
 
     /**
      * Visitor Pattern: accept a utility worker to maintenance the scene

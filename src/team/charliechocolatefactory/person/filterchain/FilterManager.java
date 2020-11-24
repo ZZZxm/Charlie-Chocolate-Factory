@@ -51,7 +51,7 @@ public class FilterManager {
             return false;
         }
         /*
-         * If the root node is empty, put it directly into our root node;
+          If the root node is empty, put it directly into our root node;
          */
         if (rootPerson == null) {
             this.rootPerson = person;
@@ -59,11 +59,12 @@ public class FilterManager {
             return true;
         }
 
-        Person temp = person;
+        Person temp = rootPerson;
         /*
          * Loop through whether there are duplicate nodes. If there are duplicate nodes, insert is rejected.
          */
         while (temp != null) {
+            // System.out.println(temp);
             if (person.equals(temp)) {
                 return false;
             }

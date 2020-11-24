@@ -2,6 +2,7 @@ package team.charliechocolatefactory.scene.staffarea;
 
 import team.charliechocolatefactory.person.staff.Manager;
 import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
+import team.charliechocolatefactory.scene.SceneNameConst;
 
 /**
  * @author Y.C.Young
@@ -46,6 +47,6 @@ public class Office extends StaffArea {
      */
     @Override
     public String toString() {
-        return "office";
+        return SceneNameConst.OFFICE;
     }
 }

@@ -39,7 +39,7 @@ public class GarbageStation extends Scene {
      */
     @Override
     public String toString() {
-        return "garbage station";
+        return SceneNameConst.GARBAGE_STATION;
     }
 
     /**

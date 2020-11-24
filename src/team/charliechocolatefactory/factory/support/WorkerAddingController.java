@@ -2,6 +2,7 @@ package team.charliechocolatefactory.factory.support;
 
 import team.charliechocolatefactory.person.Person;
 import team.charliechocolatefactory.person.staff.worker.*;
+import team.charliechocolatefactory.scene.SceneNameConst;
 import team.charliechocolatefactory.scene.staffarea.StaffArea;
 
 /**
@@ -24,19 +25,19 @@ public class WorkerAddingController {
     public static void addWorkerToScene(String name, int age, Person.Sex sex, int salary, StaffArea scene) {
 
         Worker workerObj;
-        if (scene.toString().equals("office")) {
+        if (scene.toString().equals(SceneNameConst.OFFICE)) {
             workerObj = new OfficeWorker(name, age, sex, salary, scene);
             scene.addWorker(workerObj);
         }
-        else if (scene.toString().equals("dining room")) {
+        else if (scene.toString().equals(SceneNameConst.DINING_ROOM)) {
             workerObj = new DinningRoomWorker(name, age, sex, salary, scene);
             scene.addWorker(workerObj);
         }
-        else if (scene.toString().equals("workshop")) {
+        else if (scene.toString().contains(SceneNameConst.WORKSHOP)) {
             workerObj = new WorkshopWorker(name, age, sex, salary, scene);
             scene.addWorker(workerObj);
         }
-        else if (scene.toString().equals("warehouse")) {
+        else if (scene.toString().equals(SceneNameConst.WAREHOUSE)) {
             workerObj = new WarehouseWorker(name, age, sex, salary, scene);
             scene.addWorker(workerObj);
         }
