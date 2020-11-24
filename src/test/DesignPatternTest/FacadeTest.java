@@ -81,7 +81,12 @@ public class FacadeTest {
         SecurityCheckTask securityCheckTask=new SecurityCheckTask(exhibitionRoomList,experienceRoomList,machineList);
         guard.setSecurityCheckTask(securityCheckTask);
 
-        System.out.println("系统已经为您创建好一个警卫对象，他将负责两个展览馆，两个实践区，三台机器的安全检查工作。");
+        System.out.println("");
+        System.out.println("***************************   Facade Test   ***************************");
+        System.out.println("***              1.系统已经为您创建好一个警卫对象                      ***");
+        System.out.println("***       他将负责两个展览馆，两个实践区，三台机器的安全检查工作。        ***");
+        System.out.println("***                 2. 选择警卫进行的工作                             ***");
+        System.out.println("***********************************************************************");
 
         int cmd;
         while(true){

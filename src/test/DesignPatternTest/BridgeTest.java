@@ -17,7 +17,13 @@ import java.util.Scanner;
  */
 public class BridgeTest {
     static public void BridgeTest(){
-        System.out.println("桥接模式测试：");
+        System.out.println("");
+        System.out.println("***************************   Bridge Test   ***************************");
+        System.out.println("***                 1. 选择夹心类型                                  ***");
+        System.out.println("***                 2. 选择巧克力类型                                ***");
+        System.out.println("***                 3. 等待桥接完成！                                ***");
+        System.out.println("***********************************************************************");
+        System.out.println("");
         Scanner scanner = new Scanner(System.in);
         System.out.println("首先新建一个Sandwich对象……");
         System.out.println("请选择夹心类型：1.榛仁  2.酒心");

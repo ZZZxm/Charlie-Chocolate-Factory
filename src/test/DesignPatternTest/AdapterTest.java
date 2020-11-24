@@ -17,7 +17,13 @@ import java.util.Scanner;
 public class AdapterTest {
     static public void AdapterTest(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("创建一个无人机对象");
+        System.out.println("");
+        System.out.println("***************************   Adapter Test   **************************");
+        System.out.println("***                 1. 创建一个无人机对象                             ***");
+        System.out.println("***                 2. 设置无人机属性                                ***");
+        System.out.println("***                 3. 无人机开始工作！                               ***");
+        System.out.println("***********************************************************************");
+        System.out.println("");
 
         System.out.println("请为该架无人机设置机器编号（ID）:");
         String machineNum=scanner.nextLine();
