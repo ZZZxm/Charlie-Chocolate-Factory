@@ -6,6 +6,7 @@ import team.charliechocolatefactory.product.Sandwich.Hazelnut;
 import team.charliechocolatefactory.product.Sandwich.Liqueur;
 import team.charliechocolatefactory.product.chocolate.*;
 
+import java.util.Scanner;
 
 /**
  * @author Miracle Ray
@@ -17,25 +18,67 @@ import team.charliechocolatefactory.product.chocolate.*;
 public class BridgeTest {
     static public void BridgeTest(){
         System.out.println("桥接模式测试：");
+        Scanner scanner = new Scanner(System.in);
         System.out.println("首先新建一个Sandwich对象……");
-        System.out.println("夹心：榛仁");
-        Sandwich hazelnut=new Hazelnut();
+        System.out.println("请选择夹心类型：1.榛仁  2.酒心");
+        Sandwich sandwich;
+        int tmp;
+        while (true){
+            try {
+                tmp=scanner.nextInt();
+                if(tmp==1){
+                    sandwich=new Hazelnut();
+                    System.out.println("选择夹心类型为：榛仁！");
+                    break;
+                }
+                else if(tmp==2){
+                    sandwich=new Liqueur();
+                    System.out.println("选择夹心类型为：酒心！");
+                    break;
+                }
+                else {
+                    System.out.println("请选择夹心类型:1.榛仁  2.酒心");
+                }
+            }catch(Exception e) {
+                System.out.println("请重新选择夹心类型。");
+            }
+        }
         System.out.println("新建Chocolate对象……");
-        System.out.println("获取夹心巧克力的名字。");
-        Chocolate hazelnutMilkChocolate=new MilkChocolate(hazelnut);
-        System.out.println("榛仁牛奶巧克力："+hazelnutMilkChocolate.getNameWithSandwich());
-        Chocolate hazelnutMatchaChocolate=new MatchaChocolate(hazelnut);
-        System.out.println("榛仁抹茶巧克力："+hazelnutMatchaChocolate.getNameWithSandwich()+"\n");
-
-        System.out.println("新建另一个Sandwich对象……");
-        System.out.println("夹心：酒心");
-        Sandwich liqueur =new Liqueur();
-        System.out.println("新建Chocolate对象……");
-        System.out.println("获取夹心巧克力的名字。");
-        Chocolate liqueurDarkChocolate=new DarkChocolate(liqueur);
-        System.out.println("酒心黑巧克力："+liqueurDarkChocolate.getNameWithSandwich());
-        Chocolate liqueurWhiteChocolate=new WhiteChocolate(liqueur);
-        System.out.println("酒心白巧克力："+liqueurWhiteChocolate.getNameWithSandwich());
+        int cmd;
+        while(true){
+            try{
+                System.out.println("");
+                System.out.println("选择你想放入的巧克力。");
+                System.out.println("1.牛奶巧克力  2.抹茶巧克力  3.黑巧克力  4.白巧克力  5.退出测试");
+                cmd=scanner.nextInt();
+                System.out.println("获取夹心巧克力的名字:");
+                Chocolate SandwichChocolate;
+                if(cmd==1){
+                    SandwichChocolate=new MilkChocolate(sandwich);
+                    System.out.println(SandwichChocolate.getNameWithSandwich());
+                }
+                else if(cmd==2){
+                    SandwichChocolate=new MatchaChocolate(sandwich);
+                    System.out.println(SandwichChocolate.getNameWithSandwich());
+                }
+                else if(cmd==3){
+                    SandwichChocolate=new DarkChocolate(sandwich);
+                    System.out.println(SandwichChocolate.getNameWithSandwich());
+                }
+                else if(cmd==4){
+                    SandwichChocolate=new WhiteChocolate(sandwich);
+                    System.out.println(SandwichChocolate.getNameWithSandwich());
+                }
+                else if(cmd==5){
+                    break;
+                }
+                else {
+                    System.out.println("输入指令无效，请重新输入。");
+                }
+            }catch(Exception e) {
+                System.out.println("输入指令无效，请重新输入。");
+            }
+        }
 
     }
 
