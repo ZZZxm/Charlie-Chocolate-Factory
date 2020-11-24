@@ -12,6 +12,10 @@ public class ThickMilkChocMachine extends MilkChocMachine{
     {
         this.setMachineNum("002");
     }
+    public ThickMilkChocMachine(String number)
+    {
+        super(number);
+    }
 
     @Override
     public void useCocoaBean() {

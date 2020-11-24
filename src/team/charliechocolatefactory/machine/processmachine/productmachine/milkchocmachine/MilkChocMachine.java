@@ -18,6 +18,11 @@ public abstract class MilkChocMachine extends BasicProductMachine {
         milkChocolate = new MilkChocolate();
     }
 
+    public MilkChocMachine(String number) {
+        super("MilkChocMachine", number);
+        milkChocolate = new MilkChocolate();
+    }
+
     /**
      * to get product
      *

@@ -44,7 +44,7 @@ public abstract class ProcessMachine extends Machine {
             return 0;
         }
         Random rand = new Random();
-        int failPossibility = rand.nextInt(8);
+        int failPossibility = rand.nextInt(12);
         if (failPossibility < 2) malfunction();
         if (!breakDown) {
             Random rand2 = new Random();

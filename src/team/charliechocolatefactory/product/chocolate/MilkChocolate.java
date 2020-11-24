@@ -87,6 +87,18 @@ public class MilkChocolate extends Chocolate implements Serializable,Cloneable {
         this.milkNum = milkNum;
     }
 
+    public double getCocoaBeanNum() {
+        return cocoaBeanNum;
+    }
+
+    public double getMilkNum() {
+        return milkNum;
+    }
+
+    public double getSugarNum() {
+        return sugarNum;
+    }
+
     @Override
     public void dispaly() {
         System.out.println("this is MilkChocolate!!");
@@ -95,5 +107,12 @@ public class MilkChocolate extends Chocolate implements Serializable,Cloneable {
     @Override
     public Object clone() throws CloneNotSupportedException {
         return super.clone();
+    }
+
+    public boolean equals(MilkChocolate milkChocolate)
+    {
+        if(this.cocoaBeanNum==milkChocolate.getCocoaBeanNum()&&this.sugarNum==milkChocolate.getSugarNum()&&this.milkNum==milkChocolate.getMilkNum())
+            return true;
+        return false;
     }
 }

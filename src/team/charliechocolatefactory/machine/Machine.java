@@ -269,7 +269,7 @@ public abstract class Machine {
             System.out.println("Please set " + type + machineNum + "'s aimProcessNum first.\n");
             return 0;
         }
-        System.out.println(type + machineNum + " starts to tun:\n");
+        System.out.println(type + machineNum + " starts to run:\n");
         return work(product);
     }
 
