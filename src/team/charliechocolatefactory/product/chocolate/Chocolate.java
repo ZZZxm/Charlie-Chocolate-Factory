@@ -63,4 +63,6 @@ public abstract class Chocolate extends Product {
      * this method to show class is some Chocolate , To subclass implementation
      */
     public abstract void dispaly();
+    
+    public abstract String getNameWithSandwich();
 }

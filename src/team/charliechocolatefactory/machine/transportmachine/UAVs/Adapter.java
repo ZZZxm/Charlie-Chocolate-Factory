@@ -16,6 +16,7 @@ public class Adapter implements UAV {
 
     @Override
     public int work(Product product) {
+        this.navigate();
         adaptee.run(product);
         return 0;
     }
@@ -30,9 +31,15 @@ public class Adapter implements UAV {
         return this.mID;
     }
 
+
+    @Override
+    public void setAimProcessNum(int aimProcessNum){
+        adaptee.setAimProcessNum(aimProcessNum);
+    }
+
     @Override
     public void navigate() {
-        System.out.println("UAV " + this.mID + " is navigating to destination.");
+        System.out.println("UAV " + this.mID + " is navigating to destination.\n");
     }
 
     public Adapter() {

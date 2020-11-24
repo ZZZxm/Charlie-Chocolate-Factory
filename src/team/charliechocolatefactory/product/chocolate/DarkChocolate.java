@@ -33,6 +33,7 @@ public class DarkChocolate extends Chocolate {
         super.ingredientList.add(new Water());
     }
 
+    @Override
     public String getNameWithSandwich() {
         return sandwich.getSandwich() + " DarkChocolate";
     }
