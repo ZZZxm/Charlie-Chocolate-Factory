@@ -105,7 +105,7 @@ public class MainTest {
                     //IteratorTest.main(new String[]{});
                     break;
                 case 14:
-                    //MediatorTest.main(new String[]{});
+                    MediatorTest.main(new String[]{});
                     break;
                 case 15:
                     //MementoTest.main(new String[]{});
@@ -147,7 +147,7 @@ public class MainTest {
                     //FilterTest.main(new String[]{});
                     break;
                 case 28:
-                    MultitonTest.main(new String[]{});
+                    MultitionTest.main(new String[]{});
                     break;
                 default:
                     System.out.println("Invalid input!");

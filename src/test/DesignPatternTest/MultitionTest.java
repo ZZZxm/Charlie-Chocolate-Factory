@@ -9,14 +9,14 @@ import team.charliechocolatefactory.person.staff.worker.WorkshopWorker;
 /**
  * @author Zheng
  * @project chocolateFactory
- * @classname MultitonTest
- * @description MultitonTest
+ * @classname MultitionTest
+ * @description MultitionTest
  * @date 2020/11/22 15:49
  */
-public class MultitonTest {
+public class MultitionTest {
 
     public static void main(String[] args) {
-        System.out.println("------------------------------------ [Command] Test ------------------------------------");
+        System.out.println("------------------------------------ [Multition] Test ------------------------------------");
 
         System.out.println("");
         System.out.println("Manager : getDiningRoomManager() : Get dining room's manager which is single.");

@@ -2,6 +2,7 @@ package test;
 
 import team.charliechocolatefactory.person.Person;
 import team.charliechocolatefactory.person.staff.Manager;
+import team.charliechocolatefactory.rawmaterial.packagematerial.Cup;
 import team.charliechocolatefactory.scene.staffarea.Office;
 
 /**
@@ -13,15 +14,12 @@ import team.charliechocolatefactory.scene.staffarea.Office;
  */
 public class Test {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CloneNotSupportedException {
 
-        Office office = new Office();
-        Manager officeManager = office.getManager();
+        Cup cup = new Cup();
+        Cup cup1 =(Cup) cup.clone();
 
-        System.out.println(office.getWorkerList());
-        officeManager.hireWorker("worker1", Person.Sex.MALE, 18, 1000, office);
-        System.out.println(office.getWorkerList());
-        officeManager.hireWorker("worker2", Person.Sex.MALE, 18, 1000, office);
-        System.out.println(office.getWorkerList());
+        System.out.println(cup == cup1);
+        System.out.println(cup.equals(cup1));
     }
 }

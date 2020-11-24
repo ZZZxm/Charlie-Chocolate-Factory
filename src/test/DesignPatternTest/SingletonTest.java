@@ -24,6 +24,7 @@ public class SingletonTest {
         System.out.println("");
         System.out.println("The next time to get instance of general manager: ");
         GeneralManager generalManager2 = GeneralManager.getInstance();
+        System.out.println(generalManager1 == generalManager2);
 
     }
 }
