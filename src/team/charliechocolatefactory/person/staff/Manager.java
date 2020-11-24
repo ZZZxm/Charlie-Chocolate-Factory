@@ -21,7 +21,7 @@ public class Manager extends Staff {
     public String identity = "manager";
     public ArrayList<StaffArea> departmentList;
     public static Manager diningRoomManager;
-    public static Manager officeManager = getOfficeManager();
+    public static Manager officeManager;
     public static Manager workShopManager;
     public static Manager warehouseManager;
 
