@@ -52,7 +52,7 @@ public class BusinessDelegateTest {
 
         do {
             System.out.println("");
-            System.out.println("Enter the order [0 to quit]:");
+            System.out.print("Enter the order [0 to quit]:");
             op = input.nextInt();
 
             if (warehouseDelegate == null && op > 1) {
@@ -90,6 +90,9 @@ public class BusinessDelegateTest {
                     warehouseDelegate.setServiceType("hahahahaha");
                     warehouseClient.doTask(new Egg());
                     break;
+                }
+                default:{
+                    System.out.println("Invalid Input, Please input again.");
                 }
             }
         } while (flag);

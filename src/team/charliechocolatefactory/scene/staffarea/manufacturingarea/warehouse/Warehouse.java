@@ -68,7 +68,8 @@ public class Warehouse extends ManufacturingArea {
         if (materialAmount.containsKey(type)) {
             materialAmount.put(type, amount + materialAmount.get(type));
         } else {
-            System.out.println("The kind doesn't exist");
+            materialAmount.put(type, amount);
+            System.out.println("Successfully add " + amount + " " + type + " in the warehouse.");
         }
     }
 
