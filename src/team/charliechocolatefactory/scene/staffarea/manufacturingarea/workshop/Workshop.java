@@ -1,6 +1,7 @@
 package team.charliechocolatefactory.scene.staffarea.manufacturingarea.workshop;
 
 import team.charliechocolatefactory.machine.processmachine.productmachine.ProductMachine;
+import team.charliechocolatefactory.person.GeneralManager;
 import team.charliechocolatefactory.person.staff.Manager;
 import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
 import team.charliechocolatefactory.scene.staffarea.manufacturingarea.ManufacturingArea;
@@ -24,6 +25,7 @@ public abstract class Workshop extends ManufacturingArea {
     public Workshop(String location, double cost, double area) {
         super(location, cost, area, Manager.workShopManager);
         Manager.workShopManager.addDepartment(this);
+        GeneralManager.getInstance().addManager(Manager.workShopManager);
     }
 
 

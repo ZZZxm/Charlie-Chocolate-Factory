@@ -1,5 +1,6 @@
 package team.charliechocolatefactory.scene.staffarea.manufacturingarea.warehouse;
 
+import team.charliechocolatefactory.person.GeneralManager;
 import team.charliechocolatefactory.person.staff.Manager;
 import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
 import team.charliechocolatefactory.scene.staffarea.manufacturingarea.ManufacturingArea;
@@ -21,6 +22,7 @@ public class Warehouse extends ManufacturingArea {
     public Warehouse(String location, double cost, double area) {
         super(location, cost, area, Manager.warehouseManager);
         Manager.warehouseManager.addDepartment(this);
+        GeneralManager.getInstance().addManager(Manager.warehouseManager);
         materialAmount = new HashMap<String, Double>();
         productionAmount = new HashMap<String, Integer>();
     }
