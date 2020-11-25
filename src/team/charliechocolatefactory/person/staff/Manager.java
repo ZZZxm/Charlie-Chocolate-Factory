@@ -146,14 +146,15 @@ public class Manager extends Staff {
      * @return whether the action of fire is successful, the manager can only fire the workers in his/her department.
      */
     public boolean fireWorker(Worker worker) {
-        if (this.department == worker.getDepartment()) {
-            /* 删除员工 */
-            department.removeWorker(worker);
-            return true;
-        } else {
-            System.out.println("The worker is not responsible to the manager.");
-            return false;
+        for (StaffArea department : this.departmentList) {
+            if (department == worker.getDepartment()) {
+                /* 删除员工 */
+                department.removeWorker(worker);
+                return true;
+            }
         }
+        System.out.println("The worker is not responsible to the manager.");
+        return false;
     }
 
     /**
@@ -199,13 +200,19 @@ public class Manager extends Staff {
         return "class Manager extends Staff";
     }
 
+    /**
+     * receive feedback from workers
+     */
     public void receiveFeedBack() {
-        System.out.println(this.department.toString() + " manager received feed back.");
+        System.out.println(this.name + " received feed back.");
         reportToGeneralManager();
     }
 
+    /**
+     * send feedbacks to the general manager
+     */
     private void reportToGeneralManager() {
-        System.out.println(this.department.toString() + " manager report feed back things to the general manager.");
+        System.out.println(this.name + " report feed back things to the general manager.");
         GeneralManager.getInstance().receiveFeedBack();
     }
 
