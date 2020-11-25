@@ -1,11 +1,11 @@
 package test.DesignPatternTest;
 
+import team.charliechocolatefactory.factory.support.SecurityCheckTask;
 import team.charliechocolatefactory.person.Person;
 import team.charliechocolatefactory.person.staff.Guard;
 import team.charliechocolatefactory.product.Product;
 import team.charliechocolatefactory.scene.publicarea.ExperienceRoom;
 import team.charliechocolatefactory.scene.publicarea.ExhibitionRoom;
-import team.charliechocolatefactory.supplement.facade.SecurityCheckTask;
 import team.charliechocolatefactory.machine.Machine;
 
 import java.util.ArrayList;
@@ -21,7 +21,7 @@ import java.util.Scanner;
  */
 public class FacadeTest {
     static public void facadeTest(){
-        /**
+        /*
          * create two ExhibitionRooms
          */
         List<ExhibitionRoom> exhibitionRoomList = new ArrayList<ExhibitionRoom>();
@@ -36,7 +36,7 @@ public class FacadeTest {
         exhibitionRoomList.add(exhibitionRoom1);
         exhibitionRoomList.add(exhibitionRoom2);
 
-        /**
+        /*
          * create two ExperienceRooms
          */
         List<ExperienceRoom> experienceRoomList = new ArrayList<ExperienceRoom>();
@@ -47,7 +47,7 @@ public class FacadeTest {
         experienceRoomList.add(experienceRoom1);
         experienceRoomList.add(experienceRoom2);
 
-        /**
+        /*
          * create 2 machines
          */
         List<Machine> machineList = new ArrayList<Machine>();
@@ -75,7 +75,7 @@ public class FacadeTest {
 
         Guard guard=new Guard("Mike",25, Person.Sex.MALE,1000);
 
-        /**
+        /*
          * assign a task to the guard
          */
         SecurityCheckTask securityCheckTask=new SecurityCheckTask(exhibitionRoomList,experienceRoomList,machineList);
