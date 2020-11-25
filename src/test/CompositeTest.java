@@ -82,7 +82,7 @@ public class CompositeTest {
         QualityTestSystem leafNode;
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Please input the identifier of the group you want to enlarge（'#' to quit）：");
+        System.out.println("Please input the identifier of the group you want to enlarge（numbers except'#'）：");
         String root = sc.next();
         if(root.equals("#")){
             return;
@@ -100,14 +100,14 @@ public class CompositeTest {
         }
 
         while(true) {
-            System.out.println("Please input which kind of system you want to add to enlarge the group you choose（'#' to quit）：");
+            System.out.println("Please input which kind of system you want to add to enlarge the group you choose（numbers,'#' to quit）：");
             System.out.println("[0 Group | 1 Panel] ");
             String choice = sc.next();
             if(choice.equals("#")){
                 return;
             }
             if(choice.equals("0")) {
-                System.out.println("Please input the identifier of the group you want to add to Group "+root+"（'#' to quit）：");
+                System.out.println("Please input the identifier of the group you want to add to Group "+root+"（numbers,'#' to quit）：");
                 String no = sc.next();
 
                 if(no.equals("#")){
@@ -175,7 +175,7 @@ public class CompositeTest {
          * @return : void
          **/
         Scanner sc = new Scanner(System.in);
-        System.out.println("Please input the identifier of the  group you want to know（'#' to quit）：");
+        System.out.println("Please input the identifier of the  group you want to know（numbers,'#' to quit）：");
         String root = sc.next();
         if(root.equals("#")){
             return;
