@@ -24,9 +24,9 @@ public class DiningRoom extends StaffArea {
      * constructor of the DiningRoom with manager specified
      */
     public DiningRoom(String location, double cost, double area) {
-        super(location, cost, area, Manager.getDiningRoomManager());
-        setManager(Manager.getDiningRoomManager());
-        Manager.getDiningRoomManager().addDepartment(this);
+        super(location, cost, area, Manager.diningRoomManager);
+        Manager.diningRoomManager.addDepartment(this);
+        GeneralManager.getInstance().addManager(Manager.diningRoomManager);
     }
 
     /**

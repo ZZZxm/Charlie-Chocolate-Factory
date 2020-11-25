@@ -29,9 +29,9 @@ public class Office extends StaffArea {
      * constructor of the Office with no manager specified
      */
     public Office(String location, double cost, double area) {
-        super(location, cost, area, Manager.getOfficeManager());
-        setManager(Manager.getOfficeManager());
-        Manager.getOfficeManager().addDepartment(this);
+        super(location, cost, area, Manager.officeManager);
+        Manager.officeManager.addDepartment(this);
+        GeneralManager.getInstance().addManager(Manager.officeManager);
     }
 
     /**

@@ -23,9 +23,9 @@ public abstract class Workshop extends ManufacturingArea {
     }
 
     public Workshop(String location, double cost, double area) {
-        super(location, cost, area, Manager.getWorkShopManager());
-        setManager(Manager.getWorkShopManager());
-        Manager.getWorkShopManager().addDepartment(this);
+        super(location, cost, area, Manager.workShopManager);
+        Manager.workShopManager.addDepartment(this);
+        GeneralManager.getInstance().addManager(Manager.workShopManager);
     }
 
 
