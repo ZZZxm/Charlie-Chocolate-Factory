@@ -150,12 +150,6 @@ public class MainTest {
                 case 28:
                     MultitionTest.main(new String[]{});
                     break;
-                case 29:
-                    MultitionTest.main(new String[]{});
-                    break;
-                case 30:
-                    NullObjectTest.main(new String[]{});
-                    break;
                 default:
                     System.out.println("Invalid input!");
                     System.out.println("Please input a number of 0-30!");
