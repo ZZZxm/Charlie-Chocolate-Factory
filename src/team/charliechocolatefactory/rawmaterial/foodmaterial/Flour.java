@@ -17,7 +17,7 @@ public class Flour extends FoodMaterial {
      * This ctor sets state to POWDER.
      *
      * @param initialQuant         initial quantity
-     * @param timeBeforeExpiration initial time to expire
+     * @param initialExpireTime initial time to expire
      */
     public Flour(double initialQuant, double initialExpireTime) {
         super(initialQuant, initialExpireTime, State.POWDER);

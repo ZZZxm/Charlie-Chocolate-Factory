@@ -19,12 +19,32 @@ public class PeriodicMaintenance {
      */
     private SceneStructure scenes;
 
+    private boolean dirtyFlag = false;
+
+    private boolean agingFlag = false;
+
     public PeriodicMaintenance() {
         scenes = new SceneStructure();
     }
 
     public PeriodicMaintenance(SceneStructure sst) {
         scenes = sst;
+    }
+
+    public void setDirty() {
+        this.dirtyFlag = true;
+    }
+
+    public boolean getDirtyFlag() {
+        return this.dirtyFlag;
+    }
+
+    public void setAging() {
+        this.agingFlag = true;
+    }
+
+    public boolean getAgingFlag() {
+        return this.agingFlag;
     }
 
     /**
@@ -36,6 +56,10 @@ public class PeriodicMaintenance {
         scenes.accept(c);
     }
 
+    public void doClean() {
+
+    }
+
     /**
      * Periodically maintain the scenes
      * @param m maintenance object
@@ -43,6 +67,10 @@ public class PeriodicMaintenance {
     public void checkAndMaintenance(MaintenanceWorker m)
     {
         scenes.accept(m);
+    }
+
+    public void doMaintenance() {
+
     }
 
 }

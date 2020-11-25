@@ -100,21 +100,29 @@ public class GeneralManager extends Person {
      * If you do not agree to the request,
      * it will return false. If you agree, it will be submitted to the next level for approval.
      * If you are the last level, you will return true.
+     *
      * @param requestMessage：sendMessage
      * @return Processing results
      */
     @Override
     public boolean HandleRequest(Message requestMessage) {
-        if (successor != null){
-            return HandleRequest(requestMessage);
-        }else {
+        System.out.println(this.identity + " " + this.name + " is handling request.");
+        if (requestMessage.getMessageInfo().charAt(0) == 'G') {
+            System.out.println(this.identity + " " + this.name + " rejects the request.");
+            return false;
+        }
+        System.out.println(this.identity + " " + this.name + " approves the request.");
+        if (successor != null) {
+            return successor.HandleRequest(requestMessage);
+        } else {
+            System.out.println("The request is eventually approved. The content of the message is: " + requestMessage.getMessageInfo());
             return true;
         }
     }
 
     @Override
     public boolean equals(Object obj) {
-        if (!(obj instanceof GeneralManager)){
+        if (!(obj instanceof GeneralManager)) {
             return false;
         }
         GeneralManager temp = (GeneralManager) obj;
@@ -136,5 +144,6 @@ public class GeneralManager extends Person {
      */
     private GeneralManager(String name, int age, Sex sex) {
         super(name, age, sex);
+        managerList = new ArrayList<Manager>();
     }
 }

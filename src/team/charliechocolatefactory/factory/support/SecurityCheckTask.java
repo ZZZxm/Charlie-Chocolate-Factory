@@ -63,6 +63,8 @@ public class SecurityCheckTask {
         System.out.println("正在向总管汇报安全检查情况……");
         System.out.println("公共场地安全检查情况为:" + roomSt + "。");
         System.out.println("机器设备安全检查情况为:" + machineSt + "。");
+        MachineChecked=false;
+        RoomChecked=false;
     }
 
     @Override

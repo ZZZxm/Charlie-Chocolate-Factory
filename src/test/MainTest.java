@@ -35,7 +35,7 @@ public class MainTest {
         System.out.println("               **            18 --- Proxy                     **");
         System.out.println("               **            19 --- Singleton                 **");
         System.out.println("               **            20 --- State                     **");
-        System.out.println("               **            21 --- StrategyTest              **");
+        System.out.println("               **            21 --- Strategy                  **");
         System.out.println("               **            22 --- Template Method           **");
         System.out.println("               **            23 --- Visitor                   **");
         System.out.println("               **            24 --- Business Delegate         **");
@@ -43,7 +43,8 @@ public class MainTest {
         System.out.println("               **            26 --- Extension                 **");
         System.out.println("               **            27 --- Filter                    **");
         System.out.println("               **            28 --- IOC                       **");
-        System.out.println("               **            29 --- Multipate                 **");
+        System.out.println("               **            29 --- Multiton                 **");
+        System.out.println("               **            30 --- Null Object               **");
         System.out.println("               -------------------------------------------------");
         System.out.print("               Which design pattern do you want to test? [0 to quit]: ");
     }
@@ -80,7 +81,7 @@ public class MainTest {
                    //ChainOfResponsibilityTest.main(new String[]{});
                     break;
                 case 6:
-                    //CommandTest.main(new String[]{});
+                    CommandTest.main(new String[]{});
                     break;
                 case 7:
                     //CompositeTest.main(new String[]{});
@@ -104,10 +105,10 @@ public class MainTest {
                     //IteratorTest.main(new String[]{});
                     break;
                 case 14:
-                    //MediatorTest.main(new String[]{});
+                    MediatorTest.main(new String[]{});
                     break;
                 case 15:
-                    //MementoTest.main(new String[]{});
+                    MementoTest.main(new String[]{});
                     break;
                 case 16:
                     //ObserverTest.main(new String[]{});
@@ -146,7 +147,7 @@ public class MainTest {
                     //FilterTest.main(new String[]{});
                     break;
                 case 28:
-                    //MultipateTest.main(new String[]{});
+                    MultitionTest.main(new String[]{});
                     break;
                 default:
                     System.out.println("Invalid input!");

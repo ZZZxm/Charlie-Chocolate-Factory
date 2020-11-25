@@ -58,7 +58,7 @@ public abstract class RawMaterial {
 
         if (quantity - quant <= 0) {
             quantConsumed = quantity;
-            quantity = 0;
+            quantity = 0.0;
             notifyOnExhaustion();
         }
         quantity -= quant;
@@ -99,6 +99,24 @@ public abstract class RawMaterial {
     }
 
     /**
+     *
+     * @param obj
+     * @return
+     */
+    public boolean checkQuantityEqualOnStorage(RawMaterial obj) {
+        return this.quantity == obj.quantity;
+    }
+
+    /**
+     *
+     * @param obj
+     * @return
+     */
+    public boolean checkQuantityEqualOnValue(RawMaterial obj) {
+        return this.quantity.equals(obj.quantity);
+    }
+
+    /**
      * quantity of the raw material
      * <p>
      * For FoodRawMaterial subclass, this attribute is intended to represent the
@@ -107,7 +125,8 @@ public abstract class RawMaterial {
      * This attribute may have different units with respect to particular subclass
      * type.
      */
-    protected double quantity;
+    protected Double quantity;
+    // protected double quantity;
 
     /**
      * obsever array of exhaustion

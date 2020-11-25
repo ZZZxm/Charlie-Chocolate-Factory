@@ -4,6 +4,7 @@ import team.charliechocolatefactory.machine.processmachine.productmachine.Produc
 import team.charliechocolatefactory.person.GeneralManager;
 import team.charliechocolatefactory.person.staff.Manager;
 import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
+import team.charliechocolatefactory.scene.SceneNameConst;
 import team.charliechocolatefactory.scene.staffarea.manufacturingarea.ManufacturingArea;
 
 /**
@@ -23,21 +24,23 @@ public abstract class Workshop extends ManufacturingArea {
     }
 
     public Workshop(String location, double cost, double area) {
-        super(location, cost, area, Manager.workShopManager);
-        Manager.workShopManager.addDepartment(this);
-        GeneralManager.getInstance().addManager(Manager.workShopManager);
+        super(location, cost, area, Manager.getWorkShopManager());
+        setManager(Manager.getWorkShopManager());
+        Manager.getWorkShopManager().addDepartment(this);
     }
 
 
-     /**
     /**
      * @return name of the scene as a String
      */
     @Override
-    public String toString() {
-        return "workshop";
-    }
+    public abstract String toString();
 
+    /*
+    public String toString() {
+        return SceneNameConst.WORKSHOP;
+    }
+    */
 
     /**
      * Visitor Pattern: accept a utility worker to maintenance the scene

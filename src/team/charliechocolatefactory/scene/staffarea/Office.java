@@ -3,6 +3,7 @@ package team.charliechocolatefactory.scene.staffarea;
 import team.charliechocolatefactory.person.GeneralManager;
 import team.charliechocolatefactory.person.staff.Manager;
 import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
+import team.charliechocolatefactory.scene.SceneNameConst;
 
 /**
  * @author Y.C.Young
@@ -21,16 +22,16 @@ public class Office extends StaffArea {
 //    }
 
     public Office() {
-
+        this("Default Office", 100, 100);
     }
 
     /**
      * constructor of the Office with no manager specified
      */
     public Office(String location, double cost, double area) {
-        super(location, cost, area, Manager.officeManager);
-        Manager.officeManager.addDepartment(this);
-        GeneralManager.getInstance().addManager(Manager.officeManager);
+        super(location, cost, area, Manager.getOfficeManager());
+        setManager(Manager.getOfficeManager());
+        Manager.getOfficeManager().addDepartment(this);
     }
 
     /**
@@ -48,6 +49,6 @@ public class Office extends StaffArea {
      */
     @Override
     public String toString() {
-        return "office";
+        return SceneNameConst.OFFICE;
     }
 }

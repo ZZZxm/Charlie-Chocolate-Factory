@@ -11,10 +11,14 @@ import team.charliechocolatefactory.factory.support.PeriodicMaintenance;
  */
 public class CharlieFactory {
 
-    private PeriodicMaintenance periodicMaintenance;
+    static private PeriodicMaintenance periodicMaintenance;
 
     public CharlieFactory() {
         periodicMaintenance = new PeriodicMaintenance();
+    }
+
+    public static PeriodicMaintenance getPeriodicMaintenance() {
+        return periodicMaintenance;
     }
 
 }

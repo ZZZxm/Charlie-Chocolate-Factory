@@ -60,6 +60,7 @@ public class MilkChocolate extends Chocolate implements Serializable,Cloneable {
         super.ingredientList.add(new Milk());
     }
 
+    @Override
     public String getNameWithSandwich() {
         return sandwich.getSandwich() + " MilkChocolate";
     }

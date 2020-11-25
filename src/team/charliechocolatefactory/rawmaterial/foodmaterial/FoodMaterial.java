@@ -21,7 +21,7 @@ public abstract class FoodMaterial extends RawMaterial implements Cloneable {
      * ctor of FoodMaterial
      *
      * @param initialQuant         initial quantity
-     * @param timeBeforeExpiration initial time to expire
+     * @param initialExpireTime initial time to expire
      * @param state                state of material
      */
     protected FoodMaterial(double initialQuant, double initialExpireTime, State state) {
@@ -109,7 +109,6 @@ public abstract class FoodMaterial extends RawMaterial implements Cloneable {
      * <p>
      * This is a part of the "strategy" pattern.
      *
-     * @param toState change to state
      * @return true if it can be processed
      */
     public abstract boolean process();
