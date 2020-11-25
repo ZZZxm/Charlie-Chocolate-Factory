@@ -31,20 +31,20 @@ public class ValueObjectTest {
         System.out.println("MilkChocolate product1 is in normal flavor...");
         MilkChocolate milkChocolate2=null;
 
-        System.out.println("");
-        System.out.println("******************************** TIPS **********************************");
-        System.out.println("***       1. Input 1 to test if two products are equal in value      ***");
-        System.out.println("*** 2. Input 2 to create a milk chocolate(product2) in normal flavor ***");
-        System.out.println("*** 2. Input 3 to create a milk chocolate(product2) in thick flavor  ***");
-        System.out.println("***                      4. Input 0 to exit                          ***");
-        System.out.println("************************************************************************");
-        System.out.println("");
-
         Scanner input = new Scanner(System.in);
         int op;
         boolean flag = true;
 
         do {
+            System.out.println("");
+            System.out.println("******************************** TIPS **********************************");
+            System.out.println("***       1. Input 1 to test if two products are equal in value      ***");
+            System.out.println("*** 2. Input 2 to create a milk chocolate(product2) in normal flavor ***");
+            System.out.println("*** 2. Input 3 to create a milk chocolate(product2) in thick flavor  ***");
+            System.out.println("***                      4. Input 0 to exit                          ***");
+            System.out.println("************************************************************************");
+            System.out.println("");
+
             System.out.println("");
             System.out.print("Enter the command [0 to quit]:");
             op = input.nextInt();

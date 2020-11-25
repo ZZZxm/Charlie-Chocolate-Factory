@@ -5,11 +5,11 @@ import team.charliechocolatefactory.scene.staffarea.manufacturingarea.assemblyli
 /**
  * @author Zeus Lee
  * @project chocolateFactory
- * @classname ChocolatesFactorProducer
+ * @classname ChocolatesFactoryProducer
  * @description This class is used to obtain our specific chocolate factory
  * @date 2020/11/15 16:40
  */
-public class ChocolatesFactorProducer {
+public class ChocolatesFactoryProducer {
 
     /**
      * This method is used to obtain our specific chocolate factory

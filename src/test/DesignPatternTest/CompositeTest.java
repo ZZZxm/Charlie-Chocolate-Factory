@@ -1,4 +1,4 @@
-package test;
+package test.DesignPatternTest;
 
 import team.charliechocolatefactory.machine.qualitytestmachine.qualitytestsystem.QualityInspectionPanel;
 import team.charliechocolatefactory.machine.qualitytestmachine.qualitytestsystem.QualityInspectionPanelGroup;
@@ -27,14 +27,14 @@ public class CompositeTest {
          **/
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Please input the  identifier of Group you want to create（numbers except'#'）：\n");
+        System.out.println("Please input the identifier of Group you want to create（numbers except'#'）：\n");
         String no = sc.next();
-        while(no.equals("#")) {
+        while (no.equals("#")) {
             System.out.println("Invalid Input, Please input again.（numbers except'#'）：\n");
 
             no = sc.next();
         }
-        while(qualityInspectionPanelGroups.get(no) != null) {
+        while (qualityInspectionPanelGroups.get(no) != null) {
             System.out.println("The  identifier has been used, ");
             System.out.println("please input again.（numbers except'#'）：\n");
             no = sc.next();
@@ -42,7 +42,7 @@ public class CompositeTest {
 
         QualityInspectionPanelGroup node = new QualityInspectionPanelGroup(no);
         qualityInspectionPanelGroups.put(no, node);
-        System.out.println("Group "+no+" has been created");
+        System.out.println("Group " + no + " has been created");
     }
 
     public static void createPanel() {
@@ -55,12 +55,12 @@ public class CompositeTest {
 
         System.out.println("Please input the size of the panel you want to create（A-Z except'#'）：");
         String name = sc.next();
-        while(name.equals("#")) {
+        while (name.equals("#")) {
             System.out.println("The size is invalid,");
             System.out.println("please input again（A-Z except'#'）：\n");
             name = sc.next();
         }
-        while(qualityInspectionPanels.get(name) != null) {
+        while (qualityInspectionPanels.get(name) != null) {
             System.out.println("The size has been used,");
             System.out.println("please input again（A-Z except'#'）：\n");
             name = sc.next();
@@ -68,7 +68,7 @@ public class CompositeTest {
 
         QualityInspectionPanel node = new QualityInspectionPanel(name);
         qualityInspectionPanels.put(name, node);
-        System.out.println("Panel "+name+" has been created");
+        System.out.println("Panel " + name + " has been created");
     }
 
 
@@ -84,84 +84,82 @@ public class CompositeTest {
         Scanner sc = new Scanner(System.in);
         System.out.println("Please input the identifier of the group you want to enlarge（numbers except'#'）：");
         String root = sc.next();
-        if(root.equals("#")){
+        if (root.equals("#")) {
             return;
         }
         rootNode = qualityInspectionPanelGroups.get(root);
-        while(rootNode == null) {
+        while (rootNode == null) {
             System.out.println("The group does not exist");
             System.out.println("Please input again:(numbers except '#')\n");
 //            System.out.println("请输入成链的前驱节点编号（输入'#'退出操作）：");
             root = sc.next();
-            if(root.equals("#")){
+            if (root.equals("#")) {
                 return;
             }
             rootNode = qualityInspectionPanelGroups.get(root);
         }
 
-        while(true) {
+        while (true) {
             System.out.println("Please input which kind of system you want to add to enlarge the group you choose（numbers,'#' to quit）：");
             System.out.println("[0 Group | 1 Panel] ");
             String choice = sc.next();
-            if(choice.equals("#")){
+            if (choice.equals("#")) {
                 return;
             }
-            if(choice.equals("0")) {
-                System.out.println("Please input the identifier of the group you want to add to Group "+root+"（numbers,'#' to quit）：");
+            if (choice.equals("0")) {
+                System.out.println("Please input the identifier of the group you want to add to Group " + root + "（numbers,'#' to quit）：");
                 String no = sc.next();
 
-                if(no.equals("#")){
+                if (no.equals("#")) {
                     return;
                 }
                 leafNode = qualityInspectionPanelGroups.get(no);
-                while(leafNode == null) {
+                while (leafNode == null) {
                     System.out.println("The group does not exist,you must create it first!");
                     System.out.println("Do you want to create it now? (y=yes/#=no)\n");
                     String cho = sc.next();
 
-                    if(cho.equals("y")){
+                    if (cho.equals("y")) {
 //                        createGroup();
                         QualityInspectionPanelGroup node = new QualityInspectionPanelGroup(no);
                         qualityInspectionPanelGroups.put(no, node);
                     }
-                    if(no.equals("#")){
+                    if (no.equals("#")) {
                         return;
                     }
                     leafNode = qualityInspectionPanelGroups.get(no);
-                    System.out.println("Group "+no+" has been created");
-                    System.out.println("Group "+no+" has been added to Group "+root);
+                    System.out.println("Group " + no + " has been created");
+                    System.out.println("Group " + no + " has been added to Group " + root);
                     break;
                 }
                 break;
-            }
-            else if(choice.equals("1")){
-                System.out.println("Please input the size of the  panel you want to add to Group "+root+"（A-Z'#' to quit）：");
+            } else if (choice.equals("1")) {
+                System.out.println("Please input the size of the panel you want to add to Group " + root + "（A-Z'#' to quit）：");
                 String name = sc.next();
-                if(name.equals("#")){
+                if (name.equals("#")) {
                     return;
                 }
                 leafNode = qualityInspectionPanels.get(name);
-                while(leafNode == null) {
-                    System.out.println("The panel does not exist,you must create it first! ");
+                while (leafNode == null) {
+                    System.out.println("The panel does not exist, you must create it first! ");
                     System.out.println("Do you want to create it now? (y=yes/#=no)\n");
                     String cho = sc.next();
 
-                    if(cho.equals("y")){
+                    if (cho.equals("y")) {
 //                        createPanel();
                         QualityInspectionPanel node = new QualityInspectionPanel(name);
                         qualityInspectionPanels.put(name, node);
-                        System.out.println("Panel "+name+" has been created");
+                        System.out.println("Panel " + name + " has been created");
                     }
-                    if(name.equals("#")){
+                    if (name.equals("#")) {
                         return;
                     }
                     leafNode = qualityInspectionPanels.get(name);
-                    System.out.println("Panel "+name+" has been added to Group "+root);
+                    System.out.println("Panel " + name + " has been added to Group " + root);
                     break;
                 }
                 break;
-            }
-            else {
+            } else {
                 System.out.println("Invalid Input\n");
             }
         }
@@ -175,17 +173,17 @@ public class CompositeTest {
          * @return : void
          **/
         Scanner sc = new Scanner(System.in);
-        System.out.println("Please input the identifier of the  group you want to know（numbers,'#' to quit）：");
+        System.out.println("Please input the identifier of the group you want to know（numbers,'#' to quit）：");
         String root = sc.next();
-        if(root.equals("#")){
+        if (root.equals("#")) {
             return;
         }
         QualityInspectionPanelGroup rootNode = qualityInspectionPanelGroups.get(root);
-        while(rootNode == null) {
+        while (rootNode == null) {
             System.out.println("The group does not exist ");
             System.out.println("Please input again:（'#' to quit）：\n");
             root = sc.next();
-            if(root.equals("#")){
+            if (root.equals("#")) {
                 return;
             }
             rootNode = qualityInspectionPanelGroups.get(root);
@@ -208,7 +206,7 @@ public class CompositeTest {
 
         String choice;
 
-        while(true) {
+        while (true) {
             Scanner sc = new Scanner(System.in);
 
             System.out.println("----------------------------Composite Test---------------------------");
@@ -220,22 +218,17 @@ public class CompositeTest {
             System.out.println("-----------------------------------------");
 //            System.out.println("请选择操作：[1 新建Cluster(Multiple)节点 | 2 新建Plant(Single)节点 | 3 往根节点中添加叶节点 | 4 查看树型结构 | 0]");
             choice = sc.next();
-            if(choice.equals("1")) {
+            if (choice.equals("1")) {
                 createGroup();
-            }
-            else if(choice.equals("2")) {
+            } else if (choice.equals("2")) {
                 createPanel();
-            }
-            else if(choice.equals("3")) {
+            } else if (choice.equals("3")) {
                 addLeaf();
-            }
-            else if(choice.equals("4")) {
+            } else if (choice.equals("4")) {
                 showLeaf();
-            }
-            else if(choice.equals("5")) {
+            } else if (choice.equals("5")) {
                 break;
-            }
-            else {
+            } else {
                 System.out.println("Invalid Input, Please input again.\n");
             }
         }

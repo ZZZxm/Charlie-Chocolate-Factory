@@ -1,11 +1,11 @@
 package test.DesignPatternTest;
 
-
 import team.charliechocolatefactory.scene.decorator.*;
 import team.charliechocolatefactory.scene.publicarea.ExhibitionRoom;
 import team.charliechocolatefactory.scene.publicarea.ExperienceRoom;
 
 import java.util.Scanner;
+
 /**
  * @author TT
  * @project chocolateFactory
@@ -14,32 +14,30 @@ import java.util.Scanner;
  * @date 2020/11/24 19:55
  */
 public class DecoratorTest {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         System.out.println("—————————————-------------------------------------———— Test[Decorator]Pattern —————————————-------------------------------------————");
         System.out.println("please choose the residence you want to build:");
         System.out.println("**              1 --- villa                 **");
         System.out.println("**              2 --- flat                  **");
-        Residence residence ;
+        Residence residence;
         int i;
-        while(true) {
+        while (true) {
             try {
-                Scanner reader=new Scanner(System.in);
+                Scanner reader = new Scanner(System.in);
                 i = reader.nextInt();
                 if (i == 1) {
-                    /**
+                    /*
                      * create a villa without decorations
                      */
                     residence = new Villa();
                     break;
-                }
-                else if (i == 2) {
-                    /**
+                } else if (i == 2) {
+                    /*
                      * create a flat without decorations
                      */
                     residence = new Flat();
                     break;
-                }
-                else{
+                } else {
                     System.out.println("Invalid Input, Please input again.\n");
                 }
             } catch (Exception e) {
@@ -47,7 +45,7 @@ public class DecoratorTest {
             }
         }
 
-        while(true){
+        while (true) {
             try {
                 System.out.println("--------------------Choose options------------------");
                 System.out.println("**      1 --- Add an fire hydrant                 **");
@@ -57,37 +55,32 @@ public class DecoratorTest {
                 System.out.println("**      5 --- Exit                                **");
                 System.out.println("----------------------------------------------------");
 //                System.out.print("请选择操作[1 增加一个消防栓 | 2 增加一个中央空调 | 3 增加一个监视器 | 4 显示建筑当前造价 | 5 退出]");
-                Scanner reader=new Scanner(System.in);
+                Scanner reader = new Scanner(System.in);
                 i = reader.nextInt();
-                if(i == 1){
-                    /**
+                if (i == 1) {
+                    /*
                      * add an fire hydrant
                      */
                     residence = new FireHydrant(residence);
-                }
-                else if(i == 2){
-                    /**
+                } else if (i == 2) {
+                    /*
                      * add a central air condition
                      */
                     residence = new CentralAirCondition(residence);
-                }
-                else if(i == 3){
-                    /**
+                } else if (i == 3) {
+                    /*
                      * add a monitor
                      */
                     residence = new Monitor(residence);
-                }
-                else if(i == 4){
-                    /**
+                } else if (i == 4) {
+                    /*
                      * show the current price of the house
                      */
                     System.out.print(residence.getDescription());
                     System.out.println("，the price is" + residence.getCost());
-                }
-                else if(i == 5){
+                } else if (i == 5) {
                     break;
-                }
-                else{
+                } else {
                     System.out.print("Invalid Input, Please input again.\n");
                 }
             } catch (Exception e) {
