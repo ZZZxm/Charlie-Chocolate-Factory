@@ -21,9 +21,10 @@ public class Warehouse extends ManufacturingArea {
     protected HashMap<String, Integer> productionAmount;
 
     public Warehouse(String location, double cost, double area) {
-        super(location, cost, area, Manager.warehouseManager);
-        Manager.warehouseManager.addDepartment(this);
-        GeneralManager.getInstance().addManager(Manager.warehouseManager);
+        super(location, cost, area, Manager.getWarehouseManager());
+        setManager(Manager.getWarehouseManager());
+        Manager.getWarehouseManager().addDepartment(this);
+
         materialAmount = new HashMap<String, Double>();
         productionAmount = new HashMap<String, Integer>();
     }
