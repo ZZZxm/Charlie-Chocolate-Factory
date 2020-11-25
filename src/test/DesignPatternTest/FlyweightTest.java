@@ -5,8 +5,6 @@ import team.charliechocolatefactory.product.chocolateProduct.chocolatemix.*;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-import org.graalvm.compiler.lir.StandardOp.NullCheck;
-import jdk.internal.joptsimple.internal.Classes;
 
 /**
  * @project chocolateFactory

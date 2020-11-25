@@ -25,7 +25,7 @@ public class CallbackTest {
                 + "*** 0. Quit                                                         ***\n"
                 + "*** 1. Find the Loaction of Scene(s) Which Cost More Than 100       ***\n"
                 + "*** 2. Find the Loaction of Scene(s) Which Are Lagerer Than 100 m^2 ***\n"
-                + "*** 3. Find the Loaction of Scene(s) Containing \"O\"                 ***\n"
+                + "*** 3. Find the Loaction of Scene(s) Containing \"O\"               ***\n"
                 + "***                                                                 ***\n"
                 + "***********************************************************************\n";
 

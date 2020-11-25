@@ -1,11 +1,11 @@
 package test.DesignPatternTest;
 
+import team.charliechocolatefactory.factory.support.SecurityCheckTask;
 import team.charliechocolatefactory.person.Person;
 import team.charliechocolatefactory.person.staff.Guard;
 import team.charliechocolatefactory.product.Product;
 import team.charliechocolatefactory.scene.publicarea.ExperienceRoom;
 import team.charliechocolatefactory.scene.publicarea.ExhibitionRoom;
-import team.charliechocolatefactory.supplement.facade.SecurityCheckTask;
 import team.charliechocolatefactory.machine.Machine;
 
 import java.util.ArrayList;
