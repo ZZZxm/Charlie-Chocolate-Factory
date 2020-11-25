@@ -16,4 +16,9 @@ public class PackagedState extends ProductState {
         product.setState(new StoriedState());
         System.out.println("From packaged state to storied state. The product is stored.");
     }
+
+    @Override
+    public String toString() {
+        return "packaged state";
+    }
 }

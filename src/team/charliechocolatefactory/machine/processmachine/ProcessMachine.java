@@ -18,7 +18,7 @@ public abstract class ProcessMachine extends Machine {
     /**
      * ProcessMachine's state
      */
-    public void ProcessMachineState(){
+    public void ProcessMachineState() {
         Context context = new Context();
         context.setProcessMachineState(new StoppingState());
         context.open();
@@ -28,9 +28,8 @@ public abstract class ProcessMachine extends Machine {
     }
 
 
-    public ProcessMachine(String type,String machineNum,double lifeYear,double lossCoefficient,int maxCapacity)
-    {
-        super(type,machineNum,lifeYear,lossCoefficient,maxCapacity);
+    public ProcessMachine(String type, String machineNum, double lifeYear, double lossCoefficient, int maxCapacity) {
+        super(type, machineNum, lifeYear, lossCoefficient, maxCapacity);
     }
 
     public ProcessMachine(String type, String machineNum, double age, double lifeYear, double lossCoefficient, int maxCapacity) {

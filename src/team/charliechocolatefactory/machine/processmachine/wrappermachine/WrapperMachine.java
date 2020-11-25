@@ -16,6 +16,10 @@ public class WrapperMachine extends ProcessMachine {
     // wrapping strategy
     private WrapStrategy strategy;
 
+    public WrapperMachine(String type, String machineNum) {
+        this(type,machineNum,10.0,0.5,10);
+    }
+
     public WrapperMachine(String type, String machineNum, double lifeYear, double lossCoefficient, int maxCapacity) {
         super(type, machineNum, lifeYear, lossCoefficient, maxCapacity);
     }

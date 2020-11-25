@@ -19,7 +19,7 @@ public class WarehouseClient {
 
     public WarehouseClient(WarehouseDelegate warehouseDelegate) {
         this.warehouseDelegate = warehouseDelegate;
-        showServiceList();
+        // showServiceList();
     }
 
     /**
