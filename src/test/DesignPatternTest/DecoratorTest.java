@@ -49,6 +49,7 @@ public class DecoratorTest {
 
         while(true){
             try {
+                System.out.println("");
                 System.out.println("--------------------Choose options------------------");
                 System.out.println("**      1 --- Add an fire hydrant                 **");
                 System.out.println("**      2 --- Add a central air condition         **");
@@ -82,7 +83,7 @@ public class DecoratorTest {
                      * show the current price of the house
                      */
                     System.out.print(residence.getDescription());
-                    System.out.println("，the price is" + residence.getCost());
+                    System.out.println("，the price is " + residence.getCost());
                 }
                 else if(i == 5){
                     break;
