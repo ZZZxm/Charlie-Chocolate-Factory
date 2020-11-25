@@ -13,22 +13,31 @@ import java.util.List;
 public class QualityInspectionPanelGroup extends QualityTestSystem {
     private List<QualityTestSystem> succulents = new ArrayList<QualityTestSystem>();
 
+    public QualityInspectionPanelGroup(String species){
+        super(species);
+    }
     public QualityInspectionPanelGroup(String type, String machineNum, List<QualityTestSystem> succulents) {
         super(type, machineNum);
         this.succulents = succulents;
     }
 
-    @Override
-    protected void add(QualityTestSystem qualityTestSystem) {
 
+    @Override
+    public void add(QualityTestSystem qualityTestSystem){
+        succulents.add(qualityTestSystem);
     }
+
+//    @Override
+//    public void add(QualityTestSystem qualityTestSystem) {
+//
+//    }
 
     @Override
     public void show(int depth) {
         for (int i = 0; i <= depth; i++) {
             System.out.print("-");
         }
-        System.out.println(this.getSpecies() + " Cluster:");
+        System.out.println("Group"+this.getSpecies() );
         for (QualityTestSystem suc : succulents) {
             suc.show(depth + 2);
         }

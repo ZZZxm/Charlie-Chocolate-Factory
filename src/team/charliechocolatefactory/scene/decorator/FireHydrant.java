@@ -16,7 +16,7 @@ public class FireHydrant extends ResidenceDecorator {
 
     public FireHydrant(Residence r){
         super(r);
-        System.out.println("添加一个消防栓");
+        System.out.println("A fire hydrant has been added");
     }
 
     @Override
@@ -31,12 +31,12 @@ public class FireHydrant extends ResidenceDecorator {
 
     @Override
     public String getDescription() {
-        return residence.getDescription() + "，加了一个红外报警器";
+        return residence.getDescription() + "，has added a fire hydrant";
     }
 
     @Override
     public String toString() {
-        return "class InfraredAlarm extends ResidenceDecorator";
+        return "class FireHydrant extends ResidenceDecorator";
     }
 }
 

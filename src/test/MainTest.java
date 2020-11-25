@@ -84,10 +84,10 @@ public class MainTest {
                     CommandTest.main(new String[]{});
                     break;
                 case 7:
-                    //CompositeTest.main(new String[]{});
+                    CompositeTest.main(new String[]{});
                     break;
                 case 8:
-                    //DecoratorTest.main(new String[]{});
+                    DecoratorTest.main(new String[]{});
                     break;
                 case 9:
                     FacadeTest.main(new String[]{});
@@ -118,6 +118,7 @@ public class MainTest {
                     break;
                 case 18:
                     //ProxyTest.main(new String[]{});
+                    ProxyTest.main(new String[]{});
                     break;
                 case 19:
                     SingletonTest.main(new String[]{});

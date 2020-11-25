@@ -17,7 +17,7 @@ public class Monitor extends ResidenceDecorator {
 
     public Monitor(Residence r) {
         super(r);
-        System.out.println("添加一个监视器");
+        System.out.println("A monitor has been added");
     }
 
     @Override
@@ -32,7 +32,7 @@ public class Monitor extends ResidenceDecorator {
 
     @Override
     public String getDescription() {
-        return residence.getDescription() + "，加了一个监视器";
+        return residence.getDescription() + "，has added a monitor";
     }
 
     @Override

@@ -43,6 +43,11 @@ public abstract class Machine {
     //the degree of machine failure
     protected int breakLevel = 0;
 
+     private String machineType;
+    public Machine(String type) {
+        this.machineType = type;
+
+    }
     public Machine(String type, String machineNum) {
         this.type = type;
         this.machineNum = machineNum;
