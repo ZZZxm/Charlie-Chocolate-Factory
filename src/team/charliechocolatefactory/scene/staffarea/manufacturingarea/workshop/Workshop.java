@@ -3,7 +3,6 @@ package team.charliechocolatefactory.scene.staffarea.manufacturingarea.workshop;
 import team.charliechocolatefactory.machine.processmachine.productmachine.ProductMachine;
 import team.charliechocolatefactory.person.staff.Manager;
 import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
-import team.charliechocolatefactory.scene.SceneNameConst;
 import team.charliechocolatefactory.scene.staffarea.manufacturingarea.ManufacturingArea;
 
 /**
@@ -54,16 +53,14 @@ public abstract class Workshop extends ManufacturingArea {
     /**
      * produce product 1 of the production family: Chocolate
      *
-     * @return a int
      */
-    public abstract int produceChocolate();
+    public abstract void produceChocolate();
 
     /**
      * produce product 2 of the production family: ChocolateCookie
      *
-     * @return a int
      */
-    public abstract int produceChocolateCookie();
+    public abstract void produceChocolateCookie();
 
 
 }

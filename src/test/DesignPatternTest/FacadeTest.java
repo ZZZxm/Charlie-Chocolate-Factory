@@ -20,18 +20,18 @@ import java.util.Scanner;
  * @date 2020/11/23 14：10
  */
 public class FacadeTest {
-    static public void facadeTest(){
+    static public void facadeTest() {
         /*
          * create two ExhibitionRooms
          */
         List<ExhibitionRoom> exhibitionRoomList = new ArrayList<ExhibitionRoom>();
-        ExhibitionRoom exhibitionRoom1=new ExhibitionRoom("area1",100,100,100);
-        ExhibitionRoom exhibitionRoom2=new ExhibitionRoom("area2",100,100,100);
+        ExhibitionRoom exhibitionRoom1 = new ExhibitionRoom("area1", 100, 100, 100);
+        ExhibitionRoom exhibitionRoom2 = new ExhibitionRoom("area2", 100, 100, 100);
         exhibitionRoom1.setExhRoomNumber(1);
         exhibitionRoom2.setExhRoomNumber(2);
-        for(int i=0;i<10;i++){
-            exhibitionRoom1.addExhibits("chocolate made in 201"+i);
-            exhibitionRoom2.addExhibits("tools used in 198"+i);
+        for (int i = 0; i < 10; i++) {
+            exhibitionRoom1.addExhibits("chocolate made in 201" + i);
+            exhibitionRoom2.addExhibits("tools used in 198" + i);
         }
         exhibitionRoomList.add(exhibitionRoom1);
         exhibitionRoomList.add(exhibitionRoom2);
@@ -40,8 +40,8 @@ public class FacadeTest {
          * create two ExperienceRooms
          */
         List<ExperienceRoom> experienceRoomList = new ArrayList<ExperienceRoom>();
-        ExperienceRoom experienceRoom1=new ExperienceRoom("area3",100,100,100);
-        ExperienceRoom experienceRoom2=new ExperienceRoom("area4",100,100,100);
+        ExperienceRoom experienceRoom1 = new ExperienceRoom("area3", 100, 100, 100);
+        ExperienceRoom experienceRoom2 = new ExperienceRoom("area4", 100, 100, 100);
         experienceRoom1.setExpRoomNumber(1);
         experienceRoom2.setExpRoomNumber(2);
         experienceRoomList.add(experienceRoom1);
@@ -51,19 +51,19 @@ public class FacadeTest {
          * create 2 machines
          */
         List<Machine> machineList = new ArrayList<Machine>();
-        Machine productionMachine =new Machine("PR","101"){
+        Machine productionMachine = new Machine("PR", "101") {
             @Override
             protected int work(Product product) {
                 return 0;
             }
         };
-        Machine packingMachine = new Machine("PA","202"){
+        Machine packingMachine = new Machine("PA", "202") {
             @Override
             protected int work(Product product) {
                 return 0;
             }
         };
-        Machine transportMachine = new Machine("TR","303"){
+        Machine transportMachine = new Machine("TR", "303") {
             @Override
             protected int work(Product product) {
                 return 0;
@@ -73,12 +73,12 @@ public class FacadeTest {
         machineList.add(packingMachine);
         machineList.add(transportMachine);
 
-        Guard guard=new Guard("Mike",25, Person.Sex.MALE,1000);
+        Guard guard = new Guard("Mike", 25, Person.Sex.MALE, 1000);
 
         /*
          * assign a task to the guard
          */
-        SecurityCheckTask securityCheckTask=new SecurityCheckTask(exhibitionRoomList,experienceRoomList,machineList);
+        SecurityCheckTask securityCheckTask = new SecurityCheckTask(exhibitionRoomList, experienceRoomList, machineList);
         guard.setSecurityCheckTask(securityCheckTask);
 
         System.out.println("");
@@ -89,24 +89,24 @@ public class FacadeTest {
         System.out.println("***********************************************************************");
 
         int cmd;
-        while(true){
-            try{
+        while (true) {
+            try {
                 System.out.println("");
                 System.out.println("请指定警卫将要进行的安全检查工作： 1.检查公共区域  2.检查机器安全  3.汇报检查工作情况  4.退出");
                 Scanner scanner = new Scanner(System.in);
-                cmd=scanner.nextInt();
-                if(cmd==1) {
+                cmd = scanner.nextInt();
+                if (cmd == 1) {
                     guard.checkRoomSecurity();
-                } else if(cmd==2) {
+                } else if (cmd == 2) {
                     guard.checkMachineSecurity();
-                } else if(cmd==3) {
+                } else if (cmd == 3) {
                     guard.report();
-                } else if(cmd==4) {
+                } else if (cmd == 4) {
                     break;
                 } else {
                     System.out.println("输入指令无效，请重新输入。");
                 }
-                }catch(Exception e) {
+            } catch (Exception e) {
                 System.out.println("输入指令无效，请重新输入。");
             }
         }
@@ -114,7 +114,7 @@ public class FacadeTest {
     }
 
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         System.out.println("—————————————-------------------------------------———— Test[Facade]Pattern —————————————-------------------------------------————");
         System.out.println("Initiating System ……");
 

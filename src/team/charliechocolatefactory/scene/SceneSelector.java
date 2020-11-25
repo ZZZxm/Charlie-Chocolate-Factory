@@ -23,5 +23,6 @@ public class SceneSelector {
     }
 
     private SceneSelector() {
+
     }
 }

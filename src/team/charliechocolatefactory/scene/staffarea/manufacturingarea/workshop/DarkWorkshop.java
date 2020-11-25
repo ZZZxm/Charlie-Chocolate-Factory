@@ -22,25 +22,23 @@ public class DarkWorkshop extends Workshop {
     }
 
     @Override
-    public int produceChocolate() {
+    public void produceChocolate() {
         int outNum = productMachine.run(new DarkChocolate());
         if (outNum == 0) {
             System.out.println("Failing producing DarkChocolate!");
         } else {
-            System.out.println("Successfully producing " + outNum + " DarkChocolate!");
+            System.out.println("Successfully producing " + outNum + " DarkChocolate!\n");
         }
-        return outNum;
     }
 
     @Override
-    public int produceChocolateCookie() {
+    public void produceChocolateCookie() {
         int outNum = productMachine.run(new ChocolateCookie(ChocolateCookie.Shape.CAT));
         if (outNum == 0) {
             System.out.println("Failing producing ChocolateCookie in the shape of cat!");
         } else {
-            System.out.println("Successfully producing " + outNum + " ChocolateCookie in the shape of cat!");
+            System.out.println("Successfully producing " + outNum + " ChocolateCookie in the shape of cat!\n");
         }
-        return outNum;
     }
 
     @Override

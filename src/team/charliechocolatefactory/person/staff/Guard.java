@@ -17,6 +17,7 @@ import java.util.Observable;
 public class Guard extends Staff {
 
     public String identity = "guard";
+
     private SecurityCheckTask securityCheckTask;
 
     public Guard(String name, int age, Sex sex, int salary, StaffArea workingArea) {

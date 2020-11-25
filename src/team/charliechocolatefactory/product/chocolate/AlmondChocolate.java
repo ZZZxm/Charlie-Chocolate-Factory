@@ -30,6 +30,11 @@ public class AlmondChocolate extends Chocolate {
     }
 
     @Override
+    public String getNameWithSandwich() {
+        return null;
+    }
+
+    @Override
     protected void initIngredientList() {
 
     }
