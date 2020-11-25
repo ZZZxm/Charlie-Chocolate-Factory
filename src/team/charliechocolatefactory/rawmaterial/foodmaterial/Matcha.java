@@ -16,7 +16,7 @@ public class Matcha extends FoodMaterial {
      * This ctor sets state to POWDER.
      *
      * @param initialQuant         initial quantity
-     * @param timeBeforeExpiration initial time to expire
+     * @param initialExpireTime initial time to expire
      */
     public Matcha(double initialQuant, double initialExpireTime) {
         super(initialQuant, initialExpireTime, State.POWDER);
@@ -35,7 +35,7 @@ public class Matcha extends FoodMaterial {
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
+    public Object clone() throws CloneNotSupportedException {
         System.out.println("Successfully copy matcha!");
         return (Matcha) super.clone();
     }

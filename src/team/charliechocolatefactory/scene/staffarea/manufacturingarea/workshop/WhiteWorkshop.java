@@ -3,6 +3,7 @@ package team.charliechocolatefactory.scene.staffarea.manufacturingarea.workshop;
 import team.charliechocolatefactory.machine.processmachine.productmachine.BasicProductMachine;
 import team.charliechocolatefactory.product.chocolate.WhiteChocolate;
 import team.charliechocolatefactory.product.chocolateProduct.ChocolateCookie;
+import team.charliechocolatefactory.scene.SceneNameConst;
 
 /**
  * @author Yuan.Cai
@@ -21,28 +22,27 @@ public class WhiteWorkshop extends Workshop {
     }
 
     @Override
-    public int produceChocolate() {
+    public void produceChocolate() {
         int outNum = productMachine.run(new WhiteChocolate());
         if (outNum == 0) {
             System.out.println("Failing producing WhiteChocolate!");
         } else {
-            System.out.println("Successfully producing " + outNum + " WhiteChocolate!");
+            System.out.println("Successfully producing " + outNum + " WhiteChocolate!\n");
         }
-        return outNum;
     }
 
     @Override
-    public int produceChocolateCookie() {
+    public void produceChocolateCookie() {
         int outNum = productMachine.run(new ChocolateCookie(ChocolateCookie.Shape.DOG));
         if (outNum == 0) {
             System.out.println("Failing producing ChocolateCookie in the shape of dog!");
         } else {
-            System.out.println("Successfully producing " + outNum + " ChocolateCookie in the shape of dog!");
+            System.out.println("Successfully producing " + outNum + " ChocolateCookie in the shape of dog!\n");
         }
-        return outNum;
     }
 
+    @Override
     public String toString() {
-        return "class WhiteWorkshop extends Workshop";
+        return SceneNameConst.WHITE_WORKSHOP;
     }
 }

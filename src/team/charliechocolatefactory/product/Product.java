@@ -3,8 +3,13 @@ package team.charliechocolatefactory.product;
 import team.charliechocolatefactory.machine.processmachine.ProcessMachine;
 import team.charliechocolatefactory.machine.processmachine.productmachine.BasicProductMachine;
 import team.charliechocolatefactory.machine.processmachine.wrappermachine.WrapperMachine;
+import team.charliechocolatefactory.product.memento.ProductMemento;
+import team.charliechocolatefactory.product.state.PackagedState;
+import team.charliechocolatefactory.product.state.ProducingState;
+import team.charliechocolatefactory.product.state.ProductState;
 import team.charliechocolatefactory.rawmaterial.packagematerial.PackageMaterial;
 import team.charliechocolatefactory.rawmaterial.RawMaterial;
+import team.charliechocolatefactory.scene.staffarea.manufacturingarea.warehouse.Warehouse;
 
 import java.util.ArrayList;
 
@@ -28,17 +33,8 @@ public abstract class Product {
     protected int weight; // weight of single item, in gram
 
     public ProcessMachine produceMachine, wrapperMachine;
-    /**
-     * 0 -> still producing
-     * 1 -> produced but un-packaged
-     * 2 -> packaging
-     * 3 -> packaged
-     * 4 -> storied
-     * 5 -> loading
-     * 6 -> delivering
-     * ...
-     */
-    protected int state;
+
+    protected ProductState state;
 
     protected PackageMaterial pack;
 
@@ -54,11 +50,11 @@ public abstract class Product {
         this.productName = name;
         this.shelfLife = shelfLife;
         this.producedDate = null;
-        this.state = 0;
+        this.state = new ProducingState();
         this.weight = weight;
         this.ingredientList = new ArrayList<RawMaterial>();
-        this.produceMachine = new BasicProductMachine("PR", "PR220");
-        this.wrapperMachine = new WrapperMachine("PA", "PA118", 40, 1, 500);
+        this.produceMachine = new BasicProductMachine("PR", "220");
+        this.wrapperMachine = new WrapperMachine("PA", "118", 40, 1, 500);
     }
 
 // methods
@@ -68,7 +64,6 @@ public abstract class Product {
      */
     protected void setName(String name) {
         this.productName = name;
-        return;
     }
 
     /**
@@ -83,15 +78,19 @@ public abstract class Product {
     /**
      * @return the state of the product
      */
-    public int getState() {
+    public ProductState getState() {
         return state;
+    }
+
+    public void setState(ProductState state) {
+        this.state = state;
     }
 
     /**
      * this product is in the next state.
      */
     public void gotoNextState() {
-        this.state++;
+        state.gotoNextState(this);
     }
 
     /**
@@ -119,7 +118,6 @@ public abstract class Product {
      */
     protected void setShelfLife(int shelfLife) {
         this.shelfLife = shelfLife;
-        return;
     }
 
     /**
@@ -135,9 +133,8 @@ public abstract class Product {
      *
      * @param weight
      */
-    protected void setWeight(int weight) {
+    public void setWeight(int weight) {
         this.weight = weight;
-        return;
     }
 
     /**
@@ -156,6 +153,14 @@ public abstract class Product {
         this.pack = pack;
     }
 
+    public void setWrapperMachine(ProcessMachine wrapperMachine) {
+        this.wrapperMachine = wrapperMachine;
+    }
+
+    public void setProduceMachine(ProcessMachine produceMachine) {
+        this.produceMachine = produceMachine;
+    }
+
     /**
      * produce the product
      */
@@ -167,9 +172,33 @@ public abstract class Product {
         this.wrapperMachine.process(this, 1);
     }
 
+    public void storing() {
+        if (!(this.state instanceof PackagedState)) {
+            System.out.println("The product has not been packaged!");
+            return;
+        }
+        System.out.println("Transporting " + getName() + " to the warehouse.");
+        this.gotoNextState();
+    }
+
     /**
      * initialize the ingredient list of the product
      */
     protected abstract void initIngredientList();
 
+    /**
+     * for design pattern --- Memento
+     * @return a new product memento
+     */
+    public ProductMemento createMemento() {
+        return new ProductMemento(this.weight);
+    }
+
+    /**
+     * restore param from memento
+     * @param memento memento that store history messages of the product
+     */
+    public void restoreMemento(ProductMemento memento) {
+        this.weight = memento.getWeight();
+    }
 }

@@ -8,7 +8,6 @@ import team.charliechocolatefactory.scene.Scene;
 import team.charliechocolatefactory.scene.staffarea.StaffArea;
 
 import java.util.ArrayList;
-import java.util.Observable;
 
 /**
  * @author Brian.Z
@@ -20,15 +19,17 @@ import java.util.Observable;
 public class Manager extends Staff {
 
     public String identity = "manager";
-    public ArrayList<StaffArea> departmentList;
-    public static Manager diningRoomManager;
-    public static Manager officeManager;
-    public static Manager workShopManager;
-    public static Manager warehouseManager;
+    private ArrayList<StaffArea> departmentList;
+    private static Manager diningRoomManager;
+    private static Manager officeManager;
+    private static Manager workShopManager;
+    private static Manager warehouseManager;
 
 
     protected Manager(String name, int age, Sex sex, int salary) {
         super(name, age, sex, salary, null);
+        departmentList = new ArrayList<StaffArea>();
+
         diningRoomManager = null;
         officeManager = null;
         workShopManager = null;
@@ -40,9 +41,10 @@ public class Manager extends Staff {
      *
      * @return Manager
      */
-    public Manager getDiningRoomManager() {
+    public static Manager getDiningRoomManager() {
         if (diningRoomManager == null) {
             diningRoomManager = new Manager("diningRoomManager", 25, Sex.FEMALE, 500);
+            System.out.println("Here is our dining room manager.");
         }
         return diningRoomManager;
     }
@@ -52,9 +54,10 @@ public class Manager extends Staff {
      *
      * @return Manager
      */
-    public Manager getOfficeManager() {
+    public static Manager getOfficeManager() {
         if (officeManager == null) {
             officeManager = new Manager("officeManager", 28, Sex.FEMALE, 700);
+            System.out.println("Here is our office manager.");
         }
         return officeManager;
     }
@@ -64,9 +67,10 @@ public class Manager extends Staff {
      *
      * @return
      */
-    public Manager getWorkShopManager() {
+    public static Manager getWorkShopManager() {
         if (workShopManager == null) {
             workShopManager = new Manager("workShopManager", 30, Sex.FEMALE, 800);
+            System.out.println("Here is our workshop manager.");
         }
         return workShopManager;
     }
@@ -76,11 +80,33 @@ public class Manager extends Staff {
      *
      * @return
      */
-    public Manager getWarehouseManager() {
+    public static Manager getWarehouseManager() {
         if (warehouseManager == null) {
             warehouseManager = new Manager("warehouseManager", 28, Sex.MALE, 500);
+            System.out.println("Here is our warehouse manager.");
         }
         return warehouseManager;
+    }
+
+    /**
+     *
+     * @param joinStr
+     * @return
+     */
+    public String getDepartmentListName(String joinStr) {
+        ArrayList<String> strList = new ArrayList<String>();
+        for (Scene obj: departmentList) {
+            strList.add(obj.toString());
+        }
+        return String.join(joinStr, strList);
+    }
+
+    /**
+     *
+     * @return
+     */
+    public String getDepartmentListName() {
+        return getDepartmentListName(", ");
     }
 
     /**
@@ -93,6 +119,15 @@ public class Manager extends Staff {
     }
 
     /**
+     * display information of the staff
+     */
+    @Override
+    public void display() {
+
+        System.out.printf("%-10s%-20s%-5d%-10s%s%n", id, name, age, sex, getDepartmentListName());
+    }
+
+    /**
      * Manager can hire workers for his/her department.
      *
      * @param name   name of the new worker
@@ -100,8 +135,8 @@ public class Manager extends Staff {
      * @param age    age of the new worker
      * @param salary salary of the new worker
      */
-    public void hireWorker(String name, Sex sex, int age, int salary) {
-        WorkerAddingController.addWorkerToScene(name, age, sex, salary, department);
+    public void hireWorker(String name, Sex sex, int age, int salary, StaffArea staffArea) {
+        WorkerAddingController.addWorkerToScene(name, age, sex, salary, staffArea);
     }
 
     /**
@@ -111,14 +146,15 @@ public class Manager extends Staff {
      * @return whether the action of fire is successful, the manager can only fire the workers in his/her department.
      */
     public boolean fireWorker(Worker worker) {
-        if (this.department == worker.getDepartment()) {
-            /* 删除员工 */
-            department.removeWorker(worker);
-            return true;
-        } else {
-            System.out.println("The worker is not responsible to the manager.");
-            return false;
+        for (StaffArea department : this.departmentList) {
+            if (department == worker.getDepartment()) {
+                /* 删除员工 */
+                department.removeWorker(worker);
+                return true;
+            }
         }
+        System.out.println("The worker is not responsible to the manager.");
+        return false;
     }
 
     /**
@@ -164,13 +200,19 @@ public class Manager extends Staff {
         return "class Manager extends Staff";
     }
 
+    /**
+     * receive feedback from workers
+     */
     public void receiveFeedBack() {
-        System.out.println(this.department.toString() + " manager received feed back.");
+        System.out.println(this.name + " received feed back.");
         reportToGeneralManager();
     }
 
+    /**
+     * send feedbacks to the general manager
+     */
     private void reportToGeneralManager() {
-        System.out.println(this.department.toString() + " manager report feed back things to the general manager.");
+        System.out.println(this.name + " report feed back things to the general manager.");
         GeneralManager.getInstance().receiveFeedBack();
     }
 
@@ -185,9 +227,16 @@ public class Manager extends Staff {
      */
     @Override
     public boolean HandleRequest(Message requestMessage) {
+        System.out.println(this.identity + " " + this.name + " is handling request.");
+        if (requestMessage.getMessageInfo().charAt(0) == 'M') {
+            System.out.println(this.identity + " " + this.name + " rejects the request.");
+            return false;
+        }
+        System.out.println(this.identity + " " + this.name + " approves the request.");
         if (successor != null) {
-            return HandleRequest(requestMessage);
+            return successor.HandleRequest(requestMessage);
         } else {
+            System.out.println("The request is eventually approved. The content of the message is: " + requestMessage.getMessageInfo());
             return true;
         }
     }

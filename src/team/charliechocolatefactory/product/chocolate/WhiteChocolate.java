@@ -36,6 +36,7 @@ public class WhiteChocolate extends Chocolate {
         super.ingredientList.add(new Sugar());
     }
 
+    @Override
     public String getNameWithSandwich() {
         return sandwich.getSandwich() + " WhiteChocolate";
     }

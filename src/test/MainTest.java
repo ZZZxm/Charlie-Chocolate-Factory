@@ -35,7 +35,7 @@ public class MainTest {
         System.out.println("               **            18 --- Proxy                     **");
         System.out.println("               **            19 --- Singleton                 **");
         System.out.println("               **            20 --- State                     **");
-        System.out.println("               **            21 --- StrategyTest              **");
+        System.out.println("               **            21 --- Strategy                  **");
         System.out.println("               **            22 --- Template Method           **");
         System.out.println("               **            23 --- Visitor                   **");
         System.out.println("               **            24 --- Business Delegate         **");
@@ -43,7 +43,8 @@ public class MainTest {
         System.out.println("               **            26 --- Extension                 **");
         System.out.println("               **            27 --- Filter                    **");
         System.out.println("               **            28 --- IOC                       **");
-        System.out.println("               **            29 --- Multipate                 **");
+        System.out.println("               **            29 --- Multiton                 **");
+        System.out.println("               **            30 --- Null Object               **");
         System.out.println("               -------------------------------------------------");
         System.out.print("               Which design pattern do you want to test? [0 to quit]: ");
     }
@@ -65,22 +66,22 @@ public class MainTest {
                     flag = false;
                     break;
                 case 1:
-                    //AbstractFactoryTest.main(new String[]{});
+                    AbstractFactoryTest.main(new String[]{});
                     break;
                 case 2:
-                    //AdapterTest.main(new String[]{});
+                    AdapterTest.main(new String[]{});
                     break;
                 case 3:
-                    //BridgeTest.main(new String[]{});
+                    BridgeTest.main(new String[]{});
                     break;
                 case 4:
-                    //BuilderTest.main(new String[]{});
+                    BuilderTest.main(new String[]{});
                     break;
                 case 5:
                    //ChainOfResponsibilityTest.main(new String[]{});
                     break;
                 case 6:
-                    //CommandTest.main(new String[]{});
+                    CommandTest.main(new String[]{});
                     break;
                 case 7:
                     //CompositeTest.main(new String[]{});
@@ -89,13 +90,13 @@ public class MainTest {
                     //DecoratorTest.main(new String[]{});
                     break;
                 case 9:
-                    //FacadeTest.main(new String[]{});
+                    FacadeTest.main(new String[]{});
                     break;
                 case 10:
-                    //FactoryMethodTest.main(new String[]{});
+                    FactoryMethodTest.main(new String[]{});
                     break;
                 case 11:
-                    //FlyweightTest.main(new String[]{});
+                    FlyweightTest.main(new String[]{});
                     break;
                 case 12:
                     //InterpreterTest.main(new String[]{});
@@ -104,16 +105,16 @@ public class MainTest {
                     //IteratorTest.main(new String[]{});
                     break;
                 case 14:
-                    //MediatorTest.main(new String[]{});
+                    MediatorTest.main(new String[]{});
                     break;
                 case 15:
-                    //MementoTest.main(new String[]{});
+                    MementoTest.main(new String[]{});
                     break;
                 case 16:
-                    //ObserverTest.main(new String[]{});
+                    ObserverTest.main(new String[]{});
                     break;
                 case 17:
-                    //PrototypeTest.main(new String[]{});
+                    PrototypeTest.main(new String[]{});
                     break;
                 case 18:
                     //ProxyTest.main(new String[]{});
@@ -122,7 +123,7 @@ public class MainTest {
                     SingletonTest.main(new String[]{});
                     break;
                 case 20:
-                    //StateTest.main(new String[]{});
+                    StateTest.main(new String[]{});
                     break;
                 case 21:
                     StrategyTest.main(new String[]{});
@@ -137,16 +138,16 @@ public class MainTest {
                     BusinessDelegateTest.main(new String[]{});
                     break;
                 case 25:
-                    //CopyOnWriteTest.main(new String[]{});
+                    COWTest.main(new String[]{});
                     break;
                 case 26:
-                    //ExtensionTest.main(new String[]{});
+                    ExtensionObjectsTest.main(new String[]{});
                     break;
                 case 27:
-                    //FilterTest.main(new String[]{});
+                    FilterTest.main(new String[]{});
                     break;
                 case 28:
-                    //MultipateTest.main(new String[]{});
+                    MultitionTest.main(new String[]{});
                     break;
                 default:
                     System.out.println("Invalid input!");

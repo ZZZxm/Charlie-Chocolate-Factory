@@ -1,7 +1,10 @@
 package team.charliechocolatefactory.scene.staffarea;
 
+import team.charliechocolatefactory.machine.Machine;
+import team.charliechocolatefactory.person.GeneralManager;
 import team.charliechocolatefactory.person.staff.Manager;
 import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
+import team.charliechocolatefactory.scene.SceneNameConst;
 
 /**
  * @author Y.C.Young
@@ -23,6 +26,7 @@ public class DiningRoom extends StaffArea {
     public DiningRoom(String location, double cost, double area) {
         super(location, cost, area, Manager.diningRoomManager);
         Manager.diningRoomManager.addDepartment(this);
+        GeneralManager.getInstance().addManager(Manager.diningRoomManager);
     }
 
     /**
@@ -30,7 +34,7 @@ public class DiningRoom extends StaffArea {
      */
     @Override
     public String toString() {
-        return "dining room";
+        return SceneNameConst.DINING_ROOM;
     }
 
     /**

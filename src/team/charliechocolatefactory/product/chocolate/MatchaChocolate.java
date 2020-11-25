@@ -59,6 +59,7 @@ public class MatchaChocolate extends Chocolate {
         super.ingredientList.add(new Matcha());
     }
 
+    @Override
     public String getNameWithSandwich() {
         return sandwich.getSandwich() + " MatchaChocolate";
     }

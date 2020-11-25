@@ -15,7 +15,12 @@ public class AugProductMachine implements MachineExtension {
     private BasicProductMachine productMachine;
 
     public AugProductMachine(BasicProductMachine productMachine) {
+
+        String name = productMachine.getMachineID();
+        System.out.println("Machine " + name + " has been set to produce.\n");
+        productMachine.setAimProcessNum(250);
         this.productMachine = productMachine;
+        System.out.println("The machine has been enhanced!");
     }
 
     /**
@@ -27,10 +32,16 @@ public class AugProductMachine implements MachineExtension {
      */
     @Override
     public int continueWork(int workNum, Product product) {
+        if(workNum<=1)
+        {
+            System.out.println("The machine must work more than once!");
+            return 0;
+        }
         int outNum = 0;
         for (int i = 0; i < workNum; ++i) {
             int output = productMachine.run(product);
-            System.out.println("Run" + i + ": the machine produced " + outNum + " products");
+            int n=i+1;
+            System.out.println("Run" + n + ": the machine produced " + output + " products");
             outNum = output + outNum;
             if (output == 0) break;
         }

@@ -12,7 +12,7 @@ import java.util.Date;
 public class HandmadeTool {
 
     private final long batchNumber;
-    private String description = "Defalut description.";
+    private String description = "Default description.";
     private int refCount = 0;
 
     /**
