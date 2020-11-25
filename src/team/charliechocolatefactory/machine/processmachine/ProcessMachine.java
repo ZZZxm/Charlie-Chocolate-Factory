@@ -28,6 +28,7 @@ public abstract class ProcessMachine extends Machine {
     }
 
 
+
     public ProcessMachine(String type,String machineNum,double lifeYear,double lossCoefficient,int maxCapacity)
     {
         super(type,machineNum,lifeYear,lossCoefficient,maxCapacity);
@@ -67,7 +68,9 @@ public abstract class ProcessMachine extends Machine {
      * @param productNum a int
      */
     public abstract void process(Product product, int productNum);
-
+    public ProcessMachine(String type) {
+        super(type);
+    }
     public String toString() {
         return "class ProcessMachine";
     }

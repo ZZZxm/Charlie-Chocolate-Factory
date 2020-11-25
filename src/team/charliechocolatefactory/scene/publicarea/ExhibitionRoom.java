@@ -34,9 +34,8 @@ public class ExhibitionRoom extends PublicArea {
         exhibitList = new ArrayList<String>();
     }
 
-    public ExhibitionRoom() {
-        super();
-    }
+
+
 
     /**
      * @return name of the scene as a String
