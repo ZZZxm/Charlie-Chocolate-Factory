@@ -34,12 +34,12 @@ public class CommandTest {
         System.out.println("");
 
         System.out.println("Firstly, we need to create a worker.");
-        Worker worker = new WorkshopWorker("worker", 18, Person.Sex.MALE, 10, null);
+        Worker worker = new WorkshopWorker("worker", 18, Person.Sex.MALE, 10);
 
         System.out.println("");
         System.out.println("*******************             Command Test        *******************");
         System.out.println("***                 1. produce some dark chocolate                  ***");
-        System.out.println("***                 2. produce chocolate ca                         ***");
+        System.out.println("***                 2. produce chocolate cake                       ***");
         System.out.println("***                 3. produce chocolate cookie                     ***");
         System.out.println("***                 4. produce chocolate ice cream                  ***");
         System.out.println("***********************************************************************");

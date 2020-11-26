@@ -11,8 +11,8 @@ import java.util.Scanner;
 /**
  * @author Zheng
  * @project chocolateFactory
- * @classname MultitionTest
- * @description MultitionTest
+ * @classname MultitonTest
+ * @description MultitonTest
  * @date 2020/11/22 15:49
  */
 public class MultitonTest {
@@ -28,7 +28,7 @@ public class MultitonTest {
         System.out.println("");
 
         System.out.println("");
-        System.out.println("******************* (Your Design Pattern Name) Test *******************");
+        System.out.println("***************************** Multiton Test ***************************");
         System.out.println("***                 1. get instance of dining room's manager        ***");
         System.out.println("***                 2. get instance of office's manager             ***");
         System.out.println("***                 3. get instance of workshop's manager           ***");

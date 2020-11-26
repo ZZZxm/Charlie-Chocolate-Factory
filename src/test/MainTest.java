@@ -181,7 +181,7 @@ public class MainTest {
                     //MonostateTest.main(new String[]{});
                     break;
                 case 35:
-                    MultitionTest.main(new String[]{});
+                    MultitonTest.main(new String[]{});
                     break;
                 case 36:
                     NullObjectTest.main(new String[]{});
