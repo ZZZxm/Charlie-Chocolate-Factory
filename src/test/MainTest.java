@@ -143,8 +143,10 @@ public class MainTest {
                     TemplateMethodTest.main(new String[]{});
                     break;
                 case 23:
-                    //VisitorTest.main(new String[]{});
+                    VisitorTest.main(new String[]{});
                     break;
+
+
                 case 24:
                     BusinessDelegateTest.main(new String[]{});
                     break;
@@ -170,10 +172,10 @@ public class MainTest {
                     FilterTest.main(new String[]{});
                     break;
                 case 32:
-                    //ImmutableTest.main(new String[]{});
+                    ImmutableTest.main(new String[]{});
                     break;
                 case 33:
-                    //IOCTest.main(new String[]{});
+                    IOCTest.main(new String[]{});
                     break;
                 case 34:
                     //MonostateTest.main(new String[]{});
