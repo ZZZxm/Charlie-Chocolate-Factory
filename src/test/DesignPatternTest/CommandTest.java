@@ -33,9 +33,11 @@ public class CommandTest {
         System.out.println("ProductMachine : process : Execute specific production process.");
         System.out.println("");
 
+        System.out.println("Firstly, we need to create a worker.");
+        Worker worker = new WorkshopWorker("worker", 18, Person.Sex.MALE, 10, null);
 
         System.out.println("");
-        System.out.println("******************* (Your Design Pattern Name) Test *******************");
+        System.out.println("*******************             Command Test        *******************");
         System.out.println("***                 1. produce some dark chocolate                  ***");
         System.out.println("***                 2. produce chocolate ca                         ***");
         System.out.println("***                 3. produce chocolate cookie                     ***");
@@ -47,14 +49,10 @@ public class CommandTest {
         int op;
         boolean flag = true;
 
-        System.out.println("Firstly, we need to create a worker.");
-        Worker worker = new WorkshopWorker("worker", 18, Person.Sex.MALE, 10, null);
-
         do {
             System.out.println("");
             System.out.print("Enter the order [0 to quit]:");
             op = input.nextInt();
-
 
             switch (op) {
                 case 0:

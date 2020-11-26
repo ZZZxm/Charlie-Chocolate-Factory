@@ -30,8 +30,15 @@ public class MediatorTest {
         System.out.println("Manager:dispatchTask():Manager dispatch the task that general manager dispatch to him to the office workers.");
         System.out.println("");
 
+        System.out.println("First,we need to create an office... ");
+        Office office=new Office();
+        System.out.println("Next,we should get the instance of the office manager...");
+        Manager officeManager=Manager.getOfficeManager();
 
-
+        System.out.println("Then ,office manager should hired some office workers... ");
+        officeManager.hireWorker("worker1",  Person.Sex.MALE, 18,10,office);
+        officeManager.hireWorker("worker2",  Person.Sex.FEMALE, 22,10,office);
+        officeManager.hireWorker("worker3",  Person.Sex.MALE, 20,10,office);
 
         System.out.println("");
         System.out.println("*******************                        Mediator Test                           *******************");
@@ -43,17 +50,6 @@ public class MediatorTest {
         Scanner input = new Scanner(System.in);
         int op;
         boolean flag = true;
-
-        System.out.println("First,we need to create an office... ");
-        Office office=new Office();
-        System.out.println("Next,we should get the instance of the office manager...");
-        Manager officeManager=Manager.getOfficeManager();
-
-        System.out.println("Then ,office manager should hired some office workers... ");
-        officeManager.hireWorker("worker1",  Person.Sex.MALE, 18,10,office);
-        officeManager.hireWorker("worker2",  Person.Sex.FEMALE, 22,10,office);
-        officeManager.hireWorker("worker3",  Person.Sex.MALE, 20,10,office);
-
 
         do {
             System.out.println("");
