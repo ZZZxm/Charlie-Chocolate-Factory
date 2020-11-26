@@ -147,7 +147,7 @@ public class MainTest {
                     FilterTest.main(new String[]{});
                     break;
                 case 28:
-                    MultitionTest.main(new String[]{});
+                    MultitonTest.main(new String[]{});
                     break;
                 default:
                     System.out.println("Invalid input!");
