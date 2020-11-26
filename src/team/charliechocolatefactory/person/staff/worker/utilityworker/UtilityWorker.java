@@ -22,6 +22,4 @@ public interface UtilityWorker {
     void visit(DiningRoom s);
 
     void visit(Office s);
-
-
 }

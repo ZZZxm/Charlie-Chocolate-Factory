@@ -23,9 +23,9 @@ public class CallbackTest {
                 + "*************************** Callback Test *****************************\n"
                 + "***                                                                 ***\n"
                 + "*** 0. Quit                                                         ***\n"
-                + "*** 1. Find the Loaction of Scene(s) Which Cost More Than 100       ***\n"
-                + "*** 2. Find the Loaction of Scene(s) Which Are Lagerer Than 100 m^2 ***\n"
-                + "*** 3. Find the Loaction of Scene(s) Containing \"O\"               ***\n"
+                + "*** 1. Find the Location of Scene(s) Which Cost More Than 100       ***\n"
+                + "*** 2. Find the Location of Scene(s) Which Are Lagerer Than 100 m^2 ***\n"
+                + "*** 3. Find the Location of Scene(s) Containing \"O\"                 ***\n"
                 + "***                                                                 ***\n"
                 + "***********************************************************************\n";
 
@@ -42,6 +42,7 @@ public class CallbackTest {
         scenes.add(new Warehouse("Warehouse A", 10000, 100));
         scenes.add(new Office("Office 101", 100, 100));
         scenes.add(new DiningRoom("Dining Room A", 1000, 1000));
+        System.out.println("");
         System.out.println("We created the following scenes:");
         System.out.println("Location         Cost        Area");
         System.out.println("---------------------------------");

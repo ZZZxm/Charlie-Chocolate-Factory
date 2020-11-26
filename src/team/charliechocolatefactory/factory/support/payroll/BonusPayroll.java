@@ -14,6 +14,7 @@ public class BonusPayroll extends Payroll {
     private int bonus;
 
     public BonusPayroll(int bonus) {
+        super();
         this.bonus = bonus;
     }
 

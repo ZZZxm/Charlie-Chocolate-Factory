@@ -128,7 +128,6 @@ public class MainTest {
                     PrototypeTest.main(new String[]{});
                     break;
                 case 18:
-                    //ProxyTest.main(new String[]{});
                     ProxyTest.main(new String[]{});
                     break;
                 case 19:

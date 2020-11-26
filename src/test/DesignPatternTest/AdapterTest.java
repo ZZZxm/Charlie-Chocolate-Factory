@@ -15,7 +15,7 @@ import java.util.Scanner;
  * @date 2020/11/23 13：30
  */
 public class AdapterTest {
-    static public void adapterTest() {
+    public static void adapterTest() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("");
         System.out.println("***************************   Adapter Test   **************************");

@@ -19,7 +19,7 @@ public abstract class Workshop extends ManufacturingArea {
 
 
     public Workshop() {
-        super();
+        this("Workshop", 10000, 100);
     }
 
     public Workshop(String location, double cost, double area) {

@@ -17,7 +17,11 @@ import java.util.List;
  */
 public abstract class Payroll {
 
-    protected List<Staff> staffList;
+    protected ArrayList<Staff> staffList;
+
+    protected Payroll() {
+        staffList = new ArrayList<Staff>();
+    }
 
     /**
      * add a staff into the payroll
@@ -25,6 +29,7 @@ public abstract class Payroll {
      */
     public void addStaff(Staff staff) {
         staffList.add(staff);
+        System.out.println("Add " + staff.getName() + " successfully.");
     }
 
     /**
@@ -34,6 +39,7 @@ public abstract class Payroll {
     public void addAllStaffs(StaffArea staffArea) {
         ArrayList<Worker> list = staffArea.getWorkerList();
         staffList.addAll(list);
+        System.out.println("Add all staffs in " + staffArea.toString() + " successfully.");
     }
 
     /**
@@ -42,6 +48,15 @@ public abstract class Payroll {
      */
     public void removeStaff(Staff staff) {
         staffList.remove(staff);
+    }
+
+    public void removeStaff(String name) {
+        if (staffList.removeIf(worker -> worker.getName().equals(name))) {
+            System.out.println("Remove " + name + " successfully.");
+        } else {
+            System.out.println(name + " is not in the staff list of this payroll.");
+        }
+
     }
 
     /**
