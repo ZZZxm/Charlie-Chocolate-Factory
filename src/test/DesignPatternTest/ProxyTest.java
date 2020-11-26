@@ -29,6 +29,7 @@ public class ProxyTest {
         List<PortableBatteryProxy> ProxyList = new ArrayList<PortableBatteryProxy>();
 
         while (true) {
+            System.out.println("");
             System.out.println("----------------Proxy Test---------------");
             System.out.println("**      1 --- Show all information     **");
             System.out.println("**      2 --- New a PortableBattery    **");
@@ -78,10 +79,7 @@ public class ProxyTest {
                         } else {
                             System.out.println("Invalid Input, Please input again.\n");
                         }
-                    } catch (ArrayIndexOutOfBoundsException e) {
-                        System.out.println("Invalid Input, Please input again.\n");
-                        System.out.println("");
-                    } catch (InputMismatchException e) {
+                    } catch (ArrayIndexOutOfBoundsException | InputMismatchException e) {
                         System.out.println("Invalid Input, Please input again.\n");
                         System.out.println("");
                     }
@@ -98,10 +96,7 @@ public class ProxyTest {
                         } else {
                             System.out.println("Invalid Input, Please input again.\n");
                         }
-                    } catch (ArrayIndexOutOfBoundsException e) {
-                        System.out.println("Invalid Input, Please input again.\n");
-                        System.out.println("");
-                    } catch (InputMismatchException e) {
+                    } catch (ArrayIndexOutOfBoundsException | InputMismatchException e) {
                         System.out.println("Invalid Input, Please input again.\n");
                         System.out.println("");
                     }
@@ -119,7 +114,7 @@ public class ProxyTest {
     }
 
     public static void main(String[] args) {
-        System.out.println("—————————————-------------------------------------———— 测试[Proxy]模式 —————————————-------------------------------------————");
+        System.out.println("—————————————-------------------------------------———— [Proxy] Test —————————————-------------------------------------————");
         System.out.println("PortableBattery : PortableBattery() : Inherited from Supply, create an instance of PortableBattery.");
         System.out.println("PortableBatteryProxy : PortableBatteryProxy() : Implements PortableBatterySubjects, create an instance of PortableBatteryProxy and bind it to an PortableBattery.");
         System.out.println("PortableBatteryProxy : take() : Implements PortableBatterySubjects, take the portableBattery through the proxy.");

@@ -70,6 +70,7 @@ public class Warehouse extends ManufacturingArea {
     public void addMaterial(String type, Double amount) {
         if (materialAmount.containsKey(type)) {
             materialAmount.put(type, amount + materialAmount.get(type));
+            System.out.println("Successfully add " + amount + " " + type + " in the warehouse.");
         } else {
             materialAmount.put(type, amount);
             System.out.println("Successfully add " + amount + " " + type + " in the warehouse.");

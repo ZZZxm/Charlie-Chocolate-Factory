@@ -28,11 +28,11 @@ public class PortableBatteryProxy implements PortableBatterySubject {
     }
 
     public void preTake() {
-        System.out.println("Doing preTake functions");
+        //System.out.println("Doing preTake functions");
     }
 
     public void postTake() {
-        System.out.println("Doing postTake functions");
+        //System.out.println("Doing postTake functions");
     }
 
     @Override
@@ -48,11 +48,11 @@ public class PortableBatteryProxy implements PortableBatterySubject {
     }
 
     public void preReturn() {
-        System.out.println("Doing preReturn functions");
+        //System.out.println("Doing preReturn functions");
     }
 
     public void postReturn() {
-        System.out.println("Doing postReturn functions");
+        //System.out.println("Doing postReturn functions");
     }
 
     public PortableBattery getPortableBatteryInstance() {

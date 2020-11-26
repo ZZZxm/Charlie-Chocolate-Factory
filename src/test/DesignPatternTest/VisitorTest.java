@@ -28,18 +28,13 @@ public class VisitorTest {
 
         System.out.println("");
         System.out.println("SceneStructure : addScene(): void : " +
-                "Add scenarios to our processing class..\n" +
-                "\n");
-        System.out.println("");
-
-        System.out.println("");
+                "Add scenarios to our processing class.");
         System.out.println("SceneStructure : accept(UtilityWorker worker): void : " +
-                "In different scenarios, different utiliyworker classes are executed to separate the specific scene from the scene operation.\n" +
-                "\n");
+                "In different scenarios, different utility worker classes are executed to separate the specific scene from the scene operation.");
         System.out.println("");
 
         System.out.println("");
-        System.out.println("******************* (Immutable patter) Test *******************");
+        System.out.println("*********************** Immutable patter Test *************************");
         System.out.println("***                 1. test cleaner                                 ***");
         System.out.println("***                 2. test maintenanceWorker                       ***");
         System.out.println("***                                                                 ***");

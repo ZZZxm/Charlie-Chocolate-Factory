@@ -28,18 +28,6 @@ public class TemplateMethodTest {
         System.out.println("TransportMachine : arrive(product: Product) : last step of work, loading a product.");
         System.out.println("");
 
-        System.out.println("");
-        System.out.println("************************* Template Method Test ************************");
-        System.out.println("***                 To transport chocolate cakes                    ***");
-        System.out.println("***                 1. Use a big truck                              ***");
-        System.out.println("***                 2. Use a van                                    ***");
-        System.out.println("***                 3. Use a small car                              ***");
-        System.out.println("***                                                                 ***");
-        System.out.println("***                 To carry people                                 ***");
-        System.out.println("***                 4. Use a small car                              ***");
-        System.out.println("***********************************************************************");
-        System.out.println("");
-
         Scanner input = new Scanner(System.in);
         int op;
         boolean flag = true;
@@ -49,6 +37,17 @@ public class TemplateMethodTest {
         ChocolateCake cakes = new ChocolateCake(1);
 
         do {
+            System.out.println("");
+            System.out.println("************************* Template Method Test ************************");
+            System.out.println("***                 To transport chocolate cakes                    ***");
+            System.out.println("***                 1. Use a big truck                              ***");
+            System.out.println("***                 2. Use a van                                    ***");
+            System.out.println("***                 3. Use a small car                              ***");
+            System.out.println("***                                                                 ***");
+            System.out.println("***                 To carry people                                 ***");
+            System.out.println("***                 4. Use a small car                              ***");
+            System.out.println("***********************************************************************");
+
             System.out.println("");
             System.out.print("Enter the order [0 to quit]:");
             op = input.nextInt();
@@ -79,7 +78,7 @@ public class TemplateMethodTest {
                     break;
                 }
                 case 4: {
-                    System.out.println("\nIt seems that small car can only take people. Let's try again!");
+                    System.out.println("\nIt seems that small car can only take people. Let's try!");
                     SmallCar smallCar = new SmallCar("TR", "104");
                     smallCar.work(null);
                     break;

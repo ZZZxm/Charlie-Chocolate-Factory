@@ -36,9 +36,6 @@ public class GeneralManager extends Person {
     public static GeneralManager getInstance() {
         if (instance == null) {
             instance = new GeneralManager("Young young", 20, Sex.MALE);
-            System.out.println("We didn't have a general manager yet. Now our general manager has taken over.");
-        } else {
-            System.out.println("Here is our general manager.");
         }
         return instance;
     }

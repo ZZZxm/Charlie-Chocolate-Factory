@@ -77,7 +77,7 @@ public class DecoratorTest {
                      * show the current price of the house
                      */
                     System.out.print(residence.getDescription());
-                    System.out.println("，the price is" + residence.getCost());
+                    System.out.println("，the price is " + residence.getCost());
                 } else if (i == 5) {
                     break;
                 } else {

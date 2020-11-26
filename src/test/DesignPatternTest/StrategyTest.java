@@ -63,7 +63,7 @@ public class StrategyTest {
                     flag = false;
                     break;
                 case 1: {
-                    System.out.println("\nUse a box to wrap the chocolate cake.");
+                    System.out.println("\nLet's use a box to wrap the chocolate cake.\n");
                     System.out.println("Create a chocolate cake...");
                     ChocolateCake chocolateCake = new ChocolateCake(1);
                     chocolateCake.setState(new ProducedState());// 假装生产完成了
@@ -72,7 +72,7 @@ public class StrategyTest {
                     break;
                 }
                 case 2: {
-                    System.out.println("\nUse a bag to wrap the chocolate cookie.");
+                    System.out.println("\nLet's use a bag to wrap the chocolate cookie.\n");
                     System.out.println("Create a chocolate cookie...");
                     ChocolateCookie chocolateCookie = new ChocolateCookie(ChocolateCookie.Shape.CAT);
                     chocolateCookie.setState(new ProducedState());
@@ -81,7 +81,7 @@ public class StrategyTest {
                     break;
                 }
                 case 3: {
-                    System.out.println("\nUse a cup to wrap the chocolate ice-cream.");
+                    System.out.println("\nLet's use a cup to wrap the chocolate ice-cream.\n");
                     System.out.println("Create a chocolate ice-cream...");
                     ChocolateIceCream chocolateIceCream = new ChocolateIceCream();
                     chocolateIceCream.setState(new ProducedState());
@@ -90,7 +90,7 @@ public class StrategyTest {
                     break;
                 }
                 case 4: {
-                    System.out.println("\nIf using a wrapper machine without setting its strategy...");
+                    System.out.println("\nIf using a wrapper machine without setting its strategy...\n");
                     WrapperMachine wrapperMachine2 = new WrapperMachine("WP", "102", 5.0, 0.1, 50);
                     DarkChocolate darkChocolate = new DarkChocolate();
                     wrapperMachine2.process(darkChocolate, 1);

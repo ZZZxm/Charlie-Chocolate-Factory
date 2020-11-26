@@ -25,7 +25,7 @@ public class DarkWorkshop extends Workshop {
     public void produceChocolate() {
         int outNum = productMachine.run(new DarkChocolate());
         if (outNum == 0) {
-            System.out.println("Failing producing DarkChocolate!");
+            System.out.println("Failing producing DarkChocolate!\n");
         } else {
             System.out.println("Successfully producing " + outNum + " DarkChocolate!\n");
         }
@@ -35,7 +35,7 @@ public class DarkWorkshop extends Workshop {
     public void produceChocolateCookie() {
         int outNum = productMachine.run(new ChocolateCookie(ChocolateCookie.Shape.CAT));
         if (outNum == 0) {
-            System.out.println("Failing producing ChocolateCookie in the shape of cat!");
+            System.out.println("Failing producing ChocolateCookie in the shape of cat!\n");
         } else {
             System.out.println("Successfully producing " + outNum + " ChocolateCookie in the shape of cat!\n");
         }

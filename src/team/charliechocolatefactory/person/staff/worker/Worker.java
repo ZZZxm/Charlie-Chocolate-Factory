@@ -26,7 +26,9 @@ public abstract class Worker extends Staff {
 
     public Worker(String name, int age, Sex sex, int salary, StaffArea department) {
         super(name, age, sex, salary, department);
-        department.addWorker(this);
+        if (department != null) {
+            department.addWorker(this);
+        }
 
         this.darkChocolate = new DarkChocolate();
         this.matchaChocolate = new MatchaChocolate();

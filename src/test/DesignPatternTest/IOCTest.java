@@ -12,8 +12,7 @@ import java.util.Scanner;
  * @author Y.C.Young, Zeus Lee
  * @project chocolateFactory
  * @classname IOCPatternTest
- * @description
- * By passing different staffareas, we create different workers in our workeraddingcontroller
+ * @description By passing different staffareas, we create different workers in our workeraddingcontroller
  * and inject them into our staffarea class to realize our IOC (dependency flipping) function
  * @date 2020/11/22 22:07
  */
@@ -29,12 +28,13 @@ public class IOCTest {
         System.out.println("");
 
         System.out.println("");
-        System.out.println("******************* (Immutable patter) Test *******************");
-        System.out.println("***                 1. init Office                                  ***");
-        System.out.println("***                 2. init DiningRoom                              ***");
-        System.out.println("***                 3. init Warehouse                               ***");
+        System.out.println("*************************** Immutable Test ****************************");
+        System.out.println("***                         1. Init Office                          ***");
+        System.out.println("***                         2. Init DiningRoom                      ***");
+        System.out.println("***                         3. Init Warehouse                       ***");
         System.out.println("***                                                                 ***");
-        System.out.println("***You can select different scenarios, and the workers in the scene will be filled automatically***");
+        System.out.println("***You can select different scenarios, and the workers in the       ***");
+        System.out.println("***scene will be filled automatically                               ***");
         System.out.println("***********************************************************************");
         System.out.println("");
 
@@ -55,7 +55,7 @@ public class IOCTest {
                 case 1: {
                     System.out.println("IOC Pattern: creating office Walker will implicitly create office worker：");
                     Office office = new Office();
-                    WorkerAddingController.addWorkerToScene("Tom",18, Person.Sex.MALE,5000,office);
+                    WorkerAddingController.addWorkerToScene("Tom", 18, Person.Sex.MALE, 5000, office);
                     System.out.println(office);
                     System.out.println("");
                     break;
@@ -63,7 +63,7 @@ public class IOCTest {
                 case 2: {
                     System.out.println("IOC Pattern: creating office DiningRoom will implicitly create DinningRoomWorker：");
                     DiningRoom diningRoom = new DiningRoom();
-                    WorkerAddingController.addWorkerToScene("lisa",20, Person.Sex.MALE,6000,diningRoom);
+                    WorkerAddingController.addWorkerToScene("lisa", 20, Person.Sex.MALE, 6000, diningRoom);
                     System.out.println(diningRoom);
                     System.out.println("");
                     break;
@@ -71,12 +71,12 @@ public class IOCTest {
                 case 3: {
                     System.out.println("IOC Pattern: creating warehouse Walker will implicitly create WarehouseWorker：");
                     Warehouse warehouse = new Warehouse();
-                    WorkerAddingController.addWorkerToScene("mark",22, Person.Sex.FEMALE,7000,warehouse);
+                    WorkerAddingController.addWorkerToScene("mark", 22, Person.Sex.FEMALE, 7000, warehouse);
                     System.out.println(warehouse);
                     System.out.println("");
                     break;
                 }
-                default:{
+                default: {
                     System.out.println("Invalid Input, Please input again.");
                 }
             }

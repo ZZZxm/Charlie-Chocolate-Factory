@@ -25,20 +25,20 @@ public class ExtensionObjectsTest {
         System.out.println("Create an product machine and then enhance it...");
         AugProductMachine augProductMachine=new AugProductMachine(new BasicProductMachine("PR","507"));
 
-        System.out.println("");
-        System.out.println("********************** TIPS **********************");
-        System.out.println("***      1. Input 1 to start testing           ***");
-        System.out.println("***      2. Input 2 to fix machine            ***");
-        System.out.println("***      3. Input 3 to create new machine     ***");
-        System.out.println("***      4. Input 0 to exit                    ***");
-        System.out.println("**************************************************");
-        System.out.println("");
-
         Scanner input = new Scanner(System.in);
         int op;
         boolean flag = true;
 
         do {
+            System.out.println("");
+            System.out.println("********************** TIPS **********************");
+            System.out.println("***      1. Input 1 to start testing           ***");
+            System.out.println("***      2. Input 2 to fix machine            ***");
+            System.out.println("***      3. Input 3 to create new machine     ***");
+            System.out.println("***      4. Input 0 to exit                    ***");
+            System.out.println("**************************************************");
+            System.out.println("");
+
             System.out.println("");
             System.out.print("Enter the command [0 to quit]:");
             op = input.nextInt();
@@ -49,7 +49,7 @@ public class ExtensionObjectsTest {
                 case 1: {
                     System.out.print("Please enter the number of times the machine runs:");
                     int workNum = input.nextInt();
-                    System.out.println("Let AugProductMachine run "+workNum+" times producing dark chocolate...");
+                    System.out.println("\nLet AugProductMachine run "+workNum+" times producing dark chocolate...\n");
                     augProductMachine.continueWork(workNum, new DarkChocolate());
                     break;
                 }

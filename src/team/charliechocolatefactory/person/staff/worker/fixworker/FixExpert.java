@@ -17,12 +17,12 @@ public class FixExpert extends FixWorker {
 
     @Override
     public void work() {
-        System.out.println("The fix expert" + this.name + "is working.");
+        System.out.println("The fix expert " + this.name + " is working.");
     }
 
     @Override
     public void rest() {
-        System.out.println("The fix expert" + this.name + "goes to rest.");
+        System.out.println("The fix expert " + this.name + " goes to rest.");
     }
 
     @Override

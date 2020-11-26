@@ -43,11 +43,13 @@ public abstract class Machine {
     //the degree of machine failure
     protected int breakLevel = 0;
 
-     private String machineType;
+    private String machineType;
+
     public Machine(String type) {
         this.machineType = type;
 
     }
+
     public Machine(String type, String machineNum) {
         this.type = type;
         this.machineNum = machineNum;
@@ -174,9 +176,9 @@ public abstract class Machine {
      * set breakDown to false, called when fix work finishes
      */
     public void fix() {
-        FixRookie worker1 = new FixRookie("rookie", 18, Person.Sex.MALE, 10, null);
-        FixProfession worker2 = new FixProfession("profession", 19, Person.Sex.MALE, 10, null);
-        FixExpert worker3 = new FixExpert("expert", 18, Person.Sex.MALE, 10, null);
+        FixRookie worker1 = new FixRookie("Kerr", 18, Person.Sex.MALE, 10, null);
+        FixProfession worker2 = new FixProfession("Young", 19, Person.Sex.MALE, 10, null);
+        FixExpert worker3 = new FixExpert("Brian", 18, Person.Sex.MALE, 10, null);
 
 
         if (breakDown) {
@@ -245,7 +247,7 @@ public abstract class Machine {
         this.aimProcessNum = aimProcessNum;
         //adjust the machine aging speed according to the target production number
         this.agingSpeed = lossCoefficient + (1.0 * aimProcessNum) / maxCapacity;
-        System.out.println("Set aimProcessNum to " + aimProcessNum + ".\n");
+        System.out.println("Set aimProcessNum to " + aimProcessNum + ".");
         System.out.println("The agingSpeed of " + type + machineNum + " changes to " + agingSpeed + ".\n");
     }
 
@@ -274,7 +276,7 @@ public abstract class Machine {
             System.out.println("Please set " + type + machineNum + "'s aimProcessNum first.\n");
             return 0;
         }
-        System.out.println(type + machineNum + " starts to run:\n");
+        System.out.println(type + machineNum + " starts to run...");
         return work(product);
     }
 

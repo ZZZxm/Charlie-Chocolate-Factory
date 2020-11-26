@@ -91,6 +91,8 @@ public class ObserverTest {
 
         Guard guard1 = new Guard("Young", 20, Person.Sex.MALE, 10);
 
+        System.out.println("\n-------------------以上输出不重要--------------------\n");
+
         System.out.println("");
         System.out.println("********    Here is our worker list   ********");
         System.out.printf("***%-10s%-10s%-10s%-10s***\n", "Name", "Sex", "Age", "Salary");
@@ -110,6 +112,8 @@ public class ObserverTest {
 
         System.out.println("");
         System.out.println("***************************** Observer Test ***************************");
+        System.out.println("***              Now choose the staffs who can get paid!            ***");
+        System.out.println("***                                                                 ***");
         System.out.println("***              1. add the guard(Young Young) to the payroll       ***");
         System.out.println("***              2. add all staffs in the workshop to the payroll   ***");
         System.out.println("***              3. add all staffs in the warehouse to the payroll  ***");

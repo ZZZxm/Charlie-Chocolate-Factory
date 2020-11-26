@@ -23,13 +23,13 @@ public class ValueObjectTest {
         System.out.println("");
 
         System.out.println("Create a new MilkChocMachine producing milk chocolate in normal flavor and give control of it to a controller...");
-        MilkChocController normalMilkChocController=new MilkChocController(new NormalMilkChocMachine());
+        MilkChocController normalMilkChocController = new MilkChocController(new NormalMilkChocMachine());
         System.out.println("Let normalMilkChocMachine start producing...");
         normalMilkChocController.startProduce();
         System.out.println("Get product1 ...");
-        MilkChocolate milkChocolate1=normalMilkChocController.getMilkChocolate();
+        MilkChocolate milkChocolate1 = normalMilkChocController.getMilkChocolate();
         System.out.println("MilkChocolate product1 is in normal flavor...");
-        MilkChocolate milkChocolate2=null;
+        MilkChocolate milkChocolate2 = null;
 
         Scanner input = new Scanner(System.in);
         int op;
@@ -38,9 +38,11 @@ public class ValueObjectTest {
         do {
             System.out.println("");
             System.out.println("******************************** TIPS **********************************");
+            System.out.println("***        We have create a milk chocolate in normal flavor!         ***");
+            System.out.println("***                                                                  ***");
             System.out.println("***       1. Input 1 to test if two products are equal in value      ***");
             System.out.println("*** 2. Input 2 to create a milk chocolate(product2) in normal flavor ***");
-            System.out.println("*** 2. Input 3 to create a milk chocolate(product2) in thick flavor  ***");
+            System.out.println("*** 3. Input 3 to create a milk chocolate(product2) in thick flavor  ***");
             System.out.println("***                      4. Input 0 to exit                          ***");
             System.out.println("************************************************************************");
             System.out.println("");
@@ -53,11 +55,11 @@ public class ValueObjectTest {
                     flag = false;
                     break;
                 case 1: {
-                    if(milkChocolate2==null){
+                    if (milkChocolate2 == null) {
                         System.out.println("Please create product2 first!");
                         break;
                     }
-                    if(milkChocolate1.equals(milkChocolate2))
+                    if (milkChocolate1.equals(milkChocolate2))
                         System.out.println("The two milk chocolate products are equal in value.");
                     else
                         System.out.println("The two milk chocolate products are NOT equal in value!");
@@ -66,29 +68,29 @@ public class ValueObjectTest {
                 case 2: {
                     Random rand = new Random();
                     int num = rand.nextInt(1000);
-                    String number=String.valueOf(num);
-                    normalMilkChocController.milkChocMachine=new NormalMilkChocMachine(number);
+                    String number = String.valueOf(num);
+                    normalMilkChocController.milkChocMachine = new NormalMilkChocMachine(number);
                     String name = normalMilkChocController.milkChocMachine.getMachineID();
                     System.out.println("Of the normalMilkChocController, machine " + name + " has been set to produce.\n");
                     normalMilkChocController.milkChocMachine.setAimProcessNum(100);
                     System.out.println("Let normalMilkChocMachine start producing...");
                     normalMilkChocController.startProduce();
                     System.out.println("Get product2 ...");
-                    milkChocolate2=normalMilkChocController.getMilkChocolate();
+                    milkChocolate2 = normalMilkChocController.getMilkChocolate();
                     System.out.println("MilkChocolate product2 is in normal flavor...");
                     break;
                 }
                 case 3: {
                     System.out.println("Create a new MilkChocMachine producing milk chocolate in thick flavor and give control of it to a controller...");
-                    MilkChocController thickMilkChocController=new MilkChocController(new ThickMilkChocMachine());
+                    MilkChocController thickMilkChocController = new MilkChocController(new ThickMilkChocMachine());
                     System.out.println("Let thickMilkChocMachine start producing...");
                     thickMilkChocController.startProduce();
                     System.out.println("Get product2 ...");
-                    milkChocolate2=thickMilkChocController.getMilkChocolate();
+                    milkChocolate2 = thickMilkChocController.getMilkChocolate();
                     System.out.println("MilkChocolate product2 is in thick flavor...");
                     break;
                 }
-                default:{
+                default: {
                     System.out.println("Invalid Input, Please input again.");
                 }
             }

@@ -16,7 +16,7 @@ import java.util.Scanner;
 public class ImmutableTest {
 
     public static void main(String[] args) {
-        System.out.println("------------------------------------ [Immutable patter] Test ------------------------------------");
+        System.out.println("------------------------------------ [Immutable] Test ------------------------------------");
 
         System.out.println("");
         System.out.println("AbstractReceipt : AbstractReceipt(String info, ReceiptType type) : " +
@@ -24,12 +24,13 @@ public class ImmutableTest {
         System.out.println("");
 
         System.out.println("");
-        System.out.println("******************* Immutable patter Test *******************");
-        System.out.println("***                 1. init commonReceipt                           ***");
-        System.out.println("***                 2. init TaxReceipt                              ***");
-        System.out.println("***                 3. init PurchaseReceipt                         ***");
+        System.out.println("************************* Immutable Test ******************************");
+        System.out.println("***                 1. Init commonReceipt                           ***");
+        System.out.println("***                 2. Init TaxReceipt                              ***");
+        System.out.println("***                 3. Init PurchaseReceipt                         ***");
         System.out.println("***                                                                 ***");
-        System.out.println("***Tips: You can choose the type of invoice to input. The invoice initialized here is immutable,***");
+        System.out.println("*** Tips: You can choose the type of invoice to input.              ***");
+        System.out.println("***       The invoice initialized here is immutable                 ***");
         System.out.println("***********************************************************************");
         System.out.println("");
 
@@ -48,7 +49,7 @@ public class ImmutableTest {
                     flag = false;
                     break;
                 case 1: {
-                    // init commonreceipt;
+                    // init common receipt;
                     CommonReceipt receipt = new CommonReceipt("this is CommonReceipt");
                     System.out.println(receipt);
                     break;
@@ -65,7 +66,7 @@ public class ImmutableTest {
                     System.out.println(receipt);
                     break;
                 }
-                default:{
+                default: {
                     System.out.println("Invalid Input, Please input again.");
                 }
             }

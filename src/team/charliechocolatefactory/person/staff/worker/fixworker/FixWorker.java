@@ -21,12 +21,12 @@ public abstract class FixWorker extends Worker {
 
     @Override
     public void work() {
-        System.out.println("The fix worker" + this.name + "is working.");
+        System.out.println("The fix worker " + this.name + " is working.");
     }
 
     @Override
     public void rest() {
-        System.out.println("The fix worker" + this.name + "goes to rest.");
+        System.out.println("The fix worker " + this.name + " goes to rest.");
     }
 
     public void setNext(FixWorker next) {

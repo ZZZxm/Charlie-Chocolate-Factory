@@ -17,7 +17,7 @@ public class DiningRoom extends StaffArea {
 
 
     public DiningRoom() {
-        super();
+        this("Dining room", 10000, 100);
     }
 
     /**

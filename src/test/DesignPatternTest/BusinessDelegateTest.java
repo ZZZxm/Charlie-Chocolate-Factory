@@ -82,7 +82,7 @@ public class BusinessDelegateTest {
                     break;
                 }
                 case 4: {
-                    System.out.println("\nLet's input a wrong service type.");
+                    System.out.println("\nLet's input a wrong service type --- hahahahaha service.");
                     warehouseDelegate.setServiceType("hahahahaha");
                     warehouseClient.doTask(new Egg());
                     break;

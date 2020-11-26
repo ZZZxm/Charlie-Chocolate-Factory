@@ -17,12 +17,12 @@ public class FixRookie extends FixWorker {
 
     @Override
     public void work() {
-        System.out.println("The fix rookie" + this.name + "is working.");
+        System.out.println("The fix rookie " + this.name + " is working.");
     }
 
     @Override
     public void rest() {
-        System.out.println("The fix rookie" + this.name + "goes to rest.");
+        System.out.println("The fix rookie " + this.name + " goes to rest.");
     }
 
     @Override

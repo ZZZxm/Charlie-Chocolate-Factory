@@ -53,9 +53,11 @@ public class SingletonTest {
                 case 1: {
                     System.out.println("Let's get an instance of general manager for the first time: ");
                     generalManager1 = GeneralManager.getInstance();
+                    System.out.println("Get the first instance successfully.");
                     System.out.println("");
                     System.out.println("Get an instance of general manager again: ");
                     generalManager2 = GeneralManager.getInstance();
+                    System.out.println("Get the second instance successfully.");
                     break;
                 }
                 case 2: {
