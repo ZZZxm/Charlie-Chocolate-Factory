@@ -78,7 +78,7 @@ public class MainTest {
                     //BuilderTest.main(new String[]{});
                     break;
                 case 5:
-                   //ChainOfResponsibilityTest.main(new String[]{});
+                   ResponsibilityChainTest.main(new String[]{});
                     break;
                 case 6:
                     CommandTest.main(new String[]{});

@@ -159,9 +159,9 @@ public abstract class Machine {
     /**
      *
      */
-    public void notifyBroke() {
+    public void notifyBroke(int breakLevel) {
         breakDown = true;
-        breakLevel = (int) (Math.random() * 10 + 1);
+        this.breakLevel = breakLevel;
         fix();
     }
 
