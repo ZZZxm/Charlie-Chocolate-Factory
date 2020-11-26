@@ -1,5 +1,6 @@
 package test;
 
+import com.sun.net.httpserver.Filter;
 import test.DesignPatternTest.*;
 
 import java.util.Scanner;
@@ -38,13 +39,23 @@ public class MainTest {
         System.out.println("               **            21 --- Strategy                  **");
         System.out.println("               **            22 --- Template Method           **");
         System.out.println("               **            23 --- Visitor                   **");
+
         System.out.println("               **            24 --- Business Delegate         **");
-        System.out.println("               **            25 --- Copy on Write             **");
-        System.out.println("               **            26 --- Extension                 **");
-        System.out.println("               **            27 --- Filter                    **");
-        System.out.println("               **            28 --- IOC                       **");
-        System.out.println("               **            29 --- Multiton                 **");
-        System.out.println("               **            30 --- Null Object               **");
+        System.out.println("               **            25 --- Callback                  **");
+        System.out.println("               **            26 --- Converter                 **");
+        System.out.println("               **            27 --- Copy On Write             **");
+        System.out.println("               **            28 --- Data Access Object        **");
+        System.out.println("               **            29 --- Dirty Flag                **");
+        System.out.println("               **            30 --- Extension Object          **");
+        System.out.println("               **            31 --- Filter                    **");
+        System.out.println("               **            32 --- Immutable                 **");
+        System.out.println("               **            33 --- IOC                       **");
+        System.out.println("               **            34 --- Monostate                 **");
+        System.out.println("               **            35 --- Multition                 **");
+        System.out.println("               **            36 --- Null Object               **");
+        System.out.println("               **            37 --- Value Object              **");
+        System.out.println("               **            38 --- Transfer Object           **");
+
         System.out.println("               -------------------------------------------------");
         System.out.print("               Which design pattern do you want to test? [0 to quit]: ");
     }
@@ -139,16 +150,46 @@ public class MainTest {
                     BusinessDelegateTest.main(new String[]{});
                     break;
                 case 25:
-                    COWTest.main(new String[]{});
+                    CallbackTest.main(new String[]{});
                     break;
                 case 26:
-                    ExtensionObjectsTest.main(new String[]{});
+                    //ConverterTest.main(new String[]{});
                     break;
                 case 27:
-                    FilterTest.main(new String[]{});
+                    COWTest.main(new String[]{});
                     break;
                 case 28:
+                    //DAOTest.main(new String[]{});
+                    break;
+                case 29:
+                    //DirtyFlagTest.main(new String[]{});
+                    break;
+                case 30:
+                    ExtensionObjectsTest.main(new String[]{});
+                    break;
+                case 31:
+                    FilterTest.main(new String[]{});
+                    break;
+                case 32:
+                    //ImmutableTest.main(new String[]{});
+                    break;
+                case 33:
+                    //IOCTest.main(new String[]{});
+                    break;
+                case 34:
+                    //MonostateTest.main(new String[]{});
+                    break;
+                case 35:
                     MultitionTest.main(new String[]{});
+                    break;
+                case 36:
+                    NullObjectTest.main(new String[]{});
+                    break;
+                case 37:
+                    ValueObjectTest.main(new String[]{});
+                    break;
+                case 38:
+                    //TransferObjectTest.main(new String[]{});
                     break;
                 default:
                     System.out.println("Invalid input!");
