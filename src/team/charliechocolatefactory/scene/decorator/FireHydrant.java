@@ -31,7 +31,7 @@ public class FireHydrant extends ResidenceDecorator {
 
     @Override
     public String getDescription() {
-        return residence.getDescription() + "，has added a fire hydrant";
+        return residence.getDescription();
     }
 
     @Override

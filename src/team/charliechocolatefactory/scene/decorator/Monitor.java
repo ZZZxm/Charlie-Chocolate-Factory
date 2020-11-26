@@ -32,7 +32,7 @@ public class Monitor extends ResidenceDecorator {
 
     @Override
     public String getDescription() {
-        return residence.getDescription() + "，has added a monitor";
+        return residence.getDescription();
     }
 
     @Override

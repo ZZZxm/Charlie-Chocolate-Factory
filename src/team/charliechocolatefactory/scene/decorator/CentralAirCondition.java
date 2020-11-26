@@ -31,7 +31,7 @@ public class CentralAirCondition extends ResidenceDecorator {
 
     @Override
     public String getDescription() {
-        return residence.getDescription() + "，has added a central air condition";
+        return residence.getDescription();
     }
 
     @Override

@@ -178,7 +178,7 @@ public class MainTest {
                     IOCTest.main(new String[]{});
                     break;
                 case 34:
-                    //MonostateTest.main(new String[]{});
+                    MonostateTest.main(new String[]{});
                     break;
                 case 35:
                     MultitonTest.main(new String[]{});
@@ -194,7 +194,7 @@ public class MainTest {
                     break;
                 default:
                     System.out.println("Invalid input!");
-                    System.out.println("Please input a number of 0-30!");
+                    System.out.println("Please input a number of 0-38!");
             }
             System.out.println("\n");
             System.out.println("Enter to continue testing...");
