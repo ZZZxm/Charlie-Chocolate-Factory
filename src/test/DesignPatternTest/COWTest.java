@@ -28,7 +28,7 @@ public class COWTest {
                 + "***Tips: Every time you modify a unmodified tool, you will trigger  ***\n"
                 + "***        Copy on Write. Every time you triggered Copy on Write, a ***\n"
                 + "***        line of \"Copy Handmade Tool!\" will be printed. And the   ***\n"
-                + "***        reference count of defalut tool is decreased by 1.       ***\n"
+                + "***        reference count of default tool is decreased by 1.       ***\n"
                 + "***      The batch number of both tools should ALWAYS BE THE SAME.  ***\n"
                 + "***********************************************************************\n";
 

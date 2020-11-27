@@ -28,13 +28,13 @@ public class ConverterTest {
         System.out.println("Product : producing : Transmit the command to a specific machine .");
         System.out.println("");
 
-        List<Visitor> visitors = new ArrayList< >();
-        List <VisitorDto> dtoVisitors = new ArrayList< >();
+        List<Visitor> visitors = new ArrayList<>();
+        List<VisitorDto> dtoVisitors = new ArrayList<>();
         String name;
         int age;
         Person.Sex sex;
         System.out.println("Create an visitorConverter...");
-        Converter < VisitorDto, Visitor > visitorConverter = new VisitorConverter();
+        Converter<VisitorDto, Visitor> visitorConverter = new VisitorConverter();
 
         System.out.println("");
         System.out.println("*******************             Converter Test            ******************");
@@ -63,36 +63,36 @@ public class ConverterTest {
                 case 1: {
                     System.out.println("Please enter the information of a visitor:name,age and sex(MALE/FEMALE)");
                     name = input.next();
-                    age=input.nextInt();
-                    sex =Person.Sex.valueOf(input.next());
+                    age = input.nextInt();
+                    sex = Person.Sex.valueOf(input.next());
                     visitors.add(new Visitor(name, age, sex));
+                    System.out.println("Successfully add a visitor.\n");
                     break;
                 }
                 case 2: {
                     System.out.println("Please enter the information of a dto visitor:name,age and sex(MALE/FEMALE)");
                     name = input.next();
-                    age=input.nextInt();
-                    sex =Person.Sex.valueOf(input.next());
+                    age = input.nextInt();
+                    sex = Person.Sex.valueOf(input.next());
                     dtoVisitors.add(new VisitorDto(name, age, sex));
+                    System.out.println("Successfully add a visitorDto.\n");
                     break;
                 }
                 case 3: {
-                    if(visitors.isEmpty()){
+                    if (visitors.isEmpty()) {
                         System.out.println("Please create some dto visitors");
-                    }
-                    else {
+                    } else {
                         dtoVisitors = visitorConverter.batchConverterFromEntities(visitors);
-                        visitors.forEach((visitor) -> System.out.println(visitor.getName()+" "+visitor.getAge()+" "+visitor.getSex()));
+                        visitors.forEach((visitor) -> System.out.println(visitor.getName() + " " + visitor.getAge() + " " + visitor.getSex()));
                     }
                     break;
                 }
                 case 4: {
-                    if(dtoVisitors.isEmpty()){
+                    if (dtoVisitors.isEmpty()) {
                         System.out.println("Please create some visitors");
-                    }
-                    else {
+                    } else {
                         visitors = visitorConverter.batchConverterFromDto(dtoVisitors);
-                        dtoVisitors.forEach((dtoVisitor) -> System.out.println(dtoVisitor.getName()+" "+dtoVisitor.getAge()+" "+dtoVisitor.getSex()));
+                        dtoVisitors.forEach((dtoVisitor) -> System.out.println(dtoVisitor.getName() + " " + dtoVisitor.getAge() + " " + dtoVisitor.getSex()));
                     }
                     break;
                 }

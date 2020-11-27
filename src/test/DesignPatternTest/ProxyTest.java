@@ -51,7 +51,7 @@ public class ProxyTest {
             switch (order) {
                 case 1: {
                     for (int i = 0; i < ProxyList.size(); i++) {
-                        String State = new String();
+                        String State;
                         PortableBattery portableBattery = ProxyList.get(i).getPortableBatteryInstance();
                         if (portableBattery.isOccupied()) {
                             State = "Taken";

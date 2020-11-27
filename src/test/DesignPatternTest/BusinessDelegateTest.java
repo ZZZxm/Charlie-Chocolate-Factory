@@ -35,7 +35,7 @@ public class BusinessDelegateTest {
         System.out.println("***                 3. Store eggs into the warehouse       ***");
         System.out.println("***                 4. Try a wrong test                    ***");
         System.out.println("***                                                        ***");
-        System.out.println("***Tips: Please execute order 1 first.                     ***");
+        System.out.println("*** Tips: Please execute order 1 first.                    ***");
         System.out.println("**************************************************************");
         System.out.println("");
 

@@ -15,6 +15,10 @@ public class FixExpert extends FixWorker {
         super(name, age, sex, salary, department);
     }
 
+    public FixExpert(String name, int age, Person.Sex sex, int salary) {
+        super(name, age, sex, salary);
+    }
+
     @Override
     public void work() {
         System.out.println("The fix expert " + this.name + " is working.");

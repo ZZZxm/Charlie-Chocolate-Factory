@@ -146,6 +146,7 @@ public class MainTest {
                     VisitorTest.main(new String[]{});
                     break;
 
+                    // 下面是23个设计模式外的15个其他设计模式
 
                 case 24:
                     BusinessDelegateTest.main(new String[]{});

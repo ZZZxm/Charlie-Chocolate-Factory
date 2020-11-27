@@ -22,6 +22,10 @@ public class Cleaner extends Worker implements UtilityWorker {
         super(name, age, sex, salary, department);
     }
 
+    public Cleaner(String name, int age, Sex sex, int salary) {
+        super(name, age, sex, salary);
+    }
+
     @Override
     public void work() {
         System.out.println("The cleaner " + this.name + "is working.");

@@ -40,6 +40,10 @@ public abstract class Worker extends Staff {
         this.chocolateWafer = new ChocolateWafer();
     }
 
+    public Worker(String name, int age, Sex sex, int salary) {
+        this(name, age, sex, salary, null);
+    }
+
     public void produceDarkChocolate() {
         this.darkChocolate.producing();
     }
@@ -104,9 +108,7 @@ public abstract class Worker extends Staff {
         this.chocolateWafer.producing();
     }
 
-    public Worker(String name, int age, Sex sex, int salary) {
-        this(name, age, sex, salary, null);
-    }
+
 
     /**
      * @modified by Ray

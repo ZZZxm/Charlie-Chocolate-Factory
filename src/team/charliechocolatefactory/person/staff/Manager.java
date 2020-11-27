@@ -123,7 +123,6 @@ public class Manager extends Staff {
      */
     @Override
     public void display() {
-
         System.out.printf("%-10s%-20s%-5d%-10s%s%n", id, name, age, sex, getDepartmentListName());
     }
 
