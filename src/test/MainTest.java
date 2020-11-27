@@ -49,7 +49,7 @@ public class MainTest {
         System.out.print("               Which design pattern do you want to test? [0 to quit]: ");
     }
 
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
 
         boolean flag = true;
         int op;
@@ -61,7 +61,7 @@ public class MainTest {
             op = input.nextInt();
             System.out.println("\n");
 
-            switch (op){
+            switch (op) {
                 case 0:
                     flag = false;
                     break;
@@ -78,7 +78,7 @@ public class MainTest {
                     //BuilderTest.main(new String[]{});
                     break;
                 case 5:
-                   ResponsibilityChainTest.main(new String[]{});
+                    ResponsibilityChainTest.main(new String[]{});
                     break;
                 case 6:
                     CommandTest.main(new String[]{});
@@ -99,7 +99,7 @@ public class MainTest {
                     //FlyweightTest.main(new String[]{});
                     break;
                 case 12:
-                    //InterpreterTest.main(new String[]{});
+                    InterpreterTest.main(new String[]{});
                     break;
                 case 13:
                     IteratorTest.main(new String[]{});
