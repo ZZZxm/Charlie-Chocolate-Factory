@@ -15,7 +15,7 @@ import java.util.Scanner;
 public class ResponsibilityChainTest {
     public static void main(String[] args) {
         System.out.println("------------------------------------ [Chain of Responsibility] Test ------------------------------------");
-
+        System.out.println("");
         System.out.println("FixWorker:setNext(next:FixWorker) : create next link");
         System.out.println("FixWorker:getNext() : get next link");
         System.out.println("FixWorker:handleRequest(breakLevel:int) : The specific process for processing the request");

@@ -43,7 +43,7 @@ public class MainTest {
         System.out.println("               **            26 --- Extension                 **");
         System.out.println("               **            27 --- Filter                    **");
         System.out.println("               **            28 --- IOC                       **");
-        System.out.println("               **            29 --- Multiton                 **");
+        System.out.println("               **            29 --- Multiton                  **");
         System.out.println("               **            30 --- Null Object               **");
         System.out.println("               -------------------------------------------------");
         System.out.print("               Which design pattern do you want to test? [0 to quit]: ");
@@ -102,7 +102,7 @@ public class MainTest {
                     //InterpreterTest.main(new String[]{});
                     break;
                 case 13:
-                    //IteratorTest.main(new String[]{});
+                    IteratorTest.main(new String[]{});
                     break;
                 case 14:
                     MediatorTest.main(new String[]{});
