@@ -10,7 +10,7 @@ import java.util.Scanner;
  * @classname COWTest
  * @description Test for COW
  * @author Ngae Zeh-ghau
- * @date 2020/11/25 00:29
+ * @date 2020/11/27 12:55
  */
 public class COWTest {
     public static void main(String[] args) {
@@ -19,14 +19,17 @@ public class COWTest {
                 + "************************* Copy on Write Test **************************\n"
                 + "***                                                                 ***\n"
                 + "***            0. Quit                                              ***\n"
-                + "***            1. Display the Ref Count of Defalut Tool             ***\n"
+                + "***            1. Display the Reference Count of Defalut Tool       ***\n"
                 + "***            2. Modify Tool Description in Room 0                 ***\n"
                 + "***            3. Modify Tool Description in Room 1                 ***\n"
                 + "***            4. Display Tool Batch Number in Room 0               ***\n"
                 + "***            5. Display Tool Batch Number in Room 1               ***\n"
                 + "***                                                                 ***\n"
-                + "***Tips: If you triggered Copy on Write, a line of\"Copy Handmade    ***\n"
-                + "***Tool!\" will be printed.                                          ***\n"
+                + "***Tips: Every time you modify a unmodified tool, you will trigger  ***\n"
+                + "***        Copy on Write. Every time you triggered Copy on Write, a ***\n"
+                + "***        line of \"Copy Handmade Tool!\" will be printed. And the   ***\n"
+                + "***        reference count of defalut tool is decreased by 1.       ***\n"
+                + "***      The batch number of both tools should ALWAYS BE THE SAME.  ***\n"
                 + "***********************************************************************\n";
 
 
@@ -43,11 +46,12 @@ public class COWTest {
         System.out.println(
                 "ExperienceRoom: setToolDescription(description: String): Set the description of the tool.");
         System.out.println("");
-        System.out.println(HINT);
 
         ExperienceRoom[] experienceRooms = new ExperienceRoom[2];
         experienceRooms[0] = new ExperienceRoom();
         experienceRooms[1] = new ExperienceRoom();
+        System.out.println("We created 2 room with tools: Room 0 and Room 1.");
+        System.out.println(HINT);
 
         Scanner input = new Scanner(System.in);
         int op;

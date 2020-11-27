@@ -12,7 +12,7 @@ import java.util.Scanner;
  * @classname FlyweightTest
  * @description Test for Flyweight
  * @author Ngae Zeh-ghau
- * @date 2020/11/24 23:02
+ * @date 2020/11/27 13:31
  */
 public class FlyweightTest {
 
@@ -99,6 +99,9 @@ public class FlyweightTest {
             if (classChosen != null) {
                 classes.add(classChosen);
                 System.out.println("Added chocolate type:" + classChosen.getSimpleName());
+                System.out.println("");
+            } else {
+                System.out.println("");
             }
         } while (flag);
 
@@ -107,7 +110,16 @@ public class FlyweightTest {
 
         try {
             ChocolateMix chocolateMix = new ChocolateMix(classes);
-            System.out.println("ChocolateMix instantiated.");
+            int index = 0;
+            System.out.println("");
+            System.out.println("ChocolateMix instantiated as following:");
+            System.out.println("index\ttype");
+            System.out.println("-----\t---------------");
+            while (chocolateMix.at(index) != null) {
+                System.out.println(Integer.toString(index) + "\t"
+                        + chocolateMix.at(index).getClass().getSimpleName());
+                index++;
+            }
             System.out.println(HINT2);
             while (true) {
                 System.out.print("Enter the indexes [-1 to quit]:");
