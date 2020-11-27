@@ -22,13 +22,11 @@ public class Stockholder extends Person {
      * A stockholder can move to anywhere.
      *
      * @param dest destination
-     * @return whether he/she moves to the destination successfully.
      */
     @Override
-    public boolean moveTo(Scene dest) {
+    public void moveTo(Scene dest) {
         this.location = dest;
         System.out.println("The stockholder " + this.name + " moves to " + dest.toString());
-        return true;
     }
 
     /**
@@ -44,6 +42,7 @@ public class Stockholder extends Person {
      * If you do not agree to the request,
      * it will return false. If you agree, it will be submitted to the next level for approval.
      * If you are the last level, you will return true.
+     *
      * @param requestMessage：sendMessage
      * @return Processing results
      */
@@ -65,7 +64,7 @@ public class Stockholder extends Person {
 
     @Override
     public boolean equals(Object obj) {
-        if (!(obj instanceof Stockholder)){
+        if (!(obj instanceof Stockholder)) {
             return false;
         }
         Stockholder temp = (Stockholder) obj;

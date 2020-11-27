@@ -16,6 +16,7 @@ import team.charliechocolatefactory.scene.publicarea.PublicArea;
 public class Visitor extends Person {
 
     public String identity = "Visitor";
+
     public int visitCode;
 
     private Context visitLimit;
@@ -70,25 +71,17 @@ public class Visitor extends Person {
      * @param dest destination
      */
     @Override
-    public boolean moveTo(Scene dest) {
-       /* if(dest instanceof PublicArea) {
-            this.location = dest;
-            System.out.println("Visitor" + this.name + "moves to " + dest.toString());
-            return true;
-        } else {
-            System.out.println("Sorry, visitor " +this.name + "can't go to" + dest.toString());
-            return false;
-        }*/
+    public void moveTo(Scene dest) {
+
         if (this.canEnter(dest.toString())) {
             this.location = dest;
             System.out.println(this.identity + " " + this.name + " moves to " + dest.toString());
-            return true;
         } else {
             System.out.println("Sorry, " + this.identity + " " + this.name + "can 't go to" + dest.toString());
-            return false;
         }
     }
-    public int getVisitCode(){
+
+    public int getVisitCode() {
         return visitCode;
     }
 

@@ -1,7 +1,5 @@
 package team.charliechocolatefactory.rawmaterial.foodmaterial;
 
-import team.charliechocolatefactory.rawmaterial.foodmaterial.FoodMaterial;
-
 /**
  * @author Ngae Zeh-ghau
  * @project chocolateFactory

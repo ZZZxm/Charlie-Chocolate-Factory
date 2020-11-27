@@ -11,10 +11,11 @@ import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWor
  */
 public class CentralAirCondition extends ResidenceDecorator {
 
-    public CentralAirCondition(){
+    public CentralAirCondition() {
+
     }
 
-    public CentralAirCondition(Residence r){
+    public CentralAirCondition(Residence r) {
         super(r);
         System.out.println("A central air condition has been added");
     }

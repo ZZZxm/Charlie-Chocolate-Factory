@@ -15,7 +15,7 @@ public class VisitorConverter extends Converter<VisitorDto, Visitor> {
         super(visitorDto -> new Visitor(visitorDto.getName(), visitorDto.getAge(),
                         visitorDto.getSex()),
                 visitor -> new VisitorDto(visitor.getName(), visitor.getAge(),
-                        visitor.getSex() ));
+                        visitor.getSex()));
 
     }
 

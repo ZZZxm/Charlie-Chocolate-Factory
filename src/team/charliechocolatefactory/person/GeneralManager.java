@@ -4,9 +4,7 @@ package team.charliechocolatefactory.person;
 
 import team.charliechocolatefactory.person.filterchain.message.Message;
 import team.charliechocolatefactory.person.staff.Manager;
-import team.charliechocolatefactory.person.staff.Staff;
 import team.charliechocolatefactory.scene.Scene;
-import team.charliechocolatefactory.scene.staffarea.StaffArea;
 
 import java.util.ArrayList;
 
@@ -49,8 +47,7 @@ public class GeneralManager extends Person {
 
     /**
      * add manager to the list
-     *
-     * @param manager
+     * @param manager manager
      */
     public void addManager(Manager manager) {
         if (manager != null) {
@@ -77,10 +74,9 @@ public class GeneralManager extends Person {
      * @param dest destination
      */
     @Override
-    public boolean moveTo(Scene dest) {
+    public void moveTo(Scene dest) {
         this.location = dest;
         System.out.println("The general manager " + this.name + "moves to " + dest.toString());
-        return true;
     }
 
     /**

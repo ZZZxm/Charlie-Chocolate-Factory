@@ -38,13 +38,9 @@ public abstract class RawMaterial {
 
     /**
      * acquire - Add the quantity of raw material.
-     *
-     * @param quant quantity to add
-     * @return the exact quantity acquired
      */
-    public double acquire(double quant) {
+    public void acquire(double quant) {
         quantity += quant;
-        return quant;
     }
 
     /**
@@ -59,56 +55,21 @@ public abstract class RawMaterial {
         if (quantity - quant <= 0) {
             quantConsumed = quantity;
             quantity = 0.0;
-            notifyOnExhaustion();
+            // notifyOnExhaustion();
         }
         quantity -= quant;
         return quantConsumed;
     }
 
     /**
-     * add exhaustion obsever (to exhaustionObserverList)
-     * <p>
-     * This is a part of the "observer" pattern.
-     * <p>
-     * TODO: The type of observer remains to be defined.
-     *
-     * @param observer observer to add
-     */
-    public boolean addExhaustionObsever(Object observer) {
-        return exhaustionObserverList.add(observer);
-    }
-
-    /*
-     * TODO: removeExhaustionObserver may be implemented if needed.
-     */
-
-    /**
-     * notify on exhaustion
-     * <p>
-     * This function is called when items are exhausted, maybe by consume().
-     */
-    protected void notifyOnExhaustion() {
-        /*
-         * TODO: notifyOnExhaustion()
-         *
-         * This is a part of the "observer" pattern.
-         *
-         * Hint: exhaustionObseverList is the array holding all the observers that
-         * should be notified here.
-         */
-    }
-
-    /**
-     *
      * @param obj
      * @return
      */
     public boolean checkQuantityEqualOnStorage(RawMaterial obj) {
-        return this.quantity == obj.quantity;
+        return this.quantity.equals(obj.quantity);
     }
 
     /**
-     *
      * @param obj
      * @return
      */
@@ -126,17 +87,33 @@ public abstract class RawMaterial {
      * type.
      */
     protected Double quantity;
-    // protected double quantity;
 
-    /**
-     * obsever array of exhaustion
-     * <p>
-     * Array holding all the observer that should be notified when
-     * notifyOnExhaustion() is called.
-     * <p>
-     * This is a part of the "observer" pattern.
-     * <p>
-     * TODO: The type of observer remains to be defined.
-     */
-    private LinkedList<Object> exhaustionObserverList;
+
+//    /**
+//     * notify on exhaustion
+//     * <p>
+//     * This function is called when items are exhausted, maybe by consume().
+//     */
+//    protected void notifyOnExhaustion() {
+//        /*
+//         * TODO: notifyOnExhaustion()
+//         *
+//         * This is a part of the "observer" pattern.
+//         *
+//         * Hint: exhaustionObseverList is the array holding all the observers that
+//         * should be notified here.
+//         */
+//    }
+//
+//    /**
+//     * obsever array of exhaustion
+//     * <p>
+//     * Array holding all the observer that should be notified when
+//     * notifyOnExhaustion() is called.
+//     * <p>
+//     * This is a part of the "observer" pattern.
+//     * <p>
+//     * TODO: The type of observer remains to be defined.
+//     */
+//    private LinkedList<Object> exhaustionObserverList;
 }

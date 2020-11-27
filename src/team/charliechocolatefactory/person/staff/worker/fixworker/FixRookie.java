@@ -40,7 +40,7 @@ public class FixRookie extends FixWorker {
             return true;
         } else {
             if (getNext() != null) {
-                System.out.println(this.name+" cannot fix it, send a requirement to the professional repairman.");
+                System.out.println(this.name + " cannot fix it, send a requirement to the professional repairman.");
                 System.out.println("");
                 if (getNext().handleRequest(breakLevel)) {
                     return true;

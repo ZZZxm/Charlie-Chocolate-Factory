@@ -1,3 +1,5 @@
+package team.charliechocolatefactory.rawmaterial.packagematerial;
+
 /**
  * @project chocolateFactory
  * @classname Box
@@ -5,10 +7,6 @@
  * @author Ngae Zeh-ghau
  * @date 2020-11-09 22:04:02
  */
-package team.charliechocolatefactory.rawmaterial.packagematerial;
-
-import team.charliechocolatefactory.rawmaterial.foodmaterial.Alcohol;
-
 public class Box extends PackageMaterial {
 	/**
 	 * ctor of Box

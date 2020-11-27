@@ -18,9 +18,7 @@ public class Context {
     }
 
     public boolean canEnter(String info) {
-        boolean ok = visitLimit.interpret(info);
-        if (ok) return true;
-        else return false;
+        return visitLimit.interpret(info);
     }
 
     @Override

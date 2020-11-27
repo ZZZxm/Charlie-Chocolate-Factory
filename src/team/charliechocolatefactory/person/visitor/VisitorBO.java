@@ -15,8 +15,11 @@ import java.util.List;
 
 public class VisitorBO {
 
-    //list as a database to store the visitors.
+    /**
+     * list as a database to store the visitors.
+     */
     private static List<Visitor> visitors;
+
     private static VisitorBO visitorList = null;
 
     protected VisitorBO() {
@@ -48,7 +51,9 @@ public class VisitorBO {
                 + code + ", deleted from database");
     }
 
-    //search visitor from the database
+    /**
+     * search visitor from the database
+     */
     public List<Visitor> getAllVisitors() {
         return visitors;
     }

@@ -1,6 +1,5 @@
 package team.charliechocolatefactory.rawmaterial.packagematerial;
 
-import team.charliechocolatefactory.rawmaterial.foodmaterial.Alcohol;
 
 /**
  * @author Ngae Zeh-ghau

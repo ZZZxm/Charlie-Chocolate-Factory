@@ -1,6 +1,5 @@
 package team.charliechocolatefactory.person.filterchain.message;
 
-
 /**
  * @author Zeus Lee
  * @project chocolateFactory
@@ -18,7 +17,7 @@ public abstract class Message {
     /**
      * Construct method, set our information
      *
-     * @param messageInfo
+     * @param messageInfo info of message
      */
     public Message(String messageInfo) {
         this.messageInfo = messageInfo;
