@@ -29,6 +29,6 @@ public class TerminalExpression implements Expression {
 
     @Override
     public String toString() {
-        return "class TerminalExpression implements  Expression";
+        return "class TerminalExpression implements Expression";
     }
 }
