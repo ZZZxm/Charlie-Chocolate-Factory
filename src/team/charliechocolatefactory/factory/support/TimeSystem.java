@@ -15,8 +15,24 @@ import java.util.concurrent.TimeUnit;
  */
 public class TimeSystem {
 
-    private int curDay, curHour;
+    /**
+     * current day
+     */
+    private int curDay;
 
+    /**
+     * current hour
+     */
+    private int curHour;
+
+    /**
+     * timer service
+     */
+    private ScheduledExecutorService service;
+
+    /**
+     * constructor of TimeSystem
+     */
     public TimeSystem() {
         Runnable runnable = new Runnable() {
             public void run() {
@@ -24,12 +40,15 @@ public class TimeSystem {
             }
         };
 
-        ScheduledExecutorService service = Executors.newSingleThreadScheduledExecutor();
+        service = Executors.newSingleThreadScheduledExecutor();
 
-        service.scheduleAtFixedRate(runnable, 0, 10, TimeUnit.SECONDS);
+        service.scheduleAtFixedRate(runnable, 0, 3, TimeUnit.SECONDS);
 
     }
 
+    /**
+     * check the cleaning and aging condition of the factory every once in a while
+     */
     public void tick() {
 
         curHour++;
@@ -43,12 +62,15 @@ public class TimeSystem {
             curDay = 1;
         }
 
+        System.out.printf("current hour: %d, current day: %d.%n", curHour, curDay);
+
+        /*
         if (curHour == 6) {
-            CharlieFactory.getPeriodicMaintenance().setDirty();
+            CharlieFactory.getPeriodicMaintenance().setDirtyTrue();
         }
 
         if (curDay == 62) {
-            CharlieFactory.getPeriodicMaintenance().setAging();
+            CharlieFactory.getPeriodicMaintenance().setAgingTrue();
         }
 
         if (CharlieFactory.getPeriodicMaintenance().getDirtyFlag()) {
@@ -58,7 +80,14 @@ public class TimeSystem {
         if (CharlieFactory.getPeriodicMaintenance().getAgingFlag()) {
             CharlieFactory.getPeriodicMaintenance().doMaintenance();
         }
+         */
+    }
 
+    /**
+     * stop the timer
+     */
+    public void stopTimeSystem() {
+        service.shutdownNow();
     }
 
 }
