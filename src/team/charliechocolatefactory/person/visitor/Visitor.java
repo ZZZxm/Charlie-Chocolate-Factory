@@ -16,6 +16,7 @@ import team.charliechocolatefactory.scene.publicarea.PublicArea;
 public class Visitor extends Person {
 
     public String identity = "Visitor";
+    public int visitCode;
 
     private Context visitLimit;
 
@@ -24,6 +25,14 @@ public class Visitor extends Person {
         String[] persons = {this.identity};
         String[] publicAreas = {"publicArea", "experienceRoom", "exhibitionRoom"};
         this.visitLimit = new Context(persons, publicAreas);
+    }
+
+    public Visitor(String name, int age, Sex sex, int visitCode) {
+        super(name, age, sex);
+        String[] persons = {this.identity};
+        String[] publicAreas = {"publicArea", "experienceRoom", "exhibitionRoom"};
+        this.visitLimit = new Context(persons, publicAreas);
+        this.visitCode = visitCode;
     }
 
 
@@ -78,6 +87,9 @@ public class Visitor extends Person {
             System.out.println("Sorry, " + this.identity + " " + this.name + "can 't go to" + dest.toString());
             return false;
         }
+    }
+    public int getVisitCode(){
+        return visitCode;
     }
 
     /**
