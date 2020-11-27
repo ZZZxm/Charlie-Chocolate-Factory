@@ -15,6 +15,8 @@ public class SceneNameConst {
 
     public static final String OFFICE = "office";
 
+    public static final String UTILITY_WORKER_OFFICE = "utility worker office";
+
     public static final String DINING_ROOM = "dining room";
 
     public static final String STAFF_AREA = "staff area";

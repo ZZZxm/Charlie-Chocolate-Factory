@@ -40,4 +40,18 @@ public class SceneStructure {
         }
     }
 
+    /**
+     *
+     * @param name
+     * @return
+     */
+    public Scene getSceneByName(String name) {
+        for (Scene item: scenes) {
+            if (item.toString().equals(name)) {
+                return item;
+            }
+        }
+        return null;
+    }
+
 }

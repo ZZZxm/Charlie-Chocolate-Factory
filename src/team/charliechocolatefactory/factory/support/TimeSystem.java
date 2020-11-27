@@ -64,23 +64,24 @@ public class TimeSystem {
 
         System.out.printf("current hour: %d, current day: %d.%n", curHour, curDay);
 
-        /*
+
         if (curHour == 6) {
-            CharlieFactory.getPeriodicMaintenance().setDirtyTrue();
+
+            CharlieFactory.getCharlieFactory().setDirtyTrue();
         }
 
         if (curDay == 62) {
-            CharlieFactory.getPeriodicMaintenance().setAgingTrue();
+            CharlieFactory.getCharlieFactory().setAgingTrue();
         }
 
-        if (CharlieFactory.getPeriodicMaintenance().getDirtyFlag()) {
-            CharlieFactory.getPeriodicMaintenance().doClean();
+        if (CharlieFactory.getCharlieFactory().getDirtyFlag()) {
+            CharlieFactory.getCharlieFactory().doClean();
         }
 
-        if (CharlieFactory.getPeriodicMaintenance().getAgingFlag()) {
-            CharlieFactory.getPeriodicMaintenance().doMaintenance();
+        if (CharlieFactory.getCharlieFactory().getAgingFlag()) {
+            CharlieFactory.getCharlieFactory().doMaintenance();
         }
-         */
+
     }
 
     /**

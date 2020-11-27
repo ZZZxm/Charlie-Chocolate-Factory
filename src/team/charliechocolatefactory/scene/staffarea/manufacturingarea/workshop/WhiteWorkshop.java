@@ -21,6 +21,18 @@ public class WhiteWorkshop extends Workshop {
         productMachine.setAimProcessNum(250);
     }
 
+    public WhiteWorkshop(String location, double cost, double area) {
+        super(location, cost, area);
+        productMachine = new BasicProductMachine("PR", "1825");
+        productMachine.setAimProcessNum(250);
+    }
+
+    public WhiteWorkshop(String location, double cost, double area, String machineType, String machineNum, int aimProcess) {
+        super(location, cost, area);
+        productMachine = new BasicProductMachine(machineType, machineNum);
+        productMachine.setAimProcessNum(aimProcess);
+    }
+
     @Override
     public void produceChocolate() {
         int outNum = productMachine.run(new WhiteChocolate());

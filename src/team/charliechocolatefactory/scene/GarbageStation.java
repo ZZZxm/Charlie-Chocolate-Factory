@@ -21,6 +21,7 @@ public class GarbageStation extends Scene {
      */
     protected int maxGarbageAmount;
 
+
     /**
      * constructor of GarbageStation
      */

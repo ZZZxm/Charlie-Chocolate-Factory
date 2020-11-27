@@ -2,12 +2,12 @@ package test.DesignPatternTest;
 
 import team.charliechocolatefactory.factory.support.WorkerAddingController;
 import team.charliechocolatefactory.person.Person;
+import team.charliechocolatefactory.person.staff.Manager;
 import team.charliechocolatefactory.scene.staffarea.DiningRoom;
 import team.charliechocolatefactory.scene.staffarea.Office;
 import team.charliechocolatefactory.scene.staffarea.manufacturingarea.warehouse.Warehouse;
 import team.charliechocolatefactory.scene.staffarea.manufacturingarea.workshop.DarkWorkshop;
 import team.charliechocolatefactory.scene.staffarea.manufacturingarea.workshop.WhiteWorkshop;
-import team.charliechocolatefactory.scene.staffarea.manufacturingarea.workshop.Workshop;
 
 import java.util.Scanner;
 
@@ -61,7 +61,8 @@ public class IOCTest {
                 case 1: {
                     System.out.println("IOC Pattern: creating office Walker will implicitly create office worker：");
                     Office office = new Office();
-                    WorkerAddingController.addWorkerToScene("Tom", 18, Person.Sex.MALE, 5000, office);
+                    Manager.getOfficeManager().hireWorker("Tom",  Person.Sex.MALE, 18, 5000, office);
+                    //WorkerAddingController.addWorkerToScene("Tom", 18, Person.Sex.MALE, 5000, office);
                     office.displayAllStaffs();
                     System.out.println("");
                     break;
@@ -69,7 +70,8 @@ public class IOCTest {
                 case 2: {
                     System.out.println("IOC Pattern: creating office DiningRoom will implicitly create DinningRoomWorker：");
                     DiningRoom diningRoom = new DiningRoom();
-                    WorkerAddingController.addWorkerToScene("lisa", 20, Person.Sex.MALE, 6000, diningRoom);
+                    Manager.getDiningRoomManager().hireWorker("Lisa", Person.Sex.FEMALE, 20, 6000, diningRoom);
+                    //WorkerAddingController.addWorkerToScene("lisa", 20, Person.Sex.MALE, 6000, diningRoom);
                     diningRoom.displayAllStaffs();
                     System.out.println("");
                     break;
@@ -77,7 +79,8 @@ public class IOCTest {
                 case 3: {
                     System.out.println("IOC Pattern: creating warehouse Walker will implicitly create WarehouseWorker：");
                     Warehouse warehouse = new Warehouse();
-                    WorkerAddingController.addWorkerToScene("mark", 22, Person.Sex.FEMALE, 7000, warehouse);
+                    Manager.getWarehouseManager().hireWorker("mark",  Person.Sex.FEMALE, 22, 7000, warehouse);
+                    //WorkerAddingController.addWorkerToScene("mark", 22, Person.Sex.FEMALE, 7000, warehouse);
                     warehouse.displayAllStaffs();
                     System.out.println("");
                     break;
@@ -85,7 +88,8 @@ public class IOCTest {
                 case 4: {
                     System.out.println("IOC Pattern: creating DarkWorkshop Walker will implicitly create DarkWorkshopWorker：");
                     DarkWorkshop darkWorkshop = new DarkWorkshop();
-                    WorkerAddingController.addWorkerToScene("mark", 22, Person.Sex.FEMALE, 7000, darkWorkshop);
+                    Manager.getWorkShopManager().hireWorker("mark",  Person.Sex.MALE, 22, 7000, darkWorkshop);
+                    //WorkerAddingController.addWorkerToScene("mark", 22, Person.Sex.FEMALE, 7000, darkWorkshop);
                     darkWorkshop.displayAllStaffs();
                     System.out.println("");
                     break;
@@ -93,7 +97,8 @@ public class IOCTest {
                 case 5: {
                     System.out.println("IOC Pattern: creating WhiteWorkshop Walker will implicitly create WhiteWorkshopWorker：");
                     WhiteWorkshop whiteWorkshop = new WhiteWorkshop();
-                    WorkerAddingController.addWorkerToScene("mark", 22, Person.Sex.FEMALE, 7000, whiteWorkshop);
+                    Manager.getWorkShopManager().hireWorker("mark", Person.Sex.FEMALE, 22,  7000, whiteWorkshop);
+                    //WorkerAddingController.addWorkerToScene("mark", 22, Person.Sex.FEMALE, 7000, whiteWorkshop);
                     whiteWorkshop.displayAllStaffs();
                     System.out.println("");
                     break;

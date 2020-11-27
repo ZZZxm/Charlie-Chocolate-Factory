@@ -5,6 +5,7 @@ import team.charliechocolatefactory.person.GeneralManager;
 import team.charliechocolatefactory.person.filterchain.message.Message;
 import team.charliechocolatefactory.person.staff.worker.Worker;
 import team.charliechocolatefactory.scene.Scene;
+import team.charliechocolatefactory.scene.SceneNameConst;
 import team.charliechocolatefactory.scene.staffarea.StaffArea;
 
 import java.util.ArrayList;
@@ -135,7 +136,12 @@ public class Manager extends Staff {
      * @param salary salary of the new worker
      */
     public void hireWorker(String name, Sex sex, int age, int salary, StaffArea staffArea) {
-        WorkerAddingController.addWorkerToScene(name, age, sex, salary, staffArea);
+        if (this.departmentList.contains(staffArea)) {
+            WorkerAddingController.addWorkerToScene(name, age, sex, salary, staffArea);
+        }
+        else {
+            System.out.println("The manager does not match the staff area.");
+        }
     }
 
     /**

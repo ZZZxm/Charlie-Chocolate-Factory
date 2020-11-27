@@ -1,11 +1,7 @@
 package test.DesignPatternTest;
 
-import team.charliechocolatefactory.person.GeneralManager;
 import team.charliechocolatefactory.person.Person;
 import team.charliechocolatefactory.person.staff.Manager;
-import team.charliechocolatefactory.person.staff.worker.OfficeWorker;
-import team.charliechocolatefactory.person.staff.worker.Worker;
-import team.charliechocolatefactory.person.staff.worker.WorkshopWorker;
 import team.charliechocolatefactory.scene.staffarea.Office;
 
 import java.util.Scanner;

@@ -1,7 +1,6 @@
 package team.charliechocolatefactory.person.staff.worker.utilityworker;
 
 import team.charliechocolatefactory.person.staff.worker.Worker;
-import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
 import team.charliechocolatefactory.scene.GarbageStation;
 import team.charliechocolatefactory.scene.publicarea.PublicArea;
 import team.charliechocolatefactory.scene.staffarea.DiningRoom;

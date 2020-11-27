@@ -1,7 +1,6 @@
 package test.DesignPatternTest;
 
 import team.charliechocolatefactory.factory.CharlieFactory;
-import team.charliechocolatefactory.factory.support.PeriodicMaintenance;
 import team.charliechocolatefactory.factory.support.TimeSystem;
 
 import java.util.Scanner;
@@ -52,6 +51,7 @@ public class DirtyFlagTest {
                     break;
                 case 1: {
                     if (timeSystem == null) {
+                        CharlieFactory.getCharlieFactory();
                         timeSystem = new TimeSystem();
                         System.out.println("Now the timer starts.");
                     }
@@ -61,13 +61,11 @@ public class DirtyFlagTest {
                     break;
                 }
                 case 2: {
-                    System.out.println("dirty");
-                    // CharlieFactory.getPeriodicMaintenance().setDirtyTrue();
+                    CharlieFactory.getCharlieFactory().setDirtyTrue();
                     break;
                 }
                 case 3: {
-                    System.out.println("aging");
-                    // CharlieFactory.getPeriodicMaintenance().setAgingTrue();
+                    CharlieFactory.getCharlieFactory().setAgingTrue();
                     break;
                 }
                 default:{

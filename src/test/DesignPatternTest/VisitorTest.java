@@ -1,6 +1,6 @@
 package test.DesignPatternTest;
 
-import team.charliechocolatefactory.factory.support.WorkerAddingController;
+import team.charliechocolatefactory.factory.CharlieFactory;
 import team.charliechocolatefactory.person.Person;
 import team.charliechocolatefactory.person.staff.worker.utilityworker.Cleaner;
 import team.charliechocolatefactory.person.staff.worker.utilityworker.MaintenanceWorker;
@@ -58,7 +58,9 @@ public class VisitorTest {
                     break;
                 case 1: {
                     System.out.println("Visitor Pattern Test: Test the treatment method of Cleaner (Cleaner)：");
+                    CharlieFactory.getCharlieFactory().doClean();
                     // Initialize specific operations on the scene.
+                    /*
                     Cleaner cleaner = new Cleaner("Tom",18, Person.Sex.MALE,5000,new Office());
                     // Initialize scene launcher
                     SceneStructure structure = new SceneStructure();
@@ -66,11 +68,15 @@ public class VisitorTest {
                     structure.addScene(new DiningRoom());
                     structure.addScene(new Warehouse());
                     structure.accept(cleaner);
+                     */
                     System.out.println("");
+
                     break;
                 }
                 case 2: {
                     System.out.println("Visitor Pattern Test: Test the treatment method of MaintenanceWorker (MaintenanceWorker)：");
+                    CharlieFactory.getCharlieFactory().doMaintenance();
+                    /*
                     // Initialize specific operations on the scene.
                     MaintenanceWorker maintenanceWorker = new MaintenanceWorker("Tom",18, Person.Sex.MALE,5000,new Office());
                     // Initialize scene launcher
@@ -80,6 +86,7 @@ public class VisitorTest {
                     structure2.addScene(new Warehouse());
                     structure2.accept(maintenanceWorker);
                     System.out.println("");
+                     */
                     break;
                 }
                 default:{

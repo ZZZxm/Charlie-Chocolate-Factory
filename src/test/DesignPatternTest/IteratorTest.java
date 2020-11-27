@@ -1,6 +1,5 @@
 package test.DesignPatternTest;
 
-import team.charliechocolatefactory.machine.processmachine.wrappermachine.WrapperMachine;
 import team.charliechocolatefactory.person.Person;
 import team.charliechocolatefactory.person.staff.worker.OfficeWorker;
 import team.charliechocolatefactory.person.staff.worker.Worker;
