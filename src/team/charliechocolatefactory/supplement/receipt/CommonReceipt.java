@@ -1,5 +1,8 @@
 package team.charliechocolatefactory.supplement.receipt;
 
+
+import team.charliechocolatefactory.supplement.receipt.provider.CommonProvider;
+
 /**
  * @author Zeus Lee
  * @project chocolateFactory
@@ -28,7 +31,7 @@ public final class CommonReceipt extends AbstractReceipt {
      * @param type : type of the receipt
      */
     protected CommonReceipt(String info, ReceiptType type) {
-        super(info, type);
+        super(info, type, new CommonProvider("commonName","commonTel","commonAdd"));
     }
 
 

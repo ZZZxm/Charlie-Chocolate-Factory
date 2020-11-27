@@ -1,5 +1,8 @@
 package team.charliechocolatefactory.supplement.receipt;
 
+import team.charliechocolatefactory.supplement.receipt.provider.CommonProvider;
+import team.charliechocolatefactory.supplement.receipt.provider.PurchaseProvider;
+
 /**
  * @author Zeus Lee
  * @project chocolateFactory
@@ -28,7 +31,7 @@ public final class PurchaseReceipt extends AbstractReceipt {
      * @param type : type of the receipt
      */
     protected PurchaseReceipt(String info, ReceiptType type) {
-        super(info, type);
+        super(info, type, new PurchaseProvider("purchaseName","purchaseTel","purchaseAdd"));
     }
 
 

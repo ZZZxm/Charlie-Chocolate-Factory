@@ -1,5 +1,7 @@
 package team.charliechocolatefactory.supplement.receipt;
 
+import team.charliechocolatefactory.supplement.receipt.provider.TaxProvider;
+
 /**
  * @author Zeus Lee
  * @project chocolateFactory
@@ -28,7 +30,7 @@ public final class TaxReceipt extends AbstractReceipt {
      * @param type : type of the receipt
      */
     protected TaxReceipt(String info, ReceiptType type) {
-        super(info, type);
+        super(info, type,new TaxProvider("taxName","taxTel","taxAdd"));
     }
 
 

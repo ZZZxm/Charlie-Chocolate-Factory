@@ -5,6 +5,9 @@ import team.charliechocolatefactory.person.Person;
 import team.charliechocolatefactory.scene.staffarea.DiningRoom;
 import team.charliechocolatefactory.scene.staffarea.Office;
 import team.charliechocolatefactory.scene.staffarea.manufacturingarea.warehouse.Warehouse;
+import team.charliechocolatefactory.scene.staffarea.manufacturingarea.workshop.DarkWorkshop;
+import team.charliechocolatefactory.scene.staffarea.manufacturingarea.workshop.WhiteWorkshop;
+import team.charliechocolatefactory.scene.staffarea.manufacturingarea.workshop.Workshop;
 
 import java.util.Scanner;
 
@@ -19,7 +22,7 @@ import java.util.Scanner;
 public class IOCTest {
 
     public static void main(String[] args) {
-        System.out.println("------------------------------------ [IOCPatternTest patter] Test ------------------------------------");
+        System.out.println("------------------------------------ [IOC] Test ------------------------------------");
 
         System.out.println("");
         System.out.println("WorkerAddingController : addWorkerToScene(): void : " +
@@ -28,10 +31,13 @@ public class IOCTest {
         System.out.println("");
 
         System.out.println("");
-        System.out.println("*************************** Immutable Test ****************************");
+        System.out.println("****************************** IOC Test *******************************");
         System.out.println("***                         1. Init Office                          ***");
         System.out.println("***                         2. Init DiningRoom                      ***");
         System.out.println("***                         3. Init Warehouse                       ***");
+        System.out.println("***                         4. Init DarkWorkshop                    ***");
+        System.out.println("***                         5. Init WhiteWorkshop                   ***");
+        System.out.println("***                                                                 ***");
         System.out.println("***                                                                 ***");
         System.out.println("***You can select different scenarios, and the workers in the       ***");
         System.out.println("***scene will be filled automatically                               ***");
@@ -56,7 +62,7 @@ public class IOCTest {
                     System.out.println("IOC Pattern: creating office Walker will implicitly create office worker：");
                     Office office = new Office();
                     WorkerAddingController.addWorkerToScene("Tom", 18, Person.Sex.MALE, 5000, office);
-                    System.out.println(office);
+                    office.displayAllStaffs();
                     System.out.println("");
                     break;
                 }
@@ -64,7 +70,7 @@ public class IOCTest {
                     System.out.println("IOC Pattern: creating office DiningRoom will implicitly create DinningRoomWorker：");
                     DiningRoom diningRoom = new DiningRoom();
                     WorkerAddingController.addWorkerToScene("lisa", 20, Person.Sex.MALE, 6000, diningRoom);
-                    System.out.println(diningRoom);
+                    diningRoom.displayAllStaffs();
                     System.out.println("");
                     break;
                 }
@@ -72,7 +78,23 @@ public class IOCTest {
                     System.out.println("IOC Pattern: creating warehouse Walker will implicitly create WarehouseWorker：");
                     Warehouse warehouse = new Warehouse();
                     WorkerAddingController.addWorkerToScene("mark", 22, Person.Sex.FEMALE, 7000, warehouse);
-                    System.out.println(warehouse);
+                    warehouse.displayAllStaffs();
+                    System.out.println("");
+                    break;
+                }
+                case 4: {
+                    System.out.println("IOC Pattern: creating DarkWorkshop Walker will implicitly create DarkWorkshopWorker：");
+                    DarkWorkshop darkWorkshop = new DarkWorkshop();
+                    WorkerAddingController.addWorkerToScene("mark", 22, Person.Sex.FEMALE, 7000, darkWorkshop);
+                    darkWorkshop.displayAllStaffs();
+                    System.out.println("");
+                    break;
+                }
+                case 5: {
+                    System.out.println("IOC Pattern: creating WhiteWorkshop Walker will implicitly create WhiteWorkshopWorker：");
+                    WhiteWorkshop whiteWorkshop = new WhiteWorkshop();
+                    WorkerAddingController.addWorkerToScene("mark", 22, Person.Sex.FEMALE, 7000, whiteWorkshop);
+                    whiteWorkshop.displayAllStaffs();
                     System.out.println("");
                     break;
                 }
