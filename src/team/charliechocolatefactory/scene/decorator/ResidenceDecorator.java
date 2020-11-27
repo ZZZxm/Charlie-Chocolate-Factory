@@ -4,11 +4,15 @@ package team.charliechocolatefactory.scene.decorator;
  * @author TT
  * @project chocolateFactory
  * @classname ResidenceDecorator
- * @description residence decorator
+ * @description TODO
  * @date 2020/11/18 14:25
  */
 public abstract class ResidenceDecorator extends Residence {
-    protected Residence residence;      //Residence decorated by the ResidenceDecorator
+
+    /**
+     * Residence decorated by the ResidenceDecorator
+     */
+    protected Residence residence;
 
     public ResidenceDecorator() {
         this(null);

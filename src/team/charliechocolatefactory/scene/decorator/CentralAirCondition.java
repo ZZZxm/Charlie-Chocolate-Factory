@@ -6,7 +6,7 @@ import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWor
  * @author TT
  * @project chocolateFactory
  * @classname CentralAirCondition
- * @description Central air condition
+ * @description TODO
  * @date 2020/11/18 14:35
  */
 public class CentralAirCondition extends ResidenceDecorator {
@@ -22,7 +22,8 @@ public class CentralAirCondition extends ResidenceDecorator {
 
     @Override
     public double getCost() {
-        return residence.getCost() + 200; //chair 200yuan/per
+        // cost of one chair if 200 yuan
+        return residence.getCost() + 200;
     }
 
     @Override

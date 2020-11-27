@@ -6,7 +6,7 @@ import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWor
  * @author TT
  * @project chocolateFactory
  * @classname Monitor
- * @description monitor
+ * @description TODO
  * @date 2020/11/18 14:34
  */
 public class Monitor extends ResidenceDecorator {
@@ -22,6 +22,7 @@ public class Monitor extends ResidenceDecorator {
 
     @Override
     public double getCost() {
+        // cost of one table is 500 yuan
         return residence.getCost() + 500; //table 500yuan/per
     }
 

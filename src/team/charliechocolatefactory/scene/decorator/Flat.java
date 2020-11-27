@@ -1,16 +1,16 @@
 package team.charliechocolatefactory.scene.decorator;
 
 import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
+import team.charliechocolatefactory.scene.SceneNameConst;
 
 /**
  * @author TT
  * @project chocolateFactory
  * @classname Flat
- * @description flat
+ * @description TODO
  * @date 2020/11/24 20:35
  */
 public class Flat extends Residence {
-
 
     public Flat() {
 
@@ -28,12 +28,8 @@ public class Flat extends Residence {
 
     @Override
     public String toString() {
-        return "class ReceptionCenter extends Residence";
+        return SceneNameConst.FLAT;
     }
 
-    @Override
-    public void accept(UtilityWorker worker) {
-
-    }
 }
 

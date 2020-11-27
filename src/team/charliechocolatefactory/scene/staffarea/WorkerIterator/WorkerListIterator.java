@@ -35,6 +35,7 @@ public class WorkerListIterator implements Iterator {
 
     /**
      * make the index points to the first element
+     *
      * @return the first element
      */
     @Override
@@ -45,6 +46,7 @@ public class WorkerListIterator implements Iterator {
 
     /**
      * make the index points to the next element
+     *
      * @return the next element
      */
     @Override
@@ -57,31 +59,40 @@ public class WorkerListIterator implements Iterator {
 
     /**
      * determine if there exists the next element
+     *
      * @return true if there exists the next element
      */
     @Override
     public boolean hasNext() {
-        if (index < workerList.size() - 1) {
-            return true;
-        }
-        return false;
+        return index < workerList.size() - 1;
     }
 
+    /**
+     * make the index points to the last element
+     *
+     * @return the last element
+     */
     public Worker last() {
         index = workerList.size() - 1;
         return workerList.get(index);
     }
 
+    /**
+     * make the index points to the previous element
+     *
+     * @return the previous element
+     */
     public Worker previous() {
         return workerList.get(--index);
     }
 
+
     public List<Worker> getWorkerList() {
-        return workerList;
+        return new ArrayList<>(workerList);
     }
 
     public void setWorkerList(ArrayList<Worker> workerList) {
-        this.workerList = workerList;
+        this.workerList = new ArrayList<Worker>(workerList);
     }
 
     public int getIndex() {

@@ -6,7 +6,7 @@ import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWor
  * @author TT
  * @project chocolateFactory
  * @classname FireHydrant
- * @description fire hydrant
+ * @description TODO
  * @date 2020/11/18 15:34
  */
 public class FireHydrant extends ResidenceDecorator {
@@ -22,7 +22,8 @@ public class FireHydrant extends ResidenceDecorator {
 
     @Override
     public double getCost() {
-        return residence.getCost() + 1000; //Infrared alarm 100yuan/per
+        // cost of one infrared alarm is 100 yuan
+        return residence.getCost() + 1000;
     }
 
     @Override

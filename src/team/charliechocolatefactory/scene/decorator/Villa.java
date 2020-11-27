@@ -1,12 +1,13 @@
 package team.charliechocolatefactory.scene.decorator;
 
 import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
+import team.charliechocolatefactory.scene.SceneNameConst;
 
 /**
  * @author TT
  * @project chocolateFactory
  * @classname Villa
- * @description villa
+ * @description TODO
  * @date 2020/11/24 20:30
  */
 public class Villa extends Residence {
@@ -24,11 +25,7 @@ public class Villa extends Residence {
 
     @Override
     public String toString() {
-        return "class Villa extends Residence";
+        return SceneNameConst.VILLA;
     }
 
-    @Override
-    public void accept(UtilityWorker worker) {
-
-    }
 }

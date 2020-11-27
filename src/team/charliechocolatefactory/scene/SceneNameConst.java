@@ -37,5 +37,10 @@ public class SceneNameConst {
 
     public static final String EXPERIENCE_ROOM = "experience room";
 
+    public static final String RESIDENCE = "residence";
+
+    public static final String FLAT = "flat";
+
+    public static final String VILLA = "villa";
 
 }

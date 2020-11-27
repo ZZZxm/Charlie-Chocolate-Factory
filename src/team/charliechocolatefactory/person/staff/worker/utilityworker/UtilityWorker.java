@@ -1,6 +1,7 @@
 package team.charliechocolatefactory.person.staff.worker.utilityworker;
 
 import team.charliechocolatefactory.scene.GarbageStation;
+import team.charliechocolatefactory.scene.decorator.Residence;
 import team.charliechocolatefactory.scene.publicarea.PublicArea;
 import team.charliechocolatefactory.scene.staffarea.DiningRoom;
 import team.charliechocolatefactory.scene.staffarea.Office;
@@ -22,4 +23,6 @@ public interface UtilityWorker {
     void visit(DiningRoom s);
 
     void visit(Office s);
+
+    void visit(Residence s);
 }

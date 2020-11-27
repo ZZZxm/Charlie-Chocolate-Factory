@@ -9,9 +9,9 @@ package team.charliechocolatefactory.scene.staffarea.WorkerIterator;
  */
 public interface Iterator {
 
-    public Object first();
+    Object first();
 
-    public Object next();
+    Object next();
 
-    public boolean hasNext();
+    boolean hasNext();
 }
