@@ -29,8 +29,8 @@ public class ImmutableTest {
         System.out.println("***                 2. Init TaxReceipt                              ***");
         System.out.println("***                 3. Init PurchaseReceipt                         ***");
         System.out.println("***                                                                 ***");
-        System.out.println("*** Tips: You can choose the type of invoice to input.              ***");
-        System.out.println("***       The invoice initialized here is immutable                 ***");
+        System.out.println("***      Tips: You can choose the type of invoice to input.         ***");
+        System.out.println("***          The invoice initialized here is immutable              ***");
         System.out.println("***********************************************************************");
         System.out.println("");
 
@@ -51,19 +51,19 @@ public class ImmutableTest {
                 case 1: {
                     // init common receipt;
                     CommonReceipt receipt = new CommonReceipt("this is CommonReceipt");
-                    System.out.println(receipt);
+                    receipt.displayAll();
                     break;
                 }
                 case 2: {
                     // init TaxReceipt;
                     TaxReceipt receipt = new TaxReceipt("this is TaxReceipt");
-                    System.out.println(receipt);
+                    receipt.displayAll();
                     break;
                 }
                 case 3: {
                     // init PurchaseReceipt;
                     PurchaseReceipt receipt = new PurchaseReceipt("this is PurchaseReceipt");
-                    System.out.println(receipt);
+                    receipt.displayAll();
                     break;
                 }
                 default: {
