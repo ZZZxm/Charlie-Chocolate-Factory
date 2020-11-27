@@ -31,7 +31,7 @@ public class PeriodicMaintenance {
         scenes = sst;
     }
 
-    public void setDirty() {
+    public void setDirtyTrue() {
         this.dirtyFlag = true;
     }
 
@@ -39,7 +39,7 @@ public class PeriodicMaintenance {
         return this.dirtyFlag;
     }
 
-    public void setAging() {
+    public void setAgingTrue() {
         this.agingFlag = true;
     }
 
