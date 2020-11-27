@@ -3,6 +3,7 @@ package test;
 import com.sun.net.httpserver.Filter;
 import test.DesignPatternTest.*;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -66,143 +67,145 @@ public class MainTest {
         int op;
         String blank;
         Scanner input = new Scanner(System.in);
+        try {
+            while (flag) {
+                showList();
+                op = input.nextInt();
+                System.out.println("\n");
 
-        while (flag) {
-            showList();
-            op = input.nextInt();
-            System.out.println("\n");
-
-            switch (op) {
-                case 0:
-                    flag = false;
-                    break;
-                case 1:
-                    AbstractFactoryTest.main(new String[]{});
-                    break;
-                case 2:
-                    AdapterTest.main(new String[]{});
-                    break;
-                case 3:
-                    BridgeTest.main(new String[]{});
-                    break;
-                case 4:
-                    BuilderTest.main(new String[]{});
-                    break;
-                case 5:
-                    ResponsibilityChainTest.main(new String[]{});
-                    break;
-                case 6:
-                    CommandTest.main(new String[]{});
-                    break;
-                case 7:
-                    CompositeTest.main(new String[]{});
-                    break;
-                case 8:
-                    DecoratorTest.main(new String[]{});
-                    break;
-                case 9:
-                    FacadeTest.main(new String[]{});
-                    break;
-                case 10:
-                    FactoryMethodTest.main(new String[]{});
-                    break;
-                case 11:
-                    FlyweightTest.main(new String[]{});
-                    break;
-                case 12:
-                    InterpreterTest.main(new String[]{});
-                    break;
-                case 13:
-                    IteratorTest.main(new String[]{});
-                    break;
-                case 14:
-                    MediatorTest.main(new String[]{});
-                    break;
-                case 15:
-                    MementoTest.main(new String[]{});
-                    break;
-                case 16:
-                    ObserverTest.main(new String[]{});
-                    break;
-                case 17:
-                    PrototypeTest.main(new String[]{});
-                    break;
-                case 18:
-                    ProxyTest.main(new String[]{});
-                    break;
-                case 19:
-                    SingletonTest.main(new String[]{});
-                    break;
-                case 20:
-                    StateTest.main(new String[]{});
-                    break;
-                case 21:
-                    StrategyTest.main(new String[]{});
-                    break;
-                case 22:
-                    TemplateMethodTest.main(new String[]{});
-                    break;
-                case 23:
-                    VisitorTest.main(new String[]{});
-                    break;
+                switch (op) {
+                    case 0:
+                        flag = false;
+                        break;
+                    case 1:
+                        AbstractFactoryTest.main(new String[]{});
+                        break;
+                    case 2:
+                        AdapterTest.main(new String[]{});
+                        break;
+                    case 3:
+                        BridgeTest.main(new String[]{});
+                        break;
+                    case 4:
+                        BuilderTest.main(new String[]{});
+                        break;
+                    case 5:
+                        ResponsibilityChainTest.main(new String[]{});
+                        break;
+                    case 6:
+                        CommandTest.main(new String[]{});
+                        break;
+                    case 7:
+                        CompositeTest.main(new String[]{});
+                        break;
+                    case 8:
+                        DecoratorTest.main(new String[]{});
+                        break;
+                    case 9:
+                        FacadeTest.main(new String[]{});
+                        break;
+                    case 10:
+                        FactoryMethodTest.main(new String[]{});
+                        break;
+                    case 11:
+                        FlyweightTest.main(new String[]{});
+                        break;
+                    case 12:
+                        InterpreterTest.main(new String[]{});
+                        break;
+                    case 13:
+                        IteratorTest.main(new String[]{});
+                        break;
+                    case 14:
+                        MediatorTest.main(new String[]{});
+                        break;
+                    case 15:
+                        MementoTest.main(new String[]{});
+                        break;
+                    case 16:
+                        ObserverTest.main(new String[]{});
+                        break;
+                    case 17:
+                        PrototypeTest.main(new String[]{});
+                        break;
+                    case 18:
+                        ProxyTest.main(new String[]{});
+                        break;
+                    case 19:
+                        SingletonTest.main(new String[]{});
+                        break;
+                    case 20:
+                        StateTest.main(new String[]{});
+                        break;
+                    case 21:
+                        StrategyTest.main(new String[]{});
+                        break;
+                    case 22:
+                        TemplateMethodTest.main(new String[]{});
+                        break;
+                    case 23:
+                        VisitorTest.main(new String[]{});
+                        break;
 
                     // 下面是23个设计模式外的15个其他设计模式
 
-                case 24:
-                    BusinessDelegateTest.main(new String[]{});
-                    break;
-                case 25:
-                    CallbackTest.main(new String[]{});
-                    break;
-                case 26:
-                    ConverterTest.main(new String[]{});
-                    break;
-                case 27:
-                    COWTest.main(new String[]{});
-                    break;
-                case 28:
-                    DAOTest.main(new String[]{});
-                    break;
-                case 29:
-                    DirtyFlagTest.main(new String[]{});
-                    break;
-                case 30:
-                    ExtensionObjectsTest.main(new String[]{});
-                    break;
-                case 31:
-                    FilterTest.main(new String[]{});
-                    break;
-                case 32:
-                    ImmutableTest.main(new String[]{});
-                    break;
-                case 33:
-                    IOCTest.main(new String[]{});
-                    break;
-                case 34:
-                    MonostateTest.main(new String[]{});
-                    break;
-                case 35:
-                    MultitonTest.main(new String[]{});
-                    break;
-                case 36:
-                    NullObjectTest.main(new String[]{});
-                    break;
-                case 37:
-                    ValueObjectTest.main(new String[]{});
-                    break;
-                case 38:
-                    //TransferObjectTest.main(new String[]{});
-                    break;
-                default:
-                    System.out.println("Invalid input!");
-                    System.out.println("Please input a number of 0-38!");
+                    case 24:
+                        BusinessDelegateTest.main(new String[]{});
+                        break;
+                    case 25:
+                        CallbackTest.main(new String[]{});
+                        break;
+                    case 26:
+                        ConverterTest.main(new String[]{});
+                        break;
+                    case 27:
+                        COWTest.main(new String[]{});
+                        break;
+                    case 28:
+                        DAOTest.main(new String[]{});
+                        break;
+                    case 29:
+                        DirtyFlagTest.main(new String[]{});
+                        break;
+                    case 30:
+                        ExtensionObjectsTest.main(new String[]{});
+                        break;
+                    case 31:
+                        FilterTest.main(new String[]{});
+                        break;
+                    case 32:
+                        ImmutableTest.main(new String[]{});
+                        break;
+                    case 33:
+                        IOCTest.main(new String[]{});
+                        break;
+                    case 34:
+                        MonostateTest.main(new String[]{});
+                        break;
+                    case 35:
+                        MultitonTest.main(new String[]{});
+                        break;
+                    case 36:
+                        NullObjectTest.main(new String[]{});
+                        break;
+                    case 37:
+                        ValueObjectTest.main(new String[]{});
+                        break;
+                    case 38:
+                        TransferObjectTest.main(new String[]{});
+                        break;
+                    default:
+                        System.out.println("Invalid input!");
+                        System.out.println("Please input a number of 0-38!");
+                }
+                System.out.println("\n");
+                System.out.println("Enter to continue testing...");
+                blank = input.nextLine();
+                blank = input.nextLine();
             }
-            System.out.println("\n");
-            System.out.println("Enter to continue testing...");
-            blank = input.nextLine();
-            blank = input.nextLine();
+        } catch (InputMismatchException exception) {
+            System.out.println("Please input Integer! You have to run the test again.");
         }
-
         System.out.println("");
         System.out.println("========= End of Design Patterns Test ==========");
     }

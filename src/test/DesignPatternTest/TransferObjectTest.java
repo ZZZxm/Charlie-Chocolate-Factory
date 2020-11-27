@@ -10,11 +10,11 @@ import java.util.Scanner;
 /**
  * @author Kerr
  * @project chocolateFactory
- * @classname TransferTest
+ * @classname TransferObjectTest
  * @description TODO
  * @date 2020/11/27 20:21
  */
-public class TransferTest {
+public class TransferObjectTest {
     public static void main(String[] args) {
         System.out.println("------------------------------------ [Transfer] Test ------------------------------------");
         System.out.println("");
