@@ -14,7 +14,7 @@ import java.io.Serializable;
  * @description this is milk chocolate.
  * @date 2020/11/8 15:16
  */
-public class MilkChocolate extends Chocolate implements Serializable,Cloneable {
+public class MilkChocolate extends Chocolate implements Serializable, Cloneable {
 
     //fields
     protected double milkContent;
@@ -109,10 +109,7 @@ public class MilkChocolate extends Chocolate implements Serializable,Cloneable {
         return super.clone();
     }
 
-    public boolean equals(MilkChocolate milkChocolate)
-    {
-        if(this.cocoaBeanNum==milkChocolate.getCocoaBeanNum()&&this.sugarNum==milkChocolate.getSugarNum()&&this.milkNum==milkChocolate.getMilkNum())
-            return true;
-        return false;
+    public boolean equals(MilkChocolate milkChocolate) {
+        return this.cocoaBeanNum == milkChocolate.getCocoaBeanNum() && this.sugarNum == milkChocolate.getSugarNum() && this.milkNum == milkChocolate.getMilkNum();
     }
 }

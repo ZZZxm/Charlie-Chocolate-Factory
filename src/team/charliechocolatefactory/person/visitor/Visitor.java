@@ -50,7 +50,7 @@ public class Visitor extends Person {
             System.out.println(this.name + " can enter" + dest);
             return true;
         } else {
-            System.out.println("Sorry! " + this.name + " cannot enter" + dest);
+            System.out.println("Sorry! " + this.name + " cannot enter " + dest);
             return false;
         }
     }

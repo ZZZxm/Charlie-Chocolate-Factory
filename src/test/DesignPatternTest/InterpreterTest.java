@@ -99,7 +99,7 @@ public class InterpreterTest {
                     System.out.println("    |-- experienceRoom");
                     System.out.println("    |-- whiteChocolateWorkshop");
                     inputSentence = input.next();
-                    String s[] = inputSentence.split("->");
+                    String[] s = inputSentence.split("->");
                     if (visitor.getName().equals(s[0])) {
                         visitor.canEnter(s[1]);
                     } else if ("generalManager".equals(s[0])) {

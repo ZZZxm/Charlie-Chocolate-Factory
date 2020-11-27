@@ -164,7 +164,7 @@ public class MainTest {
                     DAOTest.main(new String[]{});
                     break;
                 case 29:
-                    //DirtyFlagTest.main(new String[]{});
+                    DirtyFlagTest.main(new String[]{});
                     break;
                 case 30:
                     ExtensionObjectsTest.main(new String[]{});
