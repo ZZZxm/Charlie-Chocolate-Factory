@@ -178,7 +178,7 @@ public abstract class Machine {
     public void fix() {
         FixRookie worker1 = new FixRookie("Kerr", 18, Person.Sex.MALE, 10, null);
         FixProfession worker2 = new FixProfession("Young", 19, Person.Sex.MALE, 10, null);
-        FixExpert worker3 = new FixExpert("Brian", 18, Person.Sex.MALE, 10, null);
+        FixExpert worker3 = new FixExpert("Brian", 18, Person.Sex.MALE, 10000, null);
 
 
         if (breakDown) {
