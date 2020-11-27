@@ -1,4 +1,4 @@
-package team.charliechocolatefactory.machine.qualitytestmachine.qualitytestsystem;
+package team.charliechocolatefactory.machine.processmachine.qualitytestmachine.qualitytestsystem;
 
 /**
  * @author TT
@@ -11,9 +11,11 @@ public class QualityInspectionPanel extends QualityTestSystem {
     public QualityInspectionPanel(String type, String machineNum) {
         super(type, machineNum);
     }
-    public QualityInspectionPanel(String species){
+
+    public QualityInspectionPanel(String species) {
         super(species);
     }
+
     @Override
     protected void add(QualityTestSystem qualityTestSystem) {
     }

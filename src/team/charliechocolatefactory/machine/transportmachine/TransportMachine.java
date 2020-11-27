@@ -21,7 +21,6 @@ public abstract class TransportMachine extends Machine {
         super(type, machineNum, age, lifeYear, lossCoefficient, maxCapacity);
     }
 
-
     /**
      * function work() for transport machine aims to transport products or persons from one place to another
      *

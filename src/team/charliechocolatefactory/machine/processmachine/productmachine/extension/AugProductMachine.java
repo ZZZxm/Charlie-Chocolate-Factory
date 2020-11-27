@@ -1,4 +1,4 @@
-package team.charliechocolatefactory.machine.extension;
+package team.charliechocolatefactory.machine.processmachine.productmachine.extension;
 
 import team.charliechocolatefactory.machine.processmachine.productmachine.BasicProductMachine;
 import team.charliechocolatefactory.product.Product;
@@ -32,15 +32,14 @@ public class AugProductMachine implements MachineExtension {
      */
     @Override
     public int continueWork(int workNum, Product product) {
-        if(workNum<=1)
-        {
+        if (workNum <= 1) {
             System.out.println("The machine must work more than once!");
             return 0;
         }
         int outNum = 0;
         for (int i = 0; i < workNum; ++i) {
             int output = productMachine.run(product);
-            int n=i+1;
+            int n = i + 1;
             System.out.println("Run" + n + ": the machine produced " + output + " products");
             outNum = output + outNum;
             if (output == 0) break;
