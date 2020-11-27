@@ -15,14 +15,18 @@ public class FixRookie extends FixWorker {
         super(name, age, sex, salary, department);
     }
 
+    public FixRookie(String name, int age, Person.Sex sex, int salary) {
+        super(name, age, sex, salary);
+    }
+
     @Override
     public void work() {
-        System.out.println("The fix rookie" + this.name + "is working.");
+        System.out.println("The fix rookie " + this.name + " is working...");
     }
 
     @Override
     public void rest() {
-        System.out.println("The fix rookie" + this.name + "goes to rest.");
+        System.out.println("The fix rookie " + this.name + " goes to rest...");
     }
 
     @Override
@@ -31,11 +35,13 @@ public class FixRookie extends FixWorker {
     }
 
     public boolean handleRequest(int breakLevel) {
+        this.work();
         if (breakLevel <= 3) {
-            work();
             return true;
         } else {
             if (getNext() != null) {
+                System.out.println(this.name+" cannot fix it, send a requirement to the professional repairman.");
+                System.out.println("");
                 if (getNext().handleRequest(breakLevel)) {
                     return true;
                 } else {

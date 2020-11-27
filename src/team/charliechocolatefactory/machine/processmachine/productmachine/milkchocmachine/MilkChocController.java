@@ -33,7 +33,7 @@ public class MilkChocController {
         if (outNum == 0) {
             System.out.println("Failing producing MilkChocolate!");
         } else {
-            System.out.println("Successfully producing " + outNum + " MilkChocolate!");
+            // System.out.println("Successfully producing " + outNum + " MilkChocolate!");
         }
         return outNum;
     }

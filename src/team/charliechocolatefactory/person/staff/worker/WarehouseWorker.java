@@ -15,6 +15,10 @@ public class WarehouseWorker extends Worker {
         super(name, age, sex, salary, department);
     }
 
+    public WarehouseWorker(String name, int age, Sex sex, int salary) {
+        super(name, age, sex, salary);
+    }
+
     @Override
     public void work() {
         System.out.println("Warehouse Worker " + this.name + " is working.");

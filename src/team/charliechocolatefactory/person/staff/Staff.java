@@ -129,10 +129,12 @@ public abstract class Staff extends Person {
      */
     public void getPaid() {
         this.asset += salary;
+        System.out.println(this.name + " gets paid of " + this.salary + " yuan for wage.");
     }
 
     public void getPaid(int pay) {
         this.asset += pay;
+        System.out.println(this.name + " gets paid of " + pay + " yuan for bonus.");
     }
 
     @Override

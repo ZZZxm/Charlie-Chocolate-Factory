@@ -16,4 +16,9 @@ public class ProducingState extends ProductState {
         product.setState(new ProducedState());
         System.out.println("From producing state to produced state, waiting for packaging.");
     }
+
+    @Override
+    public String toString() {
+        return "producing state";
+    }
 }

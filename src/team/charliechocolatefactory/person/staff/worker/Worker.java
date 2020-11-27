@@ -1,5 +1,6 @@
 package team.charliechocolatefactory.person.staff.worker;
 
+import com.sun.xml.internal.bind.v2.model.core.NonElement;
 import team.charliechocolatefactory.person.staff.Staff;
 import team.charliechocolatefactory.product.Product;
 import team.charliechocolatefactory.product.chocolate.*;
@@ -18,13 +19,17 @@ import team.charliechocolatefactory.scene.staffarea.StaffArea;
  */
 public abstract class Worker extends Staff {
 
-    public String identity="worker";
+    public String identity = "worker";
     // command pattern
     // workers are invokers, they invoke machines to carry on the command -> produce product
     private Product darkChocolate, matchaChocolate, milkChocolate, whiteChocolate, chocolateCake, chocolateWafer, chocolateIceCream, chocolateStarCookie;
 
     public Worker(String name, int age, Sex sex, int salary, StaffArea department) {
         super(name, age, sex, salary, department);
+        if (department != null) {
+            department.addWorker(this);
+        }
+
         this.darkChocolate = new DarkChocolate();
         this.matchaChocolate = new MatchaChocolate();
         this.milkChocolate = new MilkChocolate();
@@ -33,6 +38,10 @@ public abstract class Worker extends Staff {
         this.chocolateStarCookie = new ChocolateCookie(ChocolateCookie.Shape.STAR);
         this.chocolateIceCream = new ChocolateIceCream();
         this.chocolateWafer = new ChocolateWafer();
+    }
+
+    public Worker(String name, int age, Sex sex, int salary) {
+        this(name, age, sex, salary, null);
     }
 
     public void produceDarkChocolate() {
@@ -99,14 +108,12 @@ public abstract class Worker extends Staff {
         this.chocolateWafer.producing();
     }
 
-    public Worker(String name, int age, Sex sex, int salary) {
-        super(name, age, sex, salary);
-    }
+
 
     /**
      * @modified by Ray
      */
-    public void respondMorning(){
+    public void respondMorning() {
         System.out.println("保，早安！噢，抱歉。。。早，保安！");
     }
 

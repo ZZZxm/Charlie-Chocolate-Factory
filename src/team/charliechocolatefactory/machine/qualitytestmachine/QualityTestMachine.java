@@ -12,6 +12,10 @@ import team.charliechocolatefactory.product.Product;
  */
 public class QualityTestMachine extends ProcessMachine {
 
+    public QualityTestMachine(String type)
+    {
+        super(type);
+    }
     public QualityTestMachine(String type, String machineNum, double lifeYear, double lossCoefficient, int maxCapacity) {
         super(type, machineNum, lifeYear, lossCoefficient, maxCapacity);
     }

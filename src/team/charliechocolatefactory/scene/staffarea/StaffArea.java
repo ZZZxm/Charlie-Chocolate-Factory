@@ -100,6 +100,11 @@ public abstract class StaffArea extends Scene implements Aggregate {
         }
     }
 
+    public void removeWorker(String name) {
+        workerList.removeIf(worker -> worker.getName().equals(name));
+        System.out.println("Worker object doesn't exist.");
+    }
+
     /**
      * get the worker list
      *

@@ -22,6 +22,10 @@ public class MaintenanceWorker extends Worker implements UtilityWorker {
         super(name, age, sex, salary, department);
     }
 
+    public MaintenanceWorker(String name, int age, Sex sex, int salary) {
+        super(name, age, sex, salary);
+    }
+
     @Override
     public void work() {
         System.out.println("The maintenance worker " + this.name + "is working.");

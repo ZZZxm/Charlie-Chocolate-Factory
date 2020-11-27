@@ -16,7 +16,7 @@ public class CentralAirCondition extends ResidenceDecorator {
 
     public CentralAirCondition(Residence r){
         super(r);
-        System.out.println("添加一个中央空调");
+        System.out.println("A central air condition has been added");
     }
 
     @Override
@@ -31,7 +31,7 @@ public class CentralAirCondition extends ResidenceDecorator {
 
     @Override
     public String getDescription() {
-        return residence.getDescription() + "，加了一个中央空调";
+        return residence.getDescription();
     }
 
     @Override

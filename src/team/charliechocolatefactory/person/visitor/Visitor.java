@@ -15,11 +15,17 @@ import team.charliechocolatefactory.scene.publicarea.PublicArea;
  */
 public class Visitor extends Person {
 
-    public String identity = "visitor";
+    public String identity = "Visitor";
+
+    private Context visitLimit;
 
     public Visitor(String name, int age, Sex sex) {
         super(name, age, sex);
+        String[] persons = {this.identity};
+        String[] publicAreas = {"publicArea", "experienceRoom", "exhibitionRoom"};
+        this.visitLimit = new Context(persons, publicAreas);
     }
+
 
     /**
      * visit a public area
@@ -34,6 +40,17 @@ public class Visitor extends Person {
             return true;
         } else {
             System.out.println("Sorry, the" + dest.toString() + "is already full.");
+            return false;
+        }
+    }
+
+    public boolean canEnter(String dest) {
+        String move = this.identity + " enter " + dest;
+        if (this.visitLimit.canEnter(move)) {
+            System.out.println(this.name + " can enter" + dest);
+            return true;
+        } else {
+            System.out.println("Sorry! " + this.name + " cannot enter " + dest);
             return false;
         }
     }
@@ -53,14 +70,12 @@ public class Visitor extends Person {
             System.out.println("Sorry, visitor " +this.name + "can't go to" + dest.toString());
             return false;
         }*/
-        Context visit = new Context();
-        String move = "visitor enter " + dest.toString();
-        if (visit.canEnter(move)) {
+        if (this.canEnter(dest.toString())) {
             this.location = dest;
-            System.out.println("Visitor" + this.name + "moves to " + dest.toString());
+            System.out.println(this.identity + " " + this.name + " moves to " + dest.toString());
             return true;
         } else {
-            System.out.println("Sorry, visitor " + this.name + "can't go to" + dest.toString());
+            System.out.println("Sorry, " + this.identity + " " + this.name + "can 't go to" + dest.toString());
             return false;
         }
     }

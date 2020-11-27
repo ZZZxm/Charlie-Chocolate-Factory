@@ -2,7 +2,6 @@ package team.charliechocolatefactory.machine.processmachine;
 
 import team.charliechocolatefactory.machine.Machine;
 import team.charliechocolatefactory.product.Product;
-import team.charliechocolatefactory.machine.processmachine.state.*;
 
 import java.util.Random;
 
@@ -18,19 +17,13 @@ public abstract class ProcessMachine extends Machine {
     /**
      * ProcessMachine's state
      */
-    public void ProcessMachineState(){
-        Context context = new Context();
-        context.setProcessMachineState(new StoppingState());
-        context.open();
-        context.close();
-        context.run();
-        context.stop();
+    public void ProcessMachineState() {
+
     }
 
 
-    public ProcessMachine(String type,String machineNum,double lifeYear,double lossCoefficient,int maxCapacity)
-    {
-        super(type,machineNum,lifeYear,lossCoefficient,maxCapacity);
+    public ProcessMachine(String type, String machineNum, double lifeYear, double lossCoefficient, int maxCapacity) {
+        super(type, machineNum, lifeYear, lossCoefficient, maxCapacity);
     }
 
     public ProcessMachine(String type, String machineNum, double age, double lifeYear, double lossCoefficient, int maxCapacity) {
@@ -44,7 +37,7 @@ public abstract class ProcessMachine extends Machine {
             return 0;
         }
         Random rand = new Random();
-        int failPossibility = rand.nextInt(8);
+        int failPossibility = rand.nextInt(12);
         if (failPossibility < 2) malfunction();
         if (!breakDown) {
             Random rand2 = new Random();
@@ -67,7 +60,9 @@ public abstract class ProcessMachine extends Machine {
      * @param productNum a int
      */
     public abstract void process(Product product, int productNum);
-
+    public ProcessMachine(String type) {
+        super(type);
+    }
     public String toString() {
         return "class ProcessMachine";
     }

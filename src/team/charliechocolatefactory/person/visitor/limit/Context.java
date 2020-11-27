@@ -9,14 +9,12 @@ package team.charliechocolatefactory.person.visitor.limit;
  */
 public class Context {
 
-    private String[] persons = {"visitor"};
-    private String[] areas = {"public area", "experience room", "exhibition room"};
     private Expression visitLimit;
 
-    public Context() {
-        Expression person = new TerminalExpression(persons);
-        Expression area = new TerminalExpression(areas);
-        visitLimit = new AndExpression(person, area);
+    public Context(String[] persons, String[] areas) {
+        Expression _persons = new TerminalExpression(persons);
+        Expression _areas = new TerminalExpression(areas);
+        visitLimit = new AndExpression(_persons, _areas);
     }
 
     public boolean canEnter(String info) {

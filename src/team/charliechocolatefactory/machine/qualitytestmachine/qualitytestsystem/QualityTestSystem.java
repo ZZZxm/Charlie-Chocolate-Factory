@@ -13,6 +13,11 @@ public abstract class QualityTestSystem extends QualityTestMachine {
     private String species;
 
 
+    public QualityTestSystem(String species){
+        super(species);
+
+        this.species = species;
+    }
     public QualityTestSystem(String type, String machineNum) {
         super(type, machineNum, 50, 1.2, 500);
     }

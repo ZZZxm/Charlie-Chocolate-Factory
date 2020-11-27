@@ -14,4 +14,9 @@ public class StoriedState extends ProductState {
     public void gotoNextState(Product product) {
         System.out.println("The product has been storied.");
     }
+
+    @Override
+    public String toString() {
+        return "storied state";
+    }
 }

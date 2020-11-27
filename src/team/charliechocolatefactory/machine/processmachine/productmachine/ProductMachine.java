@@ -21,7 +21,8 @@ public abstract class ProductMachine extends ProcessMachine {
 
     @Override
     public void process(Product product, int productNum) {
-        System.out.println("Process" + productNum + " " + product.getName());
+        System.out.println("Successfully produce " + productNum + " " + product.getName());
+        product.gotoNextState();
     }
 
     public String toString() {

@@ -1,5 +1,6 @@
 package team.charliechocolatefactory.scene.staffarea.manufacturingarea.warehouse;
 
+import team.charliechocolatefactory.person.GeneralManager;
 import team.charliechocolatefactory.person.staff.Manager;
 import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
 import team.charliechocolatefactory.scene.SceneNameConst;
@@ -21,9 +22,8 @@ public class Warehouse extends ManufacturingArea {
 
     public Warehouse(String location, double cost, double area) {
         super(location, cost, area, Manager.getWarehouseManager());
-        setManager(Manager.getWarehouseManager());
         Manager.getWarehouseManager().addDepartment(this);
-
+        GeneralManager.getInstance().addManager(Manager.getWarehouseManager());
         materialAmount = new HashMap<String, Double>();
         productionAmount = new HashMap<String, Integer>();
     }
@@ -70,8 +70,10 @@ public class Warehouse extends ManufacturingArea {
     public void addMaterial(String type, Double amount) {
         if (materialAmount.containsKey(type)) {
             materialAmount.put(type, amount + materialAmount.get(type));
+            System.out.println("Successfully add " + amount + " " + type + " in the warehouse.");
         } else {
-            System.out.println("The kind doesn't exist");
+            materialAmount.put(type, amount);
+            System.out.println("Successfully add " + amount + " " + type + " in the warehouse.");
         }
     }
 

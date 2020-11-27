@@ -11,6 +11,10 @@ import team.charliechocolatefactory.person.staff.Staff;
  */
 public class WagePayroll extends Payroll {
 
+    public WagePayroll() {
+        super();
+    }
+
     @Override
     public void payOff() {
         for (Staff staff : staffList) {

@@ -14,7 +14,7 @@ public class PickupService implements WarehouseService {
 
     @Override
     public void doProcessing(Warehouse warehouse, RawMaterial rawMaterial) {
-        warehouse.useMaterial("test", 1.0);
+        warehouse.useMaterial(rawMaterial.toString(), 1.0);
         System.out.println("Finish pickup service for " + rawMaterial.toString());
     }
 }

@@ -1,5 +1,6 @@
 package team.charliechocolatefactory.scene.staffarea;
 
+import team.charliechocolatefactory.person.GeneralManager;
 import team.charliechocolatefactory.person.staff.Manager;
 import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
 import team.charliechocolatefactory.scene.SceneNameConst;
@@ -29,8 +30,8 @@ public class Office extends StaffArea {
      */
     public Office(String location, double cost, double area) {
         super(location, cost, area, Manager.getOfficeManager());
-        setManager(Manager.getOfficeManager());
         Manager.getOfficeManager().addDepartment(this);
+        GeneralManager.getInstance().addManager(Manager.getOfficeManager());
     }
 
     /**

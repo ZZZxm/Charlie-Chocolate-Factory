@@ -1,9 +1,9 @@
 package test.DesignPatternTest;
 
-import com.sun.org.apache.xpath.internal.functions.FuncFalse;
-import jdk.nashorn.internal.ir.CaseNode;
-import jdk.nashorn.internal.ir.Flags;
-import team.charliechocolatefactory.person.GeneralManager;
+//import com.sun.org.apache.xpath.internal.functions.FuncFalse;
+//import jdk.nashorn.internal.ir.CaseNode;
+//import jdk.nashorn.internal.ir.Flags;
+//import team.charliechocolatefactory.person.GeneralManager;
 import team.charliechocolatefactory.rawmaterial.foodmaterial.Egg;
 import team.charliechocolatefactory.scene.staffarea.manufacturingarea.warehouse.Delegate.WarehouseClient;
 import team.charliechocolatefactory.scene.staffarea.manufacturingarea.warehouse.Delegate.WarehouseDelegate;
@@ -39,7 +39,7 @@ public class BusinessDelegateTest {
         System.out.println("***                 3. Store eggs into the warehouse       ***");
         System.out.println("***                 4. Try a wrong test                    ***");
         System.out.println("***                                                        ***");
-        System.out.println("***Tips: Please execute order 1 first.                     ***");
+        System.out.println("*** Tips: Please execute order 1 first.                    ***");
         System.out.println("**************************************************************");
         System.out.println("");
 
@@ -52,7 +52,7 @@ public class BusinessDelegateTest {
 
         do {
             System.out.println("");
-            System.out.println("Enter the order [0 to quit]:");
+            System.out.print("Enter the order [0 to quit]:");
             op = input.nextInt();
 
             if (warehouseDelegate == null && op > 1) {
@@ -86,10 +86,13 @@ public class BusinessDelegateTest {
                     break;
                 }
                 case 4: {
-                    System.out.println("\nLet's input a wrong service type.");
+                    System.out.println("\nLet's input a wrong service type --- hahahahaha service.");
                     warehouseDelegate.setServiceType("hahahahaha");
                     warehouseClient.doTask(new Egg());
                     break;
+                }
+                default:{
+                    System.out.println("Invalid Input, Please input again.");
                 }
             }
         } while (flag);

@@ -36,12 +36,12 @@ public class SecurityCheckTask {
         for (ExhibitionRoom item : ExhRooms) {
             System.out.println("开始巡逻第" + item.getExhRoomNumber() + "号展览厅。");
             item.visitExhibitionRoom();
-            System.out.println("第" + item.getExhRoomNumber() + "号展览厅巡逻完毕。");
+            System.out.println("第" + item.getExhRoomNumber() + "号展览厅巡逻完毕。\n");
         }
         System.out.println("其次进行实践区的例行巡逻检查……");
         for (ExperienceRoom item : ExpRooms) {
             System.out.println("开始巡逻第" + item.getExpRoomNumber() + "号实践区。");
-            System.out.println("第" + item.getExpRoomNumber() + "号实践区巡逻完毕。");
+            System.out.println("第" + item.getExpRoomNumber() + "号实践区巡逻完毕。\n");
         }
         RoomChecked = true;
     }
@@ -63,6 +63,8 @@ public class SecurityCheckTask {
         System.out.println("正在向总管汇报安全检查情况……");
         System.out.println("公共场地安全检查情况为:" + roomSt + "。");
         System.out.println("机器设备安全检查情况为:" + machineSt + "。");
+        MachineChecked=false;
+        RoomChecked=false;
     }
 
     @Override

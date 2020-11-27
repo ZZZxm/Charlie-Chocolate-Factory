@@ -10,7 +10,7 @@ import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWor
  * @project chocolateFactory
  * @classname ExperienceRoom
  * @description Designed for visitors to experience making chocolate.
- * @date 2020/11/18 10:13
+ * @date 2020/11/24 11:25
  */
 public class ExperienceRoom extends PublicArea {
 
@@ -61,33 +61,6 @@ public class ExperienceRoom extends PublicArea {
             tool = new HandmadeTool(tool);
         }
         tool.setDescription(description);
-    }
-
-    /**
-     * Tests of COW pattern.
-     */
-    public static void main(String[] args) {
-        // HandmadeToolFactory.reset();
-
-        ExperienceRoom[] rooms = new ExperienceRoom[3];
-
-        // The following lines should print one line of "New Handmade Tool!".
-        for (int i = 0; i < rooms.length; i++) {
-            rooms[i] = new ExperienceRoom("10" + Integer.toString(i + 1), 1, 1, 1);
-        }
-        // The following line should print "true".
-        System.out.println(rooms[0].getTool() == rooms[1].getTool());
-        // The following line should print "Copy Handmade Tool!"
-        rooms[1].setToolDescription("Tool in 102.");
-        // The following line should print "false".
-        System.out.println(rooms[0].getTool() == rooms[1].getTool());
-        // The following line should print "true".
-        System.out.println(rooms[0].getTool() == rooms[2].getTool());
-        // The following lines should both print "Copy Handmade Tool!"
-        rooms[0].setToolDescription("Tool in 101.");
-        rooms[2].setToolDescription("Tool in 101.");
-        // The following line should print 0.
-        System.out.println(HandmadeToolFactory.getDefaultHandmadeTool().getRefCount());
     }
 
     public int getExpRoomNumber() {
