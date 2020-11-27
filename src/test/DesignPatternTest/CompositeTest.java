@@ -1,8 +1,8 @@
 package test.DesignPatternTest;
 
-import team.charliechocolatefactory.machine.qualitytestmachine.qualitytestsystem.QualityInspectionPanel;
-import team.charliechocolatefactory.machine.qualitytestmachine.qualitytestsystem.QualityInspectionPanelGroup;
-import team.charliechocolatefactory.machine.qualitytestmachine.qualitytestsystem.QualityTestSystem;
+import team.charliechocolatefactory.machine.processmachine.qualitytestmachine.qualitytestsystem.QualityInspectionPanel;
+import team.charliechocolatefactory.machine.processmachine.qualitytestmachine.qualitytestsystem.QualityInspectionPanelGroup;
+import team.charliechocolatefactory.machine.processmachine.qualitytestmachine.qualitytestsystem.QualityTestSystem;
 
 import java.util.HashMap;
 import java.util.Map;

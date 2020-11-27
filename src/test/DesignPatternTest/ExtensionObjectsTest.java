@@ -1,6 +1,6 @@
 package test.DesignPatternTest;
 
-import team.charliechocolatefactory.machine.extension.AugProductMachine;
+import team.charliechocolatefactory.machine.processmachine.productmachine.extension.AugProductMachine;
 import team.charliechocolatefactory.machine.processmachine.productmachine.BasicProductMachine;
 import team.charliechocolatefactory.product.chocolate.DarkChocolate;
 

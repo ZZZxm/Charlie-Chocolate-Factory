@@ -33,7 +33,7 @@ public class Adapter implements UAV {
 
 
     @Override
-    public void setAimProcessNum(int aimProcessNum){
+    public void setAimProcessNum(int aimProcessNum) {
         adaptee.setAimProcessNum(aimProcessNum);
     }
 
