@@ -40,7 +40,7 @@ public class MainTest {
         System.out.println("               **            21 --- Strategy                  **");
         System.out.println("               **            22 --- Template Method           **");
         System.out.println("               **            23 --- Visitor                   **");
-
+        // 下面是23个设计模式外的15个其他设计模式
         System.out.println("               **            24 --- Business Delegate         **");
         System.out.println("               **            25 --- Callback                  **");
         System.out.println("               **            26 --- Converter                 **");
