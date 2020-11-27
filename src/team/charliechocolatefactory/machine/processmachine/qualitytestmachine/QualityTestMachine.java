@@ -1,4 +1,4 @@
-package team.charliechocolatefactory.machine.qualitytestmachine;
+package team.charliechocolatefactory.machine.processmachine.qualitytestmachine;
 
 import team.charliechocolatefactory.machine.processmachine.ProcessMachine;
 import team.charliechocolatefactory.product.Product;
@@ -12,10 +12,10 @@ import team.charliechocolatefactory.product.Product;
  */
 public class QualityTestMachine extends ProcessMachine {
 
-    public QualityTestMachine(String type)
-    {
+    public QualityTestMachine(String type) {
         super(type);
     }
+
     public QualityTestMachine(String type, String machineNum, double lifeYear, double lossCoefficient, int maxCapacity) {
         super(type, machineNum, lifeYear, lossCoefficient, maxCapacity);
     }

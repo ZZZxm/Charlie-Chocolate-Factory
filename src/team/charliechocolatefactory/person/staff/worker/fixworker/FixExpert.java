@@ -47,7 +47,7 @@ public class FixExpert extends FixWorker {
                     return false;
                 }
             } else {
-                System.out.println(this.name+" cannot fix it.");
+                System.out.println(this.name + " cannot fix it.");
                 System.out.println("The machine is totally broken down, cannot be fixed anymore!!");
                 return false;
             }

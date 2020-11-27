@@ -20,7 +20,7 @@ public class TransferObjectTest {
         System.out.println("");
         System.out.println("VisitorBO:getInstance(): get the visitorBO");
         System.out.println("VisitorBO:addVisitor(Visitor visitor) : add visitor to the database");
-        System.out.println("VisitorBO:deleteVisitor(Visitor visitor): delete visitor to the database");
+        System.out.println("VisitorBO:deleteVisitor(int code): delete visitor to the database");
         System.out.println("VisitorBO:getAllVisitors(): get all the visitors(return a visitor list)");
         System.out.println("VisitorBO:updateVisitor(Visitor visitor): update the visitor's name");
         System.out.println("");

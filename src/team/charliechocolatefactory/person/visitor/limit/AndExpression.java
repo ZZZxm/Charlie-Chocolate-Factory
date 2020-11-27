@@ -10,6 +10,7 @@ package team.charliechocolatefactory.person.visitor.limit;
 public class AndExpression implements Expression {
 
     private Expression person = null;
+
     private Expression area = null;
 
     public AndExpression(Expression person, Expression area) {
@@ -18,7 +19,7 @@ public class AndExpression implements Expression {
     }
 
     public boolean interpret(String info) {
-        String s[] = info.split(" enter ");
+        String[] s = info.split(" enter ");
         return person.interpret(s[0]) && area.interpret(s[1]);
     }
 

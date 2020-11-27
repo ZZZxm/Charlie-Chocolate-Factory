@@ -15,7 +15,7 @@ import team.charliechocolatefactory.rawmaterial.foodmaterial.Water;
  */
 public class ChocolateIceCream extends Product {
 
-    // constructor
+// constructor
     public ChocolateIceCream() {
         super("Chocolate Ice-cream", 12, 200);
         this.initIngredientList();

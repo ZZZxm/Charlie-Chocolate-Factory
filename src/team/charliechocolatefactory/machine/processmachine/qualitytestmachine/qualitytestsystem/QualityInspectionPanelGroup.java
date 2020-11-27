@@ -1,4 +1,4 @@
-package team.charliechocolatefactory.machine.qualitytestmachine.qualitytestsystem;
+package team.charliechocolatefactory.machine.processmachine.qualitytestmachine.qualitytestsystem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,9 +13,10 @@ import java.util.List;
 public class QualityInspectionPanelGroup extends QualityTestSystem {
     private List<QualityTestSystem> succulents = new ArrayList<QualityTestSystem>();
 
-    public QualityInspectionPanelGroup(String species){
+    public QualityInspectionPanelGroup(String species) {
         super(species);
     }
+
     public QualityInspectionPanelGroup(String type, String machineNum, List<QualityTestSystem> succulents) {
         super(type, machineNum);
         this.succulents = succulents;
@@ -23,7 +24,7 @@ public class QualityInspectionPanelGroup extends QualityTestSystem {
 
 
     @Override
-    public void add(QualityTestSystem qualityTestSystem){
+    public void add(QualityTestSystem qualityTestSystem) {
         succulents.add(qualityTestSystem);
     }
 
@@ -37,7 +38,7 @@ public class QualityInspectionPanelGroup extends QualityTestSystem {
         for (int i = 0; i <= depth; i++) {
             System.out.print("-");
         }
-        System.out.println("Group"+this.getSpecies() );
+        System.out.println("Group" + this.getSpecies());
         for (QualityTestSystem suc : succulents) {
             suc.show(depth + 2);
         }

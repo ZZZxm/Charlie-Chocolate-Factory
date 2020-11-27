@@ -10,7 +10,7 @@ import team.charliechocolatefactory.product.Product;
  * @date 2020/11/21 22:00
  */
 public class ProducingState extends ProductState {
-
+// methods
     @Override
     public void gotoNextState(Product product) {
         product.setState(new ProducedState());

@@ -32,16 +32,16 @@ public class FilterManager {
      *
      * @param message passed in at the beginning of the method
      */
-    public boolean doFilterMessage(Message message) {
+    public void doFilterMessage(Message message) {
         this.message = message;
-        return doFilterMessage();
+        doFilterMessage();
     }
 
     /**
      * This method can dynamically add the handler we need to enhance the flexibility of the code.
      *
      * @param person:Added handler
-     * @return:Is the addition successful
+     * @return: is the addition successful
      */
     public boolean addPersonProcess(Person person) {
         /*
@@ -70,6 +70,7 @@ public class FilterManager {
             }
             temp = temp.getSuccessor();
         }
+
         /*
          * The last node points to our newly added node.
          */
@@ -81,19 +82,18 @@ public class FilterManager {
     /**
      * The method of executing message passing to deliver message.
      *
-     * @return:message is success filter;
      */
-    public boolean doFilterMessage() {
+    public void doFilterMessage() {
         if (this.message == null) {
             throw new RuntimeException("message must not null!");
         }
-        return rootPerson.HandleRequest(this.message);
+        rootPerson.HandleRequest(this.message);
     }
 
     /**
      * Get our message
      *
-     * @return:Get our message
+     * @return: Get our message
      */
     public Message getMessage() {
         return message;
@@ -102,7 +102,7 @@ public class FilterManager {
     /**
      * Set up the message we send
      *
-     * @param message:send message;
+     * @param message send message
      */
     public void setMessage(Message message) {
         this.message = message;

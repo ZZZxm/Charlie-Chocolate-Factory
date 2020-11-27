@@ -20,10 +20,15 @@ import java.util.ArrayList;
 public class Manager extends Staff {
 
     public String identity = "manager";
+
     private ArrayList<StaffArea> departmentList;
+
     private static Manager diningRoomManager;
+
     private static Manager officeManager;
+
     private static Manager workShopManager;
+
     private static Manager warehouseManager;
 
 
@@ -66,7 +71,7 @@ public class Manager extends Staff {
     /**
      * return the work shop's manager, which is single!!
      *
-     * @return
+     * @return Manager
      */
     public static Manager getWorkShopManager() {
         if (workShopManager == null) {
@@ -79,7 +84,7 @@ public class Manager extends Staff {
     /**
      * return the warehouse's manager which is single!!
      *
-     * @return
+     * @return Manager
      */
     public static Manager getWarehouseManager() {
         if (warehouseManager == null) {
@@ -90,30 +95,23 @@ public class Manager extends Staff {
     }
 
     /**
-     *
-     * @param joinStr
-     * @return
+     * @param joinStr the joining string
+     * @return the department list name
      */
     public String getDepartmentListName(String joinStr) {
         ArrayList<String> strList = new ArrayList<String>();
-        for (Scene obj: departmentList) {
+        for (Scene obj : departmentList) {
             strList.add(obj.toString());
         }
         return String.join(joinStr, strList);
     }
 
-    /**
-     *
-     * @return
-     */
     public String getDepartmentListName() {
         return getDepartmentListName(", ");
     }
 
     /**
      * add department to the departmentList;
-     *
-     * @param department
      */
     public void addDepartment(StaffArea department) {
         this.departmentList.add(department);
@@ -186,10 +184,9 @@ public class Manager extends Staff {
      * @param dest destination
      */
     @Override
-    public boolean moveTo(Scene dest) {
+    public void moveTo(Scene dest) {
         this.location = dest;
         System.out.println("The manager " + this.name + "moves to " + dest.toString());
-        return true;
     }
 
     /**
@@ -214,7 +211,7 @@ public class Manager extends Staff {
     }
 
     /**
-     * send feedbacks to the general manager
+     * send feedback to the general manager
      */
     private void reportToGeneralManager() {
         System.out.println(this.name + " report feed back things to the general manager.");
@@ -254,5 +251,4 @@ public class Manager extends Staff {
         Manager temp = (Manager) obj;
         return this.name.equals(temp.name);
     }
-
 }

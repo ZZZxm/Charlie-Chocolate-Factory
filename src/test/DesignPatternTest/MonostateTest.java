@@ -1,9 +1,6 @@
 package test.DesignPatternTest;
 
-import team.charliechocolatefactory.machine.qualitytestmachine.qualitytestsystem.QualityInspectionPanel;
-import team.charliechocolatefactory.machine.qualitytestmachine.qualitytestsystem.QualityInspectionPanelGroup;
 import team.charliechocolatefactory.supplement.monostate.Screen;
-import team.charliechocolatefactory.supplement.proxy.PortableBatteryProxy;
 
 import java.util.*;
 import java.util.ArrayList;

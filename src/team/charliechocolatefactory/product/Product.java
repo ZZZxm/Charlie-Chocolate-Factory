@@ -9,7 +9,6 @@ import team.charliechocolatefactory.product.state.ProducingState;
 import team.charliechocolatefactory.product.state.ProductState;
 import team.charliechocolatefactory.rawmaterial.packagematerial.PackageMaterial;
 import team.charliechocolatefactory.rawmaterial.RawMaterial;
-import team.charliechocolatefactory.scene.staffarea.manufacturingarea.warehouse.Warehouse;
 
 import java.util.ArrayList;
 
@@ -153,10 +152,18 @@ public abstract class Product {
         this.pack = pack;
     }
 
+    /**
+     * set wrapper machine of the product
+     * @param wrapperMachine
+     */
     public void setWrapperMachine(ProcessMachine wrapperMachine) {
         this.wrapperMachine = wrapperMachine;
     }
 
+    /**
+     * set produce machine of the product
+     * @param produceMachine
+     */
     public void setProduceMachine(ProcessMachine produceMachine) {
         this.produceMachine = produceMachine;
     }
@@ -168,10 +175,16 @@ public abstract class Product {
         this.produceMachine.process(this, 1);
     }
 
+    /**
+     * package the product
+     */
     public void packaging() {
         this.wrapperMachine.process(this, 1);
     }
 
+    /**
+     * store the product
+     */
     public void storing() {
         if (!(this.state instanceof PackagedState)) {
             System.out.println("The product has not been packaged!");
@@ -188,6 +201,7 @@ public abstract class Product {
 
     /**
      * for design pattern --- Memento
+     *
      * @return a new product memento
      */
     public ProductMemento createMemento() {
@@ -196,6 +210,7 @@ public abstract class Product {
 
     /**
      * restore param from memento
+     *
      * @param memento memento that store history messages of the product
      */
     public void restoreMemento(ProductMemento memento) {

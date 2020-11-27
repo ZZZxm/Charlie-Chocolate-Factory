@@ -1,7 +1,6 @@
 package team.charliechocolatefactory.product.chocolateProduct.chocolatemix;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Date;
 
@@ -19,7 +18,7 @@ import team.charliechocolatefactory.product.Product;
  * @date 2020/11/23 23:40
  */
 public class ChocolateMix extends Product {
-
+// fields
     private final Chocolate[] chocolates;
 
     /**

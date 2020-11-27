@@ -1,6 +1,6 @@
-package team.charliechocolatefactory.machine.qualitytestmachine.qualitytestsystem;
+package team.charliechocolatefactory.machine.processmachine.qualitytestmachine.qualitytestsystem;
 
-import team.charliechocolatefactory.machine.qualitytestmachine.QualityTestMachine;
+import team.charliechocolatefactory.machine.processmachine.qualitytestmachine.QualityTestMachine;
 
 /**
  * @author TT
@@ -13,11 +13,12 @@ public abstract class QualityTestSystem extends QualityTestMachine {
     private String species;
 
 
-    public QualityTestSystem(String species){
+    public QualityTestSystem(String species) {
         super(species);
 
         this.species = species;
     }
+
     public QualityTestSystem(String type, String machineNum) {
         super(type, machineNum, 50, 1.2, 500);
     }

@@ -13,7 +13,7 @@ import team.charliechocolatefactory.rawmaterial.foodmaterial.*;
  */
 public class ChocolateCake extends Product {
 
-    // fields
+// fields
     protected int size; //how many inches is its radius
 
 //constructor

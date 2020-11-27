@@ -1,6 +1,7 @@
 package team.charliechocolatefactory.person.staff;
 
 //import com.sun.corba.se.spi.orbutil.threadpool.Work;
+
 import team.charliechocolatefactory.scene.staffarea.StaffArea;
 import team.charliechocolatefactory.person.staff.worker.Worker;
 import team.charliechocolatefactory.factory.support.SecurityCheckTask;
@@ -29,7 +30,7 @@ public class Guard extends Staff {
     }
 
     /**
-     * @param worker
+     * @param worker worker
      * @modified by Ray
      */
     public void sayMorning(Worker worker) {

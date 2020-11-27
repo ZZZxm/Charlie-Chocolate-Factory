@@ -10,6 +10,6 @@ import team.charliechocolatefactory.product.Product;
  * @date 2020/11/21 21:59
  */
 public abstract class ProductState {
-
+// methods
     public abstract void gotoNextState(Product product);
 }

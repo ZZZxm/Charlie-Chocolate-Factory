@@ -61,4 +61,13 @@ public abstract class AbstractReceipt {
                 ", type=" + type +
                 '}';
     }
+
+    public void displayAll() {
+        System.out.println("----------------------------------------------------------"+ this.type +"--------------------------------------------------------------");
+        System.out.printf("%-10s%-30s%-20s%-30s%-30s%-30s", "|money", "|info", "|type", "|providerName", "|providerTel", "|providerAdd");
+        System.out.println();
+        System.out.printf("%-10s%-30s%-20s%-30s%-30s%-30s", "|" + this.money, "|" + this.info, "|" + this.type, "|" + this.provider.getProviderName(),"|" + this.provider.getProviderTel(),"|" + this.provider.getProviderAdd());
+        System.out.println();
+        System.out.println("---------------------------------------------------------------------------------------------------------------------------------------");
+    }
 }

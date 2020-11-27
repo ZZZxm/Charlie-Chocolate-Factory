@@ -12,7 +12,7 @@ import team.charliechocolatefactory.product.chocolate.*;
  * @date 2020/11/16 00:32
  */
 public class MixChocolateFactory {
-
+// fields
     private static final HashMap<Class<? extends Chocolate>, Chocolate> chocolateMap =
             new HashMap<>();
 

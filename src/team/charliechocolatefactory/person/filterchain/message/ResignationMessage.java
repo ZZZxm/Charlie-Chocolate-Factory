@@ -1,6 +1,5 @@
 package team.charliechocolatefactory.person.filterchain.message;
 
-
 /**
  * @author Zeus Lee
  * @project chocolateFactory

@@ -15,52 +15,57 @@ import java.util.Formatter;
  * @description: Dao Pattern to implement function of StaffDao.
  * @date: 2020/11/27 11:35
  */
-public class StaffDaoImpl implements StaffDao{
+public class StaffDaoImpl implements StaffDao {
 
-    List<Staff> allstaff;
+    List<Staff> allStaff;
+
     static Formatter formatter = new Formatter(System.out);
 
-    public StaffDaoImpl(){
+    /**
+     * Constructor of StaffDaoImpl
+     * generate three staffs to test the design pattern DAO
+     */
+    public StaffDaoImpl() {
         super();
-        allstaff = new ArrayList<Staff>();
-        Staff staff1=new Staff("Dinesh",25, Person.Sex.MALE,13000) {
+        allStaff = new ArrayList<Staff>();
+        Staff staff1 = new Staff("Dinesh", 25, Person.Sex.MALE, 13000) {
             @Override
             protected void setInitialAsset() {
                 this.asset = salary;
             }
         };
-        Staff staff2=new Staff("Arnav",23, Person.Sex.FEMALE,8000) {
+        Staff staff2 = new Staff("Arnav", 23, Person.Sex.FEMALE, 8000) {
             @Override
             protected void setInitialAsset() {
                 this.asset = salary;
             }
         };
-        Staff staff3 = new WorkshopWorker("Illidan",21, Person.Sex.MALE,6500);
-        allstaff.add(staff1);
-        allstaff.add(staff2);
-        allstaff.add(staff3);
+        Staff staff3 = new WorkshopWorker("Illidan", 21, Person.Sex.MALE, 6500);
+        allStaff.add(staff1);
+        allStaff.add(staff2);
+        allStaff.add(staff3);
     }
 
     @Override
-    public List getAllStaff() {
-        return allstaff;
+    public List<Staff> getAllStaff() {
+        return allStaff;
     }
 
     @Override
     public void addStaff(Staff staff) {
-        allstaff.add(staff);
+        allStaff.add(staff);
         System.out.println("Add successfully!");
-        System.out.println("Staff info:"+staff);
+        System.out.println("Staff info:" + staff);
     }
 
     @Override
     public void showAllStaff() {
-        int i=0;
+        int i = 0;
         System.out.println("_______________________________________________________________________________________");
         System.out.println("|------------------------------------ Staff Table ------------------------------------|");
         System.out.println("|Index|      StaffID       |   StaffName   | StaffAge | StaffSex |    StaffSalary     |");
-        for(Staff staff:allstaff){
-            formatter.format("|%-5d|%-20s|%-15s|%-10d|%-10s|%-20d|",i,staff.getId(),staff.getName(),staff.getAge(),staff.getSex(),staff.getSalary());
+        for (Staff staff : allStaff) {
+            formatter.format("|%-5d|%-20s|%-15s|%-10d|%-10s|%-20d|", i, staff.getId(), staff.getName(), staff.getAge(), staff.getSex(), staff.getSalary());
             System.out.println("");
             i++;
         }
@@ -69,46 +74,46 @@ public class StaffDaoImpl implements StaffDao{
 
     @Override
     public Staff getStaff(String id) {
-        int StaffNo=get_index_by_ID(id);
-        if(StaffNo==-1){
+        int StaffNo = get_index_by_ID(id);
+        if (StaffNo == -1) {
             System.out.println("Can't find ID...");
             return null;
         }
-        return (Staff) allstaff.get(StaffNo);
+        return (Staff) allStaff.get(StaffNo);
     }
 
     @Override
-    public void updateStaff(String id,String name) {
+    public void updateStaff(String id, String name) {
         int index = get_index_by_ID(id);
-        if(index==-1){
+        if (index == -1) {
             System.out.println("Can't find ID...");
             return;
         }
-        allstaff.get(index).setName(name);
+        allStaff.get(index).setName(name);
         System.out.println("Staff information has updated in the database.");
     }
 
     @Override
     public void deleteStaff(String id) {
-        int index=get_index_by_ID(id);
-        if(index==-1){
+        int index = get_index_by_ID(id);
+        if (index == -1) {
             System.out.println("Can't find ID...");
             return;
         }
-        allstaff.remove(index);
+        allStaff.remove(index);
         System.out.println("Staff information has deleted from the database.");
     }
 
     @Override
-    public String showDetail(Staff staff){
-        return "Staff Info:[\"StaffID\":\""+staff.getId()+"\",\"StaffName\":\""+staff.getName()+"\",\"StaffAge\":"+staff.getAge()+",\"StaffSex\":\""+staff.getSex()+"\",\"StaffSalary\":"+staff.getSalary()+"]";
+    public String showDetail(Staff staff) {
+        return "Staff Info:[\"StaffID\":\"" + staff.getId() + "\",\"StaffName\":\"" + staff.getName() + "\",\"StaffAge\":" + staff.getAge() + ",\"StaffSex\":\"" + staff.getSex() + "\",\"StaffSalary\":" + staff.getSalary() + "]";
     }
 
-    private int get_index_by_ID(String id){
-        int index=-1;
-        for (Staff staff : allstaff) {
+    private int get_index_by_ID(String id) {
+        int index = -1;
+        for (Staff staff : allStaff) {
             if (staff.getId().equals(id)) {
-                index = allstaff.indexOf(staff);
+                index = allStaff.indexOf(staff);
                 break;
             }
         }

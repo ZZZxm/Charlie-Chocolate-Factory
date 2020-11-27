@@ -9,6 +9,7 @@ package team.charliechocolatefactory.product.Sandwich;
  */
 
 public class Liqueur implements Sandwich {
+// methods
     @Override
     public String getSandwich() {
         return "Liqueur";

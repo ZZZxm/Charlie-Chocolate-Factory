@@ -9,6 +9,7 @@ package team.charliechocolatefactory.product.Sandwich;
  */
 
 public class Pure implements Sandwich {
+// methods
     @Override
     public String getSandwich() {
         return null;

@@ -1,4 +1,4 @@
-package team.charliechocolatefactory.machine.extension;
+package team.charliechocolatefactory.machine.processmachine.productmachine.extension;
 
 import team.charliechocolatefactory.product.Product;
 

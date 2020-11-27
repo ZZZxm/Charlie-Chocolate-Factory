@@ -20,8 +20,11 @@ import team.charliechocolatefactory.scene.staffarea.StaffArea;
 public abstract class Worker extends Staff {
 
     public String identity = "worker";
-    // command pattern
-    // workers are invokers, they invoke machines to carry on the command -> produce product
+
+    /**
+     * command pattern
+     * workers are invokers, they invoke machines to carry on the command -> produce product
+     */
     private Product darkChocolate, matchaChocolate, milkChocolate, whiteChocolate, chocolateCake, chocolateWafer, chocolateIceCream, chocolateStarCookie;
 
     public Worker(String name, int age, Sex sex, int salary, StaffArea department) {
@@ -108,8 +111,6 @@ public abstract class Worker extends Staff {
         this.chocolateWafer.producing();
     }
 
-
-
     /**
      * @modified by Ray
      */
@@ -144,5 +145,4 @@ public abstract class Worker extends Staff {
      * feedback
      */
     public abstract void feedBack();
-
 }
