@@ -155,13 +155,13 @@ public class MainTest {
                     CallbackTest.main(new String[]{});
                     break;
                 case 26:
-                    //ConverterTest.main(new String[]{});
+                    ConverterTest.main(new String[]{});
                     break;
                 case 27:
                     COWTest.main(new String[]{});
                     break;
                 case 28:
-                    //DAOTest.main(new String[]{});
+                    DAOTest.main(new String[]{});
                     break;
                 case 29:
                     //DirtyFlagTest.main(new String[]{});
