@@ -6,13 +6,13 @@ import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWor
  * @author TT
  * @project chocolateFactory
  * @classname Monitor
- * @description TODO
+ * @description monitor
  * @date 2020/11/18 14:34
  */
 public class Monitor extends ResidenceDecorator {
 
     public Monitor() {
-
+        this(null);
     }
 
     public Monitor(Residence r) {

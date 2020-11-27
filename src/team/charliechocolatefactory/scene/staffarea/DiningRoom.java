@@ -1,6 +1,5 @@
 package team.charliechocolatefactory.scene.staffarea;
 
-import team.charliechocolatefactory.machine.Machine;
 import team.charliechocolatefactory.person.GeneralManager;
 import team.charliechocolatefactory.person.staff.Manager;
 import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;

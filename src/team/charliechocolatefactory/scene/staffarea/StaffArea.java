@@ -6,6 +6,7 @@ import team.charliechocolatefactory.person.staff.Manager;
 import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
 import team.charliechocolatefactory.person.staff.worker.Worker;
 import team.charliechocolatefactory.scene.Scene;
+import team.charliechocolatefactory.scene.SceneNameConst;
 import team.charliechocolatefactory.scene.staffarea.WorkerIterator.Aggregate;
 import team.charliechocolatefactory.scene.staffarea.WorkerIterator.Iterator;
 import team.charliechocolatefactory.scene.staffarea.WorkerIterator.WorkerListIterator;
@@ -32,14 +33,6 @@ public abstract class StaffArea extends Scene implements Aggregate {
      **/
     protected ArrayList<Worker> workerList = null;
 
-//    /**
-//     * Constructor of StaffArea with no manager specified
-//     */
-//
-//    public StaffArea(String location, double cost, double area) {
-//        this(location, cost, area, null);
-//        workerList = new ArrayList<Worker>();
-//    }
 
     public StaffArea() {
         super();
@@ -54,7 +47,6 @@ public abstract class StaffArea extends Scene implements Aggregate {
         manager = newManager;
         GeneralManager.getInstance().addManager(manager);
     }
-
 
     /**
      * get the manager of the area
@@ -100,6 +92,10 @@ public abstract class StaffArea extends Scene implements Aggregate {
         }
     }
 
+    /**
+     * find and remove a worker from the factory
+     * @param name name of the worker to be removed
+     */
     public void removeWorker(String name) {
         workerList.removeIf(worker -> worker.getName().equals(name));
         System.out.println("Worker object doesn't exist.");
@@ -161,7 +157,7 @@ public abstract class StaffArea extends Scene implements Aggregate {
 
     @Override
     public String toString() {
-        return "class StaffArea extends Scene and implements Aggregate";
+        return SceneNameConst.STAFF_AREA;
     }
 
 }

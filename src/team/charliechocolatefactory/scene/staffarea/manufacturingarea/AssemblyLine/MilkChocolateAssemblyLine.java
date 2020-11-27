@@ -6,8 +6,8 @@ import team.charliechocolatefactory.product.chocolate.MilkChocolate;
 /**
  * @author Zeus Lee
  * @project chocolateFactory
- * @classname MilkChocolateFactory
- * @description TODO
+ * @classname MilkChocolateAssemblyLine
+ * @description assembly line for milk chocolate
  * @date 2020/11/15 16:46
  */
 public class MilkChocolateAssemblyLine extends ChocolatesMachineAssemblyLine {

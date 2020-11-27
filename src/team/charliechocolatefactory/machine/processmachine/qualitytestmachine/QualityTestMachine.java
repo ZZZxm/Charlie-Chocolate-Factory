@@ -7,7 +7,7 @@ import team.charliechocolatefactory.product.Product;
  * @author TT
  * @project chocolateFactory
  * @classname QualityTestMachine
- * @description TODO
+ * @description machine used to test quality
  * @date 2020/11/14 17:58
  */
 public class QualityTestMachine extends ProcessMachine {

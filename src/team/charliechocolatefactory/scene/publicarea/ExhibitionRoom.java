@@ -36,8 +36,6 @@ public class ExhibitionRoom extends PublicArea {
     }
 
 
-
-
     /**
      * @return name of the scene as a String
      */

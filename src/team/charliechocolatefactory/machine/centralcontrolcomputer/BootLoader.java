@@ -4,7 +4,7 @@ package team.charliechocolatefactory.machine.centralcontrolcomputer;
  * @author Ngae Zeh-ghau
  * @project chocolateFactory
  * @classname BootLoader
- * @description TODO
+ * @description boot loader
  * @date 2020/11/20 22:14
  */
 public class BootLoader {

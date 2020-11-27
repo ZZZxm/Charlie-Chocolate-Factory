@@ -4,7 +4,7 @@ package team.charliechocolatefactory.machine.centralcontrolcomputer;
  * @author Ngae Zeh-ghau
  * @project chocolateFactory
  * @classname LinuxOS
- * @description TODO
+ * @description OS of Linux system
  * @date 2020/11/20 22:14
  */
 public class LinuxOS implements OperatingSystem {

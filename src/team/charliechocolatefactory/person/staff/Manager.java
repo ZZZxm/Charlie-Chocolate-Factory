@@ -11,7 +11,7 @@ import team.charliechocolatefactory.scene.staffarea.StaffArea;
 import java.util.ArrayList;
 
 /**
- * @author Brian.Z
+ * @author Brian.Z, Y.C.Young
  * @project chocolateFactory
  * @classname Manager
  * @description A manager is responsible for one department.
@@ -151,7 +151,7 @@ public class Manager extends Staff {
     public boolean fireWorker(Worker worker) {
         for (StaffArea department : this.departmentList) {
             if (department == worker.getDepartment()) {
-                /* 删除员工 */
+                /* remove a worker from the worker list */
                 department.removeWorker(worker);
                 return true;
             }

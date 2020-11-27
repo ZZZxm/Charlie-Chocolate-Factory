@@ -5,11 +5,11 @@ import team.charliechocolatefactory.product.chocolate.Chocolate;
 /**
  * @author Zeus Lee
  * @project chocolateFactory
- * @classname ChocolatesMachineFactory
- * @description The chocolate factory, inherited from the top factory
+ * @classname ChocolatesMachineAssemblyLine
+ * @description abstract assembly line class of chocolate factory
  * @date 2020/11/15 16:26
  */
-public abstract class ChocolatesMachineAssemblyLine extends MachineAssemblyLine {
+public abstract class ChocolatesMachineAssemblyLine {
 
     /**
      * Return the corresponding product,

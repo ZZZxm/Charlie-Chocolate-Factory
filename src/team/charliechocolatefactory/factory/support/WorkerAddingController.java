@@ -2,8 +2,6 @@ package team.charliechocolatefactory.factory.support;
 
 import team.charliechocolatefactory.person.Person;
 import team.charliechocolatefactory.person.staff.worker.*;
-import team.charliechocolatefactory.person.staff.worker.utilityworker.Cleaner;
-import team.charliechocolatefactory.person.staff.worker.utilityworker.MaintenanceWorker;
 import team.charliechocolatefactory.scene.SceneNameConst;
 import team.charliechocolatefactory.scene.staffarea.StaffArea;
 
@@ -43,25 +41,5 @@ public class WorkerAddingController {
         }
 
     }
-
-    /*
-    public static void addCleanerToScene(String name, int age, Person.Sex sex, int salary, StaffArea scene) {
-        if (scene.toString().equals(SceneNameConst.OFFICE)) {
-            Cleaner cleanerObj = new Cleaner(name, age, sex, salary);
-        } else {
-            System.out.println("The scene is not an office.");
-        }
-    }
-
-    public static void addMaintenanceWorkerToScene(String name, int age, Person.Sex sex, int salary, StaffArea scene) {
-        if (scene.toString().equals(SceneNameConst.OFFICE)) {
-            MaintenanceWorker MaintenanceWorkerObj = new MaintenanceWorker(name, age, sex, salary);
-        } else {
-            System.out.println("The scene is not an office.");
-        }
-    }
-
-     */
-
 
 }

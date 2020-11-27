@@ -28,9 +28,6 @@ public class Warehouse extends ManufacturingArea {
         productionAmount = new HashMap<String, Integer>();
     }
 
-//    public Warehouse(String location, double cost, double area) {
-//        this(location, cost, area, null);
-//    }
 
     public Warehouse() {
         this("Warehouse Location", 10000, 100);

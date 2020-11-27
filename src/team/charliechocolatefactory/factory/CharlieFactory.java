@@ -1,12 +1,10 @@
 package team.charliechocolatefactory.factory;
 
-import team.charliechocolatefactory.factory.support.PeriodicMaintenance;
 import team.charliechocolatefactory.person.Person;
 import team.charliechocolatefactory.person.staff.worker.utilityworker.Cleaner;
 import team.charliechocolatefactory.person.staff.worker.utilityworker.MaintenanceWorker;
 import team.charliechocolatefactory.scene.GarbageStation;
 import team.charliechocolatefactory.scene.Scene;
-import team.charliechocolatefactory.scene.SceneNameConst;
 import team.charliechocolatefactory.scene.SceneStructure;
 import team.charliechocolatefactory.scene.publicarea.ExhibitionRoom;
 import team.charliechocolatefactory.scene.publicarea.ExperienceRoom;
@@ -17,35 +15,37 @@ import team.charliechocolatefactory.scene.staffarea.manufacturingarea.workshop.D
 import team.charliechocolatefactory.scene.staffarea.manufacturingarea.workshop.WhiteWorkshop;
 
 /**
- * @author Brian.Z
+ * @author Brian.Z, Y.C.Young
  * @project chocolateFactory
  * @classname CharlieFactory
- * @description
+ * @description the factory class (including attributes and methods for visitor pattern)
  * @date 2020/11/7 17:50
  */
 public class CharlieFactory {
 
+    /**
+     * the only one instance of the factory
+     */
     private static CharlieFactory instance = null;
 
-    private PeriodicMaintenance periodicMaintenance;
-
+    /**
+     * scene structure containing all scenes in the factory
+     */
     private SceneStructure scenes;
 
+    /**
+     * flag showing whether the factory is to clean
+     */
     private boolean dirtyFlag = false;
 
+    /**
+     * flag showing whether the factory is to maintenance
+     */
     private boolean agingFlag = false;
 
-
-    /*
-    public CharlieFactory() {
-        periodicMaintenance = new PeriodicMaintenance();
-    }
-
-    public static PeriodicMaintenance getPeriodicMaintenance() {
-        return periodicMaintenance;
-    }
+    /**
+     * constructor of the factory
      */
-
     private CharlieFactory() {
         scenes = new SceneStructure();
         scenes.addScene(new ExhibitionRoom("", 5e5, 300.0, 100));
@@ -59,8 +59,9 @@ public class CharlieFactory {
     }
 
     /**
+     * using Singleton pattern to get or create the only one instance of the class
      *
-     * @return
+     * @return the only one instance of the factory class
      */
     public static CharlieFactory getCharlieFactory() {
         if (instance == null) {
@@ -70,25 +71,42 @@ public class CharlieFactory {
     }
 
     /**
+     * add a scene to the factory
      *
-     * @param scene
+     * @param scene the scene to be added to the factory
      */
     public void addScene(Scene scene) {
         scenes.addScene(scene);
     }
 
+    /**
+     * set the dirty flag true
+     */
     public void setDirtyTrue() {
         this.dirtyFlag = true;
     }
 
+    /**
+     * get the value of dirty flag
+     *
+     * @return the value of dirty flag
+     */
     public boolean getDirtyFlag() {
         return this.dirtyFlag;
     }
 
+    /**
+     * set the aging flag true
+     */
     public void setAgingTrue() {
         this.agingFlag = true;
     }
 
+    /**
+     * get the value of aging flag
+     *
+     * @return the value of aging flag
+     */
     public boolean getAgingFlag() {
         return this.agingFlag;
     }
@@ -103,24 +121,16 @@ public class CharlieFactory {
     }
 
     /**
-     *
+     * interface of clean operation for TimeSystem class
      */
     public void doClean() {
 
+        // hire a temporary cleaner
         Cleaner tempCleaner = new Cleaner("Temp Cleaner", 20, Person.Sex.MALE, 500);
+
         clean(tempCleaner);
         dirtyFlag = false;
 
-        /*
-        Office office = (Office) scenes.getSceneByName(SceneNameConst.OFFICE);
-        if (office == null) {
-            System.out.println("Need to add office scene.");
-        }
-        else {
-            clean(office.getRandomCleaner());
-        }
-
-         */
     }
 
     /**
@@ -128,28 +138,21 @@ public class CharlieFactory {
      *
      * @param m maintenance object
      */
-    public void checkAndMaintenance(MaintenanceWorker m) {
+    public void maintain(MaintenanceWorker m) {
         scenes.accept(m);
     }
 
     /**
-     *
+     * interface of maintenance operation for TimeSystem class
      */
     public void doMaintenance() {
 
+        // hire a temporary maintenance worker
         MaintenanceWorker tempWorker = new MaintenanceWorker("temp maintenance worker", 20, Person.Sex.MALE, 500);
-        checkAndMaintenance(tempWorker);
+
+        maintain(tempWorker);
         agingFlag = false;
 
-        /*
-        Office office = (Office) scenes.getSceneByName(SceneNameConst.OFFICE);
-        if (office == null) {
-            System.out.println("Need to add office scene.");
-        }
-        else {
-            checkAndMaintenance(office.getRandomMaintenanceWorker());
-        }
-         */
     }
 
 }

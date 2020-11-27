@@ -6,13 +6,13 @@ import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWor
  * @author TT
  * @project chocolateFactory
  * @classname CentralAirCondition
- * @description TODO
+ * @description Central air condition
  * @date 2020/11/18 14:35
  */
 public class CentralAirCondition extends ResidenceDecorator {
 
     public CentralAirCondition() {
-
+        this(null);
     }
 
     public CentralAirCondition(Residence r) {

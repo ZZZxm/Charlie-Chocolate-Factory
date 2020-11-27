@@ -6,26 +6,24 @@ import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWor
  * @author TT
  * @project chocolateFactory
  * @classname Flat
- * @description TODO
+ * @description flat
  * @date 2020/11/24 20:35
  */
 public class Flat extends Residence {
 
 
-    public Flat(){
+    public Flat() {
+
         super(30000);
 
         System.out.println("A flat has been built");
     }
 
 
-
-
     @Override
     public String getDescription() {
         return "This is a flat";
     }
-
 
 
     @Override

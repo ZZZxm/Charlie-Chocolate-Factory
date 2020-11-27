@@ -35,12 +35,6 @@ public abstract class Workshop extends ManufacturingArea {
     @Override
     public abstract String toString();
 
-    /*
-    public String toString() {
-        return SceneNameConst.WORKSHOP;
-    }
-    */
-
     /**
      * Visitor Pattern: accept a utility worker to maintenance the scene
      *

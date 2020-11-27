@@ -6,12 +6,13 @@ import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWor
  * @author TT
  * @project chocolateFactory
  * @classname FireHydrant
- * @description TODO
+ * @description fire hydrant
  * @date 2020/11/18 15:34
  */
 public class FireHydrant extends ResidenceDecorator {
 
     public FireHydrant(){
+        this(null);
     }
 
     public FireHydrant(Residence r){

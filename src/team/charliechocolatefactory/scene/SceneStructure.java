@@ -14,8 +14,14 @@ import java.util.List;
  */
 public class SceneStructure {
 
+    /**
+     * all scenes in the factory
+     */
     private List<Scene> scenes;
 
+    /**
+     * constructor of the class SceneStructure
+     */
     public SceneStructure() {
         scenes = new ArrayList<Scene>();
     }
@@ -41,12 +47,13 @@ public class SceneStructure {
     }
 
     /**
+     * get a scene object from the scene list by its name
      *
-     * @param name
-     * @return
+     * @param name name of the scene to be found
+     * @return object of the scene found (return null if not found)
      */
     public Scene getSceneByName(String name) {
-        for (Scene item: scenes) {
+        for (Scene item : scenes) {
             if (item.toString().equals(name)) {
                 return item;
             }

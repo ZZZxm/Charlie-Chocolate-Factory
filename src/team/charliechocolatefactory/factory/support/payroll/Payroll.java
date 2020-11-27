@@ -5,14 +5,12 @@ import team.charliechocolatefactory.person.staff.worker.Worker;
 import team.charliechocolatefactory.scene.staffarea.StaffArea;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @author Brian.Z
  * @project chocolateFactory
  * @classname Payroll
- * @description abstract class for payroll
- * TODO Design Pattern --- Observer
+ * @description abstract class for payroll (Using Design Pattern Observer)
  * @date 2020/11/21 20:20
  */
 public abstract class Payroll {

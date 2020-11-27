@@ -9,12 +9,19 @@ import java.util.List;
  * @author Zheng
  * @project chocolateFactory
  * @classname WorkerListIterator
- * @description TODO
+ * @description iterator of a worker list
  * @date 2020/11/16 9:54
  */
 public class WorkerListIterator implements Iterator {
 
+    /**
+     * the list of the workers
+     */
     private ArrayList<Worker> workerList = null;
+
+    /**
+     * current index of the iterator
+     */
     private int index = -1;
 
     public WorkerListIterator() {
@@ -26,14 +33,20 @@ public class WorkerListIterator implements Iterator {
     }
 
 
-    //Point to the first element, (the first element that can be simply modified to satisfy the condition, the same below)
+    /**
+     * make the index points to the first element
+     * @return the first element
+     */
     @Override
     public Worker first() {
         index = 0;
         return workerList.get(index);
     }
 
-    //Point to the next element
+    /**
+     * make the index points to the next element
+     * @return the next element
+     */
     @Override
     public Worker next() {
         if (this.hasNext()) {
@@ -42,7 +55,10 @@ public class WorkerListIterator implements Iterator {
         return null;
     }
 
-    //Determine if there is the next element
+    /**
+     * determine if there exists the next element
+     * @return true if there exists the next element
+     */
     @Override
     public boolean hasNext() {
         if (index < workerList.size() - 1) {

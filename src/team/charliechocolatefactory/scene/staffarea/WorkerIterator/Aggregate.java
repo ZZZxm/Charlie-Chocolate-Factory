@@ -9,5 +9,5 @@ package team.charliechocolatefactory.scene.staffarea.WorkerIterator;
  */
 public interface Aggregate {
 
-    public team.charliechocolatefactory.scene.staffarea.WorkerIterator.Iterator getIterator();
+    public Iterator getIterator();
 }

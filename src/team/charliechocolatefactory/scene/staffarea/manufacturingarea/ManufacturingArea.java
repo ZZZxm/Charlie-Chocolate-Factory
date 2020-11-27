@@ -89,6 +89,7 @@ public abstract class ManufacturingArea extends StaffArea {
         for (Machine obj : machineList) {
             obj.maintenance();
         }
+        System.out.println("The machines have been maintained.");
     }
 
     /**
