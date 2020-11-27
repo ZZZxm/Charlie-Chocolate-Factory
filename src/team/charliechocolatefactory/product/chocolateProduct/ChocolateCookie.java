@@ -12,7 +12,7 @@ import team.charliechocolatefactory.rawmaterial.foodmaterial.*;
  */
 public class ChocolateCookie extends Product {
 
-    //fields
+//fields
     public enum Shape {CAT, DOG, HORSE, HUMAN, APPLE, STAR, TREE, SUN}
 
     protected Shape shape;

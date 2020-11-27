@@ -18,9 +18,9 @@ import team.charliechocolatefactory.product.Sandwich.Sandwich;
  */
 public class AlmondChocolate extends Chocolate {
 
-
-    public AlmondChocolate(){
-        super(null, 0, 0,0.0);
+// constructor
+    public AlmondChocolate() {
+        super(null, 0, 0, 0.0);
     }
 
     public AlmondChocolate(String name, int shelfLife, int weight, double content, Sandwich sandwich) {
@@ -36,6 +36,10 @@ public class AlmondChocolate extends Chocolate {
     }
 
     @Override
+    /**
+     * return the chocolate's name with the sandwich it contains
+     * @return
+     */
     public String getNameWithSandwich() {
         return null;
     }

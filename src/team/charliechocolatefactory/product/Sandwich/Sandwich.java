@@ -9,5 +9,6 @@ package team.charliechocolatefactory.product.Sandwich;
  */
 
 public interface Sandwich {
+// methods
     String getSandwich();
 }

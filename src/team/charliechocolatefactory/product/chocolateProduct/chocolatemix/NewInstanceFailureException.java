@@ -11,9 +11,9 @@ package team.charliechocolatefactory.product.chocolateProduct.chocolatemix;
  * @date 2020/11/15 21:28
  */
 public class NewInstanceFailureException extends Exception {
-
+// fields
     static final long serialVersionUID = 1L;
-
+// constructor
     public NewInstanceFailureException(Class<?> type) {
         super("Failed to create chocolate of type: " + type.getSimpleName());
     }

@@ -8,7 +8,7 @@ package team.charliechocolatefactory.product.memento;
  * @date 2020/11/19 23:51
  */
 public class ProductMemento {
-
+// fields
     /**
      * the weight of this product's single item
      * correspond to param "weight" of Product

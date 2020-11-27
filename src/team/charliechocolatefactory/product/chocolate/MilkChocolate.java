@@ -8,7 +8,7 @@ import team.charliechocolatefactory.rawmaterial.foodmaterial.Sugar;
 import java.io.Serializable;
 
 /**
- * @author Kerr, Zeus Lee
+ * @author Kerr
  * @project chocolateFactory
  * @classname MilkChocolate
  * @description this is milk chocolate.
@@ -60,6 +60,10 @@ public class MilkChocolate extends Chocolate implements Serializable, Cloneable 
         super.ingredientList.add(new Milk());
     }
 
+    /**
+     * return the chocolate's name with the sandwich it contains
+     * @return
+     */
     public String getNameWithSandwich() {
         return sandwich.getSandwich() + " MilkChocolate";
     }

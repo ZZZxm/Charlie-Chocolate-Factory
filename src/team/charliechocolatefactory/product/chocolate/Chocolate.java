@@ -5,13 +5,9 @@ import team.charliechocolatefactory.product.Product;
 import team.charliechocolatefactory.product.Sandwich.Pure;
 import team.charliechocolatefactory.product.Sandwich.Sandwich;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
-import team.charliechocolatefactory.rawmaterial.*;
 
 /**
- * @author Kerr, Zeus Lee
+ * @author Kerr
  * @project chocolateFactory
  * @classname Chocolate
  * @description the basic class of chocolate
@@ -63,6 +59,10 @@ public abstract class Chocolate extends Product {
      * this method to show class is some Chocolate , To subclass implementation
      */
     public abstract void dispaly();
-    
+
+    /**
+     * return the chocolate's name with the sandwich it contains
+     * @return
+     */
     public abstract String getNameWithSandwich();
 }

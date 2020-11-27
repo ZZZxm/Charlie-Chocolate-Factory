@@ -37,6 +37,10 @@ public class WhiteChocolate extends Chocolate {
     }
 
     @Override
+    /**
+     * return the chocolate's name with the sandwich it contains
+     * @return
+     */
     public String getNameWithSandwich() {
         return sandwich.getSandwich() + " WhiteChocolate";
     }

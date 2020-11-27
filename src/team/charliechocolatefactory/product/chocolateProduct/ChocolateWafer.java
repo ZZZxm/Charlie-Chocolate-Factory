@@ -12,7 +12,7 @@ import team.charliechocolatefactory.rawmaterial.foodmaterial.*;
  */
 public class ChocolateWafer extends Product {
 
-    // constructor
+// constructor
     public ChocolateWafer() {
         super("Chocolate Wafer", 18, 100);
         this.initIngredientList();

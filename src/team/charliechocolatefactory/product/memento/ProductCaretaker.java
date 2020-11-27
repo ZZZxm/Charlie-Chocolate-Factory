@@ -8,7 +8,7 @@ package team.charliechocolatefactory.product.memento;
  * @date 2020/11/19 23:57
  */
 public class ProductCaretaker {
-
+// fields
     private ProductMemento productMemento;
 
     public void setProductMemento(ProductMemento productMemento) {
@@ -18,7 +18,6 @@ public class ProductCaretaker {
     public ProductMemento getProductMemento() {
         return productMemento;
     }
-
 
 
 }
