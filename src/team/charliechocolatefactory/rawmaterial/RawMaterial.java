@@ -1,5 +1,6 @@
 package team.charliechocolatefactory.rawmaterial;
 
+import java.util.LinkedList;
 
 /**
  * @author Ngae Zeh-ghau

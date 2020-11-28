@@ -1,10 +1,5 @@
 package team.charliechocolatefactory.person.visitor;
 
-import team.charliechocolatefactory.person.Person;
-
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * @author Kerr
  * @project chocolateFactory
@@ -12,6 +7,12 @@ import java.util.List;
  * @description TODO
  * @date 2020/11/27 20:12
  */
+
+import team.charliechocolatefactory.person.Person;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class VisitorBO {
 
     /**

@@ -3,5 +3,5 @@ package team.charliechocolatefactory.machine.processmachine.productmachine.exten
 import team.charliechocolatefactory.product.Product;
 
 public interface MachineExtension extends Extension {
-    void continueWork(int workNum, Product product);
+    int continueWork(int workNum, Product product);
 }

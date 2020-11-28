@@ -28,12 +28,13 @@ public class AugProductMachine implements MachineExtension {
      *
      * @param workNum
      * @param product
+     * @return a int representing output
      */
     @Override
-    public void continueWork(int workNum, Product product) {
+    public int continueWork(int workNum, Product product) {
         if (workNum <= 1) {
             System.out.println("The machine must work more than once!");
-            return;
+            return 0;
         }
         int outNum = 0;
         for (int i = 0; i < workNum; ++i) {
@@ -44,6 +45,7 @@ public class AugProductMachine implements MachineExtension {
             if (output == 0) break;
         }
         System.out.println("After continuous work, the machine produced a total of " + outNum + " products");
+        return outNum;
     }
 
     /**
