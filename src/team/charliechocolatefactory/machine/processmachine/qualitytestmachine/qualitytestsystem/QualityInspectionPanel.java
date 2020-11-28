@@ -4,22 +4,23 @@ package team.charliechocolatefactory.machine.processmachine.qualitytestmachine.q
  * @author TT
  * @project chocolateFactory
  * @classname QualityInspectionPanel
- * @description TODO
+ * @description This is quality inspection panel
  * @date 2020/11/14 18:00
  */
 public class QualityInspectionPanel extends QualityTestSystem {
-    public QualityInspectionPanel(String type, String machineNum) {
-        super(type, machineNum);
-    }
-
-    public QualityInspectionPanel(String species) {
+    /**
+     * Represent quality inspection panel
+     */
+    public QualityInspectionPanel(String species){
         super(species);
     }
 
     @Override
-    protected void add(QualityTestSystem qualityTestSystem) {
-    }
+    protected void add(QualityTestSystem qualityTestSystem) { }
 
+    /**
+     * Show the structure of the system
+     */
     @Override
     public void show(int depth) {
         for (int i = 0; i <= depth; i++) {

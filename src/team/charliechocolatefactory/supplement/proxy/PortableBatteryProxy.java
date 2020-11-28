@@ -4,17 +4,23 @@ package team.charliechocolatefactory.supplement.proxy;
  * @author TT
  * @project chocolateFactory
  * @classname PortableBatteryProxy
- * @description TODO
+ * @description Proxy the portable battery
  * @date 2020/11/18 13:28
  */
 public class PortableBatteryProxy implements PortableBatterySubject {
 
     private PortableBattery portableBatteryInstance;
 
+    /**
+     * Proxy the portable battery proxy
+     */
     public PortableBatteryProxy(PortableBattery tool) {
         this.portableBatteryInstance = tool;
     }
 
+    /**
+     * Take the portable battery
+     */
     @Override
     public boolean take() {
         if (portableBatteryInstance == null) {
@@ -35,6 +41,9 @@ public class PortableBatteryProxy implements PortableBatterySubject {
         //System.out.println("Doing postTake functions");
     }
 
+    /**
+     * Return the portable battery
+     */
     @Override
     public boolean returnPortableBattery() {
         if (portableBatteryInstance == null) {
@@ -43,7 +52,6 @@ public class PortableBatteryProxy implements PortableBatterySubject {
         preReturn();
         boolean out = portableBatteryInstance.returnPortableBattery();
         postReturn();
-
         return out;
     }
 
@@ -55,10 +63,16 @@ public class PortableBatteryProxy implements PortableBatterySubject {
         //System.out.println("Doing postReturn functions");
     }
 
+    /**
+     * Return the instance of portable battery
+     */
     public PortableBattery getPortableBatteryInstance() {
         return portableBatteryInstance;
     }
 
+    /**
+     * Set the instance of the portable battery
+     */
     public void setPortableBatteryInstance(PortableBattery portableBatteryInstance) {
         this.portableBatteryInstance = portableBatteryInstance;
     }

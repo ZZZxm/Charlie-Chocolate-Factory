@@ -6,34 +6,38 @@ import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWor
  * @author TT
  * @project chocolateFactory
  * @classname CentralAirCondition
- * @description TODO
+ * @description this is a residence with centralAirCondition
  * @date 2020/11/18 14:35
  */
 public class CentralAirCondition extends ResidenceDecorator {
 
-    public CentralAirCondition() {
-        this(null);
+    public CentralAirCondition(){
     }
 
-    public CentralAirCondition(Residence r) {
+
+    /**
+     *  Add a central air condition to the residence
+     */
+    public CentralAirCondition(DecoratorComponent r){
         super(r);
         System.out.println("A central air condition has been added");
     }
 
+    /**
+     * Return the build cost of residence WITH central air condition
+     */
     @Override
-    public double getCost() {
-        // cost of one chair if 200 yuan
-        return residence.getCost() + 200;
+    public double getBuildCost() {
+        return residence.getBuildCost() + 200; //chair 200yuan/per
     }
 
-    @Override
-    public void accept(UtilityWorker worker) {
 
-    }
-
+    /**
+     * String representing the description of the residence
+     */
     @Override
     public String getDescription() {
-        return residence.getDescription();
+        return residence.getDescription() ;
     }
 
     @Override
