@@ -6,28 +6,37 @@ import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWor
  * @author TT
  * @project chocolateFactory
  * @classname FireHydrant
- * @description fire hydrant
+ * @description this is a residence with fire hydrant
  * @date 2020/11/18 15:34
  */
 public class FireHydrant extends ResidenceDecorator {
 
     public FireHydrant(){
-        this(null);
     }
 
-    public FireHydrant(Residence r){
+    /**
+     * Add a fire hydrant to the residence
+     */
+    public FireHydrant(DecoratorComponent r){
         super(r);
         System.out.println("A fire hydrant has been added");
     }
 
+    /**
+     * Return the cost of the residence WITH fire hydrant
+     */
     @Override
     public double getBuildCost() {
-        return residence.getCost() + 1000; //Infrared alarm 100yuan/per
+        return residence.getBuildCost() + 1000; //Infrared alarm 100yuan/per
     }
 
+
+    /**
+     * String representing the residence
+     */
     @Override
     public String getDescription() {
-        return residence.getDescription();
+        return residence.getDescription() ;
     }
 
     @Override

@@ -7,22 +7,23 @@ import team.charliechocolatefactory.product.Product;
  * @author TT
  * @project chocolateFactory
  * @classname QualityTestMachine
- * @description machine used to test quality
+ * @description This is quality test machine
  * @date 2020/11/14 17:58
  */
 public class QualityTestMachine extends ProcessMachine {
 
-    public QualityTestMachine(String type) {
+
+    public QualityTestMachine(String type)
+    {
         super(type);
     }
-
+    /**
+     * Represent the quality test machine
+     */
     public QualityTestMachine(String type, String machineNum, double lifeYear, double lossCoefficient, int maxCapacity) {
         super(type, machineNum, lifeYear, lossCoefficient, maxCapacity);
     }
 
-    public QualityTestMachine(String type, String machineNum, double age, double lifeYear, double lossCoefficient, int maxCapacity) {
-        super(type, machineNum, age, lifeYear, lossCoefficient, maxCapacity);
-    }
 
     @Override
     public void process(Product product, int productNum) {

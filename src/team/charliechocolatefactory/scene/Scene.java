@@ -6,7 +6,7 @@ import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWor
 import team.charliechocolatefactory.person.Stockholder;
 
 /**
- * @author Brian.Z
+ * @author Brian.Z, Y.C.Young
  * @project chocolateFactory
  * @classname Scene
  * @description The basic class of Scene, each scene has its own function

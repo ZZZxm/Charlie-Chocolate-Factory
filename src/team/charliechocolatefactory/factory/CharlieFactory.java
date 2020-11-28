@@ -6,6 +6,8 @@ import team.charliechocolatefactory.person.staff.worker.utilityworker.Maintenanc
 import team.charliechocolatefactory.scene.GarbageStation;
 import team.charliechocolatefactory.scene.Scene;
 import team.charliechocolatefactory.scene.SceneStructure;
+import team.charliechocolatefactory.scene.decorator.Flat;
+import team.charliechocolatefactory.scene.decorator.Villa;
 import team.charliechocolatefactory.scene.publicarea.ExhibitionRoom;
 import team.charliechocolatefactory.scene.publicarea.ExperienceRoom;
 import team.charliechocolatefactory.scene.staffarea.DiningRoom;
@@ -56,6 +58,8 @@ public class CharlieFactory {
         scenes.addScene(new DiningRoom("", 3e5, 500.0));
         scenes.addScene(new Office("", 3e5, 800.0));
         scenes.addScene(new GarbageStation("", 2e5, 100.0, 1000));
+        // scenes.addScene(new Flat("", 2e5, 500.0));
+        // scenes.addScene(new Villa("", 1e6, 350.0));
     }
 
     /**

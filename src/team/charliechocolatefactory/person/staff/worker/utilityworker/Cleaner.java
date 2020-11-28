@@ -2,6 +2,7 @@ package team.charliechocolatefactory.person.staff.worker.utilityworker;
 
 import team.charliechocolatefactory.person.staff.worker.Worker;
 import team.charliechocolatefactory.scene.GarbageStation;
+import team.charliechocolatefactory.scene.decorator.Residence;
 import team.charliechocolatefactory.scene.publicarea.PublicArea;
 import team.charliechocolatefactory.scene.staffarea.DiningRoom;
 import team.charliechocolatefactory.scene.staffarea.Office;
@@ -87,6 +88,16 @@ public class Cleaner extends Worker implements UtilityWorker {
      */
     @Override
     public void visit(DiningRoom s) {
+        s.getCleanUp();
+    }
+
+    /**
+     * implement methods defined in interface to maintain the residence
+     *
+     * @param s residence scene
+     */
+    @Override
+    public void visit(Residence s) {
         s.getCleanUp();
     }
 }

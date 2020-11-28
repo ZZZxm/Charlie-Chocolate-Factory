@@ -6,20 +6,22 @@ import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWor
  * @author TT
  * @project chocolateFactory
  * @classname Flat
- * @description flat
+ * @description This is a flat
  * @date 2020/11/24 20:35
  */
 public class Flat extends Residence {
 
-
-    public Flat() {
-
+    /**
+     * Show the a flat has been built
+     */
+    public Flat(){
         super(30000);
-
         System.out.println("A flat has been built");
     }
 
-
+    /**
+     * String representing the description of the residence
+     */
     @Override
     public double getBuildCost() {
         return 0;
@@ -30,6 +32,13 @@ public class Flat extends Residence {
         return "This is a flat";
     }
 
+    /**
+     * Return the build cost
+     */
+    @Override
+    public double getBuildCost() {
+        return 30000;
+    }
 
     @Override
     public String toString() {

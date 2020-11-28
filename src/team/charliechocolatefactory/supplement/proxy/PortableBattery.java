@@ -4,23 +4,34 @@ package team.charliechocolatefactory.supplement.proxy;
  * @author TT
  * @project chocolateFactory
  * @classname PortableBattery
- * @description TODO
+ * @description This portable battery
  * @date 2020/11/18 13:28
  */
 public class PortableBattery implements PortableBatterySubject {
+    /**
+     * Represent the number of the portable battery
+     */
     private static int id_count = 100000;
 
+    /**
+     * Represent the index of the portable battery
+     */
     protected int id;
 
     protected boolean isOccupied;
 
-
+    /**
+     * Create the portable battery
+     */
     public PortableBattery() {
         this.id = id_count++;
 //        this.context = new ToolContext();
         this.isOccupied = false;
     }
 
+    /**
+     * Take portable battery
+     */
     public boolean take() {
         if (this.isOccupied) {
             System.out.println("This tool has been taken!");
@@ -32,6 +43,9 @@ public class PortableBattery implements PortableBatterySubject {
         return true;
     }
 
+    /**
+     * Return portable battery
+     */
     public boolean returnPortableBattery() {
         if (!this.isOccupied) {
             System.out.println("This tool hasn't been taken!");
@@ -43,33 +57,22 @@ public class PortableBattery implements PortableBatterySubject {
         return true;
     }
 
-
-    public int getToolId() {
-        return this.id;
-    }
-
-    public static int getId_count() {
-        return id_count;
-    }
-
-    public static void setId_count(int id_count) {
-        PortableBattery.id_count = id_count;
-    }
-
+    /**
+     * Get the index of the portable battery
+     */
     public int getId() {
         return id;
     }
 
+    /**
+     * Set the index of the portable battery
+     */
     public void setId(int id) {
         this.id = id;
     }
 
     public boolean isOccupied() {
         return isOccupied;
-    }
-
-    public void setOccupied(boolean occupied) {
-        isOccupied = occupied;
     }
 
     @Override

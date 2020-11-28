@@ -6,28 +6,39 @@ import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWor
  * @author TT
  * @project chocolateFactory
  * @classname Monitor
- * @description monitor
+ * @description this is residence with monitor
  * @date 2020/11/18 14:34
  */
 public class Monitor extends ResidenceDecorator {
 
     public Monitor() {
-        this(null);
+
     }
 
-    public Monitor(Residence r) {
+    /**
+     * Add a monitor to the residence
+     */
+    public Monitor(DecoratorComponent r) {
         super(r);
         System.out.println("A monitor has been added");
     }
 
+    /**
+     * Return the cost of the residence
+     */
     @Override
     public double getBuildCost() {
-        return residence.getCost() + 500; //table 500yuan/per
+        return residence.getBuildCost() + 500; //table 500yuan/per
     }
 
+
+
+    /**
+     * String representing the description of residence
+     */
     @Override
     public String getDescription() {
-        return residence.getDescription();
+        return residence.getDescription() ;
     }
 
     @Override
