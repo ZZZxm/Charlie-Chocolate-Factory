@@ -1,6 +1,5 @@
 package team.charliechocolatefactory.rawmaterial;
 
-import java.util.LinkedList;
 
 /**
  * @author Ngae Zeh-ghau
@@ -88,32 +87,4 @@ public abstract class RawMaterial {
      */
     protected Double quantity;
 
-
-//    /**
-//     * notify on exhaustion
-//     * <p>
-//     * This function is called when items are exhausted, maybe by consume().
-//     */
-//    protected void notifyOnExhaustion() {
-//        /*
-//         * TODO: notifyOnExhaustion()
-//         *
-//         * This is a part of the "observer" pattern.
-//         *
-//         * Hint: exhaustionObseverList is the array holding all the observers that
-//         * should be notified here.
-//         */
-//    }
-//
-//    /**
-//     * obsever array of exhaustion
-//     * <p>
-//     * Array holding all the observer that should be notified when
-//     * notifyOnExhaustion() is called.
-//     * <p>
-//     * This is a part of the "observer" pattern.
-//     * <p>
-//     * TODO: The type of observer remains to be defined.
-//     */
-//    private LinkedList<Object> exhaustionObserverList;
 }

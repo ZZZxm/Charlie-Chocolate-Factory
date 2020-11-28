@@ -5,7 +5,6 @@ import team.charliechocolatefactory.person.GeneralManager;
 import team.charliechocolatefactory.person.filterchain.message.Message;
 import team.charliechocolatefactory.person.staff.worker.Worker;
 import team.charliechocolatefactory.scene.Scene;
-import team.charliechocolatefactory.scene.SceneNameConst;
 import team.charliechocolatefactory.scene.staffarea.StaffArea;
 
 import java.util.ArrayList;

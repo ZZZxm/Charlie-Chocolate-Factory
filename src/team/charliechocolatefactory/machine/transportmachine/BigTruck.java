@@ -1,6 +1,5 @@
 package team.charliechocolatefactory.machine.transportmachine;
 
-import team.charliechocolatefactory.machine.transportmachine.TransportMachine;
 import team.charliechocolatefactory.product.Product;
 
 /**
