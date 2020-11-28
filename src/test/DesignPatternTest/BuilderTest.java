@@ -1,6 +1,5 @@
 package test.DesignPatternTest;
 
-import team.charliechocolatefactory.machine.processmachine.productmachine.BasicProductMachine;
 import team.charliechocolatefactory.machine.processmachine.productmachine.milkchocmachine.MilkChocController;
 import team.charliechocolatefactory.machine.processmachine.productmachine.milkchocmachine.NormalMilkChocMachine;
 import team.charliechocolatefactory.machine.processmachine.productmachine.milkchocmachine.ThickMilkChocMachine;

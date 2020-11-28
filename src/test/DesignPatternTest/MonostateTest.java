@@ -7,18 +7,14 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
 
-
 /**
  * @author TT
  * @project chocolateFactory
  * @classname MonostateTest
- * @description TODO
+ * @description test for monostate pattern
  * @date 2020/11/26 15:17
  */
-
-
 public class MonostateTest {
-
 
     public static void runTest() {
         List<Screen> ScreenList = new ArrayList<Screen>();
@@ -26,8 +22,6 @@ public class MonostateTest {
         System.out.println("—————————————-------------------------------------———— [Monostate]Test —————————————-------------------------------------————");
         System.out.println("Screen : setContent(String content) : Set the information show on the Screen");
         System.out.println("Screen : showContent() : Show the information");
-//        System.out.println("QualityInspectionPanel : add() : Add a element to the list of panel.");
-//        System.out.println("QualityInspectionPanel : show() : Show all elements in the list of panel.");
         System.out.println("");
 
         String choice;
@@ -39,8 +33,6 @@ public class MonostateTest {
             System.out.println("----------------------------Monostate Test---------------------------");
             System.out.println("**      1 --- Create the guard group                               **");
             System.out.println("**      2 --- Make an alert                                        **");
-//            System.out.println("**      3 --- Enlarge the existing Group                           **");
-//            System.out.println("**      4 --- Show the  QualityTestSystem  structure               **");
             System.out.println("**      # --- Exit                                                 **");
             System.out.println("----------------------------------------------------------------------");
             System.out.println("");

@@ -1,13 +1,6 @@
 package test.DesignPatternTest;
 
 import team.charliechocolatefactory.factory.CharlieFactory;
-import team.charliechocolatefactory.person.Person;
-import team.charliechocolatefactory.person.staff.worker.utilityworker.Cleaner;
-import team.charliechocolatefactory.person.staff.worker.utilityworker.MaintenanceWorker;
-import team.charliechocolatefactory.scene.SceneStructure;
-import team.charliechocolatefactory.scene.staffarea.DiningRoom;
-import team.charliechocolatefactory.scene.staffarea.Office;
-import team.charliechocolatefactory.scene.staffarea.manufacturingarea.warehouse.Warehouse;
 
 import java.util.Scanner;
 
@@ -15,10 +8,7 @@ import java.util.Scanner;
  * @author Y.C.Young, Zeus Lee
  * @project chocolateFactory
  * @classname VisitorTest
- * @description
- *  Visitor pattern is a behavioral design pattern,
- *
- *  in which different utility workers are introduced in different scenarios to achieve different processing results.
+ * @description test for visitor pattern
  * @date 2020/11/22 22:07
  */
 public class VisitorTest {
@@ -59,34 +49,12 @@ public class VisitorTest {
                 case 1: {
                     System.out.println("Visitor Pattern Test: Test the treatment method of Cleaner (Cleaner)：");
                     CharlieFactory.getCharlieFactory().doClean();
-                    // Initialize specific operations on the scene.
-                    /*
-                    Cleaner cleaner = new Cleaner("Tom",18, Person.Sex.MALE,5000,new Office());
-                    // Initialize scene launcher
-                    SceneStructure structure = new SceneStructure();
-                    structure.addScene(new Office());
-                    structure.addScene(new DiningRoom());
-                    structure.addScene(new Warehouse());
-                    structure.accept(cleaner);
-                     */
                     System.out.println("");
-
                     break;
                 }
                 case 2: {
                     System.out.println("Visitor Pattern Test: Test the treatment method of MaintenanceWorker (MaintenanceWorker)：");
                     CharlieFactory.getCharlieFactory().doMaintenance();
-                    /*
-                    // Initialize specific operations on the scene.
-                    MaintenanceWorker maintenanceWorker = new MaintenanceWorker("Tom",18, Person.Sex.MALE,5000,new Office());
-                    // Initialize scene launcher
-                    SceneStructure structure2 = new SceneStructure();
-                    structure2.addScene(new Office());
-                    structure2.addScene(new DiningRoom());
-                    structure2.addScene(new Warehouse());
-                    structure2.accept(maintenanceWorker);
-                    System.out.println("");
-                     */
                     break;
                 }
                 default:{

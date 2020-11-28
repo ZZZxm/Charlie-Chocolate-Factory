@@ -1,6 +1,5 @@
 package test.DesignPatternTest;
 
-
 import team.charliechocolatefactory.supplement.proxy.PortableBattery;
 import team.charliechocolatefactory.supplement.proxy.PortableBatteryProxy;
 
@@ -13,18 +12,15 @@ import java.util.Scanner;
  * @author TT
  * @project chocolateFactory
  * @classname ProxyTest
- * @description TODO
+ * @description test for proxy pattern
  * @date 2020/11/24 19:26
  */
 public class ProxyTest {
-    public static void runTest() {
-        /**
-         * @description: Run the test
-         *
 
-         *
-         * @return : void
-         **/
+    /**
+     * run the test
+     */
+    public static void runTest() {
 
         List<PortableBatteryProxy> ProxyList = new ArrayList<PortableBatteryProxy>();
 
@@ -83,7 +79,6 @@ public class ProxyTest {
                         System.out.println("Invalid Input, Please input again.\n");
                         System.out.println("");
                     }
-
                     break;
                 }
                 case 4: {
@@ -114,13 +109,13 @@ public class ProxyTest {
     }
 
     public static void main(String[] args) {
+
         System.out.println("—————————————-------------------------------------———— [Proxy] Test —————————————-------------------------------------————");
         System.out.println("PortableBattery : PortableBattery() : Inherited from Supply, create an instance of PortableBattery.");
         System.out.println("PortableBatteryProxy : PortableBatteryProxy() : Implements PortableBatterySubjects, create an instance of PortableBatteryProxy and bind it to an PortableBattery.");
         System.out.println("PortableBatteryProxy : take() : Implements PortableBatterySubjects, take the portableBattery through the proxy.");
         System.out.println("PortableBatteryProxy : returnPortableBattery() : Implements PortableBatterySubjects, return the portableBattery to the proxy.");
         System.out.println("");
-
 
         ProxyTest.runTest();
 

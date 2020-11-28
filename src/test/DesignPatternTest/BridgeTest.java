@@ -1,7 +1,6 @@
 package test.DesignPatternTest;
 
 import team.charliechocolatefactory.product.Sandwich.Sandwich;
-import team.charliechocolatefactory.product.Sandwich.Pure;
 import team.charliechocolatefactory.product.Sandwich.Hazelnut;
 import team.charliechocolatefactory.product.Sandwich.Liqueur;
 import team.charliechocolatefactory.product.chocolate.*;

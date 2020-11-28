@@ -1,6 +1,7 @@
 package team.charliechocolatefactory.scene.decorator;
-import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
-import team.charliechocolatefactory.scene.decorator.Residence;
+
+import team.charliechocolatefactory.scene.SceneNameConst;
+
 /**
  * @author TT
  * @project chocolateFactory
@@ -13,11 +14,14 @@ public class Villa extends Residence {
     /**
      * Show that a villa has been built
      */
-    public Villa(){
+    public Villa() {
         super(50000);
         System.out.println("A villa has been built");
     }
 
+    public Villa(String location, double cost, double area) {
+        super(location, cost, area);
+    }
 
     @Override
     public String getDescription() {
@@ -34,11 +38,7 @@ public class Villa extends Residence {
 
     @Override
     public String toString() {
-        return "class Villa extends Residence";
+        return SceneNameConst.VILLA;
     }
 
-    @Override
-    public void accept(UtilityWorker worker) {
-
-    }
 }

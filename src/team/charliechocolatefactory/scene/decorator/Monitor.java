@@ -1,7 +1,5 @@
 package team.charliechocolatefactory.scene.decorator;
 
-import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
-
 /**
  * @author TT
  * @project chocolateFactory
@@ -12,7 +10,7 @@ import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWor
 public class Monitor extends ResidenceDecorator {
 
     public Monitor() {
-
+        this(null);
     }
 
     /**
@@ -31,14 +29,12 @@ public class Monitor extends ResidenceDecorator {
         return residence.getBuildCost() + 500; //table 500yuan/per
     }
 
-
-
     /**
      * String representing the description of residence
      */
     @Override
     public String getDescription() {
-        return residence.getDescription() ;
+        return residence.getDescription();
     }
 
     @Override

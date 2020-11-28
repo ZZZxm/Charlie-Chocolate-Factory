@@ -58,8 +58,8 @@ public class CharlieFactory {
         scenes.addScene(new DiningRoom("", 3e5, 500.0));
         scenes.addScene(new Office("", 3e5, 800.0));
         scenes.addScene(new GarbageStation("", 2e5, 100.0, 1000));
-        // scenes.addScene(new Flat("", 2e5, 500.0));
-        // scenes.addScene(new Villa("", 1e6, 350.0));
+        scenes.addScene(new Flat("", 2e5, 500.0));
+        scenes.addScene(new Villa("", 1e6, 350.0));
     }
 
     /**

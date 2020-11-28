@@ -9,7 +9,7 @@ import java.util.Scanner;
  * @author Kerr
  * @project chocolateFactory
  * @classname InterpreterTest
- * @description TODO
+ * @description test for interpreter pattern
  * @date 2020/11/27 00:23
  */
 public class InterpreterTest {

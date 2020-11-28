@@ -3,10 +3,11 @@ package team.charliechocolatefactory.scene.decorator;
 /**
  * @author TT
  * @project chocolateFactory
- * @classname CentralAirCondition
+ * @classname DecoratorComponent
  * @description this is an interface implements getDescription getBuildCost
- * @date 2020/11/18 14:35
+ * @date 2020/11/28 8:35
  */
+
 public interface DecoratorComponent {
     /**
      * String represents the description of residence

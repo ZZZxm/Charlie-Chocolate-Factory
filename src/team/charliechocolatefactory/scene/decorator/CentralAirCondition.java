@@ -1,7 +1,5 @@
 package team.charliechocolatefactory.scene.decorator;
 
-import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
-
 /**
  * @author TT
  * @project chocolateFactory
@@ -9,16 +7,18 @@ import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWor
  * @description this is a residence with centralAirCondition
  * @date 2020/11/18 14:35
  */
+
 public class CentralAirCondition extends ResidenceDecorator {
 
-    public CentralAirCondition(){
+    public CentralAirCondition() {
+        this(null);
     }
 
 
     /**
-     *  Add a central air condition to the residence
+     * Add a central air condition to the residence
      */
-    public CentralAirCondition(DecoratorComponent r){
+    public CentralAirCondition(DecoratorComponent r) {
         super(r);
         System.out.println("A central air condition has been added");
     }
@@ -37,7 +37,7 @@ public class CentralAirCondition extends ResidenceDecorator {
      */
     @Override
     public String getDescription() {
-        return residence.getDescription() ;
+        return residence.getDescription();
     }
 
     @Override

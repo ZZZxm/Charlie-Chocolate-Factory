@@ -14,7 +14,7 @@ import java.util.Scanner;
  * @author Kerr
  * @project chocolateFactory
  * @classname IteratorTest
- * @description TODO
+ * @description test for iterator pattern
  * @date 2020/11/26 22:02
  */
 public class IteratorTest {

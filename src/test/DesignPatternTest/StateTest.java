@@ -1,6 +1,5 @@
 package test.DesignPatternTest;
 
-//import sun.awt.geom.AreaOp;
 import team.charliechocolatefactory.machine.processmachine.productmachine.BasicProductMachine;
 import team.charliechocolatefactory.machine.processmachine.wrappermachine.WrapperMachine;
 import team.charliechocolatefactory.machine.processmachine.wrappermachine.strategy.BagWrapStrategy;

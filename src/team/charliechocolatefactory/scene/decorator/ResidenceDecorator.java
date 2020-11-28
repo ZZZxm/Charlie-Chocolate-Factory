@@ -8,9 +8,15 @@ package team.charliechocolatefactory.scene.decorator;
  * @date 2020/11/18 14:25
  */
 public abstract class ResidenceDecorator implements DecoratorComponent {
-    protected DecoratorComponent residence;      //Residence decorated by the ResidenceDecorator
 
-    public ResidenceDecorator() { }
+    /**
+     * Residence decorated by the ResidenceDecorator
+     */
+    protected DecoratorComponent residence;
+
+    public ResidenceDecorator() {
+        this(null);
+    }
 
     /**
      * Represents the decorated residence
@@ -18,12 +24,6 @@ public abstract class ResidenceDecorator implements DecoratorComponent {
     public ResidenceDecorator(DecoratorComponent r) {
         residence = r;
     }
-
-    /**
-     * Return the cost of present residence
-     */
-
-//    public abstract double getCost();
 
     @Override
     public String toString() {

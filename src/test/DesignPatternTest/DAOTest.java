@@ -4,7 +4,6 @@ import team.charliechocolatefactory.person.DAO.StaffDao;
 import team.charliechocolatefactory.person.DAO.StaffDaoImpl;
 import team.charliechocolatefactory.person.Person;
 import team.charliechocolatefactory.person.staff.Staff;
-import team.charliechocolatefactory.person.staff.worker.WorkshopWorker;
 
 import java.util.Scanner;
 
