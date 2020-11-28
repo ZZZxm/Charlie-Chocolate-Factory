@@ -18,6 +18,11 @@ public class Villa extends Residence {
     }
 
     @Override
+    public double getBuildCost() {
+        return 0;
+    }
+
+    @Override
     public String getDescription() {
         return "This is a villa";
     }

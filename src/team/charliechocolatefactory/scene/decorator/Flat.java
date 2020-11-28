@@ -21,6 +21,11 @@ public class Flat extends Residence {
 
 
     @Override
+    public double getBuildCost() {
+        return 0;
+    }
+
+    @Override
     public String getDescription() {
         return "This is a flat";
     }

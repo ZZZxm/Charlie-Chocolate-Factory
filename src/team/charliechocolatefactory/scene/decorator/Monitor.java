@@ -21,13 +21,8 @@ public class Monitor extends ResidenceDecorator {
     }
 
     @Override
-    public double getCost() {
+    public double getBuildCost() {
         return residence.getCost() + 500; //table 500yuan/per
-    }
-
-    @Override
-    public void accept(UtilityWorker worker) {
-
     }
 
     @Override

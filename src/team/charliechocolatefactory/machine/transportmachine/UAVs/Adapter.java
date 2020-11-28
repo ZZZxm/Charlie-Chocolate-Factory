@@ -14,6 +14,13 @@ public class Adapter implements UAV {
     private TransportMachine adaptee;
     private String mID;
 
+    public Adapter() {
+    }
+
+    public Adapter(TransportMachine adaptee) {
+        this.adaptee = adaptee;
+    }
+
     @Override
     public int work(Product product) {
         this.navigate();
@@ -42,12 +49,6 @@ public class Adapter implements UAV {
         System.out.println("UAV " + this.mID + " is navigating to destination.\n");
     }
 
-    public Adapter() {
-    }
-
-    public Adapter(TransportMachine adaptee) {
-        this.adaptee = adaptee;
-    }
 
     public TransportMachine getAdaptee() {
         return adaptee;

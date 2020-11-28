@@ -9,7 +9,7 @@ import team.charliechocolatefactory.scene.Scene;
  * @description residence
  * @date 2020/11/18 14:19
  */
-public abstract class Residence extends Scene {
+public abstract class Residence extends Scene implements ResidenceComponent {
     public Residence() {
         this(0.0);
     }

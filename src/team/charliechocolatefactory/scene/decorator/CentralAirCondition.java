@@ -21,13 +21,8 @@ public class CentralAirCondition extends ResidenceDecorator {
     }
 
     @Override
-    public double getCost() {
+    public double getBuildCost() {
         return residence.getCost() + 200; //chair 200yuan/per
-    }
-
-    @Override
-    public void accept(UtilityWorker worker) {
-
     }
 
     @Override

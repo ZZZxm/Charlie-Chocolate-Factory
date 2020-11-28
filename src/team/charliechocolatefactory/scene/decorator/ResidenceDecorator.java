@@ -7,7 +7,7 @@ package team.charliechocolatefactory.scene.decorator;
  * @description residence decorator
  * @date 2020/11/18 14:25
  */
-public abstract class ResidenceDecorator extends Residence {
+public abstract class ResidenceDecorator implements ResidenceComponent {
     protected Residence residence;      //Residence decorated by the ResidenceDecorator
 
     public ResidenceDecorator() {
@@ -18,8 +18,8 @@ public abstract class ResidenceDecorator extends Residence {
         residence = r;
     }
 
-    @Override
-    public abstract double getCost();
+
+    public abstract double getBuildCost();
 
     @Override
     public String toString() {

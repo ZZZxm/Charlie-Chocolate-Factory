@@ -20,7 +20,7 @@ public class DecoratorTest {
         System.out.println("please choose the residence you want to build:");
         System.out.println("**              1 --- villa                 **");
         System.out.println("**              2 --- flat                  **");
-        Residence residence;
+        ResidenceComponent residence;
         int i;
         while (true) {
             try {
@@ -123,7 +123,7 @@ public class DecoratorTest {
                         System.out.print("1 monitor");
 
 
-                    System.out.println(", the price is " + residence.getCost());
+                    System.out.println(", the price is " + residence.getBuildCost());
                 } else if (i == 5) {
                     fh = 0;
                     cac = 0;
