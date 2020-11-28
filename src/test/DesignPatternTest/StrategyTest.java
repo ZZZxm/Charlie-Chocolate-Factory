@@ -4,14 +4,11 @@ import team.charliechocolatefactory.machine.processmachine.wrappermachine.Wrappe
 import team.charliechocolatefactory.machine.processmachine.wrappermachine.strategy.BagWrapStrategy;
 import team.charliechocolatefactory.machine.processmachine.wrappermachine.strategy.BoxWrapStrategy;
 import team.charliechocolatefactory.machine.processmachine.wrappermachine.strategy.CupWrapStrategy;
-import team.charliechocolatefactory.machine.processmachine.wrappermachine.strategy.WrapStrategy;
-import team.charliechocolatefactory.product.chocolate.Chocolate;
 import team.charliechocolatefactory.product.chocolate.DarkChocolate;
 import team.charliechocolatefactory.product.chocolateProduct.ChocolateCake;
 import team.charliechocolatefactory.product.chocolateProduct.ChocolateCookie;
 import team.charliechocolatefactory.product.chocolateProduct.ChocolateIceCream;
 import team.charliechocolatefactory.product.state.ProducedState;
-import team.charliechocolatefactory.product.state.ProductState;
 
 import java.util.Scanner;
 

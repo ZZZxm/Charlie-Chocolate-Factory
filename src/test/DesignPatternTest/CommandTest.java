@@ -1,17 +1,8 @@
 package test.DesignPatternTest;
 
-import team.charliechocolatefactory.machine.processmachine.wrappermachine.WrapperMachine;
-import team.charliechocolatefactory.person.GeneralManager;
 import team.charliechocolatefactory.person.Person;
-import team.charliechocolatefactory.person.staff.Manager;
 import team.charliechocolatefactory.person.staff.worker.Worker;
 import team.charliechocolatefactory.person.staff.worker.WorkshopWorker;
-import team.charliechocolatefactory.rawmaterial.foodmaterial.Egg;
-import team.charliechocolatefactory.scene.staffarea.manufacturingarea.warehouse.Delegate.WarehouseClient;
-import team.charliechocolatefactory.scene.staffarea.manufacturingarea.warehouse.Delegate.WarehouseDelegate;
-import team.charliechocolatefactory.scene.staffarea.manufacturingarea.warehouse.Warehouse;
-import team.charliechocolatefactory.scene.staffarea.manufacturingarea.workshop.DarkWorkshop;
-import team.charliechocolatefactory.scene.staffarea.manufacturingarea.workshop.WhiteWorkshop;
 
 import java.util.Scanner;
 
@@ -19,7 +10,7 @@ import java.util.Scanner;
  * @author Zheng
  * @project chocolateFactory
  * @classname CommandTest
- * @description TODO
+ * @description test for command pattern
  * @date 2020/11/21 21:32
  */
 public class CommandTest {

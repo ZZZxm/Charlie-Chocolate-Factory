@@ -3,8 +3,6 @@ package test.DesignPatternTest;
 import team.charliechocolatefactory.machine.transportmachine.BigTruck;
 import team.charliechocolatefactory.machine.transportmachine.SmallCar;
 import team.charliechocolatefactory.machine.transportmachine.Van;
-import team.charliechocolatefactory.person.GeneralManager;
-import team.charliechocolatefactory.product.chocolate.Chocolate;
 import team.charliechocolatefactory.product.chocolateProduct.ChocolateCake;
 
 import java.util.Scanner;

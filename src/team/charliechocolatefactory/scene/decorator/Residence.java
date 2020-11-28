@@ -1,5 +1,6 @@
 package team.charliechocolatefactory.scene.decorator;
 
+import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
 import team.charliechocolatefactory.scene.Scene;
 
 /**
@@ -10,7 +11,13 @@ import team.charliechocolatefactory.scene.Scene;
  * @date 2020/11/18 14:19
  */
 public abstract class Residence extends Scene implements DecoratorComponent {
+
     public Residence() {
+        this(0.0);
+    }
+
+    public Residence(String location, double cost, double area) {
+        super(location, cost, area);
     }
 
     /**
@@ -26,7 +33,10 @@ public abstract class Residence extends Scene implements DecoratorComponent {
     public abstract String getDescription();
 
     @Override
-    public String toString() {
-        return "abstract class Residence extends Scene";
+    public void accept(UtilityWorker worker) {
+        worker.visit(this);
     }
+
+    @Override
+    public abstract String toString();
 }

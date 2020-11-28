@@ -1,7 +1,6 @@
 package test.DesignPatternTest;
 
 import team.charliechocolatefactory.machine.processmachine.wrappermachine.WrapperMachine;
-import team.charliechocolatefactory.person.GeneralManager;
 
 import java.util.Scanner;
 
@@ -9,7 +8,7 @@ import java.util.Scanner;
  * @author Kerr
  * @project chocolateFactory
  * @classname ResponsibilityChainTest
- * @description TODO
+ * @description test for responsibility chain pattern
  * @date 2020/11/26 00:23
  */
 public class ResponsibilityChainTest {

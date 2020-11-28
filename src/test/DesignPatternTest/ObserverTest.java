@@ -7,8 +7,6 @@ import team.charliechocolatefactory.person.Person;
 import team.charliechocolatefactory.person.staff.Guard;
 import team.charliechocolatefactory.person.staff.Manager;
 import team.charliechocolatefactory.person.staff.Staff;
-import team.charliechocolatefactory.person.staff.worker.WarehouseWorker;
-import team.charliechocolatefactory.person.staff.worker.Worker;
 import team.charliechocolatefactory.person.staff.worker.fixworker.FixExpert;
 import team.charliechocolatefactory.scene.staffarea.manufacturingarea.warehouse.Warehouse;
 import team.charliechocolatefactory.scene.staffarea.manufacturingarea.workshop.WhiteWorkshop;

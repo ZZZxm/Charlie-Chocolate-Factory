@@ -1,6 +1,5 @@
 package test;
 
-import com.sun.net.httpserver.Filter;
 import test.DesignPatternTest.*;
 
 import java.util.InputMismatchException;
@@ -198,10 +197,12 @@ public class MainTest {
                         System.out.println("Invalid input!");
                         System.out.println("Please input a number of 0-38!");
                 }
-                System.out.println("\n");
-                System.out.println("Enter to continue testing...");
-                blank = input.nextLine();
-                blank = input.nextLine();
+                if (op != 0) {
+                    System.out.println("\n");
+                    System.out.println("Enter to continue testing...");
+                    blank = input.nextLine();
+                    blank = input.nextLine();
+                }
             }
         } catch (InputMismatchException exception) {
             System.out.println("Please input Integer! You have to run the test again.");

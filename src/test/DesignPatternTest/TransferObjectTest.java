@@ -11,7 +11,7 @@ import java.util.Scanner;
  * @author Kerr
  * @project chocolateFactory
  * @classname TransferObjectTest
- * @description TODO
+ * @description test for transfer object pattern
  * @date 2020/11/27 20:21
  */
 public class TransferObjectTest {

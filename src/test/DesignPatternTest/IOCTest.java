@@ -1,6 +1,5 @@
 package test.DesignPatternTest;
 
-import team.charliechocolatefactory.factory.support.WorkerAddingController;
 import team.charliechocolatefactory.person.Person;
 import team.charliechocolatefactory.person.staff.Manager;
 import team.charliechocolatefactory.scene.staffarea.DiningRoom;
@@ -53,7 +52,6 @@ public class IOCTest {
             System.out.print("Enter the order [0 to quit]:");
             op = input.nextInt();
 
-
             switch (op) {
                 case 0:
                     flag = false;
@@ -62,7 +60,6 @@ public class IOCTest {
                     System.out.println("IOC Pattern: creating office Walker will implicitly create office worker：");
                     Office office = new Office();
                     Manager.getOfficeManager().hireWorker("Tom",  Person.Sex.MALE, 18, 5000, office);
-                    //WorkerAddingController.addWorkerToScene("Tom", 18, Person.Sex.MALE, 5000, office);
                     office.displayAllStaffs();
                     System.out.println("");
                     break;
@@ -71,7 +68,6 @@ public class IOCTest {
                     System.out.println("IOC Pattern: creating office DiningRoom will implicitly create DinningRoomWorker：");
                     DiningRoom diningRoom = new DiningRoom();
                     Manager.getDiningRoomManager().hireWorker("Lisa", Person.Sex.FEMALE, 20, 6000, diningRoom);
-                    //WorkerAddingController.addWorkerToScene("lisa", 20, Person.Sex.MALE, 6000, diningRoom);
                     diningRoom.displayAllStaffs();
                     System.out.println("");
                     break;
@@ -80,7 +76,6 @@ public class IOCTest {
                     System.out.println("IOC Pattern: creating warehouse Walker will implicitly create WarehouseWorker：");
                     Warehouse warehouse = new Warehouse();
                     Manager.getWarehouseManager().hireWorker("mark",  Person.Sex.FEMALE, 22, 7000, warehouse);
-                    //WorkerAddingController.addWorkerToScene("mark", 22, Person.Sex.FEMALE, 7000, warehouse);
                     warehouse.displayAllStaffs();
                     System.out.println("");
                     break;
@@ -89,7 +84,6 @@ public class IOCTest {
                     System.out.println("IOC Pattern: creating DarkWorkshop Walker will implicitly create DarkWorkshopWorker：");
                     DarkWorkshop darkWorkshop = new DarkWorkshop();
                     Manager.getWorkShopManager().hireWorker("mark",  Person.Sex.MALE, 22, 7000, darkWorkshop);
-                    //WorkerAddingController.addWorkerToScene("mark", 22, Person.Sex.FEMALE, 7000, darkWorkshop);
                     darkWorkshop.displayAllStaffs();
                     System.out.println("");
                     break;
@@ -98,7 +92,6 @@ public class IOCTest {
                     System.out.println("IOC Pattern: creating WhiteWorkshop Walker will implicitly create WhiteWorkshopWorker：");
                     WhiteWorkshop whiteWorkshop = new WhiteWorkshop();
                     Manager.getWorkShopManager().hireWorker("mark", Person.Sex.FEMALE, 22,  7000, whiteWorkshop);
-                    //WorkerAddingController.addWorkerToScene("mark", 22, Person.Sex.FEMALE, 7000, whiteWorkshop);
                     whiteWorkshop.displayAllStaffs();
                     System.out.println("");
                     break;

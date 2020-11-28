@@ -11,10 +11,10 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
+ * @author Ngae Zeh-ghau
  * @project chocolateFactory
  * @classname CallbackTest
  * @description Test for Callback.
- * @author Ngae Zeh-ghau
  * @date 2020/11/25 10:25
  */
 public class CallbackTest {
@@ -33,9 +33,9 @@ public class CallbackTest {
                 "------------------------------------ [Callback] Test ------------------------------------");
 
         System.out.println("");
-        System.out.println("SceneSelector : " + 
-            "findSubsetSatisfying(scenes: List<Scene>, predicate: Predicate<Scene>)() : " + 
-            "Find a subset of scenes which satisfy the predicate.");
+        System.out.println("SceneSelector : " +
+                "findSubsetSatisfying(scenes: List<Scene>, predicate: Predicate<Scene>)() : " +
+                "Find a subset of scenes which satisfy the predicate.");
         System.out.println("");
 
         ArrayList<Scene> scenes = new ArrayList<>();

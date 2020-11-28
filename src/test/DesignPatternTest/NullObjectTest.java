@@ -1,14 +1,9 @@
 package test.DesignPatternTest;
 
-import team.charliechocolatefactory.factory.support.WorkerAddingController;
 import team.charliechocolatefactory.person.Person;
 import team.charliechocolatefactory.person.staff.Manager;
-import team.charliechocolatefactory.person.staff.Staff;
-import team.charliechocolatefactory.scene.Scene;
-import team.charliechocolatefactory.scene.staffarea.manufacturingarea.warehouse.Delegate.WarehouseClient;
 import team.charliechocolatefactory.scene.staffarea.manufacturingarea.warehouse.Warehouse;
 
-import javax.naming.Name;
 import java.util.Scanner;
 
 /**
@@ -41,11 +36,10 @@ public class NullObjectTest {
 
         Warehouse warehouse = new Warehouse();
 
-
-        WorkerAddingController.addWorkerToScene("Kerr", 1, Person.Sex.FEMALE, 1, warehouse);
-        WorkerAddingController.addWorkerToScene("TT", 21, Person.Sex.MALE, 10, warehouse);
-        WorkerAddingController.addWorkerToScene("Yuan", 22, Person.Sex.FEMALE, 10000, warehouse);
-        WorkerAddingController.addWorkerToScene("Muller", 31, Person.Sex.MALE, 2513, warehouse);
+        manager.hireWorker("Kerr", Person.Sex.FEMALE, 1,  1, warehouse);
+        manager.hireWorker("TT",  Person.Sex.MALE, 21, 10, warehouse);
+        manager.hireWorker("Yuan", Person.Sex.FEMALE, 22, 10000, warehouse);
+        manager.hireWorker("Muller", Person.Sex.MALE, 31, 2513, warehouse);
 
         System.out.println("\nSome staffs were added to the warehouse and here is their information: ");
 
@@ -60,8 +54,10 @@ public class NullObjectTest {
             if (myId.equals("0")) {
                 flag = false;
             }
-            System.out.println("\nHere is the searching result:");
-            warehouse.searchStaffById(myId);
+            else {
+                System.out.println("\nHere is the searching result:");
+                warehouse.searchStaffById(myId);
+            }
         }
 
     }

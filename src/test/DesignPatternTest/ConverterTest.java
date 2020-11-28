@@ -1,16 +1,12 @@
 package test.DesignPatternTest;
 
-import team.charliechocolatefactory.machine.transportmachine.TransportMachine;
 import team.charliechocolatefactory.person.Person;
-import team.charliechocolatefactory.person.staff.worker.Worker;
-import team.charliechocolatefactory.person.staff.worker.WorkshopWorker;
 import team.charliechocolatefactory.person.visitor.Visitor;
 import team.charliechocolatefactory.person.visitor.converter.*;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.function.Consumer;
 
 /**
  * @author Zheng

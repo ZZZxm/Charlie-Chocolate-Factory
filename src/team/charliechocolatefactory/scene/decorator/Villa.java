@@ -2,6 +2,7 @@ package team.charliechocolatefactory.scene.decorator;
 
 import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
 import team.charliechocolatefactory.scene.decorator.Residence;
+import team.charliechocolatefactory.scene.SceneNameConst;
 
 /**
  * @author TT
@@ -20,6 +21,10 @@ public class Villa extends Residence {
         System.out.println("A villa has been built");
     }
 
+    public Villa(String location, double cost, double area) {
+        super(location, cost, area);
+    }
+
     @Override
     public String getDescription() {
         return "This is a villa";
@@ -35,11 +40,7 @@ public class Villa extends Residence {
 
     @Override
     public String toString() {
-        return "class Villa extends Residence";
+        return SceneNameConst.VILLA;
     }
 
-    @Override
-    public void accept(UtilityWorker worker) {
-
-    }
 }

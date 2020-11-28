@@ -6,12 +6,11 @@ import team.charliechocolatefactory.product.chocolateProduct.chocolatemix.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
 /**
+ * @author Ngae Zeh-ghau
  * @project chocolateFactory
  * @classname FlyweightTest
  * @description Test for Flyweight
- * @author Ngae Zeh-ghau
  * @date 2020/11/27 13:31
  */
 public class FlyweightTest {

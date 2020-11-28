@@ -1,7 +1,5 @@
 package team.charliechocolatefactory.scene.decorator;
 
-import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
-
 /**
  * @author TT
  * @project chocolateFactory
@@ -12,6 +10,7 @@ import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWor
 public class FireHydrant extends ResidenceDecorator {
 
     public FireHydrant() {
+        this(null);
     }
 
     /**

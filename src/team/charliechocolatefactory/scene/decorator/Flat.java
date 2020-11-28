@@ -1,6 +1,6 @@
 package team.charliechocolatefactory.scene.decorator;
 
-import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
+import team.charliechocolatefactory.scene.SceneNameConst;
 
 /**
  * @author TT
@@ -19,6 +19,13 @@ public class Flat extends Residence {
         System.out.println("A flat has been built");
     }
 
+    public Flat(String location, double cost, double area) {
+        super(location, cost, area);
+    }
+
+    /**
+     * String representing the description of the residence
+     */
     @Override
     public String getDescription() {
         return "This is a flat";
@@ -34,12 +41,8 @@ public class Flat extends Residence {
 
     @Override
     public String toString() {
-        return "class ReceptionCenter extends Residence";
+        return SceneNameConst.FLAT;
     }
 
-    @Override
-    public void accept(UtilityWorker worker) {
-
-    }
 }
 
