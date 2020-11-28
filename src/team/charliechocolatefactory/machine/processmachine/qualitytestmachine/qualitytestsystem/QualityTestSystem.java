@@ -1,6 +1,6 @@
 package team.charliechocolatefactory.machine.processmachine.qualitytestmachine.qualitytestsystem;
 
-import team.charliechocolatefactory.machine.qualitytestmachine.QualityTestMachine;
+import team.charliechocolatefactory.machine.processmachine.qualitytestmachine.QualityTestMachine;
 
 /**
  * @author TT
