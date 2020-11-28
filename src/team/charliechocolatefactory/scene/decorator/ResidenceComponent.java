@@ -8,7 +8,8 @@ package team.charliechocolatefactory.scene.decorator;
  * @date 2020/11/28 8:33
  */
 public interface ResidenceComponent {
-     double getBuildCost();
-     String getDescription();
+    double getBuildCost();
+
+    String getDescription();
 
 }

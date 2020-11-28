@@ -17,7 +17,6 @@ public abstract class Workshop extends ManufacturingArea {
 
     public ProductMachine productMachine;
 
-
     public Workshop() {
         this("Workshop", 10000, 100);
     }
@@ -27,7 +26,6 @@ public abstract class Workshop extends ManufacturingArea {
         Manager.getWorkShopManager().addDepartment(this);
         GeneralManager.getInstance().addManager(Manager.getWorkShopManager());
     }
-
 
     /**
      * @return name of the scene as a String

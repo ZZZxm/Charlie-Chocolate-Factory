@@ -11,13 +11,13 @@ import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWor
  */
 public class FireHydrant extends ResidenceDecorator {
 
-    public FireHydrant(){
+    public FireHydrant() {
     }
 
     /**
      * Add a fire hydrant to the residence
      */
-    public FireHydrant(DecoratorComponent r){
+    public FireHydrant(DecoratorComponent r) {
         super(r);
         System.out.println("A fire hydrant has been added");
     }
@@ -36,7 +36,7 @@ public class FireHydrant extends ResidenceDecorator {
      */
     @Override
     public String getDescription() {
-        return residence.getDescription() ;
+        return residence.getDescription();
     }
 
     @Override

@@ -10,7 +10,8 @@ package team.charliechocolatefactory.scene.decorator;
 public abstract class ResidenceDecorator implements DecoratorComponent {
     protected DecoratorComponent residence;      //Residence decorated by the ResidenceDecorator
 
-    public ResidenceDecorator() { }
+    public ResidenceDecorator() {
+    }
 
     /**
      * Represents the decorated residence
@@ -24,7 +25,6 @@ public abstract class ResidenceDecorator implements DecoratorComponent {
      */
 
 //    public abstract double getCost();
-
     @Override
     public String toString() {
         return "abstract class ResidenceDecorator extends Residence";

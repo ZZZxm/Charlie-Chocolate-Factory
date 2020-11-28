@@ -9,8 +9,9 @@ import team.charliechocolatefactory.scene.Scene;
  * @description this is residence
  * @date 2020/11/18 14:19
  */
-public abstract class Residence extends Scene implements DecoratorComponent{
-    public Residence() { }
+public abstract class Residence extends Scene implements DecoratorComponent {
+    public Residence() {
+    }
 
     /**
      * show the cost of the residence

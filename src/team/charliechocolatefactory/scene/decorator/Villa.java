@@ -1,6 +1,8 @@
 package team.charliechocolatefactory.scene.decorator;
+
 import team.charliechocolatefactory.person.staff.worker.utilityworker.UtilityWorker;
 import team.charliechocolatefactory.scene.decorator.Residence;
+
 /**
  * @author TT
  * @project chocolateFactory
@@ -13,15 +15,9 @@ public class Villa extends Residence {
     /**
      * Show that a villa has been built
      */
-    public Villa(){
+    public Villa() {
         super(50000);
         System.out.println("A villa has been built");
-    }
-
-
-    @Override
-    public double getBuildCost() {
-        return 0;
     }
 
     @Override

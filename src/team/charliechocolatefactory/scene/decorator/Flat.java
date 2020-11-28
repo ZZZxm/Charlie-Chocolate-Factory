@@ -14,17 +14,9 @@ public class Flat extends Residence {
     /**
      * Show the a flat has been built
      */
-    public Flat(){
+    public Flat() {
         super(30000);
         System.out.println("A flat has been built");
-    }
-
-    /**
-     * String representing the description of the residence
-     */
-    @Override
-    public double getBuildCost() {
-        return 0;
     }
 
     @Override
